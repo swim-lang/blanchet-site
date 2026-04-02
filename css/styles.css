@@ -4,8 +4,7 @@
 
 /* Reset & Base */
 * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
-html { overflow-x: hidden; }
-body { font-family: 'DM Sans', sans-serif; color: #0c222c; background: #fff; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body { font-family: 'DM Sans', sans-serif; color: #0c222c; background: #fff; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, h4, h5 { font-family: 'DM Sans', sans-serif; }
 a { color: inherit; text-decoration: none; }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
@@ -359,7 +358,6 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   .window-text h2 { font-size: 40px; }
 
   /* Practice Areas */
-  .practice-areas-wrapper { overflow: hidden; }
   .practice-left { width: 300px; padding: 48px; }
   .practice-card { width: 380px; padding: 40px; }
 
