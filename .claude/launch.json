@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "auvra",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "/Users/seanashlow/Documents/Claude/auvra-preview", "-l", "3456"],
+      "port": 3456
+    }
+  ]
+}
