@@ -4,7 +4,8 @@
 
 /* Reset & Base */
 * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
-body { font-family: 'DM Sans', sans-serif; color: #0c222c; background: #fff; -webkit-font-smoothing: antialiased; }
+html { overflow-x: hidden; }
+body { font-family: 'DM Sans', sans-serif; color: #0c222c; background: #fff; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 h1, h2, h3, h4, h5 { font-family: 'DM Sans', sans-serif; }
 a { color: inherit; text-decoration: none; }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
@@ -100,7 +101,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 /* ============================================
    Services
    ============================================ */
-.services { display: flex; padding: 140px 80px; gap: 60px; align-items: flex-start; }
+.services { display: flex; padding: 140px 80px 160px; gap: 60px; align-items: flex-start; }
 .services .sticky-label { position: sticky; top: 80px; width: 180px; flex-shrink: 0; }
 .services-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .service-card { background: #ededed; padding: 0; display: flex; flex-direction: row; gap: 0; overflow: hidden; position: relative; transition: background 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
@@ -192,7 +193,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 /* ============================================
    Founding Partners
    ============================================ */
-.partners { background: #fff; padding: 120px 80px; }
+.partners { background: #fff; padding: 140px 80px; }
 .partners-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 48px; }
 .partners-header h2 { font-family: 'DM Sans', sans-serif; font-size: 48px; font-weight: 700; color: #0c222c; line-height: 1.1; margin-top: 12px; }
 .partners-header .label { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #6b7280; }
@@ -222,7 +223,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 /* ============================================
    Who We Represent
    ============================================ */
-.who-we-represent { display: flex; padding: 120px 0; }
+.who-we-represent { display: flex; padding: 140px 0; }
 .wwr-left { width: 420px; flex-shrink: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 0 60px 0 80px; }
 .wwr-left h2 { font-family: 'DM Sans', sans-serif; font-size: 48px; font-weight: 700; line-height: 1.1; margin-top: 16px; }
 .wwr-left p { font-size: 15px; line-height: 1.7; max-width: 360px; margin-top: 20px; }
@@ -268,7 +269,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 /* ============================================
    Testimonial
    ============================================ */
-.testimonial { background: #fff; padding: 120px 80px; min-height: 700px; display: flex; gap: 80px; align-items: center; }
+.testimonial { background: #fff; padding: 140px 80px; min-height: 700px; display: flex; gap: 80px; align-items: center; }
 .testimonial .quote-side { flex: 1; display: flex; flex-direction: column; gap: 32px; }
 .testimonial .quote-mark { font-size: 64px; color: #0c222c; line-height: 0.6; font-family: 'DM Sans', sans-serif; opacity: 0.15; }
 .testimonial blockquote { font-family: 'DM Sans', sans-serif; font-size: 36px; font-weight: 500; color: #0c222c; line-height: 1.3; }
@@ -295,7 +296,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 /* ============================================
    CTA Banner
    ============================================ */
-.cta-banner { background: #0c222c; padding: 120px 80px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px; position: relative; }
+.cta-banner { background: #0c222c; padding: 140px 80px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px; position: relative; }
 .cta-banner h2 { font-size: 56px; font-weight: 700; color: #fff; line-height: 1.1; }
 .cta-banner p { font-size: 16px; color: rgba(255,255,255,0.6); max-width: 500px; line-height: 1.7; }
 .cta-banner .buttons { display: flex; gap: 12px; margin-top: 16px; }
@@ -323,3 +324,155 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .footer-col .address { font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.5); text-transform: none; letter-spacing: 0; cursor: default; white-space: nowrap; }
 .footer-watermark { background: #0c222c; display: flex; align-items: center; justify-content: center; padding: 40px 60px 60px; overflow: hidden; }
 .footer-watermark img { height: 120px; width: auto; opacity: 0.08; }
+
+/* ============================================
+   Touch Device — Disable Custom Cursor
+   ============================================ */
+@media (hover: none) {
+  .cursor { display: none; }
+  * { cursor: auto !important; }
+}
+
+/* ============================================
+   Tablet (768px – 1279px)
+   ============================================ */
+@media (max-width: 1279px) {
+  /* Global padding */
+  .about, .services, .partners, .cta-banner, .contact-bar, .footer { padding-left: 48px; padding-right: 48px; }
+  .hero-left { padding: 32px 48px 48px; }
+  .scroll-nav { padding: 16px 48px; }
+  .nav-links { gap: 16px; }
+  .nav-links span { font-size: 11px; }
+  .nav-cta { font-size: 11px; padding: 8px 16px; }
+  .scroll-nav .scroll-nav-links { margin: 0 24px; }
+  .scroll-nav a { font-size: 11px; }
+
+  /* Typography */
+  .hero-left h1 { font-size: 48px; }
+  .about h2 { font-size: 36px; }
+  .partners-header h2 { font-size: 40px; }
+  .practice-left h2 { font-size: 40px; }
+  .process-left h2 { font-size: 40px; }
+  .cta-banner h2 { font-size: 44px; }
+  .testimonial blockquote { font-size: 30px; }
+  .wwr-left h2 { font-size: 40px; }
+  .window-text h2 { font-size: 40px; }
+
+  /* Practice Areas */
+  .practice-areas-wrapper { overflow: hidden; }
+  .practice-left { width: 300px; padding: 48px; }
+  .practice-card { width: 380px; padding: 40px; }
+
+  /* Partners */
+  .partner-card .portrait { height: 360px; }
+
+  /* Testimonial */
+  .testimonial { padding-left: 48px; padding-right: 48px; gap: 48px; }
+  .testimonial .photo-side { width: 360px; height: 480px; }
+
+  /* Who We Represent */
+  .wwr-left { width: 300px; padding: 0 48px 0 48px; }
+  .who-we-represent { padding-left: 0; padding-right: 0; }
+  .wwr-right { padding: 0 48px; }
+  .wwr-number { font-size: 120px; }
+
+  /* Footer */
+  .footer { gap: 48px; }
+  .footer-cols { gap: 36px; }
+}
+
+/* ============================================
+   Mobile (< 768px)
+   ============================================ */
+@media (max-width: 767px) {
+  /* Global padding */
+  .about, .services, .partners, .cta-banner { padding: 80px 24px; }
+  .contact-bar { padding: 24px; flex-direction: column; gap: 12px; align-items: flex-start; }
+  .contact-bar .links { gap: 20px; }
+  .footer { padding: 48px 24px; }
+  .scroll-nav { padding: 14px 24px; }
+
+  /* Hide nav links on mobile, keep logo + CTA */
+  .nav-links { display: none; }
+  .scroll-nav .scroll-nav-links { display: none; }
+
+  /* Hero — stack */
+  .hero { flex-direction: column; min-height: auto; }
+  .hero-left { padding: 32px 24px 48px; min-height: auto; }
+  .hero-left h1 { font-size: 36px; margin-bottom: 16px; }
+  .hero-left p { font-size: 15px; margin-bottom: 24px; }
+  .hero-right { min-height: 40vh; height: 40vh; flex: none; }
+  .hero-tag { margin-bottom: 24px; }
+
+  /* About */
+  .about { flex-direction: column; gap: 24px; }
+  .about-label { width: auto; }
+  .about h2 { font-size: 28px; }
+
+  /* Services */
+  .services { flex-direction: column; gap: 24px; }
+  .services .sticky-label { position: static; width: auto; }
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card .card-content { padding: 28px; }
+  .service-card h3 { font-size: 22px; }
+  .service-card .card-image { display: none; }
+
+  /* Practice Areas — stack vertically, disable scroll-lock */
+  .practice-areas-wrapper { height: auto !important; }
+  .practice-areas { position: static; height: auto; flex-direction: column; }
+  .practice-left { width: 100%; padding: 48px 24px; height: auto; }
+  .practice-left h2 { font-size: 32px; }
+  .practice-left .scroll-hint { display: none; }
+  .practice-track { flex-direction: column; gap: 0; transform: none !important; }
+  .practice-card { width: 100%; height: auto; min-height: 0; padding: 32px 24px; }
+  .practice-card h3 { font-size: 24px; }
+
+  /* Partners — 2 columns */
+  .partners-header { flex-direction: column; gap: 16px; }
+  .partners-header h2 { font-size: 32px; }
+  .partners-grid { flex-wrap: wrap; }
+  .partner-card { flex: 0 0 calc(50% - 10px); }
+  .partner-card .portrait { height: 280px; }
+  .partner-card .info h4 { font-size: 16px; }
+
+  /* Process/Approach — stack, disable scroll-lock */
+  .process-wrapper { height: auto !important; }
+  .process { position: static !important; height: auto !important; flex-direction: column; overflow: visible; }
+  .process-left { height: 40vh; min-height: 300px; flex: none; padding: 32px 24px; }
+  .process-left h2 { font-size: 32px; }
+  .process-right { height: auto !important; position: relative; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+  .step-card { position: static !important; transform: none !important; opacity: 1 !important; width: 100% !important; left: auto !important; box-shadow: none; }
+
+  /* Who We Represent — stack */
+  .who-we-represent { flex-direction: column; padding: 80px 0; }
+  .wwr-left { width: 100%; padding: 0 24px 40px; }
+  .wwr-left h2 { font-size: 32px; }
+  .wwr-number { display: none; }
+  .wwr-right { padding: 0 24px; }
+  .wwr-title { font-size: 18px; }
+  .wwr-ticker-wrap { width: 100%; }
+  .wwr-row-body { padding-left: 0; }
+  .wwr-row.open .wwr-row-body { padding-left: 0; padding-bottom: 20px; }
+
+  /* Testimonial — stack */
+  .testimonial { flex-direction: column; gap: 40px; padding: 80px 24px; min-height: auto; }
+  .testimonial blockquote { font-size: 26px; }
+  .testimonial .photo-side { width: 100%; height: 300px; }
+
+  /* Window section */
+  .window-section { height: 150vh; }
+  .window-text h2 { font-size: 28px; }
+
+  /* CTA */
+  .cta-banner h2 { font-size: 32px; }
+  .cta-banner .buttons { flex-direction: column; gap: 8px; }
+  .cta-banner .buttons .btn-white,
+  .cta-banner .buttons .btn-dark { width: 100%; text-align: center; }
+
+  /* Footer — stack */
+  .footer { flex-direction: column; gap: 40px; }
+  .footer-cols { flex-wrap: wrap; gap: 32px; }
+  .footer-col .address { white-space: normal; }
+  .footer-watermark { padding: 32px 24px 48px; }
+  .footer-watermark img { height: 60px; }
+}

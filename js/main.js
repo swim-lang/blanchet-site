@@ -2,19 +2,25 @@
    BLANCHET — Main Scripts
    ============================================ */
 
-// Lock service card heights to prevent jerk on hover
+const isDesktop = () => window.innerWidth >= 768;
+
+// Lock service card heights to prevent jerk on hover (desktop only)
 window.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.service-card').forEach(card => {
-    card.style.height = card.offsetHeight + 'px';
-  });
+  if (isDesktop()) {
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.style.height = card.offsetHeight + 'px';
+    });
+  }
 });
 
-// Custom dot cursor
+// Custom dot cursor (skip on touch)
 const cursor = document.querySelector('.cursor');
-document.addEventListener('mousemove', (e) => {
-  cursor.style.left = e.clientX - 4 + 'px';
-  cursor.style.top = e.clientY - 4 + 'px';
-});
+if (cursor && window.matchMedia('(hover: hover)').matches) {
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX - 4 + 'px';
+    cursor.style.top = e.clientY - 4 + 'px';
+  });
+}
 
 // Scroll-up nav reveal
 const scrollNav = document.querySelector('.scroll-nav');
@@ -44,19 +50,18 @@ if (windowSection && windowSquare) {
     const sectionHeight = windowSection.offsetHeight - window.innerHeight;
     const progress = Math.min(Math.max(-rect.top / sectionHeight, 0), 1);
 
-    // Square grows from 200px to full viewport
+    // Square grows — cap to prevent horizontal overflow
     const minSize = 200;
-    const maxSize = Math.max(window.innerWidth, window.innerHeight) * 1.5;
+    const rawMax = Math.max(window.innerWidth, window.innerHeight) * 1.5;
+    const maxSize = Math.min(rawMax, window.innerWidth * 1.1);
     const size = minSize + (maxSize - minSize) * Math.pow(progress, 0.6);
     windowSquare.style.width = size + 'px';
     windowSquare.style.height = size + 'px';
 
-    // Text fades out as square grows
     const textOpacity = Math.max(1 - progress * 3, 0);
     windowText.style.opacity = textOpacity;
     windowHint.style.opacity = textOpacity;
 
-    // Background video fades in near the end
     if (progress > 0.7) {
       windowBgVideo.style.opacity = (progress - 0.7) / 0.3;
     } else {
@@ -83,7 +88,10 @@ let lastScrollCheck = 0;
 function checkCardVisibility() {
   practiceCards.forEach((card, i) => {
     const rect = card.getBoundingClientRect();
-    if (rect.left < window.innerWidth && rect.right > 0 && !card.classList.contains('visible')) {
+    const inView = isDesktop()
+      ? (rect.left < window.innerWidth && rect.right > 0)
+      : (rect.top < window.innerHeight && rect.bottom > 0);
+    if (inView && !card.classList.contains('visible')) {
       setTimeout(() => card.classList.add('visible'), i * 120);
     }
   });
@@ -96,77 +104,96 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 checkCardVisibility();
 
-// Horizontal scroll-lock for Practice Areas
+// Horizontal scroll-lock for Practice Areas (desktop only)
 const wrapper = document.querySelector('.practice-areas-wrapper');
 const track = document.querySelector('.practice-track');
-if (wrapper && track) {
-  const leftPanel = document.querySelector('.practice-left');
-  const leftWidth = leftPanel ? leftPanel.offsetWidth : 420;
-  const totalTrackWidth = track.scrollWidth;
-  const viewportWidth = window.innerWidth - leftWidth;
-  const maxScroll = totalTrackWidth - viewportWidth;
 
-  // Set wrapper height: scroll distance + viewport + dwell time on last card
-  const neededHeight = maxScroll + window.innerHeight + window.innerHeight * 0.8;
-  wrapper.style.height = neededHeight + 'px';
+function initPracticeScroll() {
+  if (!wrapper || !track) return;
 
-  function updateHorizontalScroll() {
-    const rect = wrapper.getBoundingClientRect();
-    const wrapperHeight = wrapper.offsetHeight - window.innerHeight;
-    const rawProgress = Math.min(Math.max(-rect.top / wrapperHeight, 0), 1);
-    // Complete horizontal scroll at 75% of the way through, then dwell on last card
-    const scrollProgress = Math.min(rawProgress / 0.75, 1);
-    track.style.transform = `translateX(${-scrollProgress * maxScroll}px)`;
+  if (isDesktop()) {
+    const leftPanel = document.querySelector('.practice-left');
+    const leftWidth = leftPanel ? leftPanel.offsetWidth : 300;
+    const totalTrackWidth = track.scrollWidth;
+    const viewportWidth = window.innerWidth - leftWidth;
+    const maxScroll = Math.max(totalTrackWidth - viewportWidth, 0);
+
+    const neededHeight = maxScroll + window.innerHeight + window.innerHeight * 0.8;
+    wrapper.style.height = neededHeight + 'px';
+
+    function updateHorizontalScroll() {
+      if (!isDesktop()) return;
+      const rect = wrapper.getBoundingClientRect();
+      const wrapperHeight = wrapper.offsetHeight - window.innerHeight;
+      if (wrapperHeight <= 0) return;
+      const rawProgress = Math.min(Math.max(-rect.top / wrapperHeight, 0), 1);
+      const scrollProgress = Math.min(rawProgress / 0.75, 1);
+      track.style.transform = `translateX(${-scrollProgress * maxScroll}px)`;
+    }
+    window.addEventListener('scroll', updateHorizontalScroll, { passive: true });
+    updateHorizontalScroll();
+  } else {
+    // Mobile: reset
+    wrapper.style.height = 'auto';
+    track.style.transform = 'none';
   }
-  window.addEventListener('scroll', updateHorizontalScroll, { passive: true });
-  updateHorizontalScroll();
 }
+initPracticeScroll();
 
-// Stacking cards scroll-lock for Approach section
+// Stacking cards scroll-lock for Approach section (desktop only)
 const processWrapper = document.querySelector('.process-wrapper');
 const stepCards = document.querySelectorAll('.step-card');
-if (processWrapper && stepCards.length) {
-  const cardCount = stepCards.length;
-  // Each card gets a segment of scroll, plus dwell at the end
-  const segmentSize = 1 / (cardCount + 1); // +1 for dwell on last card
 
-  // Set wrapper height for scroll room
-  processWrapper.style.height = (cardCount * 80 + 100) + 'vh';
+function initStackingCards() {
+  if (!processWrapper || !stepCards.length) return;
 
-  function updateStackingCards() {
-    const rect = processWrapper.getBoundingClientRect();
-    const wrapperHeight = processWrapper.offsetHeight - window.innerHeight;
-    const progress = Math.min(Math.max(-rect.top / wrapperHeight, 0), 1);
+  if (isDesktop()) {
+    const cardCount = stepCards.length;
+    const segmentSize = 1 / (cardCount + 1);
+    processWrapper.style.height = (cardCount * 80 + 100) + 'vh';
 
-    stepCards.forEach((card, i) => {
-      const cardStart = i * segmentSize;
-      const cardEnd = (i + 1) * segmentSize;
-      const cardProgress = Math.min(Math.max((progress - cardStart) / (cardEnd - cardStart), 0), 1);
+    function updateStackingCards() {
+      if (!isDesktop()) return;
+      const rect = processWrapper.getBoundingClientRect();
+      const wrapperHeight = processWrapper.offsetHeight - window.innerHeight;
+      if (wrapperHeight <= 0) return;
+      const progress = Math.min(Math.max(-rect.top / wrapperHeight, 0), 1);
 
-      // Card slides up from below into its stacked position
-      const startY = 110; // start 110% below
-      const endY = i * 6; // stack with 6px offset each
-      const y = startY - (startY - endY) * cardProgress;
+      stepCards.forEach((card, i) => {
+        const cardStart = i * segmentSize;
+        const cardEnd = (i + 1) * segmentSize;
+        const cardProgress = Math.min(Math.max((progress - cardStart) / (cardEnd - cardStart), 0), 1);
 
-      card.style.transform = `translateY(${y}%)`;
-      // Smooth fade in over the first 30% of each card's animation
-      const fadeProgress = Math.min(cardProgress / 0.3, 1);
-      card.style.opacity = fadeProgress;
-      card.style.zIndex = i + 1;
+        const startY = 110;
+        const endY = i * 6;
+        const y = startY - (startY - endY) * cardProgress;
+
+        card.style.transform = `translateY(${y}%)`;
+        const fadeProgress = Math.min(cardProgress / 0.3, 1);
+        card.style.opacity = fadeProgress;
+        card.style.zIndex = i + 1;
+      });
+    }
+
+    window.addEventListener('scroll', updateStackingCards, { passive: true });
+    updateStackingCards();
+  } else {
+    // Mobile: reset cards to normal flow
+    processWrapper.style.height = 'auto';
+    stepCards.forEach(card => {
+      card.style.transform = 'none';
+      card.style.opacity = '1';
+      card.style.position = 'static';
     });
   }
-
-  window.addEventListener('scroll', updateStackingCards, { passive: true });
-  updateStackingCards();
 }
+initStackingCards();
 
 // Subtle parallax on scroll
 const parallaxImages = document.querySelectorAll('[data-parallax]');
 const newsImages = document.querySelectorAll('.news-img img');
 
 function updateParallax() {
-  const scrollY = window.scrollY;
-
   parallaxImages.forEach(img => {
     const speed = parseFloat(img.dataset.parallax) || 0.1;
     const rect = img.parentElement.getBoundingClientRect();
@@ -189,17 +216,23 @@ document.querySelectorAll('.wwr-row[data-accordion]').forEach(row => {
   const header = row.querySelector('.wwr-row-header');
   header.addEventListener('click', () => {
     const isOpen = row.classList.contains('open');
-    // Pin scroll position at the clicked header
     const headerRect = header.getBoundingClientRect();
     const headerTop = headerRect.top + window.scrollY;
-    // Close all others
     document.querySelectorAll('.wwr-row.open').forEach(r => r.classList.remove('open'));
-    // Toggle clicked
     if (!isOpen) row.classList.add('open');
-    // Restore so the clicked header stays in place
     requestAnimationFrame(() => {
       const newHeaderTop = header.getBoundingClientRect().top + window.scrollY;
       window.scrollTo(0, window.scrollY + (newHeaderTop - headerTop));
     });
   });
+});
+
+// Debounced resize handler to reinitialize viewport-dependent features
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    initPracticeScroll();
+    initStackingCards();
+  }, 250);
 });
