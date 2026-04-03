@@ -31,7 +31,7 @@
   /* Right nav */
   .practices-right-nav { position: absolute; top: 0; right: 0; z-index: 10; display: flex; justify-content: flex-end; align-items: center; padding: 40px 60px; gap: 24px; }
   .practices-right-nav a { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
-  .practices-right-nav a:hover { color: #fff; }
+  .practices-right-nav a:hover, .practices-right-nav a.active { color: #fff; }
   .practices-right-nav .nav-cta { padding: 8px 16px; border: 1px solid rgba(255,255,255,0.3); color: #fff; }
   .practices-right-nav .nav-cta:hover { background: rgba(255,255,255,0.08); }
 
@@ -92,13 +92,12 @@
 <nav class="scroll-nav">
   <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
   <div class="scroll-nav-links">
-    <a href="index.html">HOME</a>
-    <a href="practices.html">PRACTICES</a>
+    <a href="practices.html" class="active">PRACTICES</a>
     <a href="#">ABOUT</a>
     <a href="#">APPROACH</a>
     <a href="#">INSIGHTS</a>
   </div>
-  <a href="contact.html" class="scroll-nav-cta">CONTACT</a>
+  <a href="contact.html" class="scroll-nav-cta">CONTACT US</a>
 </nav>
 
 <section class="practices-page">
@@ -129,7 +128,7 @@
 
     <!-- Nav over featured image -->
     <div class="practices-right-nav">
-      <a href="index.html">HOME</a>
+      <a href="practices.html" class="active">PRACTICES</a>
       <a href="#">ABOUT</a>
       <a href="#">APPROACH</a>
       <a href="#">INSIGHTS</a>

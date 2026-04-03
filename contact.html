@@ -34,6 +34,7 @@
   .contact-right-nav { display: flex; justify-content: flex-end; align-items: center; padding: 40px 60px; gap: 24px; }
   .contact-right-nav a { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: #0c222c; text-decoration: none; transition: opacity 0.2s; }
   .contact-right-nav a:hover { opacity: 0.6; }
+  .contact-right-nav a.active { opacity: 1; }
   .contact-right-nav .nav-cta { padding: 8px 16px; border: 1px solid rgba(12,34,44,0.2); }
   .contact-right-content { flex: 1; padding: 0 80px 60px; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
   .form-section-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; color: rgba(12,34,44,0.35); }
@@ -56,15 +57,14 @@
 <div class="page-curtain"></div>
 
 <nav class="scroll-nav">
-  <div class="nav-logo"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></div>
+  <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
   <div class="scroll-nav-links">
-    <a href="index.html">HOME</a>
     <a href="practices.html">PRACTICES</a>
     <a href="#">ABOUT</a>
     <a href="#">APPROACH</a>
     <a href="#">INSIGHTS</a>
   </div>
-  <a href="contact.html" class="scroll-nav-cta">CONTACT</a>
+  <a href="contact.html" class="scroll-nav-cta active">CONTACT US</a>
 </nav>
 
 <section class="contact-page">
@@ -101,7 +101,7 @@
       <a href="#">ABOUT</a>
       <a href="#">APPROACH</a>
       <a href="#">INSIGHTS</a>
-      <a href="contact.html" class="nav-cta">CONTACT US</a>
+      <a href="contact.html" class="nav-cta active">CONTACT US</a>
     </div>
     <div class="contact-right-content">
       <span class="form-section-label">SEND A MESSAGE</span>
