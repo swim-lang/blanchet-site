@@ -66,29 +66,31 @@
   .firm-letter.revealed { opacity: 1; transform: translateY(0); }
 
   /* ============================================
-     What Defines
+     What Defines — Full Bleed Split
      ============================================ */
-  .firm-defines { display: flex; background: #fff; position: relative; overflow: hidden; }
-  .firm-defines-left { width: 440px; flex-shrink: 0; padding: 214px 56px 214px 80px; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
-  .firm-defines-left .section-label-dark { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: rgba(12,34,44,0.5); }
-  .firm-defines-left h2 { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 700; color: #0c222c; line-height: 1.1; }
-  .firm-defines-left .rule { width: 40px; height: 2px; background: rgba(12,34,44,0.1); }
-  .firm-defines-left p { font-family: 'Inter', sans-serif; font-size: 15px; color: rgba(12,34,44,0.55); line-height: 1.85; max-width: 380px; }
-  .firm-defines-note { padding-top: 44px; display: flex; flex-direction: column; gap: 8px; }
-  .firm-defines-note span { font-family: 'Inter', sans-serif; font-size: 13px; font-style: italic; color: rgba(12,34,44,0.45); line-height: 1.6; }
-  .firm-defines-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; }
-  .firm-defines-block { padding: 56px 48px; display: flex; flex-direction: column; gap: 16px; border-left: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; }
-  .firm-defines-block:nth-child(3), .firm-defines-block:nth-child(4) { border-bottom: none; }
-  .firm-defines-block .block-num { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; color: rgba(12,34,44,0.3); }
-  .firm-defines-block h3 { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 600; color: #0c222c; line-height: 1.35; }
-  .firm-defines-block p { font-family: 'Inter', sans-serif; font-size: 14px; color: #6b7280; line-height: 1.8; }
+  .firm-defines { display: flex; background: #fff; position: relative; overflow: hidden; min-height: 100vh; }
+  .firm-defines-video { width: 50%; flex-shrink: 0; position: relative; overflow: hidden; }
+  .firm-defines-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .firm-defines-right { width: 50%; padding: 214px 80px 214px 72px; display: flex; flex-direction: column; justify-content: center; }
+  .firm-defines-right .section-label-dark { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: rgba(12,34,44,0.35); margin-bottom: 20px; }
+  .firm-defines-right h2 { font-family: 'Inter', sans-serif; font-size: 48px; font-weight: 700; color: #0c222c; line-height: 1.08; margin-bottom: 16px; }
+  .firm-defines-right .rule { width: 40px; height: 2px; background: rgba(12,34,44,0.12); margin-bottom: 56px; }
+  .firm-defines-rows { display: flex; flex-direction: column; }
+  .firm-defines-row { padding: 28px 0; border-top: 1px solid rgba(12,34,44,0.08); display: flex; gap: 32px; align-items: flex-start; }
+  .firm-defines-row:last-child { border-bottom: 1px solid rgba(12,34,44,0.08); }
+  .firm-defines-row .row-num { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 1.5px; color: rgba(12,34,44,0.25); flex-shrink: 0; padding-top: 2px; }
+  .firm-defines-row-content { display: flex; flex-direction: column; gap: 8px; }
+  .firm-defines-row h3 { font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: #0c222c; line-height: 1.35; text-transform: none; }
+  .firm-defines-row p { font-family: 'Inter', sans-serif; font-size: 14px; color: rgba(12,34,44,0.5); line-height: 1.75; }
+  .firm-defines-closing { margin-top: 48px; }
+  .firm-defines-closing span { font-family: 'Inter', sans-serif; font-size: 13px; font-style: italic; color: rgba(12,34,44,0.35); line-height: 1.6; }
 
-  /* Block reveal */
-  .firm-defines-block {
-    opacity: 0; transform: translateY(24px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+  /* Row reveal */
+  .firm-defines-row {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
   }
-  .firm-defines-block.revealed { opacity: 1; transform: translateY(0); }
+  .firm-defines-row.revealed { opacity: 1; transform: translateY(0); }
 
   /* ============================================
      Timeline
@@ -180,10 +182,9 @@
     .firm-hero-right { height: 320px; }
     .firm-letter-wrap { padding: 60px 24px; }
     .firm-letter { width: 100%; padding: 48px 32px; }
-    .firm-defines { flex-direction: column; }
-    .firm-defines-left { width: 100%; padding: 60px 24px; }
-    .firm-defines-grid { grid-template-columns: 1fr; }
-    .firm-defines-block { border-left: none !important; }
+    .firm-defines { flex-direction: column; min-height: auto; }
+    .firm-defines-video { width: 100%; height: 320px; }
+    .firm-defines-right { width: 100%; padding: 60px 24px; }
     .firm-timeline { padding: 60px 24px; }
     .firm-timeline-entries { flex-direction: column; gap: 32px; }
     .firm-timeline-track { display: none; }
@@ -201,9 +202,9 @@
   @media (min-width: 768px) and (max-width: 1279px) {
     .firm-hero-left { width: 440px; }
     .firm-hero-title { font-size: 42px; }
-    .firm-defines-left { width: 340px; padding: 60px 36px; }
-    .firm-defines-left h2 { font-size: 32px; }
-    .firm-defines-block { padding: 40px 36px; }
+    .firm-defines-video { width: 45%; }
+    .firm-defines-right { width: 55%; padding: 80px 48px 80px 48px; }
+    .firm-defines-right h2 { font-size: 36px; }
     .firm-pov-left { width: 340px; padding: 80px 36px; }
     .firm-pov-deck { width: 440px; height: 420px; }
     .firm-pov-card { width: 440px; height: 420px; padding: 48px 40px; }
@@ -331,36 +332,48 @@
      SECTION 3: What Defines the Firm
      ============================================ -->
 <section class="firm-defines">
-  <div class="firm-defines-left">
+  <div class="firm-defines-video">
+    <video autoplay muted loop playsinline preload="metadata">
+      <source src="assets/video/city.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="firm-defines-right">
     <span class="section-label-dark">[ WHAT DEFINES THE FIRM ]</span>
     <h2>Built with<br>focus, not<br>sprawl.</h2>
     <div class="rule"></div>
-    <p>Blanchet is not trying to be everything. It is built around a clear kind of work and a clear way of doing it.</p>
-    <div class="firm-defines-note">
-      <div style="width:24px;height:1px;background:rgba(12,34,44,0.08);"></div>
-      <span>What clients usually feel first<br>is not size. It is clarity.</span>
+    <div class="firm-defines-rows">
+      <div class="firm-defines-row">
+        <span class="row-num">01</span>
+        <div class="firm-defines-row-content">
+          <h3>Disputes at the center</h3>
+          <p>The firm is built around litigation, investigations, and trial work. That focus shapes how matters are assessed, staffed, and run.</p>
+        </div>
+      </div>
+      <div class="firm-defines-row">
+        <span class="row-num">02</span>
+        <div class="firm-defines-row-content">
+          <h3>Senior lawyers, close to the file</h3>
+          <p>Clients are not hiring layers of oversight. They are hiring experienced litigators who stay involved, make decisions, and remain accountable.</p>
+        </div>
+      </div>
+      <div class="firm-defines-row">
+        <span class="row-num">03</span>
+        <div class="firm-defines-row-content">
+          <h3>Broad enough for real overlap</h3>
+          <p>Many disputes do not stay in one lane. A commercial case may become an internal review. The firm is built for that kind of overlap.</p>
+        </div>
+      </div>
+      <div class="firm-defines-row">
+        <span class="row-num">04</span>
+        <div class="firm-defines-row-content">
+          <h3>Modern where it counts</h3>
+          <p>Technology is part of how Blanchet works, but only where it improves clarity, coordination, speed, or control.</p>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="firm-defines-grid">
-    <div class="firm-defines-block" data-delay="0">
-      <span class="block-num">01</span>
-      <h3>Disputes at the center</h3>
-      <p>The firm is built around litigation, investigations, and trial work. That focus shapes how matters are assessed, staffed, and run.</p>
-    </div>
-    <div class="firm-defines-block" data-delay="1">
-      <span class="block-num">02</span>
-      <h3>Senior lawyers, close to the file</h3>
-      <p>Clients are not hiring layers of oversight. They are hiring experienced litigators who stay involved, make decisions, and remain accountable for the work.</p>
-    </div>
-    <div class="firm-defines-block" data-delay="2">
-      <span class="block-num">03</span>
-      <h3>Broad enough for real overlap</h3>
-      <p>Many disputes do not stay in one lane. A commercial case may become an internal review. A technical issue may turn regulatory. The firm is built for that kind of overlap.</p>
-    </div>
-    <div class="firm-defines-block" data-delay="3">
-      <span class="block-num">04</span>
-      <h3>Modern where it counts</h3>
-      <p>Technology is part of how Blanchet works, but only where it improves clarity, coordination, speed, or control. The point is better handling, not theater.</p>
+    <div class="firm-defines-closing">
+      <div style="width:24px;height:1px;background:rgba(12,34,44,0.08);margin-bottom:12px;"></div>
+      <span>What clients usually feel first is not size. It is clarity.</span>
     </div>
   </div>
 </section>
@@ -569,7 +582,7 @@
   }
 
   // Define blocks staggered reveal
-  document.querySelectorAll('.firm-defines-block').forEach((block, i) => {
+  document.querySelectorAll('.firm-defines-row').forEach((block, i) => {
     const delay = parseInt(block.dataset.delay || 0) * 150;
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
