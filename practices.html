@@ -12,7 +12,7 @@
   .practices-page { display: flex; min-height: 100vh; }
 
   /* Dark left panel */
-  .practices-left { width: 480px; flex-shrink: 0; background: #0c222c; padding: 0 48px 60px; display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh; }
+  .practices-left { width: 480px; flex-shrink: 0; background: #0c222c; padding: 0 48px 60px; display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh; align-self: flex-start; }
   .practices-left-nav { display: flex; justify-content: space-between; align-items: center; padding: 40px 0; }
   .practices-left-nav .nav-logo img { height: 15px; width: auto; }
   .practices-left-content { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 32px; }
@@ -46,20 +46,29 @@
 
   /* Grid cells */
   .practices-grid-row { display: flex; border-bottom: 1px solid #e5e5e5; }
-  .practices-cell { flex: 1; padding: 48px 40px; display: flex; flex-direction: column; gap: 14px; }
+  .practices-cell { flex: 1; padding: 48px 40px; display: flex; flex-direction: column; gap: 14px; transition: background 0.3s ease; cursor: pointer; }
+  .practices-cell:hover { background: #f7f7f7; }
   .practices-cell.bordered { border-right: 1px solid #e5e5e5; }
   .practices-cell.dark { background: #0c222c; }
+  .practices-cell.dark:hover { background: #132e3a; }
   .practices-cell .cell-tag { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 2px; color: rgba(12,34,44,0.3); text-transform: uppercase; }
   .practices-cell.dark .cell-tag { color: rgba(255,255,255,0.3); }
   .practices-cell h3 { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 700; color: #0c222c; line-height: 1.1; text-transform: uppercase; }
   .practices-cell.dark h3 { color: #fff; }
   .practices-cell p { font-family: 'Inter', sans-serif; font-size: 14px; color: #6b7280; line-height: 1.75; }
   .practices-cell.dark p { color: rgba(255,255,255,0.5); }
-  .practices-cell .cell-link { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; color: #0c222c; padding-top: 8px; }
+  .practices-cell .cell-link { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; color: #0c222c; padding-top: 8px; transition: letter-spacing 0.2s ease; }
+  .practices-cell:hover .cell-link { letter-spacing: 1px; }
   .practices-cell.dark .cell-link { color: #fff; }
 
+  /* Featured hover */
+  .practices-featured { cursor: pointer; }
+  .practices-featured:hover .practices-featured-overlay { background: rgba(12,34,44,0.7); }
+  .practices-featured-overlay { transition: background 0.3s ease; }
+
   /* Full-width environmental row */
-  .practices-wide-row { display: flex; padding: 48px 40px; border-bottom: 1px solid #e5e5e5; gap: 80px; align-items: flex-start; }
+  .practices-wide-row { display: flex; padding: 48px 40px; border-bottom: 1px solid #e5e5e5; gap: 80px; align-items: flex-start; cursor: pointer; transition: background 0.3s ease; }
+  .practices-wide-row:hover { background: #f7f7f7; }
   .practices-wide-left { width: 380px; flex-shrink: 0; display: flex; flex-direction: column; gap: 14px; }
   .practices-wide-right { flex: 1; padding-top: 28px; }
   .practices-wide-right p { font-family: 'Inter', sans-serif; font-size: 14px; color: #6b7280; line-height: 1.75; }
@@ -146,7 +155,7 @@
 
     <!-- Featured: Litigation -->
     <div id="litigation" class="practices-featured">
-      <img class="practices-featured-bg" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1400&q=80" alt="Litigation">
+      <img class="practices-featured-bg" src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1400&q=80" alt="New York City skyline">
       <div class="practices-featured-overlay"></div>
       <div class="practices-featured-content">
         <span class="practices-featured-label">Featured Practice</span>
@@ -203,6 +212,71 @@
 </section>
 
 <script src="js/main.js"></script>
+<script>
+// Practice Areas — hover/click sync between grid cells and left index
+(function() {
+  const indexLinks = document.querySelectorAll('.practices-index a');
+  const sections = document.querySelectorAll('.practices-featured, .practices-cell, .practices-wide-row');
+
+  // Map each hoverable section to its corresponding index link
+  const sectionMap = {
+    'litigation': 0,
+    'white-collar': 1,
+    'investigations': 2,
+    'product-liability': 3,
+    'class-actions': 4,
+    'environmental': 5
+  };
+
+  function setActiveIndex(idx) {
+    indexLinks.forEach((link, i) => {
+      if (i === idx) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  // Hover on grid cells highlights the left menu
+  sections.forEach(section => {
+    const id = section.id;
+    if (id && sectionMap[id] !== undefined) {
+      section.addEventListener('mouseenter', () => {
+        setActiveIndex(sectionMap[id]);
+      });
+    }
+  });
+
+  // Click on left menu scrolls to the section
+  indexLinks.forEach((link, i) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').replace('#', '');
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setActiveIndex(i);
+      }
+    });
+  });
+
+  // Scroll-based active state — update left menu as user scrolls
+  if (window.innerWidth >= 768) {
+    const allSections = Object.keys(sectionMap).map(id => document.getElementById(id)).filter(Boolean);
+    window.addEventListener('scroll', () => {
+      let current = 0;
+      allSections.forEach((section, i) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.5) {
+          current = i;
+        }
+      });
+      setActiveIndex(current);
+    }, { passive: true });
+  }
+})();
+</script>
 
 </body>
 </html>
