@@ -239,14 +239,17 @@ document.querySelectorAll('.wwr-row[data-accordion]').forEach(row => {
 // Page transition curtain
 const curtain = document.querySelector('.page-curtain');
 if (curtain) {
-  // Reveal on load — curtain starts opaque, fades away
-  window.addEventListener('load', () => {
-    requestAnimationFrame(() => curtain.classList.add('reveal'));
-  });
-  // Also reveal quickly if load event already fired
-  if (document.readyState === 'complete') {
-    requestAnimationFrame(() => curtain.classList.add('reveal'));
+  const revealCurtain = () => requestAnimationFrame(() => curtain.classList.add('reveal'));
+  // Reveal on load
+  window.addEventListener('load', revealCurtain);
+  // Also reveal on DOMContentLoaded (don't wait for video/images)
+  document.addEventListener('DOMContentLoaded', revealCurtain);
+  // Reveal if already complete
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    revealCurtain();
   }
+  // Safety timeout — never block page for more than 1.5s
+  setTimeout(revealCurtain, 1500);
   // Exit on internal link click — curtain fades in, then navigate
   document.addEventListener('click', (e) => {
     const link = e.target.closest('a[href]');
