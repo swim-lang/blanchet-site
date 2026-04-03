@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice Areas | BLANCHET</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#0c222c}</style>
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  /* Practice Areas Page */
+  .practices-page { display: flex; min-height: 100vh; }
+
+  /* Dark left panel */
+  .practices-left { width: 480px; flex-shrink: 0; background: #0c222c; padding: 0 48px 60px; display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh; }
+  .practices-left-nav { display: flex; justify-content: space-between; align-items: center; padding: 40px 0; }
+  .practices-left-nav .nav-logo img { height: 15px; width: auto; }
+  .practices-left-content { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 32px; }
+  .practices-label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 2.5px; color: rgba(255,255,255,0.3); text-transform: uppercase; }
+  .practices-heading { font-family: 'Inter', sans-serif; font-size: 64px; font-weight: 700; color: #fff; line-height: 1.0; text-transform: uppercase; }
+  .practices-intro { font-family: 'Inter', sans-serif; font-size: 15px; color: rgba(255,255,255,0.45); line-height: 1.8; max-width: 340px; }
+  .practices-divider { width: 40px; height: 2px; background: rgba(255,255,255,0.15); }
+  .practices-index { display: flex; flex-direction: column; gap: 18px; }
+  .practices-index a { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.35); letter-spacing: 0.5px; text-decoration: none; transition: color 0.2s; }
+  .practices-index a:hover,
+  .practices-index a.active { color: #fff; }
+
+  /* Right panel */
+  .practices-right { flex: 1; display: flex; flex-direction: column; background: #fff; }
+
+  /* Right nav */
+  .practices-right-nav { position: absolute; top: 0; right: 0; z-index: 10; display: flex; justify-content: flex-end; align-items: center; padding: 40px 60px; gap: 24px; }
+  .practices-right-nav a { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 1px; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+  .practices-right-nav a:hover { color: #fff; }
+  .practices-right-nav .nav-cta { padding: 8px 16px; border: 1px solid rgba(255,255,255,0.3); color: #fff; }
+  .practices-right-nav .nav-cta:hover { background: rgba(255,255,255,0.08); }
+
+  /* Featured hero */
+  .practices-featured { position: relative; min-height: 560px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; }
+  .practices-featured-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .practices-featured-overlay { position: absolute; inset: 0; background: rgba(12,34,44,0.78); }
+  .practices-featured-content { position: relative; padding: 0 60px 56px; display: flex; flex-direction: column; gap: 0; }
+  .practices-featured-label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 2px; color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: 16px; }
+  .practices-featured h2 { font-family: 'Inter', sans-serif; font-size: 56px; font-weight: 700; color: #fff; line-height: 1.0; text-transform: uppercase; margin-bottom: 24px; }
+  .practices-featured p { font-family: 'Inter', sans-serif; font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.8; max-width: 480px; }
+
+  /* Grid cells */
+  .practices-grid-row { display: flex; border-bottom: 1px solid #e5e5e5; }
+  .practices-cell { flex: 1; padding: 48px 40px; display: flex; flex-direction: column; gap: 14px; }
+  .practices-cell.bordered { border-right: 1px solid #e5e5e5; }
+  .practices-cell.dark { background: #0c222c; }
+  .practices-cell .cell-tag { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 2px; color: rgba(12,34,44,0.3); text-transform: uppercase; }
+  .practices-cell.dark .cell-tag { color: rgba(255,255,255,0.3); }
+  .practices-cell h3 { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 700; color: #0c222c; line-height: 1.1; text-transform: uppercase; }
+  .practices-cell.dark h3 { color: #fff; }
+  .practices-cell p { font-family: 'Inter', sans-serif; font-size: 14px; color: #6b7280; line-height: 1.75; }
+  .practices-cell.dark p { color: rgba(255,255,255,0.5); }
+  .practices-cell .cell-link { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; color: #0c222c; padding-top: 8px; }
+  .practices-cell.dark .cell-link { color: #fff; }
+
+  /* Full-width environmental row */
+  .practices-wide-row { display: flex; padding: 48px 40px; border-bottom: 1px solid #e5e5e5; gap: 80px; align-items: flex-start; }
+  .practices-wide-left { width: 380px; flex-shrink: 0; display: flex; flex-direction: column; gap: 14px; }
+  .practices-wide-right { flex: 1; padding-top: 28px; }
+  .practices-wide-right p { font-family: 'Inter', sans-serif; font-size: 14px; color: #6b7280; line-height: 1.75; }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    .practices-page { flex-direction: column; }
+    .practices-left { width: 100%; position: relative; height: auto; padding: 40px 24px; }
+    .practices-heading { font-size: 42px; }
+    .practices-index { display: none; }
+    .practices-right-nav { padding: 24px; }
+    .practices-featured { min-height: 400px; }
+    .practices-featured h2 { font-size: 36px; }
+    .practices-featured-content { padding: 0 24px 40px; }
+    .practices-grid-row { flex-direction: column; }
+    .practices-cell.bordered { border-right: none; border-bottom: 1px solid #e5e5e5; }
+    .practices-wide-row { flex-direction: column; gap: 24px; padding: 40px 24px; }
+    .practices-wide-left { width: 100%; }
+    .practices-wide-right { padding-top: 0; }
+  }
+
+  /* Tablet */
+  @media (min-width: 768px) and (max-width: 1279px) {
+    .practices-left { width: 360px; padding: 0 36px 48px; }
+    .practices-heading { font-size: 48px; }
+    .practices-featured h2 { font-size: 44px; }
+    .practices-featured-content { padding: 0 48px 48px; }
+    .practices-cell { padding: 40px 32px; }
+    .practices-wide-row { padding: 40px 32px; gap: 48px; }
+    .practices-wide-left { width: 300px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-curtain"></div>
+
+<nav class="scroll-nav">
+  <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
+  <div class="scroll-nav-links">
+    <a href="index.html">HOME</a>
+    <a href="practices.html">PRACTICES</a>
+    <a href="#">ABOUT</a>
+    <a href="#">APPROACH</a>
+    <a href="#">INSIGHTS</a>
+  </div>
+  <a href="contact.html" class="scroll-nav-cta">CONTACT</a>
+</nav>
+
+<section class="practices-page">
+
+  <!-- Dark left panel -->
+  <div class="practices-left">
+    <div class="practices-left-nav">
+      <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
+    </div>
+    <div class="practices-left-content">
+      <span class="practices-label">[ PRACTICE AREAS ]</span>
+      <h1 class="practices-heading">What<br>We Do</h1>
+      <p class="practices-intro">Blanchet handles litigation, investigations, and disputes across a focused set of practice areas — each led by lawyers with national-level experience and a direct, trial-ready approach.</p>
+      <div class="practices-divider"></div>
+      <div class="practices-index">
+        <a href="#litigation" class="active">Litigation</a>
+        <a href="#white-collar">White Collar Defense</a>
+        <a href="#investigations">Government Investigations</a>
+        <a href="#product-liability">Product Liability</a>
+        <a href="#class-actions">Class Actions</a>
+        <a href="#environmental">Environmental & Regulatory</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right panel -->
+  <div class="practices-right">
+
+    <!-- Nav over featured image -->
+    <div class="practices-right-nav">
+      <a href="index.html">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">APPROACH</a>
+      <a href="#">INSIGHTS</a>
+      <a href="contact.html" class="nav-cta">CONTACT US</a>
+    </div>
+
+    <!-- Featured: Litigation -->
+    <div id="litigation" class="practices-featured">
+      <img class="practices-featured-bg" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1400&q=80" alt="Litigation">
+      <div class="practices-featured-overlay"></div>
+      <div class="practices-featured-content">
+        <span class="practices-featured-label">Featured Practice</span>
+        <h2>Litigation</h2>
+        <p>Blanchet's litigation practice spans commercial disputes, contract claims, and complex business conflicts. Every case is staffed for trial — not just resolution — with disciplined preparation and direct partner involvement throughout.</p>
+      </div>
+    </div>
+
+    <!-- Grid: White Collar + Government Investigations -->
+    <div class="practices-grid-row">
+      <div id="white-collar" class="practices-cell bordered">
+        <span class="cell-tag">Defense</span>
+        <h3>White Collar<br>Defense</h3>
+        <p>Representing executives and companies in federal and state investigations, enforcement actions, and internal reviews — from the first subpoena through resolution.</p>
+        <span class="cell-link">Learn more →</span>
+      </div>
+      <div id="investigations" class="practices-cell">
+        <span class="cell-tag">Regulatory</span>
+        <h3>Government<br>Investigations</h3>
+        <p>Advising clients facing DOJ, SEC, and state-level investigations — managing parallel proceedings, negotiating resolutions, and preparing for trial when necessary.</p>
+        <span class="cell-link">Learn more →</span>
+      </div>
+    </div>
+
+    <!-- Grid: Product Liability (dark) + Class Actions -->
+    <div class="practices-grid-row">
+      <div id="product-liability" class="practices-cell dark">
+        <span class="cell-tag">Mass Tort</span>
+        <h3>Product<br>Liability</h3>
+        <p>Defending manufacturers and distributors in single-plaintiff, multi-district, and class-wide claims involving toxic tort, pharmaceutical, and industrial matters.</p>
+        <span class="cell-link">Learn more →</span>
+      </div>
+      <div id="class-actions" class="practices-cell">
+        <span class="cell-tag">Aggregate</span>
+        <h3>Class<br>Actions</h3>
+        <p>Defending class certification, managing discovery, and trying cases where aggregate exposure demands strategic discipline and courtroom credibility.</p>
+        <span class="cell-link">Learn more →</span>
+      </div>
+    </div>
+
+    <!-- Wide row: Environmental & Regulatory -->
+    <div id="environmental" class="practices-wide-row">
+      <div class="practices-wide-left">
+        <span class="cell-tag">Compliance</span>
+        <h3 style="font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 700; color: #0c222c; line-height: 1.1; text-transform: uppercase;">Environmental<br>& Regulatory</h3>
+        <span class="cell-link">Learn more →</span>
+      </div>
+      <div class="practices-wide-right">
+        <p>Handling enforcement actions, contamination disputes, permitting challenges, and regulatory compliance matters — with particular experience in chemical exposure and industrial site litigation.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -213,21 +213,52 @@ function updateParallax() {
 window.addEventListener('scroll', updateParallax, { passive: true });
 updateParallax();
 
-// Who We Represent accordion
+// Who We Represent accordion — hover on desktop, click on mobile
 document.querySelectorAll('.wwr-row[data-accordion]').forEach(row => {
   const header = row.querySelector('.wwr-row-header');
-  header.addEventListener('click', () => {
-    const isOpen = row.classList.contains('open');
-    const headerRect = header.getBoundingClientRect();
-    const headerTop = headerRect.top + window.scrollY;
-    document.querySelectorAll('.wwr-row.open').forEach(r => r.classList.remove('open'));
-    if (!isOpen) row.classList.add('open');
-    requestAnimationFrame(() => {
-      const newHeaderTop = header.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo(0, window.scrollY + (newHeaderTop - headerTop));
+  if (window.innerWidth >= 768) {
+    row.addEventListener('mouseenter', () => {
+      document.querySelectorAll('.wwr-row.open').forEach(r => r.classList.remove('open'));
+      row.classList.add('open');
     });
-  });
+  } else {
+    header.addEventListener('click', () => {
+      const isOpen = row.classList.contains('open');
+      const headerRect = header.getBoundingClientRect();
+      const headerTop = headerRect.top + window.scrollY;
+      document.querySelectorAll('.wwr-row.open').forEach(r => r.classList.remove('open'));
+      if (!isOpen) row.classList.add('open');
+      requestAnimationFrame(() => {
+        const newHeaderTop = header.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo(0, window.scrollY + (newHeaderTop - headerTop));
+      });
+    });
+  }
 });
+
+// Page transition curtain
+const curtain = document.querySelector('.page-curtain');
+if (curtain) {
+  // Reveal on load — curtain starts opaque, fades away
+  window.addEventListener('load', () => {
+    requestAnimationFrame(() => curtain.classList.add('reveal'));
+  });
+  // Also reveal quickly if load event already fired
+  if (document.readyState === 'complete') {
+    requestAnimationFrame(() => curtain.classList.add('reveal'));
+  }
+  // Exit on internal link click — curtain fades in, then navigate
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href]');
+    if (!link) return;
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('javascript')) return;
+    e.preventDefault();
+    curtain.classList.remove('reveal');
+    curtain.classList.add('exit');
+    setTimeout(() => { window.location.href = href; }, 350);
+  });
+}
 
 // Recalculate on resize (debounced)
 let resizeTimer;
@@ -239,13 +270,3 @@ window.addEventListener('resize', () => {
   }, 250);
 });
 
-// Page transitions — smooth exit on internal links
-document.addEventListener('click', (e) => {
-  const link = e.target.closest('a[href]');
-  if (!link) return;
-  const href = link.getAttribute('href');
-  if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto')) return;
-  e.preventDefault();
-  document.body.classList.add('page-exit');
-  setTimeout(() => { window.location.href = href; }, 300);
-});
