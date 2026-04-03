@@ -44,34 +44,38 @@
   .practices-featured h2 { font-family: 'Inter', sans-serif; font-size: 56px; font-weight: 700; color: #fff; line-height: 1.0; text-transform: uppercase; margin-bottom: 24px; }
   .practices-featured p { font-family: 'Inter', sans-serif; font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.8; max-width: 480px; }
 
-  /* Grid cells */
+  /* Grid cells — all white by default, navy on hover */
   .practices-grid-row { display: flex; border-bottom: 1px solid #e5e5e5; }
-  .practices-cell { flex: 1; padding: 48px 40px; display: flex; flex-direction: column; gap: 14px; transition: background 0.3s ease; cursor: pointer; }
-  .practices-cell:hover { background: #f7f7f7; }
+  .practices-cell { flex: 1; padding: 48px 40px; display: flex; flex-direction: column; gap: 14px; transition: background 0.4s ease, color 0.4s ease; cursor: pointer; background: #fff; }
+  .practices-cell:hover { background: #0c222c; }
   .practices-cell.bordered { border-right: 1px solid #e5e5e5; }
-  .practices-cell.dark { background: #0c222c; }
-  .practices-cell.dark:hover { background: #132e3a; }
-  .practices-cell .cell-tag { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 2px; color: rgba(12,34,44,0.3); text-transform: uppercase; }
-  .practices-cell.dark .cell-tag { color: rgba(255,255,255,0.3); }
-  .practices-cell h3 { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 700; color: #0c222c; line-height: 1.1; text-transform: uppercase; }
-  .practices-cell.dark h3 { color: #fff; }
-  .practices-cell p { font-family: 'Inter', sans-serif; font-size: 14px; color: #6b7280; line-height: 1.75; }
-  .practices-cell.dark p { color: rgba(255,255,255,0.5); }
-  .practices-cell .cell-link { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; color: #0c222c; padding-top: 8px; transition: letter-spacing 0.2s ease; }
-  .practices-cell:hover .cell-link { letter-spacing: 1px; }
-  .practices-cell.dark .cell-link { color: #fff; }
+  .practices-cell .cell-tag { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 2px; color: rgba(12,34,44,0.3); text-transform: uppercase; transition: color 0.4s ease; }
+  .practices-cell:hover .cell-tag { color: rgba(255,255,255,0.3); }
+  .practices-cell h3 { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 700; color: #0c222c; line-height: 1.1; text-transform: uppercase; transition: color 0.4s ease; }
+  .practices-cell:hover h3 { color: #fff; }
+  .practices-cell p { font-family: 'Inter', sans-serif; font-size: 14px; color: #6b7280; line-height: 1.75; transition: color 0.4s ease; }
+  .practices-cell:hover p { color: rgba(255,255,255,0.5); }
+  .practices-cell .cell-link { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; color: #0c222c; padding-top: 8px; transition: color 0.4s ease; }
+  .practices-cell:hover .cell-link { color: #fff; }
 
   /* Featured hover */
   .practices-featured { cursor: pointer; }
   .practices-featured:hover .practices-featured-overlay { background: rgba(12,34,44,0.7); }
   .practices-featured-overlay { transition: background 0.3s ease; }
 
-  /* Full-width environmental row */
-  .practices-wide-row { display: flex; padding: 48px 40px; border-bottom: 1px solid #e5e5e5; gap: 80px; align-items: flex-start; cursor: pointer; transition: background 0.3s ease; }
-  .practices-wide-row:hover { background: #f7f7f7; }
+  /* Full-width environmental row — same hover treatment */
+  .practices-wide-row { display: flex; padding: 48px 40px; border-bottom: 1px solid #e5e5e5; gap: 80px; align-items: flex-start; cursor: pointer; transition: background 0.4s ease; }
+  .practices-wide-row:hover { background: #0c222c; }
   .practices-wide-left { width: 380px; flex-shrink: 0; display: flex; flex-direction: column; gap: 14px; }
+  .practices-wide-left .cell-tag { transition: color 0.4s ease; }
+  .practices-wide-row:hover .cell-tag { color: rgba(255,255,255,0.3); }
+  .practices-wide-left h3 { transition: color 0.4s ease; }
+  .practices-wide-row:hover h3 { color: #fff; }
+  .practices-wide-left .cell-link { transition: color 0.4s ease; }
+  .practices-wide-row:hover .cell-link { color: #fff; }
   .practices-wide-right { flex: 1; padding-top: 28px; }
-  .practices-wide-right p { font-family: 'Inter', sans-serif; font-size: 14px; color: #6b7280; line-height: 1.75; }
+  .practices-wide-right p { font-family: 'Inter', sans-serif; font-size: 14px; color: #6b7280; line-height: 1.75; transition: color 0.4s ease; }
+  .practices-wide-row:hover .practices-wide-right p { color: rgba(255,255,255,0.5); }
 
   /* Mobile */
   @media (max-width: 767px) {
@@ -182,7 +186,7 @@
 
     <!-- Grid: Product Liability (dark) + Class Actions -->
     <div class="practices-grid-row">
-      <div id="product-liability" class="practices-cell dark">
+      <div id="product-liability" class="practices-cell bordered">
         <span class="cell-tag">Mass Tort</span>
         <h3>Product<br>Liability</h3>
         <p>Defending manufacturers and distributors in single-plaintiff, multi-district, and class-wide claims involving toxic tort, pharmaceutical, and industrial matters.</p>
