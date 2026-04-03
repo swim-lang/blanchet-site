@@ -44,19 +44,17 @@
   .practices-featured h2 { font-family: 'Inter', sans-serif; font-size: 56px; font-weight: 700; color: #fff; line-height: 1.0; text-transform: uppercase; margin-bottom: 24px; }
   .practices-featured p { font-family: 'Inter', sans-serif; font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.8; max-width: 480px; }
 
-  /* Grid cells — all white by default, navy on hover */
+  /* Grid cells — white by default, brand gray (#ededed) on hover */
   .practices-grid-row { display: flex; border-bottom: 1px solid #e5e5e5; }
-  .practices-cell { flex: 1; padding: 48px 40px; display: flex; flex-direction: column; gap: 14px; transition: background 0.4s ease, color 0.4s ease; cursor: pointer; background: #fff; }
-  .practices-cell:hover { background: #0c222c; }
+  .practices-cell { flex: 1; padding: 48px 40px; display: flex; flex-direction: column; gap: 14px; transition: background 0.4s ease; cursor: pointer; background: #fff; }
+  .practices-cell:hover { background: #ededed; }
   .practices-cell.bordered { border-right: 1px solid #e5e5e5; }
   .practices-cell .cell-tag { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; color: rgba(12,34,44,0.3); text-transform: uppercase; transition: color 0.4s ease; }
-  .practices-cell:hover .cell-tag { color: rgba(255,255,255,0.3); }
-  .practices-cell h3 { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 700; color: #0c222c; line-height: 1.1; text-transform: uppercase; transition: color 0.4s ease; }
-  .practices-cell:hover h3 { color: #fff; }
+  .practices-cell:hover .cell-tag { color: rgba(12,34,44,0.45); }
+  .practices-cell h3 { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 700; color: #0c222c; line-height: 1.1; text-transform: uppercase; }
   .practices-cell p { font-family: 'Inter', sans-serif; font-size: 15px; color: #6b7280; line-height: 1.75; transition: color 0.4s ease; }
-  .practices-cell:hover p { color: rgba(255,255,255,0.5); }
-  .practices-cell .cell-link { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: #0c222c; padding-top: 8px; transition: color 0.4s ease; }
-  .practices-cell:hover .cell-link { color: #fff; }
+  .practices-cell:hover p { color: #4b5563; }
+  .practices-cell .cell-link { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: #0c222c; padding-top: 8px; }
 
   /* Featured hover */
   .practices-featured { cursor: pointer; }
@@ -65,17 +63,13 @@
 
   /* Full-width environmental row — same hover treatment */
   .practices-wide-row { display: flex; padding: 48px 40px; border-bottom: 1px solid #e5e5e5; gap: 80px; align-items: flex-start; cursor: pointer; transition: background 0.4s ease; }
-  .practices-wide-row:hover { background: #0c222c; }
+  .practices-wide-row:hover { background: #ededed; }
   .practices-wide-left { width: 380px; flex-shrink: 0; display: flex; flex-direction: column; gap: 14px; }
   .practices-wide-left .cell-tag { transition: color 0.4s ease; }
-  .practices-wide-row:hover .cell-tag { color: rgba(255,255,255,0.3); }
-  .practices-wide-left h3 { transition: color 0.4s ease; }
-  .practices-wide-row:hover h3 { color: #fff; }
-  .practices-wide-left .cell-link { transition: color 0.4s ease; }
-  .practices-wide-row:hover .cell-link { color: #fff; }
+  .practices-wide-row:hover .cell-tag { color: rgba(12,34,44,0.45); }
   .practices-wide-right { flex: 1; padding-top: 28px; }
   .practices-wide-right p { font-family: 'Inter', sans-serif; font-size: 15px; color: #6b7280; line-height: 1.75; transition: color 0.4s ease; }
-  .practices-wide-row:hover .practices-wide-right p { color: rgba(255,255,255,0.5); }
+  .practices-wide-row:hover .practices-wide-right p { color: #4b5563; }
 
   /* Mobile */
   @media (max-width: 767px) {
