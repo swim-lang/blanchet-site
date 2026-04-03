@@ -61,16 +61,6 @@
   .practices-featured:hover .practices-featured-overlay { background: rgba(12,34,44,0.7); }
   .practices-featured-overlay { transition: background 0.3s ease; }
 
-  /* Full-width environmental row — same hover treatment */
-  .practices-wide-row { display: flex; padding: 48px 40px; border-bottom: 1px solid #e5e5e5; gap: 80px; align-items: flex-start; cursor: pointer; transition: background 0.4s ease; }
-  .practices-wide-row:hover { background: #ededed; }
-  .practices-wide-left { width: 380px; flex-shrink: 0; display: flex; flex-direction: column; gap: 14px; }
-  .practices-wide-left .cell-tag { transition: color 0.4s ease; }
-  .practices-wide-row:hover .cell-tag { color: rgba(12,34,44,0.45); }
-  .practices-wide-right { flex: 1; padding-top: 28px; }
-  .practices-wide-right p { font-family: 'Inter', sans-serif; font-size: 15px; color: #6b7280; line-height: 1.75; transition: color 0.4s ease; }
-  .practices-wide-row:hover .practices-wide-right p { color: #4b5563; }
-
   /* Mobile */
   @media (max-width: 767px) {
     .practices-page { flex-direction: column; }
@@ -83,9 +73,6 @@
     .practices-featured-content { padding: 0 24px 40px; }
     .practices-grid-row { flex-direction: column; }
     .practices-cell.bordered { border-right: none; border-bottom: 1px solid #e5e5e5; }
-    .practices-wide-row { flex-direction: column; gap: 24px; padding: 40px 24px; }
-    .practices-wide-left { width: 100%; }
-    .practices-wide-right { padding-top: 0; }
   }
 
   /* Tablet */
@@ -95,8 +82,6 @@
     .practices-featured h2 { font-size: 44px; }
     .practices-featured-content { padding: 0 48px 48px; }
     .practices-cell { padding: 40px 32px; }
-    .practices-wide-row { padding: 40px 32px; gap: 48px; }
-    .practices-wide-left { width: 300px; }
   }
 </style>
 </head>
@@ -194,15 +179,13 @@
       </div>
     </div>
 
-    <!-- Wide row: Environmental & Regulatory -->
-    <div id="environmental" class="practices-wide-row">
-      <div class="practices-wide-left">
+    <!-- Environmental & Regulatory — full width, same cell style -->
+    <div class="practices-grid-row">
+      <div id="environmental" class="practices-cell">
         <span class="cell-tag">Compliance</span>
-        <h3 style="font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 700; color: #0c222c; line-height: 1.1; text-transform: uppercase;">Environmental<br>& Regulatory</h3>
-        <span class="cell-link">Learn more →</span>
-      </div>
-      <div class="practices-wide-right">
+        <h3>Environmental<br>& Regulatory</h3>
         <p>Handling enforcement actions, contamination disputes, permitting challenges, and regulatory compliance matters — with particular experience in chemical exposure and industrial site litigation.</p>
+        <span class="cell-link">Learn more →</span>
       </div>
     </div>
 
