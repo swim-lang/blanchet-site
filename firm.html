@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Firm | BLANCHET</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#0c222c}</style>
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  /* ============================================
+     Hero
+     ============================================ */
+  .firm-hero { display: flex; min-height: 680px; position: relative; overflow: hidden; }
+  .firm-hero-left { width: 560px; flex-shrink: 0; background: #0c222c; padding: 40px 48px 56px; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 2; }
+  .firm-hero-left .nav-logo img { height: 15px; width: auto; }
+  .firm-hero-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: rgba(255,255,255,0.3); padding-bottom: 24px; }
+  .firm-hero-title { font-family: 'Inter', sans-serif; font-size: 52px; font-weight: 700; line-height: 1.05; text-transform: uppercase; color: #fff; padding-bottom: 28px; }
+  .firm-hero-rule { width: 40px; height: 2px; background: rgba(255,255,255,0.15); margin-bottom: 28px; }
+  .firm-hero-intro { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.85; color: rgba(255,255,255,0.4); max-width: 400px; }
+  .firm-hero-meta { display: flex; flex-direction: column; gap: 6px; }
+  .firm-hero-meta span { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; color: rgba(255,255,255,0.2); }
+  .firm-hero-meta span:last-child { font-weight: 400; letter-spacing: 1px; color: rgba(255,255,255,0.12); }
+  .firm-hero-right { flex: 1; position: relative; overflow: hidden; background: #0a1a22; }
+  .firm-hero-right > img:first-child { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
+  .firm-hero-nav { position: absolute; top: 40px; right: 48px; display: flex; gap: 28px; align-items: center; z-index: 3; }
+  .firm-hero-nav a { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+  .firm-hero-nav a:hover { color: #fff; }
+  .firm-hero-nav a.active { color: #fff; }
+  .firm-hero-nav .nav-cta { padding: 8px 16px; border: 1px solid rgba(255,255,255,0.2); color: #fff; }
+  .firm-hero-nav .nav-cta:hover { background: rgba(255,255,255,0.06); }
+  .firm-hero-logo-mark { position: absolute; bottom: 40px; right: 40px; width: 80px; height: auto; z-index: 2; opacity: 0; animation: logoMarkFadeIn 2s ease 1s forwards; }
+  @keyframes logoMarkFadeIn { to { opacity: 0.7; } }
+
+  /* ============================================
+     Founder Letter
+     ============================================ */
+  .firm-letter-wrap { display: flex; align-items: center; justify-content: center; padding: 214px 80px; background: #eef0f1; }
+  .firm-letter { width: 760px; background: #fff; padding: 72px 80px 64px; display: flex; flex-direction: column; position: relative; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .firm-letter-accent { position: absolute; top: 0; left: 80px; right: 80px; height: 1px; background: #0c222c; }
+  .firm-letter-logo { position: absolute; top: 56px; right: 64px; width: 24px; height: auto; opacity: 0; animation: logoMarkFadeInSubtle 2.5s ease 1.5s forwards; }
+  @keyframes logoMarkFadeInSubtle { to { opacity: 0.15; } }
+  .firm-letter-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: rgba(12,34,44,0.45); padding-bottom: 32px; }
+  .firm-letter h2 { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; color: #0c222c; line-height: 1.25; padding-bottom: 28px; }
+  .firm-letter-rule { width: 32px; height: 1.5px; background: rgba(12,34,44,0.12); margin-bottom: 28px; }
+  .firm-letter-body { display: flex; flex-direction: column; gap: 18px; padding-bottom: 36px; }
+  .firm-letter-body p { font-family: 'Inter', sans-serif; font-size: 14px; color: #4b5563; line-height: 1.9; }
+  .firm-letter-sig { display: flex; flex-direction: column; gap: 6px; padding-top: 28px; border-top: 1px solid rgba(12,34,44,0.06); align-items: flex-start; }
+  .firm-letter-sig-svg { height: 48px; width: auto; margin-bottom: 8px; align-self: flex-start; }
+  .firm-letter-sig-svg path {
+    stroke: #0c222c; stroke-width: 2; fill: none;
+    stroke-dasharray: 600; stroke-dashoffset: 600;
+    stroke-linecap: round; stroke-linejoin: round;
+  }
+  .firm-letter-sig-svg.animate path { animation: drawSig 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+  @keyframes drawSig {
+    to { stroke-dashoffset: 0; }
+  }
+  .firm-letter-sig-name { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; color: rgba(12,34,44,0.5); }
+
+  /* Letter entrance */
+  .firm-letter {
+    opacity: 0; transform: translateY(32px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .firm-letter.revealed { opacity: 1; transform: translateY(0); }
+
+  /* ============================================
+     What Defines
+     ============================================ */
+  .firm-defines { display: flex; background: #fff; position: relative; overflow: hidden; }
+  .firm-defines-left { width: 440px; flex-shrink: 0; padding: 214px 56px 214px 80px; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .firm-defines-left .section-label-dark { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: rgba(12,34,44,0.5); }
+  .firm-defines-left h2 { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 700; color: #0c222c; line-height: 1.1; }
+  .firm-defines-left .rule { width: 40px; height: 2px; background: rgba(12,34,44,0.1); }
+  .firm-defines-left p { font-family: 'Inter', sans-serif; font-size: 15px; color: rgba(12,34,44,0.55); line-height: 1.85; max-width: 380px; }
+  .firm-defines-note { padding-top: 44px; display: flex; flex-direction: column; gap: 8px; }
+  .firm-defines-note span { font-family: 'Inter', sans-serif; font-size: 13px; font-style: italic; color: rgba(12,34,44,0.45); line-height: 1.6; }
+  .firm-defines-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; }
+  .firm-defines-block { padding: 56px 48px; display: flex; flex-direction: column; gap: 16px; border-left: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; }
+  .firm-defines-block:nth-child(3), .firm-defines-block:nth-child(4) { border-bottom: none; }
+  .firm-defines-block .block-num { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; color: rgba(12,34,44,0.3); }
+  .firm-defines-block h3 { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 600; color: #0c222c; line-height: 1.35; }
+  .firm-defines-block p { font-family: 'Inter', sans-serif; font-size: 14px; color: #6b7280; line-height: 1.8; }
+
+  /* Block reveal */
+  .firm-defines-block {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .firm-defines-block.revealed { opacity: 1; transform: translateY(0); }
+
+  /* ============================================
+     Timeline
+     ============================================ */
+  .firm-timeline { background: #0c222c; padding: 214px 80px; }
+  .firm-timeline-header { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 56px; }
+  .firm-timeline-header-left { display: flex; flex-direction: column; gap: 16px; }
+  .firm-timeline-header-left span { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: rgba(255,255,255,0.3); }
+  .firm-timeline-header-left h2 { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 700; color: #fff; line-height: 1.15; }
+  .firm-timeline-header p { font-family: 'Inter', sans-serif; font-size: 13px; color: rgba(255,255,255,0.3); line-height: 1.75; max-width: 380px; }
+
+  /* Track */
+  .firm-timeline-track { position: relative; margin-bottom: 40px; }
+  .firm-timeline-line-bg { width: 100%; height: 1px; background: rgba(255,255,255,0.06); }
+  .firm-timeline-line-fill { position: absolute; left: 0; top: 0; width: 0; height: 2px; background: rgba(255,255,255,0.25); transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  .firm-timeline-dot { position: absolute; top: -3px; width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.08); transition: background 0.4s ease, transform 0.3s ease; transform: scale(0.6); }
+  .firm-timeline-dot.active { background: #fff; transform: scale(1); }
+  .firm-timeline-dot:nth-child(3) { left: 0%; }
+  .firm-timeline-dot:nth-child(4) { left: 23.5%; }
+  .firm-timeline-dot:nth-child(5) { left: 47%; }
+  .firm-timeline-dot:nth-child(6) { left: 70.5%; }
+  .firm-timeline-dot:nth-child(7) { left: 94%; }
+
+  /* Entries */
+  .firm-timeline-entries { display: flex; gap: 32px; }
+  .firm-timeline-entry { flex: 1; display: flex; flex-direction: column; gap: 12px; opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .firm-timeline-entry.revealed { opacity: 1; transform: translateY(0); }
+  .firm-timeline-entry:nth-child(1) { transition-delay: 0.1s; }
+  .firm-timeline-entry:nth-child(2) { transition-delay: 0.1s; }
+  .firm-timeline-entry:nth-child(3) { transition-delay: 0.1s; }
+  .firm-timeline-entry:nth-child(4) { transition-delay: 0.1s; }
+  .firm-timeline-entry:nth-child(5) { transition-delay: 0.1s; }
+  .firm-timeline-entry .entry-stage { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2px; color: rgba(255,255,255,0.4); }
+  .firm-timeline-entry h3 { font-family: 'Inter', sans-serif; font-size: 19px; font-weight: 600; color: #fff; line-height: 1.35; }
+  .firm-timeline-entry p { font-family: 'Inter', sans-serif; font-size: 14px; color: rgba(255,255,255,0.35); line-height: 1.75; }
+  .firm-timeline-entry .entry-note { font-family: 'Inter', sans-serif; font-size: 12px; font-style: italic; color: rgba(255,255,255,0.18); padding-top: 6px; }
+
+  /* ============================================
+     Point of View — Stacked Cards
+     ============================================ */
+  .firm-pov { display: flex; background: #eef0f1; }
+  .firm-pov-left { width: 440px; flex-shrink: 0; padding: 214px 48px 214px 60px; display: flex; flex-direction: column; justify-content: center; gap: 24px; }
+  .firm-pov-left > span { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: rgba(12,34,44,0.3); }
+  .firm-pov-left h2 { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 700; color: #0c222c; line-height: 1.15; }
+  .firm-pov-left .rule { width: 40px; height: 2px; background: rgba(12,34,44,0.1); }
+  .firm-pov-left > p { font-family: 'Inter', sans-serif; font-size: 14px; color: rgba(12,34,44,0.4); line-height: 1.85; max-width: 340px; }
+  .firm-pov-counter { display: flex; align-items: center; gap: 6px; padding-top: 32px; }
+  .firm-pov-counter .current { font-family: 'Inter', sans-serif; font-size: 32px; font-weight: 700; color: #0c222c; min-width: 40px; }
+  .firm-pov-counter .total { font-family: 'Inter', sans-serif; font-size: 14px; color: rgba(12,34,44,0.2); }
+  .firm-pov-arrows { display: flex; gap: 12px; }
+  .firm-pov-arrow { width: 44px; height: 44px; border: 1.5px solid #0c222c; background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
+  .firm-pov-arrow:hover { background: rgba(12,34,44,0.08); }
+  .firm-pov-arrow svg { width: 18px; height: 18px; stroke: #0c222c; stroke-width: 2; fill: none; }
+
+  .firm-pov-cards { flex: 1; display: flex; flex-direction: row; align-items: center; justify-content: center; position: relative; padding: 80px 40px; gap: 28px; }
+  .firm-pov-deck { position: relative; width: 560px; height: 520px; flex-shrink: 0; }
+  /* Background stack cards — larger than front card for negative space */
+  .firm-pov-deck-bg { position: absolute; width: 560px; height: 520px; background: #fff; }
+  .firm-pov-deck-bg:nth-child(1) { top: 15px; left: 12px; opacity: 0.4; transform: rotate(3deg); transform-origin: 0 0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+  .firm-pov-deck-bg:nth-child(2) { top: 10px; left: 7px; opacity: 0.6; transform: rotate(1.5deg); transform-origin: 0 0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+  .firm-pov-deck-bg:nth-child(3) { top: 5px; left: 4px; opacity: 0.8; transform: rotate(-0.5deg); transform-origin: 0 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  /* Front card — same width as deck but content has generous padding for negative space */
+  .firm-pov-card { position: absolute; top: 0; left: 0; width: 560px; height: 520px; background: #fff; padding: 64px 56px; display: flex; flex-direction: column; gap: 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); z-index: 4; opacity: 0; pointer-events: none; transform: translateY(12px) rotate(1deg); transition: opacity 0.4s ease, transform 0.4s ease; }
+  .firm-pov-card.active { opacity: 1; pointer-events: auto; transform: translateY(0) rotate(0deg); }
+  /* Exiting card animates out */
+  .firm-pov-card.exit-left { opacity: 0; transform: translateX(-40px) rotate(-3deg); transition: opacity 0.35s ease, transform 0.35s ease; }
+  .firm-pov-card.exit-right { opacity: 0; transform: translateX(40px) rotate(3deg); transition: opacity 0.35s ease, transform 0.35s ease; }
+  .firm-pov-card .card-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2px; color: rgba(12,34,44,0.25); }
+  .firm-pov-card h3 { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 600; color: #0c222c; line-height: 1.35; }
+  .firm-pov-card .card-rule { width: 32px; height: 1.5px; background: rgba(12,34,44,0.08); }
+  .firm-pov-card p { font-family: 'Inter', sans-serif; font-size: 14px; color: #6b7280; line-height: 1.85; }
+
+  /* ============================================
+     Closing
+     ============================================ */
+  .firm-closing { display: flex; align-items: center; justify-content: center; padding: 214px 60px; background: #0c222c; }
+  .firm-closing-inner { display: flex; flex-direction: column; align-items: center; gap: 24px; max-width: 720px; }
+  .firm-closing-rule { width: 40px; height: 2px; background: rgba(255,255,255,0.12); }
+  .firm-closing p { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 400; color: rgba(255,255,255,0.5); line-height: 1.8; text-align: center; opacity: 0; transform: translateY(16px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .firm-closing p.revealed { opacity: 1; transform: translateY(0); }
+
+  /* ============================================
+     Mobile
+     ============================================ */
+  @media (max-width: 767px) {
+    .firm-hero { flex-direction: column; min-height: auto; }
+    .firm-hero-left { width: 100%; padding: 32px 24px 48px; }
+    .firm-hero-title { font-size: 38px; }
+    .firm-hero-right { height: 320px; }
+    .firm-letter-wrap { padding: 60px 24px; }
+    .firm-letter { width: 100%; padding: 48px 32px; }
+    .firm-defines { flex-direction: column; }
+    .firm-defines-left { width: 100%; padding: 60px 24px; }
+    .firm-defines-grid { grid-template-columns: 1fr; }
+    .firm-defines-block { border-left: none !important; }
+    .firm-timeline { padding: 60px 24px; }
+    .firm-timeline-entries { flex-direction: column; gap: 32px; }
+    .firm-timeline-track { display: none; }
+    .firm-timeline-entry { padding-left: 24px; border-left: 2px solid rgba(255,255,255,0.1); }
+    .firm-pov { flex-direction: column; }
+    .firm-pov-left { width: 100%; padding: 60px 24px 40px; }
+    .firm-pov-cards { padding: 0 24px 60px; gap: 16px; }
+    .firm-pov-deck { width: 100%; height: 440px; }
+    .firm-pov-card { width: 100%; height: 440px; padding: 40px 32px; }
+    .firm-pov-deck-bg { width: 100%; height: 440px; }
+    .firm-pov-arrow { width: 36px; height: 36px; }
+  }
+
+  /* Tablet */
+  @media (min-width: 768px) and (max-width: 1279px) {
+    .firm-hero-left { width: 440px; }
+    .firm-hero-title { font-size: 42px; }
+    .firm-defines-left { width: 340px; padding: 60px 36px; }
+    .firm-defines-left h2 { font-size: 32px; }
+    .firm-defines-block { padding: 40px 36px; }
+    .firm-pov-left { width: 340px; padding: 80px 36px; }
+    .firm-pov-deck { width: 440px; height: 420px; }
+    .firm-pov-card { width: 440px; height: 420px; padding: 48px 40px; }
+    .firm-pov-deck-bg { width: 440px; height: 420px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-curtain"></div>
+
+<nav class="scroll-nav">
+  <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
+  <div class="scroll-nav-links">
+    <div class="nav-dropdown">
+      <a href="practices.html">PRACTICE AREAS</a>
+      <div class="nav-dropdown-menu">
+        <a href="practices.html#litigation">Litigation</a>
+        <a href="white-collar.html">White Collar Defense</a>
+        <a href="practices.html#investigations">Government Investigations</a>
+        <a href="practices.html#product-liability">Product Liability</a>
+        <a href="practices.html#class-actions">Class Actions</a>
+        <a href="practices.html#environmental">Environmental & Regulatory</a>
+      </div>
+    </div>
+    <a href="firm.html" class="active">FIRM</a>
+    <a href="team.html">TEAM</a>
+    <a href="#">INSIGHTS</a>
+  </div>
+  <a href="contact.html" class="scroll-nav-cta">CONTACT</a>
+</nav>
+
+<!-- ============================================
+     SECTION 1: Hero
+     ============================================ -->
+<section class="firm-hero">
+  <div class="firm-hero-left">
+    <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
+    <div>
+      <div class="firm-hero-label">[ THE FIRM ]</div>
+      <h1 class="firm-hero-title">A firm<br>built to<br>stay close<br>to the work.</h1>
+      <div class="firm-hero-rule"></div>
+      <p class="firm-hero-intro">Blanchet is a litigation and investigations firm built by lawyers who wanted a more direct way to practice. The goal was not to add layers. It was to build a firm where experienced counsel stays close to the facts, close to the strategy, and close to the client.</p>
+    </div>
+    <div class="firm-hero-meta">
+      <span>LITIGATION AND INVESTIGATIONS</span>
+      <span>Buffalo  /  New York City  /  Chicago</span>
+    </div>
+  </div>
+  <div class="firm-hero-right">
+    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80" alt="Office">
+    <div class="firm-hero-nav">
+      <div class="nav-dropdown">
+        <a href="practices.html">PRACTICE AREAS</a>
+        <div class="nav-dropdown-menu">
+          <a href="practices.html#litigation">Litigation</a>
+          <a href="white-collar.html">White Collar Defense</a>
+          <a href="practices.html#investigations">Government Investigations</a>
+          <a href="practices.html#product-liability">Product Liability</a>
+          <a href="practices.html#class-actions">Class Actions</a>
+          <a href="practices.html#environmental">Environmental & Regulatory</a>
+        </div>
+      </div>
+      <a href="firm.html" class="active">FIRM</a>
+      <a href="team.html">TEAM</a>
+      <a href="#">INSIGHTS</a>
+      <a href="contact.html" class="nav-cta">CONTACT</a>
+    </div>
+    <img class="firm-hero-logo-mark" src="assets/logos/Logo-White.png" alt="Blanchet">
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 2: Founder Letter
+     ============================================ -->
+<section class="firm-letter-wrap">
+  <div class="firm-letter" id="founder-letter">
+    <div class="firm-letter-accent"></div>
+    <img class="firm-letter-logo" src="assets/logos/Logo-Color.png" alt="B">
+    <div class="firm-letter-label">[ A NOTE FROM JOEL BLANCHET ]</div>
+    <h2>Why we built Blanchet</h2>
+    <div class="firm-letter-rule"></div>
+    <div class="firm-letter-body">
+      <p>Blanchet grew out of a simple view of how this work should be done.</p>
+      <p>Over time, many firms drift away from the thing clients are actually hiring them for. Teams get larger. Process gets heavier. The lawyers with the most judgment are asked to supervise the work rather than stay close to it.</p>
+      <p>We wanted to build something more direct.</p>
+      <p>A firm with real trial experience. A firm with broad disputes capability. A firm that could handle difficult litigation and investigations without losing discipline, pace, or accountability along the way.</p>
+      <p>That does not mean smaller in ambition. It means clearer in purpose.</p>
+      <p>We believe clients should know who is leading the matter. We believe technology should help move the work, not complicate it. We believe a strong firm should be able to handle demanding cases without turning every problem into a larger production.</p>
+      <p>Blanchet was built around those ideas. That is the standard we intend to keep.</p>
+    </div>
+    <div class="firm-letter-sig">
+      <svg class="firm-letter-sig-svg" viewBox="0 0 280 60" xmlns="http://www.w3.org/2000/svg">
+        <!-- J -->
+        <path d="M8 8 L8 36 Q8 52 22 52 Q36 52 36 36" />
+        <!-- o -->
+        <path d="M44 28 Q44 20 52 20 Q60 20 60 28 Q60 40 52 40 Q44 40 44 28Z" />
+        <!-- e -->
+        <path d="M66 30 L82 30 Q82 20 74 20 Q66 20 66 30 Q66 40 74 40 Q80 40 82 36" />
+        <!-- l -->
+        <path d="M90 8 L90 40" />
+        <!-- space + B flourish -->
+        <path d="M110 10 L110 48 M110 10 Q132 10 132 22 Q132 30 118 30 M110 30 Q136 30 136 38 Q136 48 110 48" />
+        <!-- l -->
+        <path d="M148 8 L148 40" />
+        <!-- a -->
+        <path d="M168 28 Q168 20 160 20 Q154 20 154 28 Q154 40 160 40 Q168 40 168 40 L168 20" />
+        <!-- n -->
+        <path d="M176 40 L176 22 Q176 18 184 18 Q190 18 190 24 L190 40" />
+        <!-- c -->
+        <path d="M210 24 Q204 18 198 18 Q194 18 194 28 Q194 40 200 40 Q206 40 210 36" />
+        <!-- h -->
+        <path d="M216 8 L216 40 M216 24 Q216 18 224 18 Q230 18 230 24 L230 40" />
+        <!-- e -->
+        <path d="M238 30 L254 30 Q254 20 246 20 Q238 20 238 30 Q238 40 246 40 Q252 40 254 36" />
+        <!-- t -->
+        <path d="M262 14 L262 36 Q262 40 266 40 M256 22 L270 22" />
+      </svg>
+      <span class="firm-letter-sig-name">FOUNDING PARTNER</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 3: What Defines the Firm
+     ============================================ -->
+<section class="firm-defines">
+  <div class="firm-defines-left">
+    <span class="section-label-dark">[ WHAT DEFINES THE FIRM ]</span>
+    <h2>Built with<br>focus, not<br>sprawl.</h2>
+    <div class="rule"></div>
+    <p>Blanchet is not trying to be everything. It is built around a clear kind of work and a clear way of doing it.</p>
+    <div class="firm-defines-note">
+      <div style="width:24px;height:1px;background:rgba(12,34,44,0.08);"></div>
+      <span>What clients usually feel first<br>is not size. It is clarity.</span>
+    </div>
+  </div>
+  <div class="firm-defines-grid">
+    <div class="firm-defines-block" data-delay="0">
+      <span class="block-num">01</span>
+      <h3>Disputes at the center</h3>
+      <p>The firm is built around litigation, investigations, and trial work. That focus shapes how matters are assessed, staffed, and run.</p>
+    </div>
+    <div class="firm-defines-block" data-delay="1">
+      <span class="block-num">02</span>
+      <h3>Senior lawyers, close to the file</h3>
+      <p>Clients are not hiring layers of oversight. They are hiring experienced litigators who stay involved, make decisions, and remain accountable for the work.</p>
+    </div>
+    <div class="firm-defines-block" data-delay="2">
+      <span class="block-num">03</span>
+      <h3>Broad enough for real overlap</h3>
+      <p>Many disputes do not stay in one lane. A commercial case may become an internal review. A technical issue may turn regulatory. The firm is built for that kind of overlap.</p>
+    </div>
+    <div class="firm-defines-block" data-delay="3">
+      <span class="block-num">04</span>
+      <h3>Modern where it counts</h3>
+      <p>Technology is part of how Blanchet works, but only where it improves clarity, coordination, speed, or control. The point is better handling, not theater.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 4: Timeline
+     ============================================ -->
+<section class="firm-timeline">
+  <div class="firm-timeline-header">
+    <div class="firm-timeline-header-left">
+      <span>[ TIMELINE ]</span>
+      <h2>How Blanchet came together</h2>
+    </div>
+    <p>The firm did not appear overnight. It took shape over years of litigation, trial work, client relationships, and lawyers finding their way back to a shared standard.</p>
+  </div>
+  <div class="firm-timeline-track" id="timeline-track">
+    <div class="firm-timeline-line-bg"></div>
+    <div class="firm-timeline-line-fill"></div>
+    <div class="firm-timeline-dot"></div>
+    <div class="firm-timeline-dot"></div>
+    <div class="firm-timeline-dot"></div>
+    <div class="firm-timeline-dot"></div>
+    <div class="firm-timeline-dot"></div>
+  </div>
+  <div class="firm-timeline-entries" id="timeline-entries">
+    <div class="firm-timeline-entry">
+      <span class="entry-stage">FOUNDATION</span>
+      <h3>The standard was set early.</h3>
+      <p>The foundation of the firm was shaped in demanding litigation environments where preparation, command of the record, and courtroom credibility were expected, not optional. That standard still informs how Blanchet approaches the work today.</p>
+      <span class="entry-note">Trial work came first.</span>
+    </div>
+    <div class="firm-timeline-entry">
+      <span class="entry-stage">RANGE</span>
+      <h3>The work widened before the firm did.</h3>
+      <p>Over time, the practice expanded across jurisdictions, forums, and subject matter. Commercial disputes, investigations, environmental issues, technical records, and other demanding matters all became part of the work.</p>
+      <span class="entry-note">Broad disputes capability.</span>
+    </div>
+    <div class="firm-timeline-entry">
+      <span class="entry-stage">BUFFALO</span>
+      <h3>A different model proved itself.</h3>
+      <p>Building a serious litigation practice from Buffalo reinforced an important point. Sophisticated work does not require a bloated structure. Clients responded to direct involvement, strong judgment, and teams that stayed close to the matter.</p>
+      <span class="entry-note">Closer to the client.</span>
+    </div>
+    <div class="firm-timeline-entry">
+      <span class="entry-stage">LAUNCH</span>
+      <h3>Blanchet takes shape.</h3>
+      <p>Blanchet launches as a focused litigation and investigations firm with a national practice and offices in Buffalo, New York City, and Chicago. The goal is not size for its own sake. The goal is quality, control, and staying close to the work.</p>
+      <span class="entry-note">Focused from the start.</span>
+    </div>
+    <div class="firm-timeline-entry">
+      <span class="entry-stage">NEXT</span>
+      <h3>The ambition is discipline.</h3>
+      <p>The future of the firm is not about becoming more sprawling. It is about becoming more trusted, more capable, and more effective while keeping the qualities that made the firm worth building in the first place.</p>
+      <span class="entry-note">Growth without drift.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 5: Point of View
+     ============================================ -->
+<section class="firm-pov">
+  <div class="firm-pov-left">
+    <span>[ POINT OF VIEW ]</span>
+    <h2>A few views<br>we hold<br>pretty firmly.</h2>
+    <div class="rule"></div>
+    <p>Every firm has a way of talking about itself. More useful is a clear sense of what it actually believes.</p>
+    <div class="firm-pov-counter">
+      <span class="current" id="pov-counter">01</span>
+      <span class="total">/ 06</span>
+    </div>
+  </div>
+  <div class="firm-pov-cards">
+    <button class="firm-pov-arrow" id="pov-prev" aria-label="Previous">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <div class="firm-pov-deck" id="pov-deck">
+      <!-- Decorative background stack -->
+      <div class="firm-pov-deck-bg"></div>
+      <div class="firm-pov-deck-bg"></div>
+      <div class="firm-pov-deck-bg"></div>
+      <!-- Actual cards -->
+      <div class="firm-pov-card active" data-num="01">
+        <span class="card-label">TEAM</span>
+        <h3>More lawyers does not always mean better lawyering.</h3>
+        <div class="card-rule"></div>
+        <p>Some matters need scale. Many do not. In our experience, larger teams often create more motion without creating better decisions. The right team is the one that understands the case and can move it forward with clarity.</p>
+      </div>
+      <div class="firm-pov-card" data-num="02">
+        <span class="card-label">TRIAL</span>
+        <h3>Trial experience matters long before trial.</h3>
+        <div class="card-rule"></div>
+        <p>It changes how a case is assessed, how pressure points are identified, and how leverage is built. Trial experience is not just a credential at the end of the page. It changes the work from the beginning.</p>
+      </div>
+      <div class="firm-pov-card" data-num="03">
+        <span class="card-label">TECHNOLOGY</span>
+        <h3>Technology should reduce drag.</h3>
+        <div class="card-rule"></div>
+        <p>Used well, technology improves review, coordination, and visibility. Used poorly, it becomes another layer of noise. We believe in using it where it helps and ignoring it where it does not.</p>
+      </div>
+      <div class="firm-pov-card" data-num="04">
+        <span class="card-label">CLIENTS</span>
+        <h3>Clients are hiring judgment, not ceremony.</h3>
+        <div class="card-rule"></div>
+        <p>A polished process is not the same thing as good counsel. At some point, every difficult matter turns on judgment. That is one reason clients need direct access to the lawyers leading the work.</p>
+      </div>
+      <div class="firm-pov-card" data-num="05">
+        <span class="card-label">PRACTICE</span>
+        <h3>A broad practice still needs a center.</h3>
+        <div class="card-rule"></div>
+        <p>Breadth is only useful if the firm knows what holds it together. For Blanchet, that center is disputes, investigations, and trial work. That is what keeps the practice coherent.</p>
+      </div>
+      <div class="firm-pov-card" data-num="06">
+        <span class="card-label">SERVICE</span>
+        <h3>A good outside firm should feel close.</h3>
+        <div class="card-rule"></div>
+        <p>Clients should not feel distance as soon as a matter becomes active. They should know who is responsible, how the work is being handled, and where decisions are being made.</p>
+      </div>
+    </div>
+    <button class="firm-pov-arrow" id="pov-next" aria-label="Next">
+      <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 6: Closing
+     ============================================ -->
+<section class="firm-closing">
+  <div class="firm-closing-inner">
+    <div class="firm-closing-rule"></div>
+    <p id="closing-text">Blanchet was built to handle demanding work without losing the things that make demanding work manageable: clarity, accountability, and judgment.</p>
+    <div class="firm-closing-rule"></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="site-footer-top">
+    <div class="site-footer-cta">
+      <div class="section-label" style="color: rgba(255,255,255,0.3); border-bottom-color: rgba(255,255,255,0.12);">[ GET IN TOUCH ]</div>
+      <h2>Start with the right counsel.</h2>
+      <p>Blanchet represents clients in litigation, investigations, and disputes that call for experience, direct involvement, and disciplined execution.</p>
+      <button class="btn-white">Contact</button>
+    </div>
+    <div class="site-footer-nav">
+      <div class="site-footer-cols">
+        <div class="footer-col">
+          <div class="col-title">EXPLORE</div>
+          <a href="practices.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Practice Areas</a>
+          <a href="firm.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Firm</a>
+          <a href="team.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Team</a>
+          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Insights</a>
+        </div>
+        <div class="footer-col">
+          <div class="col-title">OFFICES</div>
+          <span class="address">Buffalo</span>
+          <span class="address">New York City</span>
+          <span class="address">Chicago</span>
+        </div>
+        <div class="footer-col">
+          <div class="col-title">CONNECT</div>
+          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">LinkedIn</a>
+        </div>
+      </div>
+      <div class="site-footer-meta">
+        <span>Litigation and Investigations</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-watermark">
+    <img src="assets/logos/Wordmark-White.png" alt="Blanchet">
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+(function() {
+  // IntersectionObserver for all reveals
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  // Letter reveal + signature animation
+  const letter = document.getElementById('founder-letter');
+  if (letter) {
+    const letterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          letter.classList.add('revealed');
+          // Trigger signature draw after letter fades in
+          setTimeout(() => {
+            const sig = letter.querySelector('.firm-letter-sig-svg');
+            if (sig) sig.classList.add('animate');
+          }, 900);
+          letterObserver.unobserve(letter);
+        }
+      });
+    }, { threshold: 0.2 });
+    letterObserver.observe(letter);
+  }
+
+  // Define blocks staggered reveal
+  document.querySelectorAll('.firm-defines-block').forEach((block, i) => {
+    const delay = parseInt(block.dataset.delay || 0) * 150;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => block.classList.add('revealed'), delay);
+          observer.unobserve(block);
+        }
+      });
+    }, { threshold: 0.15 });
+    observer.observe(block);
+  });
+
+  // Timeline — progressive scroll reveal
+  const timelineSection = document.querySelector('.firm-timeline');
+  const track = document.getElementById('timeline-track');
+  const lineFill = track ? track.querySelector('.firm-timeline-line-fill') : null;
+  const dots = track ? track.querySelectorAll('.firm-timeline-dot') : [];
+  const entries = document.querySelectorAll('.firm-timeline-entry');
+  const totalSteps = entries.length; // 5
+
+  if (timelineSection && track) {
+    // Dot positions as percentages (must match CSS)
+    const dotPositions = [0, 23.5, 47, 70.5, 94];
+
+    function updateTimeline() {
+      const rect = timelineSection.getBoundingClientRect();
+      const sectionH = rect.height;
+      const viewH = window.innerHeight;
+      // Progress: 0 when section top enters viewport bottom, 1 when section bottom reaches viewport center
+      const raw = (viewH - rect.top) / (sectionH + viewH * 0.5);
+      const progress = Math.max(0, Math.min(1, raw));
+
+      // Start revealing after header scrolls in (~20% progress)
+      const adjusted = Math.max(0, (progress - 0.25) / 0.65);
+
+      // Update line fill width
+      if (lineFill) {
+        const lineWidth = Math.min(adjusted * 100, 100);
+        lineFill.style.width = lineWidth + '%';
+      }
+
+      // Activate dots and entries progressively
+      for (let i = 0; i < totalSteps; i++) {
+        const threshold = (i / (totalSteps - 1)) * 0.85; // spread across 85% of the adjusted range
+        if (adjusted >= threshold) {
+          if (dots[i]) dots[i].classList.add('active');
+          entries[i]?.classList.add('revealed');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', updateTimeline, { passive: true });
+    updateTimeline(); // initial check
+  }
+
+  // POV stacked cards — arrow-driven deck
+  const counter = document.getElementById('pov-counter');
+  const povCards = document.querySelectorAll('.firm-pov-card');
+  const prevBtn = document.getElementById('pov-prev');
+  const nextBtn = document.getElementById('pov-next');
+  const totalCards = povCards.length;
+  let currentCard = 0;
+  let animating = false;
+
+  function showCard(index, direction) {
+    if (animating || index === currentCard) return;
+    animating = true;
+
+    const oldCard = povCards[currentCard];
+    const newCard = povCards[index];
+
+    // Animate old card out
+    oldCard.classList.remove('active');
+    oldCard.classList.add(direction === 'next' ? 'exit-left' : 'exit-right');
+
+    // After exit animation, clean up and show new card
+    setTimeout(() => {
+      oldCard.classList.remove('exit-left', 'exit-right');
+      newCard.classList.add('active');
+      currentCard = index;
+      if (counter) counter.textContent = String(index + 1).padStart(2, '0');
+      setTimeout(() => { animating = false; }, 350);
+    }, 300);
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      const next = (currentCard + 1) % totalCards;
+      showCard(next, 'next');
+    });
+  }
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      const prev = (currentCard - 1 + totalCards) % totalCards;
+      showCard(prev, 'prev');
+    });
+  }
+
+  // Closing statement
+  const closing = document.getElementById('closing-text');
+  if (closing) revealObserver.observe(closing);
+})();
+</script>
+
+</body>
+</html>

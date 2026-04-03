@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team | BLANCHET</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#0c222c}</style>
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  /* ============================================
+     Team — Horizontal Directory
+     ============================================ */
+  .team-page { display: flex; min-height: 100vh; }
+
+  /* Left: Featured portrait */
+  .team-featured { width: 540px; flex-shrink: 0; position: sticky; top: 0; height: 100vh; align-self: flex-start; overflow: hidden; background: #0a1a22; }
+  .team-featured::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 60%;
+    background: linear-gradient(to bottom, rgba(12,34,44,0) 0%, rgba(12,34,44,0.55) 40%, rgba(12,34,44,0.85) 100%);
+    z-index: 1; pointer-events: none;
+  }
+  .team-featured-images { position: absolute; inset: 0; }
+  .team-featured-img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    opacity: 0; transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .team-featured-img.active { opacity: 0.75; }
+
+  /* Featured overlay content */
+  .team-featured-label-logo { position: absolute; top: 40px; left: 48px; z-index: 2; width: 40px; height: auto; opacity: 0; animation: logoMarkFadeInMid 2s ease 0.8s forwards; }
+  @keyframes logoMarkFadeInMid { to { opacity: 0.5; } }
+  .team-featured-info {
+    position: absolute; bottom: 56px; left: 48px; z-index: 2;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .team-featured-name {
+    font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 700; color: #fff;
+    line-height: 1.0; text-transform: uppercase;
+    opacity: 0; transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .team-featured-name.visible { opacity: 1; transform: translateY(0); }
+  .team-featured-role {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500;
+    letter-spacing: 2px; color: rgba(255,255,255,0.4);
+    opacity: 0; transform: translateY(8px);
+    transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+  }
+  .team-featured-role.visible { opacity: 1; transform: translateY(0); }
+  .team-featured-rule { width: 40px; height: 2px; background: rgba(255,255,255,0.15); }
+  .team-featured-bio {
+    font-family: 'Inter', sans-serif; font-size: 13px; color: rgba(255,255,255,0.4);
+    line-height: 1.75; max-width: 400px;
+    opacity: 0; transform: translateY(8px);
+    transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
+  }
+  .team-featured-bio.visible { opacity: 1; transform: translateY(0); }
+
+  /* Logo mark */
+  .team-featured-logo { position: absolute; bottom: 40px; right: 40px; width: 60px; height: auto; opacity: 0.12; z-index: 2; }
+
+  /* Right: Directory panel */
+  .team-directory { flex: 1; display: flex; flex-direction: column; background: #0c222c; border-left: 1px solid rgba(255,255,255,0.04); }
+
+  /* Nav */
+  .team-nav { display: flex; justify-content: flex-end; padding: 40px 48px; gap: 28px; align-items: center; }
+  .team-nav a { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+  .team-nav a:hover { color: #fff; }
+  .team-nav a.active { color: #fff; }
+  .team-nav .nav-cta { padding: 8px 16px; border: 1px solid rgba(255,255,255,0.2); color: #fff; }
+  .team-nav .nav-cta:hover { background: rgba(255,255,255,0.06); }
+
+  /* Team list */
+  .team-list { flex: 1; display: flex; flex-direction: column; padding: 0 48px; }
+  .team-row {
+    display: flex; padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+    align-items: center; gap: 24px; cursor: pointer;
+    transition: border-color 0.3s ease;
+    /* Stagger entrance */
+    opacity: 0; transform: translateX(24px);
+    animation: teamRowIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+  .team-row:hover { border-bottom-color: rgba(255,255,255,0.15); }
+
+  .team-row:nth-child(1)  { animation-delay: 0.1s; }
+  .team-row:nth-child(2)  { animation-delay: 0.18s; }
+  .team-row:nth-child(3)  { animation-delay: 0.26s; }
+  .team-row:nth-child(4)  { animation-delay: 0.34s; }
+  .team-row:nth-child(5)  { animation-delay: 0.42s; }
+  .team-row:nth-child(6)  { animation-delay: 0.50s; }
+  .team-row:nth-child(7)  { animation-delay: 0.58s; }
+  .team-row:nth-child(8)  { animation-delay: 0.66s; }
+  .team-row:nth-child(9)  { animation-delay: 0.74s; }
+  .team-row:nth-child(10) { animation-delay: 0.82s; }
+
+  @keyframes teamRowIn {
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .team-row-num {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500;
+    color: rgba(255,255,255,0.15); width: 28px; flex-shrink: 0;
+    transition: color 0.3s ease;
+  }
+  .team-row:hover .team-row-num { color: rgba(255,255,255,0.35); }
+
+  .team-row-name {
+    font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 600;
+    color: rgba(255,255,255,0.4); flex: 1;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .team-row:hover .team-row-name { color: #fff; transform: translateX(4px); }
+  .team-row.is-active .team-row-name { color: #fff; }
+
+  .team-row-title {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500;
+    letter-spacing: 1.5px; color: rgba(255,255,255,0.18);
+    transition: color 0.3s ease;
+  }
+  .team-row:hover .team-row-title { color: rgba(255,255,255,0.35); }
+
+  .team-row-arrow {
+    font-family: 'Inter', sans-serif; font-size: 14px; color: rgba(255,255,255,0.1);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .team-row:hover .team-row-arrow { color: rgba(255,255,255,0.4); transform: translateX(4px); }
+
+  /* Bottom stat bar */
+  .team-stat-bar {
+    display: flex; padding: 32px 48px; gap: 48px; border-top: 1px solid rgba(255,255,255,0.04);
+    opacity: 0; animation: teamRowIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.0s forwards;
+  }
+  .team-stat { display: flex; flex-direction: column; gap: 4px; }
+  .team-stat-num { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; color: rgba(255,255,255,0.08); }
+  .team-stat-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; color: rgba(255,255,255,0.2); }
+
+  /* Featured entrance */
+  .team-featured-label-logo {
+    opacity: 0; animation: teamLogoIn 0.8s ease 0.3s forwards;
+  }
+  @keyframes teamLogoIn {
+    to { opacity: 0.5; }
+  }
+  @keyframes teamFadeIn {
+    to { opacity: 1; }
+  }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    .team-page { flex-direction: column; }
+    .team-featured { width: 100%; position: relative; height: 50vh; }
+    .team-featured-name { font-size: 32px; }
+    .team-nav { padding: 24px 24px; gap: 16px; flex-wrap: wrap; }
+    .team-list { padding: 0 24px; }
+    .team-row-name { font-size: 20px; }
+    .team-stat-bar { padding: 24px 24px; gap: 32px; }
+  }
+
+  /* Tablet */
+  @media (min-width: 768px) and (max-width: 1279px) {
+    .team-featured { width: 400px; }
+    .team-featured-name { font-size: 36px; }
+    .team-nav { padding: 32px 36px; gap: 20px; }
+    .team-list { padding: 0 36px; }
+    .team-row-name { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-curtain"></div>
+
+<nav class="scroll-nav">
+  <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
+  <div class="scroll-nav-links">
+    <div class="nav-dropdown">
+      <a href="practices.html">PRACTICE AREAS</a>
+      <div class="nav-dropdown-menu">
+        <a href="practices.html#litigation">Litigation</a>
+        <a href="white-collar.html">White Collar Defense</a>
+        <a href="practices.html#investigations">Government Investigations</a>
+        <a href="practices.html#product-liability">Product Liability</a>
+        <a href="practices.html#class-actions">Class Actions</a>
+        <a href="practices.html#environmental">Environmental & Regulatory</a>
+      </div>
+    </div>
+    <a href="firm.html">FIRM</a>
+    <a href="team.html" class="active">TEAM</a>
+    <a href="#">INSIGHTS</a>
+  </div>
+  <a href="contact.html" class="scroll-nav-cta">CONTACT</a>
+</nav>
+
+<section class="team-page">
+
+  <!-- Left: Featured portrait -->
+  <div class="team-featured">
+    <img class="team-featured-label-logo" src="assets/logos/Logo-White.png" alt="Blanchet">
+    <div class="team-featured-images">
+      <img class="team-featured-img active" data-index="0" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80" alt="Joel Blanchet">
+      <img class="team-featured-img" data-index="1" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" alt="Sarah Mitchell">
+      <img class="team-featured-img" data-index="2" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="David Chen">
+      <img class="team-featured-img" data-index="3" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80" alt="Rachel Torres">
+      <img class="team-featured-img" data-index="4" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&q=80" alt="James Whitfield">
+      <img class="team-featured-img" data-index="5" src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=800&q=80" alt="Maria Santos">
+      <img class="team-featured-img" data-index="6" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80" alt="Thomas Park">
+      <img class="team-featured-img" data-index="7" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80" alt="Lauren Rivera">
+      <img class="team-featured-img" data-index="8" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80" alt="Andrew Cole">
+      <img class="team-featured-img" data-index="9" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80" alt="Elena Vasquez">
+    </div>
+    <div class="team-featured-info">
+      <div class="team-featured-name visible" id="featured-name">Joel<br>Blanchet</div>
+      <div class="team-featured-role visible" id="featured-role">FOUNDING PARTNER</div>
+      <div class="team-featured-rule"></div>
+      <div class="team-featured-bio visible" id="featured-bio">Trial lawyer representing companies, executives, and institutions in litigation, investigations, and disputes across the country.</div>
+    </div>
+  </div>
+
+  <!-- Right: Directory -->
+  <div class="team-directory">
+    <div class="team-nav">
+      <div class="nav-dropdown">
+        <a href="practices.html">PRACTICE AREAS</a>
+        <div class="nav-dropdown-menu">
+          <a href="practices.html#litigation">Litigation</a>
+          <a href="white-collar.html">White Collar Defense</a>
+          <a href="practices.html#investigations">Government Investigations</a>
+          <a href="practices.html#product-liability">Product Liability</a>
+          <a href="practices.html#class-actions">Class Actions</a>
+          <a href="practices.html#environmental">Environmental & Regulatory</a>
+        </div>
+      </div>
+      <a href="firm.html">FIRM</a>
+      <a href="team.html" class="active">TEAM</a>
+      <a href="#">INSIGHTS</a>
+      <a href="contact.html" class="nav-cta">CONTACT</a>
+    </div>
+
+    <div class="team-list">
+      <div class="team-row is-active" data-index="0" data-name="Joel<br>Blanchet" data-role="FOUNDING PARTNER" data-bio="Trial lawyer representing companies, executives, and institutions in litigation, investigations, and disputes across the country.">
+        <span class="team-row-num">01</span>
+        <span class="team-row-name">Joel Blanchet</span>
+        <span class="team-row-title">FOUNDING PARTNER</span>
+        <span class="team-row-arrow">→</span>
+      </div>
+      <div class="team-row" data-index="1" data-name="Sarah<br>Mitchell" data-role="PARTNER" data-bio="Focuses on complex commercial litigation and class actions, with particular experience in financial services and securities disputes.">
+        <span class="team-row-num">02</span>
+        <span class="team-row-name">Sarah Mitchell</span>
+        <span class="team-row-title">PARTNER</span>
+        <span class="team-row-arrow">→</span>
+      </div>
+      <div class="team-row" data-index="2" data-name="David<br>Chen" data-role="PARTNER" data-bio="Handles government investigations, regulatory enforcement, and white collar defense matters involving federal and state agencies.">
+        <span class="team-row-num">03</span>
+        <span class="team-row-name">David Chen</span>
+        <span class="team-row-title">PARTNER</span>
+        <span class="team-row-arrow">→</span>
+      </div>
+      <div class="team-row" data-index="3" data-name="Rachel<br>Torres" data-role="OF COUNSEL" data-bio="Advises on environmental litigation, regulatory compliance, and contamination disputes with deep experience in chemical exposure cases.">
+        <span class="team-row-num">04</span>
+        <span class="team-row-name">Rachel Torres</span>
+        <span class="team-row-title">OF COUNSEL</span>
+        <span class="team-row-arrow">→</span>
+      </div>
+      <div class="team-row" data-index="4" data-name="James<br>Whitfield" data-role="SENIOR ASSOCIATE" data-bio="Focuses on product liability defense and mass tort litigation, managing complex discovery and expert programs in multi-district proceedings.">
+        <span class="team-row-num">05</span>
+        <span class="team-row-name">James Whitfield</span>
+        <span class="team-row-title">SENIOR ASSOCIATE</span>
+        <span class="team-row-arrow">→</span>
+      </div>
+      <div class="team-row" data-index="5" data-name="Maria<br>Santos" data-role="SENIOR ASSOCIATE" data-bio="Handles commercial contract disputes, M&A litigation, and intellectual property matters across state and federal courts.">
+        <span class="team-row-num">06</span>
+        <span class="team-row-name">Maria Santos</span>
+        <span class="team-row-title">SENIOR ASSOCIATE</span>
+        <span class="team-row-arrow">→</span>
+      </div>
+      <div class="team-row" data-index="6" data-name="Thomas<br>Park" data-role="ASSOCIATE" data-bio="Supports litigation teams across practice areas with a focus on motion practice, depositions, and trial preparation.">
+        <span class="team-row-num">07</span>
+        <span class="team-row-name">Thomas Park</span>
+        <span class="team-row-title">ASSOCIATE</span>
+        <span class="team-row-arrow">→</span>
+      </div>
+      <div class="team-row" data-index="7" data-name="Lauren<br>Rivera" data-role="ASSOCIATE" data-bio="Works on government investigations and internal reviews, with experience in document review programs and witness preparation.">
+        <span class="team-row-num">08</span>
+        <span class="team-row-name">Lauren Rivera</span>
+        <span class="team-row-title">ASSOCIATE</span>
+        <span class="team-row-arrow">→</span>
+      </div>
+      <div class="team-row" data-index="8" data-name="Andrew<br>Cole" data-role="ASSOCIATE" data-bio="Handles class action defense and aggregate litigation, supporting case strategy from pleadings through trial.">
+        <span class="team-row-num">09</span>
+        <span class="team-row-name">Andrew Cole</span>
+        <span class="team-row-title">ASSOCIATE</span>
+        <span class="team-row-arrow">→</span>
+      </div>
+      <div class="team-row" data-index="9" data-name="Elena<br>Vasquez" data-role="ASSOCIATE" data-bio="Focuses on environmental and regulatory matters, including enforcement defense, permitting disputes, and compliance counseling.">
+        <span class="team-row-num">10</span>
+        <span class="team-row-name">Elena Vasquez</span>
+        <span class="team-row-title">ASSOCIATE</span>
+        <span class="team-row-arrow">→</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="site-footer">
+  <div class="site-footer-top">
+    <div class="site-footer-cta">
+      <div class="section-label" style="color: rgba(255,255,255,0.3); border-bottom-color: rgba(255,255,255,0.12);">[ GET IN TOUCH ]</div>
+      <h2>Start with the right counsel.</h2>
+      <p>Blanchet represents clients in litigation, investigations, and disputes that call for experience, direct involvement, and disciplined execution.</p>
+      <button class="btn-white">Contact</button>
+    </div>
+    <div class="site-footer-nav">
+      <div class="site-footer-cols">
+        <div class="footer-col">
+          <div class="col-title">EXPLORE</div>
+          <a href="practices.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Practice Areas</a>
+          <a href="firm.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Firm</a>
+          <span>Team</span>
+          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Insights</a>
+        </div>
+        <div class="footer-col">
+          <div class="col-title">OFFICES</div>
+          <span class="address">Buffalo</span>
+          <span class="address">New York City</span>
+          <span class="address">Chicago</span>
+        </div>
+        <div class="footer-col">
+          <div class="col-title">CONNECT</div>
+          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">LinkedIn</a>
+        </div>
+      </div>
+      <div class="site-footer-meta">
+        <span>Litigation and Investigations</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-watermark">
+    <img src="assets/logos/Wordmark-White.png" alt="Blanchet">
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+(function() {
+  const rows = document.querySelectorAll('.team-row');
+  const images = document.querySelectorAll('.team-featured-img');
+  const nameEl = document.getElementById('featured-name');
+  const roleEl = document.getElementById('featured-role');
+  const bioEl = document.getElementById('featured-bio');
+
+  let currentIndex = 0;
+
+  function setFeatured(index) {
+    if (index === currentIndex) return;
+    currentIndex = index;
+
+    // Swap images
+    images.forEach(img => {
+      if (parseInt(img.dataset.index) === index) {
+        img.classList.add('active');
+      } else {
+        img.classList.remove('active');
+      }
+    });
+
+    // Mark active row
+    rows.forEach(row => {
+      if (parseInt(row.dataset.index) === index) {
+        row.classList.add('is-active');
+      } else {
+        row.classList.remove('is-active');
+      }
+    });
+
+    // Animate text out, swap, animate in
+    nameEl.classList.remove('visible');
+    roleEl.classList.remove('visible');
+    bioEl.classList.remove('visible');
+
+    const activeRow = rows[index];
+    setTimeout(() => {
+      nameEl.innerHTML = activeRow.dataset.name;
+      roleEl.textContent = activeRow.dataset.role;
+      bioEl.textContent = activeRow.dataset.bio;
+
+      nameEl.classList.add('visible');
+      roleEl.classList.add('visible');
+      bioEl.classList.add('visible');
+    }, 300);
+  }
+
+  // Hover interaction
+  rows.forEach(row => {
+    row.addEventListener('mouseenter', () => {
+      setFeatured(parseInt(row.dataset.index));
+    });
+  });
+
+  // Click navigates to bio page
+  rows.forEach(row => {
+    row.addEventListener('click', () => {
+      const index = parseInt(row.dataset.index);
+      // First person has a bio page
+      if (index === 0) {
+        window.location.href = 'bio-joel.html';
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

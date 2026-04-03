@@ -22,8 +22,10 @@
 
   /* Bio layout */
   .bio-hero { display: flex; position: relative; }
-  .bio-photo { flex: 1; position: sticky; top: 0; height: 100vh; overflow: hidden; }
-  .bio-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .bio-photo { flex: 1; position: sticky; top: 0; height: 100vh; overflow: hidden; position: relative; }
+  .bio-photo > img:not(.bio-photo-logo) { width: 100%; height: 100%; object-fit: cover; }
+  .bio-photo-logo { position: absolute; top: 40px; left: 48px; width: 60px !important; height: auto !important; object-fit: contain !important; z-index: 2; opacity: 0; animation: logoMarkFadeIn 2s ease 1s forwards; }
+  @keyframes logoMarkFadeIn { to { opacity: 0.5; } }
   .bio-content { flex: 1; padding: 140px 80px 120px; display: flex; flex-direction: column; }
   .bio-back { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: #0c222c; text-decoration: none; display: flex; align-items: center; gap: 8px; margin-bottom: 32px; }
   .bio-back:hover { opacity: 0.6; }
@@ -32,7 +34,7 @@
   .bio-offices { font-family: 'Inter', sans-serif; font-size: 14px; color: #6b7280; letter-spacing: 0.5px; margin-bottom: 40px; }
   .bio-rule { width: 40px; height: 2px; background: #0c222c; margin-bottom: 40px; }
   .bio-text { font-family: 'Inter', sans-serif; font-size: 15px; color: #6b7280; line-height: 1.8; margin-bottom: 24px; max-width: 520px; }
-  .bio-section-title { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(12,34,44,0.35); margin-top: 40px; margin-bottom: 16px; padding-top: 32px; border-top: 1px solid #ededed; }
+  .bio-section-title { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(12,34,44,0.35); margin-top: 40px; margin-bottom: 16px; padding-top: 32px; border-top: 1px solid #dcdcdc; }
   .bio-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; margin-bottom: 8px; max-width: 520px; }
   .bio-list li { font-family: 'Inter', sans-serif; font-size: 14px; color: #0c222c; padding-left: 16px; position: relative; line-height: 1.6; }
   .bio-list li::before { content: ''; position: absolute; left: 0; top: 9px; width: 4px; height: 4px; background: rgba(12,34,44,0.2); }
@@ -49,19 +51,31 @@
 <div class="page-curtain"></div>
 
 <nav class="bio-nav">
-  <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
+  <div class="nav-logo"><a href="index.html"></a></div>
   <div class="bio-nav-links">
-    <a href="practices.html">PRACTICES</a>
-    <a href="#">ABOUT</a>
-    <a href="#">APPROACH</a>
+    <div class="nav-dropdown nav-dropdown-light">
+      <a href="practices.html">PRACTICE AREAS</a>
+      <div class="nav-dropdown-menu">
+
+        <a href="practices.html#litigation">Litigation</a>
+        <a href="white-collar.html">White Collar Defense</a>
+        <a href="practices.html#investigations">Government Investigations</a>
+        <a href="practices.html#product-liability">Product Liability</a>
+        <a href="practices.html#class-actions">Class Actions</a>
+        <a href="practices.html#environmental">Environmental & Regulatory</a>
+      </div>
+    </div>
+    <a href="firm.html">FIRM</a>
+    <a href="team.html">TEAM</a>
     <a href="#">INSIGHTS</a>
-    <a href="contact.html" class="bio-nav-cta">CONTACT US</a>
+    <a href="contact.html" class="bio-nav-cta">CONTACT</a>
   </div>
 </nav>
 
 <section class="bio-hero">
   <div class="bio-photo">
     <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1200&q=80" alt="Joel Blanchet">
+    <img class="bio-photo-logo" src="assets/logos/Logo-White.png" alt="Blanchet">
   </div>
   <div class="bio-content">
     <a href="index.html" class="bio-back"><span>&#8592;</span> Back to Team</a>
@@ -136,22 +150,26 @@
       <div class="section-label" style="color: rgba(255,255,255,0.3); border-bottom-color: rgba(255,255,255,0.12);">[ GET IN TOUCH ]</div>
       <h2>Start with the right counsel.</h2>
       <p>Blanchet represents clients in litigation, investigations, and disputes that call for experience, direct involvement, and disciplined execution.</p>
-      <button class="btn-white">Contact Us</button>
+      <button class="btn-white">Contact</button>
     </div>
     <div class="site-footer-nav">
       <div class="site-footer-cols">
         <div class="footer-col">
           <div class="col-title">EXPLORE</div>
-          <span>Practice Areas</span>
-          <span>About</span>
-          <span>Approach</span>
-          <span>Insights</span>
+          <a href="practices.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Practice Areas</a>
+          <a href="firm.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Firm</a>
+          <a href="team.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Team</a>
+          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Insights</a>
         </div>
         <div class="footer-col">
           <div class="col-title">OFFICES</div>
           <span class="address">Buffalo</span>
           <span class="address">New York City</span>
           <span class="address">Chicago</span>
+        </div>
+        <div class="footer-col">
+          <div class="col-title">CONNECT</div>
+          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">LinkedIn</a>
         </div>
       </div>
       <div class="site-footer-meta">

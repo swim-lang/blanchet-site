@@ -43,13 +43,13 @@
   .form-field { flex: 1; display: flex; flex-direction: column; gap: 8px; }
   .form-field label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; color: rgba(12,34,44,0.4); }
   .form-field input,
-  .form-field textarea { font-family: 'Inter', sans-serif; font-size: 15px; color: #0c222c; border: none; border-bottom: 1px solid #ededed; padding: 12px 0; outline: none; background: transparent; resize: none; transition: border-color 0.2s; }
+  .form-field textarea { font-family: 'Inter', sans-serif; font-size: 15px; color: #0c222c; border: none; border-bottom: 1px solid #dcdcdc; padding: 12px 0; outline: none; background: transparent; resize: none; transition: border-color 0.2s; }
   .form-field input:focus,
   .form-field textarea:focus { border-bottom-color: #0c222c; }
   .form-field textarea { height: 120px; }
   .form-submit { padding: 14px 28px; background: #0c222c; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #fff; border: none; cursor: pointer; width: fit-content; transition: opacity 0.2s; }
   .form-submit:hover { opacity: 0.85; }
-  .form-disclaimer { font-family: 'Inter', sans-serif; font-size: 12px; color: rgba(12,34,44,0.25); line-height: 1.7; max-width: 560px; margin-top: 16px; }
+  .form-disclaimer { font-family: 'Inter', sans-serif; font-size: 12px; color: rgba(12,34,44,0.45); line-height: 1.7; max-width: 560px; margin-top: 16px; }
 </style>
 </head>
 <body>
@@ -59,12 +59,23 @@
 <nav class="scroll-nav">
   <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
   <div class="scroll-nav-links">
-    <a href="practices.html">PRACTICES</a>
-    <a href="#">ABOUT</a>
-    <a href="#">APPROACH</a>
+    <div class="nav-dropdown">
+      <a href="practices.html">PRACTICE AREAS</a>
+      <div class="nav-dropdown-menu">
+
+        <a href="practices.html#litigation">Litigation</a>
+        <a href="white-collar.html">White Collar Defense</a>
+        <a href="practices.html#investigations">Government Investigations</a>
+        <a href="practices.html#product-liability">Product Liability</a>
+        <a href="practices.html#class-actions">Class Actions</a>
+        <a href="practices.html#environmental">Environmental & Regulatory</a>
+      </div>
+    </div>
+    <a href="firm.html">FIRM</a>
+    <a href="team.html">TEAM</a>
     <a href="#">INSIGHTS</a>
   </div>
-  <a href="contact.html" class="scroll-nav-cta active">CONTACT US</a>
+  <a href="contact.html" class="scroll-nav-cta active">CONTACT</a>
 </nav>
 
 <section class="contact-page">
@@ -97,11 +108,22 @@
   </div>
   <div class="contact-right">
     <div class="contact-right-nav">
-      <a href="practices.html">PRACTICES</a>
-      <a href="#">ABOUT</a>
-      <a href="#">APPROACH</a>
+      <div class="nav-dropdown nav-dropdown-light">
+        <a href="practices.html">PRACTICE AREAS</a>
+        <div class="nav-dropdown-menu">
+
+          <a href="practices.html#litigation">Litigation</a>
+          <a href="white-collar.html">White Collar Defense</a>
+          <a href="practices.html#investigations">Government Investigations</a>
+          <a href="practices.html#product-liability">Product Liability</a>
+          <a href="practices.html#class-actions">Class Actions</a>
+          <a href="practices.html#environmental">Environmental & Regulatory</a>
+        </div>
+      </div>
+      <a href="firm.html">FIRM</a>
+      <a href="team.html">TEAM</a>
       <a href="#">INSIGHTS</a>
-      <a href="contact.html" class="nav-cta active">CONTACT US</a>
+      <a href="contact.html" class="nav-cta active">CONTACT</a>
     </div>
     <div class="contact-right-content">
       <span class="form-section-label">SEND A MESSAGE</span>
@@ -141,6 +163,45 @@
     </div>
   </div>
 </section>
+
+<!-- CTA + Footer -->
+<footer class="site-footer">
+  <div class="site-footer-top">
+    <div class="site-footer-cta">
+      <div class="section-label" style="color: rgba(255,255,255,0.3); border-bottom-color: rgba(255,255,255,0.12);">[ GET IN TOUCH ]</div>
+      <h2>Start with the right counsel.</h2>
+      <p>Blanchet represents clients in litigation, investigations, and disputes that call for experience, direct involvement, and disciplined execution.</p>
+      <button class="btn-white">Contact</button>
+    </div>
+    <div class="site-footer-nav">
+      <div class="site-footer-cols">
+        <div class="footer-col">
+          <div class="col-title">EXPLORE</div>
+          <a href="practices.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Practice Areas</a>
+          <a href="firm.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Firm</a>
+          <a href="team.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Team</a>
+          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Insights</a>
+        </div>
+        <div class="footer-col">
+          <div class="col-title">OFFICES</div>
+          <span class="address">Buffalo</span>
+          <span class="address">New York City</span>
+          <span class="address">Chicago</span>
+        </div>
+        <div class="footer-col">
+          <div class="col-title">CONNECT</div>
+          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">LinkedIn</a>
+        </div>
+      </div>
+      <div class="site-footer-meta">
+        <span>Litigation and Investigations</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-watermark">
+    <img src="assets/logos/Wordmark-White.png" alt="Blanchet">
+  </div>
+</footer>
 
 <script src="js/main.js"></script>
 

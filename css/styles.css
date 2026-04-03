@@ -23,7 +23,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
    ============================================ */
 
 /* Scroll-up nav */
-.scroll-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: #0c222c; padding: 16px 60px; display: flex; align-items: center; justify-content: space-between; transform: translateY(-100%); transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.scroll-nav { display: none; }
 .scroll-nav.visible { transform: translateY(0); }
 .scroll-nav .nav-logo { display: flex; align-items: center; }
 .scroll-nav .nav-logo img { height: 14px; width: auto; }
@@ -44,6 +44,82 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .nav-cta:hover { background: rgba(255,255,255,0.1); }
 
 /* ============================================
+   Practices Dropdown — Glass Effect
+   ============================================ */
+.nav-dropdown { position: relative; }
+.nav-dropdown > a { position: relative; z-index: 2; }
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 280px;
+  padding: 28px 32px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(32px) saturate(1.6);
+  -webkit-backdrop-filter: blur(32px) saturate(1.6);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 2px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25), 0 2px 8px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
+  pointer-events: none;
+  z-index: 200;
+}
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown.open .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+/* Invisible bridge so mouse can travel from link to dropdown */
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
+}
+.nav-dropdown-menu a {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0.3px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: color 0.2s, padding-left 0.2s;
+  display: block;
+}
+.nav-dropdown-menu a:last-child { border-bottom: none; }
+.nav-dropdown-menu a:hover {
+  color: #fff;
+  padding-left: 6px;
+}
+.nav-dropdown-menu a:first-child { padding-top: 0; }
+/* Light background variant (for navs on white bg) */
+.nav-dropdown-light .nav-dropdown-menu {
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(32px) saturate(1.6);
+  -webkit-backdrop-filter: blur(32px) saturate(1.6);
+  border: 1px solid rgba(12,34,44,0.08);
+  box-shadow: 0 8px 32px rgba(12,34,44,0.12), 0 2px 8px rgba(12,34,44,0.06);
+}
+.nav-dropdown-light .nav-dropdown-menu a {
+  color: rgba(12,34,44,0.55);
+  border-bottom-color: rgba(12,34,44,0.06);
+}
+.nav-dropdown-light .nav-dropdown-menu a:hover { color: #0c222c; }
+
+/* ============================================
    Hero
    ============================================ */
 .hero { display: flex; min-height: 100vh; }
@@ -59,7 +135,8 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .btn-dark:hover { background: rgba(255,255,255,0.15); }
 .hero-right { flex: 1; position: relative; overflow: hidden; min-height: 100vh; }
 .hero-right video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.hero-logo-mark { position: absolute; bottom: 40px; right: 40px; width: 80px; height: auto; opacity: 0.7; z-index: 2; }
+.hero-logo-mark { position: absolute; bottom: 40px; right: 40px; width: 80px; height: auto; z-index: 2; opacity: 0; animation: logoMarkFadeIn 2s ease 1s forwards; }
+@keyframes logoMarkFadeIn { to { opacity: 0.7; } }
 
 /* ============================================
    Badge / Label Animations
@@ -85,7 +162,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 /* ============================================
    Logo Bar
    ============================================ */
-.logo-bar { display: flex; align-items: center; justify-content: space-between; padding: 48px 80px; border-bottom: 1px solid #ededed; }
+.logo-bar { display: flex; align-items: center; justify-content: space-between; padding: 48px 80px; border-bottom: 1px solid #dcdcdc; }
 .logo-bar span { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 1px; color: #0c222c; }
 
 /* ============================================
@@ -110,7 +187,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .services { display: flex; padding: 214px 80px; gap: 60px; align-items: flex-start; }
 .services .sticky-label { position: sticky; top: 80px; width: 180px; flex-shrink: 0; }
 .services-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.service-card { background: #ededed; padding: 0; display: flex; flex-direction: row; gap: 0; position: relative; }
+.service-card { background: #dcdcdc; padding: 0; display: flex; flex-direction: row; gap: 0; position: relative; }
 .service-card .card-content { display: flex; flex-direction: column; gap: 20px; flex: 1; min-width: 0; padding: 40px; }
 .service-card .card-image { position: absolute; top: 0; right: 0; bottom: 0; width: 0; background: #0c222c; overflow: hidden; transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); display: flex; align-items: center; justify-content: flex-start; z-index: 2; }
 .service-card:hover .card-image { width: 100%; }
@@ -136,7 +213,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .process-left p { font-size: 16px; color: rgba(255,255,255,0.7); line-height: 1.7; max-width: 400px; }
 .process-right { flex: 1; background: #0c222c; height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; }
 .step-card { background: #fff; padding: 40px; display: flex; flex-direction: column; gap: 16px; position: absolute; width: calc(100% - 80px); left: 40px; box-shadow: 0 8px 32px rgba(0,0,0,0.2); will-change: transform; }
-.step-label { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #6b7280; padding-bottom: 12px; border-bottom: 1px solid #ededed; width: fit-content; }
+.step-label { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #6b7280; padding-bottom: 12px; border-bottom: 1px solid #dcdcdc; width: fit-content; }
 .step-card h3 { font-size: 24px; font-weight: 600; }
 .step-card p { font-size: 15px; color: #6b7280; line-height: 1.6; }
 .plus-list { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
@@ -144,8 +221,8 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .plus-list div span:first-child { color: #6b7280; }
 
 /* Approach cards: horizontal layout with dividers */
-.step-card .plus-list { flex-direction: row; gap: 0; margin-top: 12px; padding-top: 16px; border-top: 1px solid #ededed; }
-.step-card .plus-list div { gap: 0; padding: 0 20px; border-right: 1px solid #ededed; font-size: 14px; color: #6b7280; }
+.step-card .plus-list { flex-direction: row; gap: 0; margin-top: 12px; padding-top: 16px; border-top: 1px solid #dcdcdc; }
+.step-card .plus-list div { gap: 0; padding: 0 20px; border-right: 1px solid #dcdcdc; font-size: 14px; color: #6b7280; }
 .step-card .plus-list div:first-child { padding-left: 0; }
 .step-card .plus-list div:last-child { border-right: none; }
 .step-card .plus-list div span:first-child { display: none; }
@@ -164,28 +241,20 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .practice-left .scroll-hint .arrow:hover { background: rgba(255,255,255,0.05); }
 .practice-left .scroll-hint span { font-size: 13px; color: rgba(255,255,255,0.3); letter-spacing: 1px; }
 .practice-track { display: flex; gap: 2px; will-change: transform; transition: none; }
-.practice-card { width: 460px; flex-shrink: 0; height: 100vh; display: flex; flex-direction: column; justify-content: space-between; padding: 48px; background: #ededed; border-right: 1px solid rgba(12,34,44,0.08); cursor: pointer; position: relative; overflow: hidden; z-index: 1; transition: background-color 0.5s ease; }
-.practice-card::before { content: ''; position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 0.5s ease; z-index: -1; }
-.practice-card:hover { background-color: #0c222c !important; }
-.practice-card:hover::before { opacity: 0.15; }
-.practice-card:nth-child(1)::before { background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=60'); }
-.practice-card:nth-child(2)::before { background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=60'); }
-.practice-card:nth-child(3)::before { background-image: url('https://images.unsplash.com/photo-1507679799987-c73b7651af56?w=600&q=60'); }
-.practice-card:nth-child(4)::before { background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=60'); }
-.practice-card:nth-child(5)::before { background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=60'); }
-.practice-card:nth-child(6)::before { background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=60'); }
-.practice-card .num { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(12,34,44,0.35); transition: color 0.3s; }
-.practice-card:hover .num { color: rgba(255,255,255,0.4); }
-.practice-card h3 { font-size: 32px; font-weight: 600; color: #0c222c; line-height: 1.15; margin-top: 16px; transition: color 0.3s; }
-.practice-card:hover h3 { color: #fff; }
-.practice-card p { font-size: 15px; color: #6b7280; line-height: 1.6; margin-top: 16px; transition: color 0.3s; }
-.practice-card:hover p { color: rgba(255,255,255,0.6); }
+.practice-card { width: 460px; flex-shrink: 0; height: 100vh; display: flex; flex-direction: column; justify-content: space-between; padding: 48px; background: #dcdcdc; border-right: 1px solid rgba(12,34,44,0.08); cursor: pointer; position: relative; overflow: hidden; z-index: 1; transition: background 0.4s ease; }
+.practice-card .num { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(12,34,44,0.35); transition: color 0.4s ease; }
+.practice-card h3 { font-size: 32px; font-weight: 600; color: #0c222c; line-height: 1.15; margin-top: 16px; transition: color 0.4s ease; }
+.practice-card p { font-size: 15px; color: rgba(12,34,44,0.5); line-height: 1.6; margin-top: 16px; transition: color 0.4s ease; }
 .practice-card .card-bottom { display: flex; flex-direction: column; gap: 12px; }
-.practice-card .card-bottom .line { width: 100%; height: 1px; background: rgba(12,34,44,0.1); transition: background 0.3s; }
-.practice-card:hover .card-bottom .line { background: rgba(255,255,255,0.15); }
-.practice-card .card-bottom a { display: flex; justify-content: space-between; align-items: center; font-size: 14px; font-weight: 500; color: #0c222c; text-decoration: none; transition: color 0.3s; }
-.practice-card:hover .card-bottom a { color: #fff; }
+.practice-card .card-bottom .line { width: 100%; height: 1px; background: rgba(12,34,44,0.1); transition: background 0.4s ease; }
+.practice-card .card-bottom a { display: flex; justify-content: space-between; align-items: center; font-size: 14px; font-weight: 500; color: #0c222c; text-decoration: none; transition: color 0.4s ease; }
 .practice-card .card-bottom a span { display: inline-block; transition: transform 0.3s ease; }
+.practice-card:hover { background: #0c222c; }
+.practice-card:hover .num { color: rgba(255,255,255,0.4); }
+.practice-card:hover h3 { color: #fff; }
+.practice-card:hover p { color: rgba(255,255,255,0.6); }
+.practice-card:hover .card-bottom .line { background: rgba(255,255,255,0.15); }
+.practice-card:hover .card-bottom a { color: #fff; }
 .practice-card:hover .card-bottom a span { transform: translateX(4px); }
 
 /* ============================================
@@ -218,7 +287,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .partner-card .info { display: flex; justify-content: space-between; align-items: flex-end; }
 .partner-card .info h4 { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; color: #0c222c; }
 .partner-card .info p { font-size: 14px; color: #6b7280; margin-top: 4px; }
-.partner-card .info span { font-size: 14px; color: rgba(12,34,44,0.3); transition: transform 0.3s ease, color 0.3s ease; }
+.partner-card .info span { font-size: 14px; color: rgba(12,34,44,0.5); transition: transform 0.3s ease, color 0.3s ease; }
 .partner-card:hover .info span { transform: translateX(4px); color: #0c222c; }
 
 /* Partners — Variation B (Dark) */
@@ -247,7 +316,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .wwr-row-header { display: flex; align-items: center; padding: 28px 0; }
 .wwr-num { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 1px; width: 40px; flex-shrink: 0; }
 .wwr-title { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 500; flex: 1; }
-.wwr-plus { font-family: 'Inter', sans-serif; font-size: 20px; flex-shrink: 0; transition: transform 0.3s ease; }
+.wwr-plus { font-family: 'Inter', sans-serif; font-size: 20px; flex-shrink: 0; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
 .wwr-row.open .wwr-plus { transform: rotate(45deg); }
 
 /* Light variant */
@@ -258,13 +327,13 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .wwr-light .wwr-left p { color: #6b7280; }
 .wwr-light .wwr-number { color: rgba(12,34,44,0.04); }
 .wwr-light .wwr-right { background: #fff; }
-.wwr-light .wwr-num { color: rgba(12,34,44,0.3); }
+.wwr-light .wwr-num { color: rgba(12,34,44,0.5); }
 .wwr-light .wwr-title { color: #0c222c; }
-.wwr-light .wwr-plus { color: rgba(12,34,44,0.3); }
+.wwr-light .wwr-plus { color: rgba(12,34,44,0.5); }
 .wwr-light .wwr-row:hover .wwr-plus { color: #0c222c; }
 
 /* Accordion body */
-.wwr-row-body { max-height: 0; overflow: hidden; transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), padding 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease; padding: 0 0 0 40px; opacity: 0; }
+.wwr-row-body { max-height: 0; overflow: hidden; transition: max-height 1s cubic-bezier(0.4, 0, 0.2, 1), padding 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.7s ease 0.1s; padding: 0 0 0 40px; opacity: 0; }
 .wwr-row.open .wwr-row-body { max-height: 800px; padding: 0 0 32px 40px; opacity: 1; }
 .wwr-teaser { font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 500; color: #0c222c; line-height: 1.5; margin-bottom: 24px; }
 .wwr-body { font-family: 'Inter', sans-serif; font-size: 14px; color: #9ca3af; line-height: 1.75; margin-bottom: 28px; }
@@ -275,7 +344,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .wwr-ticker-wrap::before { left: 0; background: linear-gradient(to right, #fff, transparent); }
 .wwr-ticker-wrap::after { right: 0; background: linear-gradient(to left, #fff, transparent); }
 .wwr-ticker { display: flex; gap: 32px; white-space: nowrap; animation: wwrScroll 18s linear infinite; }
-.wwr-ticker span { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(12,34,44,0.3); flex-shrink: 0; }
+.wwr-ticker span { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: #0c222c; flex-shrink: 0; }
 @keyframes wwrScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
 /* ============================================
@@ -297,10 +366,10 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .news { display: flex; padding: 120px 80px; gap: 60px; }
 .news-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .news-card { display: flex; flex-direction: column; gap: 16px; }
-.news-img { height: 240px; background: #ededed; position: relative; overflow: hidden; }
+.news-img { height: 240px; background: #dcdcdc; position: relative; overflow: hidden; }
 .news-img img { position: absolute; inset: -30px 0; width: 100%; height: calc(100% + 60px); object-fit: cover; will-change: transform; }
 .news-date { position: absolute; top: 16px; left: 16px; padding: 6px 12px; background: #fff; font-size: 12px; font-weight: 500; letter-spacing: 1px; }
-.news-card .cat { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #6b7280; padding-top: 8px; border-top: 1px solid #ededed; }
+.news-card .cat { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #6b7280; padding-top: 8px; border-top: 1px solid #dcdcdc; }
 .news-card h4 { font-size: 22px; font-weight: 600; line-height: 1.3; }
 .news-card p { font-size: 15px; color: #6b7280; line-height: 1.6; }
 .news-card a { font-size: 14px; font-weight: 500; text-decoration: underline; text-underline-offset: 4px; }
@@ -323,8 +392,8 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .footer-col .col-title { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); }
 .footer-col span { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: #fff; cursor: pointer; }
 .footer-col .address { font-weight: 400; color: rgba(255,255,255,0.45); cursor: default; }
-.footer-watermark { padding: 0 80px 50px; overflow: hidden; }
-.footer-watermark img { height: 140px; width: auto; opacity: 0.04; }
+.footer-watermark { padding: 0 80px 50px; overflow: hidden; max-width: calc(100% - 480px); }
+.footer-watermark img { width: 100%; height: auto; opacity: 0.04; }
 
 /* ============================================
    Touch Device — Disable Custom Cursor

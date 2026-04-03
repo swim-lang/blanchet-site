@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>White Collar Defense | BLANCHET</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#0c222c}</style>
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  html { scroll-behavior: smooth; }
+
+  /* ============================================
+     White Collar — Hero
+     ============================================ */
+  .wc-hero { display: flex; min-height: 680px; position: relative; overflow: hidden; }
+  .wc-hero-left { width: 540px; flex-shrink: 0; background: #0c222c; padding: 40px 48px 64px; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 2; }
+  .wc-hero-left .nav-logo img { height: 15px; width: auto; }
+  .wc-hero-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.3); padding-bottom: 24px; }
+  .wc-hero-title { font-family: 'Inter', sans-serif; font-size: 72px; font-weight: 700; line-height: 0.92; text-transform: uppercase; color: #fff; padding-bottom: 32px; }
+  .wc-hero-rule { width: 40px; height: 2px; background: rgba(255,255,255,0.15); margin-bottom: 28px; }
+  .wc-hero-intro { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.8; color: rgba(255,255,255,0.45); max-width: 400px; }
+  .wc-hero-right { flex: 1; position: relative; overflow: hidden; background: #0a1a22; }
+  .wc-hero-right img { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
+  .wc-hero-nav { position: absolute; top: 40px; right: 60px; display: flex; gap: 28px; align-items: center; z-index: 3; }
+  .wc-hero-nav a { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+  .wc-hero-nav a:hover { color: #fff; }
+  .wc-hero-nav a.active { color: #fff; }
+  .wc-hero-nav .nav-cta { padding: 8px 16px; border: 1px solid rgba(255,255,255,0.2); color: #fff; }
+  .wc-hero-nav .nav-cta:hover { background: rgba(255,255,255,0.08); }
+  /* Dingbat */
+  .wc-dingbat { position: absolute; bottom: -30px; left: -80px; font-family: 'DM Sans', sans-serif; font-size: 360px; font-weight: 800; color: rgba(255,255,255,0.035); line-height: 0.85; letter-spacing: -12px; pointer-events: none; z-index: 1; }
+  /* Logo mark in hero image corner */
+  .wc-hero-logo-mark { position: absolute; bottom: 40px; right: 40px; width: 80px !important; height: auto !important; z-index: 2; object-fit: contain; opacity: 0; animation: logoMarkFadeIn 2s ease 1s forwards; }
+  @keyframes logoMarkFadeIn { to { opacity: 0.7; } }
+  /* Accent line crossing the seam */
+  .wc-seam-line { position: absolute; bottom: 180px; left: 480px; width: 120px; height: 1px; background: rgba(255,255,255,0.12); z-index: 3; }
+
+  /* ============================================
+     Transition strip
+     ============================================ */
+  .wc-strip { padding: 28px 60px; background: #0c222c; border-top: 1px solid rgba(255,255,255,0.06); }
+  .wc-strip p { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 400; line-height: 1.75; color: rgba(255,255,255,0.3); max-width: 640px; opacity: 0; animation: shimmerOnce 2s ease-out 0.8s forwards; }
+  @keyframes shimmerOnce { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+  /* ============================================
+     Body — Split layout
+     ============================================ */
+  .wc-body { display: flex; }
+
+  /* Sticky sidebar nav */
+  .wc-sidebar { width: 260px; flex-shrink: 0; border-right: 1px solid #dcdcdc; position: sticky; top: 0; height: 100vh; align-self: flex-start; display: flex; flex-direction: column; padding: 64px 40px 64px 60px; }
+  .wc-sidebar-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(12,34,44,0.2); padding-bottom: 20px; border-bottom: 1px solid rgba(12,34,44,0.08); margin-bottom: 8px; }
+  .wc-sidebar-links { display: flex; flex-direction: column; gap: 0; position: relative; }
+  /* Animated active indicator bar */
+  .wc-sidebar-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 40px;
+    background: #0c222c;
+    transition: top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: top;
+  }
+  .wc-sidebar-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(12,34,44,0.5);
+    text-decoration: none;
+    padding: 12px 0 12px 16px;
+    display: block;
+    transition: color 0.3s, padding-left 0.3s, font-weight 0.3s;
+  }
+  .wc-sidebar-links a.active {
+    color: #0c222c;
+    font-weight: 600;
+    padding-left: 18px;
+  }
+  .wc-sidebar-links a:hover:not(.active) {
+    color: rgba(12,34,44,0.5);
+  }
+  /* Staggered entrance for sidebar links */
+  .wc-sidebar-links a {
+    opacity: 0;
+    transform: translateX(-8px);
+    animation: sidebarLinkIn 0.5s ease forwards;
+  }
+  .wc-sidebar-links a:nth-child(2) { animation-delay: 0.1s; }
+  .wc-sidebar-links a:nth-child(3) { animation-delay: 0.15s; }
+  .wc-sidebar-links a:nth-child(4) { animation-delay: 0.2s; }
+  .wc-sidebar-links a:nth-child(5) { animation-delay: 0.25s; }
+  .wc-sidebar-links a:nth-child(6) { animation-delay: 0.3s; }
+  .wc-sidebar-links a:nth-child(7) { animation-delay: 0.35s; }
+  @keyframes sidebarLinkIn {
+    to { opacity: 1; transform: translateX(0); }
+  }
+  .wc-sidebar-back { padding-top: 28px; border-top: 1px solid rgba(12,34,44,0.08); margin-top: 28px; }
+  .wc-sidebar-back a { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; color: rgba(12,34,44,0.45); letter-spacing: 0.5px; text-decoration: none; transition: color 0.2s; display: block; opacity: 1; transform: none; animation: none; padding-left: 0; }
+  .wc-sidebar-back a:hover { color: rgba(12,34,44,0.5); }
+
+  /* Content area */
+  .wc-content { flex: 1; display: flex; flex-direction: column; }
+
+  /* ============================================
+     Section base styles
+     ============================================ */
+  .wc-section { padding: 72px 80px; border-bottom: 1px solid #dcdcdc; }
+  .wc-section-num { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(12,34,44,0.45); padding-bottom: 20px; }
+  .wc-section-heading { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; line-height: 1.15; text-transform: uppercase; color: #0c222c; padding-bottom: 16px; }
+  .wc-body-text { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 400; line-height: 1.85; color: #6b7280; }
+  .wc-two-col { display: flex; gap: 64px; }
+  .wc-two-col > div { flex: 1; }
+  .wc-rule { width: 40px; height: 2px; background: #0c222c; margin-bottom: 32px; }
+
+  /* ============================================
+     Problems section
+     ============================================ */
+  .wc-problem-intro { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 400; line-height: 1.75; color: #6b7280; padding-bottom: 40px; max-width: 560px; }
+  .wc-problems-grid { display: flex; gap: 40px; }
+  .wc-problems-col { flex: 1; display: flex; flex-direction: column; gap: 32px; }
+  .wc-problem-item { border-left: 2px solid rgba(12,34,44,0.12); padding-left: 20px; display: flex; flex-direction: column; gap: 8px; transition: border-color 0.3s; }
+  .wc-problem-item:hover { border-color: #0c222c; }
+  .wc-problem-item h4 { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #0c222c; line-height: 1.5; text-transform: none; }
+  .wc-problem-item p { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; color: #6b7280; line-height: 1.7; }
+
+  /* ============================================
+     Focus Areas — Mini cards
+     ============================================ */
+  .wc-cards-grid { display: flex; flex-wrap: wrap; border: 1px solid #dcdcdc; }
+  .wc-mini-card { width: 50%; padding: 36px 32px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid #dcdcdc; transition: background 0.4s; }
+  .wc-mini-card:nth-child(odd) { border-right: 1px solid #dcdcdc; }
+  .wc-mini-card:nth-child(n+3) { border-bottom: none; }
+  .wc-mini-card:hover { background: #eef0f1; }
+  .wc-mini-card .card-eyebrow { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(12,34,44,0.45); }
+  .wc-mini-card h3 { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; line-height: 1.15; text-transform: uppercase; color: #0c222c; }
+  .wc-mini-card p { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.7; color: #6b7280; }
+
+  /* ============================================
+     Media break
+     ============================================ */
+  .wc-media { width: 100%; height: 360px; position: relative; overflow: hidden; }
+  .wc-media img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.4) contrast(1.05); }
+  .wc-media-tagline { position: absolute; bottom: 48px; right: 80px; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+
+  /* ============================================
+     Who We Represent
+     ============================================ */
+  .wc-who { background: #eef0f1; }
+  .wc-tags { display: flex; gap: 12px; flex-wrap: wrap; padding-bottom: 32px; }
+  .wc-tags span { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: #0c222c; padding: 10px 20px; border: 1px solid rgba(12,34,44,0.12); background: #fff; transition: background 0.2s, border-color 0.2s; }
+  .wc-tags span:hover { background: #0c222c; color: #fff; border-color: #0c222c; }
+  .wc-who-note { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.75; color: #6b7280; max-width: 560px; }
+
+  /* ============================================
+     Matter Types
+     ============================================ */
+  .wc-matters-grid { display: flex; gap: 48px; }
+  .wc-matters-col { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+  .wc-matter-item { display: flex; align-items: baseline; gap: 12px; }
+  .wc-matter-item .num { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; color: rgba(12,34,44,0.2); flex-shrink: 0; min-width: 16px; }
+  .wc-matter-item span:last-child { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #0c222c; line-height: 1.5; }
+
+  /* ============================================
+     Closing
+     ============================================ */
+  .wc-closing { border-bottom: none; }
+  .wc-closing-heading { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; line-height: 1.3; text-transform: uppercase; color: #0c222c; max-width: 560px; padding-bottom: 20px; }
+  .wc-closing-note { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.75; color: #6b7280; max-width: 480px; }
+
+  /* ============================================
+     Mobile
+     ============================================ */
+  @media (max-width: 767px) {
+    .wc-hero { flex-direction: column; min-height: auto; }
+    .wc-hero-left { width: 100%; padding: 32px 24px 48px; }
+    .wc-hero-title { font-size: 42px; }
+    .wc-hero-right { height: 320px; }
+    .wc-hero-nav { display: none; }
+    .wc-seam-line { display: none; }
+    .wc-dingbat { font-size: 200px; }
+    .wc-strip { padding: 20px 24px; }
+    .wc-body { flex-direction: column; }
+    .wc-sidebar { display: none; }
+    .wc-section { padding: 48px 24px; }
+    .wc-two-col { flex-direction: column; gap: 24px; }
+    .wc-problems-grid { flex-direction: column; gap: 24px; }
+    .wc-cards-grid { flex-direction: column; }
+    .wc-mini-card { width: 100%; border-right: none !important; border-bottom: 1px solid #dcdcdc !important; }
+    .wc-mini-card:last-child { border-bottom: none !important; }
+    .wc-matters-grid { flex-direction: column; gap: 24px; }
+    .wc-section-heading { font-size: 24px; }
+  }
+
+  /* Tablet */
+  @media (min-width: 768px) and (max-width: 1279px) {
+    .wc-hero-left { width: 400px; padding: 32px 36px 48px; }
+    .wc-hero-title { font-size: 52px; }
+    .wc-sidebar { width: 220px; padding: 48px 28px 48px 36px; }
+    .wc-section { padding: 56px 48px; }
+    .wc-matters-grid { flex-direction: column; gap: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-curtain"></div>
+
+<nav class="scroll-nav">
+  <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
+  <div class="scroll-nav-links">
+    <div class="nav-dropdown">
+      <a href="practices.html" class="active">PRACTICE AREAS</a>
+      <div class="nav-dropdown-menu">
+
+        <a href="practices.html#litigation">Litigation</a>
+        <a href="white-collar.html">White Collar Defense</a>
+        <a href="practices.html#investigations">Government Investigations</a>
+        <a href="practices.html#product-liability">Product Liability</a>
+        <a href="practices.html#class-actions">Class Actions</a>
+        <a href="practices.html#environmental">Environmental & Regulatory</a>
+      </div>
+    </div>
+    <a href="firm.html">FIRM</a>
+    <a href="team.html">TEAM</a>
+    <a href="#">INSIGHTS</a>
+  </div>
+  <a href="contact.html" class="scroll-nav-cta">CONTACT</a>
+</nav>
+
+<!-- Hero -->
+<section class="wc-hero">
+  <div class="wc-hero-left">
+    <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
+    <div>
+      <div class="wc-hero-label">[ PRACTICE AREA ]</div>
+      <h1 class="wc-hero-title">White<br>Collar<br>Defense</h1>
+      <div class="wc-hero-rule"></div>
+      <p class="wc-hero-intro">White collar matters require control, discretion, and lawyers who know how quickly legal exposure can expand.</p>
+    </div>
+  </div>
+  <div class="wc-hero-right">
+    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1400&q=80" alt="Architecture">
+    <div class="wc-hero-nav">
+      <div class="nav-dropdown">
+        <a href="practices.html" class="active">PRACTICE AREAS</a>
+        <div class="nav-dropdown-menu">
+
+          <a href="practices.html#litigation">Litigation</a>
+          <a href="white-collar.html">White Collar Defense</a>
+          <a href="practices.html#investigations">Government Investigations</a>
+          <a href="practices.html#product-liability">Product Liability</a>
+          <a href="practices.html#class-actions">Class Actions</a>
+          <a href="practices.html#environmental">Environmental & Regulatory</a>
+        </div>
+      </div>
+      <a href="firm.html">FIRM</a>
+      <a href="team.html">TEAM</a>
+      <a href="#">INSIGHTS</a>
+      <a href="contact.html" class="nav-cta">CONTACT</a>
+    </div>
+    <span class="wc-dingbat">§</span>
+    <img class="wc-hero-logo-mark" src="assets/logos/Logo-White.png" alt="Blanchet">
+  </div>
+  <div class="wc-seam-line"></div>
+</section>
+
+<!-- Transition strip -->
+<div class="wc-strip">
+  <p>Some matters begin with a subpoena. Others begin with an inquiry, an internal concern, or a call that suggests the issue is moving faster than expected. The work requires careful judgment early.</p>
+</div>
+
+<!-- Body — Split layout -->
+<div class="wc-body">
+
+  <!-- Sticky sidebar nav -->
+  <aside class="wc-sidebar">
+    <div class="wc-sidebar-label">On This Page</div>
+    <div class="wc-sidebar-links">
+      <div class="wc-sidebar-indicator"></div>
+      <a href="#overview" class="active" data-index="0">Overview</a>
+      <a href="#problems" data-index="1">Problems</a>
+      <a href="#focus-areas" data-index="2">Focus Areas</a>
+      <a href="#approach" data-index="3">Approach</a>
+      <a href="#who-we-represent" data-index="4">Who We Represent</a>
+      <a href="#matter-types" data-index="5">Matter Types</a>
+    </div>
+    <div class="wc-sidebar-back">
+      <a href="practices.html">&#8592;  All Practices</a>
+    </div>
+  </aside>
+
+  <!-- Content -->
+  <div class="wc-content">
+
+    <!-- 01 Overview -->
+    <section id="overview" class="wc-section">
+      <div class="wc-section-num">01 — Overview</div>
+      <div class="wc-two-col">
+        <div>
+          <p class="wc-body-text">White collar defense is often about more than the charge, the allegation, or the agency involved. It is about managing risk at a moment when legal, reputational, and professional consequences may all be moving at once.</p>
+          <br>
+          <p class="wc-body-text">Blanchet handles this work with a clear understanding of what clients need early: a realistic assessment of exposure, a disciplined response, and lawyers who can manage the matter without adding unnecessary noise.</p>
+        </div>
+        <div>
+          <p class="wc-body-text">Some issues stay narrow. Others widen quickly. The point is to understand which is which, and to act accordingly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 Problems -->
+    <section id="problems" class="wc-section">
+      <div class="wc-section-num">02 — Problems</div>
+      <h2 class="wc-section-heading">Problems Clients<br>Are Usually Facing</h2>
+      <p class="wc-problem-intro">These matters often arrive with urgency, uncertainty, and more than one kind of pressure.</p>
+      <div class="wc-problems-grid">
+        <div class="wc-problems-col">
+          <div class="wc-problem-item">
+            <h4>A subpoena, target letter, or government inquiry has arrived</h4>
+            <p>The issue is now formal, time-sensitive, and likely to require immediate decisions about scope, response, and exposure.</p>
+          </div>
+          <div class="wc-problem-item">
+            <h4>An internal issue may have external consequences</h4>
+            <p>What begins as a compliance concern, reporting issue, or personnel matter may quickly raise criminal or regulatory questions.</p>
+          </div>
+          <div class="wc-problem-item">
+            <h4>Civil and criminal risk may be developing at the same time</h4>
+            <p>In some matters, the legal problem does not stay in one lane. Regulatory, civil, and reputational issues may all move together.</p>
+          </div>
+        </div>
+        <div class="wc-problems-col">
+          <div class="wc-problem-item">
+            <h4>An executive or employee needs separate counsel</h4>
+            <p>The company may have one set of interests. Individuals may have another. Those lines need to be handled carefully.</p>
+          </div>
+          <div class="wc-problem-item">
+            <h4>The facts are incomplete but decisions cannot wait</h4>
+            <p>The record may still be developing, but preservation, communication, and response decisions often need to happen immediately.</p>
+          </div>
+          <div class="wc-problem-item">
+            <h4>The matter is sensitive beyond the legal issue itself</h4>
+            <p>For some clients, confidentiality, business continuity, and reputational stability are just as important as the legal defense.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Focus Areas -->
+    <section id="focus-areas" class="wc-section">
+      <div class="wc-section-num">03 — Focus Areas</div>
+      <h2 class="wc-section-heading">Focus Areas Within<br>White Collar Defense</h2>
+      <p class="wc-problem-intro">This practice includes several recurring types of work, each requiring its own set of judgments and its own kind of experience.</p>
+      <div class="wc-cards-grid">
+        <div class="wc-mini-card">
+          <span class="card-eyebrow">Regulatory</span>
+          <h3>Government<br>Investigations</h3>
+          <p>Representation in matters involving federal and state agencies, grand jury inquiries, subpoenas, witness issues, and other forms of government scrutiny. The work often requires quick assessment, controlled communication, and careful management of parallel risk.</p>
+        </div>
+        <div class="wc-mini-card">
+          <span class="card-eyebrow">Internal</span>
+          <h3>Internal<br>Investigations</h3>
+          <p>Some matters begin before any outside agency is involved. Blanchet helps clients assess internal allegations, review facts, preserve records, and determine what response is appropriate before the issue grows.</p>
+        </div>
+        <div class="wc-mini-card">
+          <span class="card-eyebrow">Individual</span>
+          <h3>Executive<br>Representation</h3>
+          <p>Executives and employees may need counsel when their position diverges from the company's or when individual exposure becomes a real concern. That requires discretion, independence, and clear judgment.</p>
+        </div>
+        <div class="wc-mini-card">
+          <span class="card-eyebrow">Cross-Exposure</span>
+          <h3>Parallel<br>Proceedings</h3>
+          <p>White collar issues often overlap with civil disputes, regulatory pressure, and internal reviews. Managing these parallel tracks requires coordination, discipline, and strategic clarity across multiple fronts.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Media break -->
+    <div class="wc-media">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80" alt="Office">
+      <span class="wc-media-tagline">Discipline. Discretion. Control.</span>
+    </div>
+
+    <!-- 04 Approach -->
+    <section id="approach" class="wc-section">
+      <div class="wc-section-num">04 — Approach</div>
+      <h2 class="wc-section-heading">How Blanchet<br>Approaches This Work</h2>
+      <div class="wc-rule"></div>
+      <div class="wc-two-col">
+        <div>
+          <p class="wc-body-text">White collar matters tend to develop in unpredictable ways. Early decisions — about document preservation, internal communications, witness coordination, and engagement with regulators — often define the shape of everything that follows.</p>
+          <br>
+          <p class="wc-body-text">Blanchet's approach is direct and controlled. The firm assigns senior lawyers from the outset, keeps teams small, and focuses on understanding the full landscape of a client's exposure before recommending a course of action.</p>
+        </div>
+        <div>
+          <p class="wc-body-text">That means preparation for the possibility of trial — even when the goal is resolution. Credibility with prosecutors, regulators, and opposing counsel comes from being ready, not from saying you are.</p>
+          <br>
+          <p class="wc-body-text">Clients receive clear, honest assessments. Strategy is built around the facts as they are, not as anyone wishes they were. And communication stays consistent — with the client, with co-counsel, and with anyone on the other side.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Who We Represent -->
+    <section id="who-we-represent" class="wc-section wc-who">
+      <div class="wc-section-num">05 — Who We Represent</div>
+      <h2 class="wc-section-heading">Who This<br>Work Is For</h2>
+      <p class="wc-problem-intro">The firm's white collar practice serves a range of clients, each with different kinds of exposure and different needs.</p>
+      <div class="wc-tags">
+        <span>Public Companies</span>
+        <span>Private Companies</span>
+        <span>Officers & Executives</span>
+        <span>Board Members</span>
+        <span>Audit Committees</span>
+        <span>Employees & Witnesses</span>
+        <span>Financial Institutions</span>
+        <span>Professional Services Firms</span>
+      </div>
+      <p class="wc-who-note">Some clients come to the firm when the issue is already formal. Others reach out earlier, when something feels wrong but the picture is still developing. Both situations require the same thing: experienced judgment and a clear plan.</p>
+    </section>
+
+    <!-- 06 Matter Types -->
+    <section id="matter-types" class="wc-section">
+      <div class="wc-section-num">06 — Matter Types</div>
+      <h2 class="wc-section-heading">Example<br>Matter Types</h2>
+      <p class="wc-problem-intro">The matters below reflect the types of issues Blanchet handles within this practice.</p>
+      <div class="wc-matters-grid">
+        <div class="wc-matters-col">
+          <div class="wc-matter-item"><span class="num">01</span><span>Federal grand jury investigations</span></div>
+          <div class="wc-matter-item"><span class="num">02</span><span>SEC and CFTC enforcement actions</span></div>
+          <div class="wc-matter-item"><span class="num">03</span><span>DOJ criminal referrals</span></div>
+          <div class="wc-matter-item"><span class="num">04</span><span>State attorney general investigations</span></div>
+        </div>
+        <div class="wc-matters-col">
+          <div class="wc-matter-item"><span class="num">05</span><span>Fraud and financial misconduct</span></div>
+          <div class="wc-matter-item"><span class="num">06</span><span>FCPA and anti-corruption matters</span></div>
+          <div class="wc-matter-item"><span class="num">07</span><span>Securities fraud and insider trading</span></div>
+          <div class="wc-matter-item"><span class="num">08</span><span>Antitrust and competition inquiries</span></div>
+        </div>
+        <div class="wc-matters-col">
+          <div class="wc-matter-item"><span class="num">09</span><span>Health care fraud and False Claims Act</span></div>
+          <div class="wc-matter-item"><span class="num">10</span><span>Tax and financial reporting disputes</span></div>
+          <div class="wc-matter-item"><span class="num">11</span><span>Internal investigations and compliance reviews</span></div>
+          <div class="wc-matter-item"><span class="num">12</span><span>Whistleblower and qui tam defense</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="wc-section wc-closing">
+      <div class="wc-rule"></div>
+      <p class="wc-closing-heading">The standard for this work is not effort. It is judgment, preparation, and knowing what to do when the situation changes.</p>
+      <p class="wc-closing-note">For questions about a matter or to speak with someone at the firm, contact us directly.</p>
+    </section>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="site-footer-top">
+    <div class="site-footer-cta">
+      <div class="section-label" style="color: rgba(255,255,255,0.3); border-bottom-color: rgba(255,255,255,0.12);">[ GET IN TOUCH ]</div>
+      <h2>Start with the right counsel.</h2>
+      <p>Blanchet represents clients in litigation, investigations, and disputes that call for experience, direct involvement, and disciplined execution.</p>
+      <a href="contact.html" class="btn-white" style="display:inline-block;text-decoration:none;">Contact</a>
+    </div>
+    <div class="site-footer-nav">
+      <div class="site-footer-cols">
+        <div class="footer-col">
+          <div class="col-title">EXPLORE</div>
+          <a href="practices.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Practice Areas</a>
+          <a href="firm.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Firm</a>
+          <a href="team.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Team</a>
+          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Insights</a>
+        </div>
+        <div class="footer-col">
+          <div class="col-title">OFFICES</div>
+          <span class="address">Buffalo</span>
+          <span class="address">New York City</span>
+          <span class="address">Chicago</span>
+        </div>
+        <div class="footer-col">
+          <div class="col-title">CONNECT</div>
+          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">LinkedIn</a>
+        </div>
+      </div>
+      <div class="site-footer-meta">
+        <span>Litigation and Investigations</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-watermark">
+    <img src="assets/logos/Wordmark-White.png" alt="Blanchet">
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+// ============================================
+// White Collar — Sidebar nav with animated indicator
+// ============================================
+(function() {
+  const sidebar = document.querySelector('.wc-sidebar-links');
+  const indicator = document.querySelector('.wc-sidebar-indicator');
+  const links = document.querySelectorAll('.wc-sidebar-links a');
+  const sections = document.querySelectorAll('.wc-content > section[id], .wc-content > .wc-media');
+
+  if (!sidebar || !indicator || !links.length) return;
+
+  // Map section IDs to link indices
+  const sectionIds = ['overview', 'problems', 'focus-areas', 'approach', 'who-we-represent', 'matter-types'];
+
+  function setActive(index) {
+    links.forEach((link, i) => {
+      if (i === index) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+    // Animate indicator to the active link position
+    const activeLink = links[index];
+    if (activeLink) {
+      const linkRect = activeLink.getBoundingClientRect();
+      const parentRect = sidebar.getBoundingClientRect();
+      indicator.style.top = (linkRect.top - parentRect.top) + 'px';
+      indicator.style.height = linkRect.height + 'px';
+    }
+  }
+
+  // Initial position
+  requestAnimationFrame(() => setActive(0));
+
+  // Scroll-based active state
+  window.addEventListener('scroll', () => {
+    let current = 0;
+    sectionIds.forEach((id, i) => {
+      const section = document.getElementById(id);
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.4) {
+          current = i;
+        }
+      }
+    });
+    setActive(current);
+  }, { passive: true });
+
+  // Click to scroll
+  links.forEach((link, i) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').replace('#', '');
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setActive(i);
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
