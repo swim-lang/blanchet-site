@@ -11,12 +11,19 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Custom dot cursor (skip on touch)
+// Custom dot cursor with dark/light detection (skip on touch)
 const cursor = document.querySelector('.cursor');
 if (cursor && window.matchMedia('(hover: hover)').matches) {
+  const darkSelectors = '.hero-left, .hero-right, .practice-areas, .partners-dark, .process-left, .window-sticky, .site-footer, .cta-banner';
   document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX - 4 + 'px';
-    cursor.style.top = e.clientY - 4 + 'px';
+    cursor.style.left = e.clientX - 6 + 'px';
+    cursor.style.top = e.clientY - 6 + 'px';
+    const el = document.elementFromPoint(e.clientX, e.clientY);
+    if (el && el.closest(darkSelectors)) {
+      cursor.classList.add('light');
+    } else {
+      cursor.classList.remove('light');
+    }
   });
 }
 
@@ -40,8 +47,7 @@ window.addEventListener('scroll', () => {
 const windowSection = document.querySelector('.window-section');
 const windowSquare = document.querySelector('.window-square');
 const windowBgVideo = document.querySelector('.window-video');
-const windowText = document.querySelector('.window-text');
-const windowHint = document.querySelector('.window-scroll-hint');
+const windowLogo = document.querySelector('.window-logo');
 if (windowSection && windowSquare) {
   window.addEventListener('scroll', () => {
     const rect = windowSection.getBoundingClientRect();
@@ -55,9 +61,11 @@ if (windowSection && windowSquare) {
     windowSquare.style.width = size + 'px';
     windowSquare.style.height = size + 'px';
 
-    const textOpacity = Math.max(1 - progress * 3, 0);
-    windowText.style.opacity = textOpacity;
-    windowHint.style.opacity = textOpacity;
+    // Logo stays visible, fades gently near the end
+    if (windowLogo) {
+      const logoOpacity = Math.max(1 - progress * 1.5, 0);
+      windowLogo.style.opacity = logoOpacity;
+    }
 
     if (progress > 0.7) {
       windowBgVideo.style.opacity = (progress - 0.7) / 0.3;
@@ -229,4 +237,15 @@ window.addEventListener('resize', () => {
     practiceMaxScroll = setupPracticeScroll();
     setupStackingCards();
   }, 250);
+});
+
+// Page transitions — smooth exit on internal links
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href]');
+  if (!link) return;
+  const href = link.getAttribute('href');
+  if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto')) return;
+  e.preventDefault();
+  document.body.classList.add('page-exit');
+  setTimeout(() => { window.location.href = href; }, 300);
 });

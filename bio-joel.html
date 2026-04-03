@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joel Blanchet | BLANCHET</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  html { scroll-behavior: smooth; }
+
+  /* Bio nav — sits over the photo */
+  .bio-nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 40px 60px; }
+  .bio-nav .nav-logo img { height: 15px; width: auto; }
+  .bio-nav-links { display: flex; gap: 24px; align-items: center; }
+  .bio-nav-links a { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 1px; color: #0c222c; text-decoration: none; transition: opacity 0.2s; }
+  .bio-nav-links a:hover { opacity: 0.6; }
+  .bio-nav-cta { padding: 8px 16px; border: 1px solid rgba(12,34,44,0.2); font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 1px; color: #0c222c; text-decoration: none; transition: background 0.2s; }
+  .bio-nav-cta:hover { background: rgba(12,34,44,0.04); }
+
+  /* Bio layout */
+  .bio-hero { display: flex; position: relative; }
+  .bio-photo { flex: 1; position: sticky; top: 0; height: 100vh; overflow: hidden; }
+  .bio-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .bio-content { flex: 1; padding: 140px 80px 120px; display: flex; flex-direction: column; }
+  .bio-back { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: #0c222c; text-decoration: none; display: flex; align-items: center; gap: 8px; margin-bottom: 32px; }
+  .bio-back:hover { opacity: 0.6; }
+  .bio-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; color: rgba(12,34,44,0.35); margin-bottom: 16px; }
+  .bio-name { font-family: 'Inter', sans-serif; font-size: 52px; font-weight: 700; color: #0c222c; line-height: 1.05; text-transform: uppercase; margin-bottom: 12px; }
+  .bio-offices { font-family: 'Inter', sans-serif; font-size: 13px; color: #6b7280; letter-spacing: 0.5px; margin-bottom: 40px; }
+  .bio-rule { width: 40px; height: 2px; background: #0c222c; margin-bottom: 40px; }
+  .bio-text { font-family: 'Inter', sans-serif; font-size: 15px; color: #6b7280; line-height: 1.8; margin-bottom: 24px; max-width: 520px; }
+  .bio-section-title { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(12,34,44,0.35); margin-top: 40px; margin-bottom: 16px; padding-top: 32px; border-top: 1px solid #ededed; }
+  .bio-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; margin-bottom: 8px; max-width: 520px; }
+  .bio-list li { font-family: 'Inter', sans-serif; font-size: 14px; color: #0c222c; padding-left: 16px; position: relative; line-height: 1.6; }
+  .bio-list li::before { content: ''; position: absolute; left: 0; top: 9px; width: 4px; height: 4px; background: rgba(12,34,44,0.2); }
+  .bio-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+  .bio-tags span { font-family: 'Inter', sans-serif; font-size: 12px; color: #0c222c; padding: 6px 14px; border: 1px solid rgba(12,34,44,0.12); }
+  .bio-rep-text { font-family: 'Inter', sans-serif; font-size: 14px; color: #6b7280; line-height: 1.7; margin-bottom: 16px; max-width: 520px; }
+  .bio-rep-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px; margin-bottom: 8px; max-width: 520px; }
+  .bio-rep-list li { font-family: 'Inter', sans-serif; font-size: 14px; color: #0c222c; line-height: 1.65; padding-left: 16px; position: relative; }
+  .bio-rep-list li::before { content: ''; position: absolute; left: 0; top: 9px; width: 4px; height: 4px; background: rgba(12,34,44,0.2); }
+</style>
+</head>
+<body>
+
+<nav class="bio-nav">
+  <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
+  <div class="bio-nav-links">
+    <a href="index.html">HOME</a>
+    <a href="#">PRACTICES</a>
+    <a href="#">ABOUT</a>
+    <a href="#">APPROACH</a>
+    <a href="#">INSIGHTS</a>
+    <a href="#" class="bio-nav-cta">CONTACT US</a>
+  </div>
+</nav>
+
+<section class="bio-hero">
+  <div class="bio-photo">
+    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1200&q=80" alt="Joel Blanchet">
+  </div>
+  <div class="bio-content">
+    <a href="index.html" class="bio-back"><span>&#8592;</span> Back to Team</a>
+    <div class="bio-label">[ FOUNDING PARTNER ]</div>
+    <h1 class="bio-name">Joel<br>Blanchet</h1>
+    <div class="bio-offices">Buffalo | New York City | Chicago</div>
+    <div class="bio-rule"></div>
+
+    <p class="bio-text">Joel Blanchet is a trial lawyer who represents companies, executives, and institutions in litigation, investigations, and other disputes across the country. His practice is broad by design, with experience spanning commercial litigation, white collar and regulatory matters, environmental disputes, product liability, class actions, and technically demanding cases.</p>
+
+    <p class="bio-text">Before helping build Blanchet, Joel spent more than a decade as a partner in the litigation department at Kirkland & Ellis and later helped lead a litigation practice at Phillips Lytle. Over the course of his career, he has handled disputes involving toxic tort liability, complex financial transactions, mergers and acquisitions, securities, intellectual property, bankruptcy, and government-facing investigations.</p>
+
+    <p class="bio-text">Joel is known for direct involvement, trial readiness, and a practical approach to difficult disputes. He works closely with clients from the outset of a matter, with an emphasis on clear decision-making, disciplined case management, and preparation that creates leverage at every stage.</p>
+
+    <div class="bio-section-title">AREAS OF FOCUS</div>
+    <div class="bio-tags">
+      <span>Litigation</span>
+      <span>Commercial & Contract Disputes</span>
+      <span>White Collar Defense</span>
+      <span>Government Investigations</span>
+      <span>Product Liability & Mass Tort</span>
+      <span>Class Actions</span>
+      <span>Intellectual Property</span>
+      <span>Environmental & Regulatory</span>
+    </div>
+
+    <div class="bio-section-title">REPRESENTATIVE EXPERIENCE</div>
+    <p class="bio-rep-text">Joel's public experience includes:</p>
+    <ul class="bio-rep-list">
+      <li>Representing Dow in litigation tied to a natural gas leak in Louisiana, where summary judgment was won on more than $100 million in damage claims while substantial counterclaim recoveries were also achieved</li>
+      <li>Representing BP in matters related to the Deepwater Horizon accident and oil spill</li>
+      <li>Representing Dow in merger litigation arising from the Rohm and Haas transaction, which settled on the first day of trial with a reduction in the cash consideration to be paid</li>
+      <li>Handling a range of business, tort, securities, IP, and bankruptcy disputes for major corporate clients across the country</li>
+    </ul>
+
+    <div class="bio-section-title">EDUCATION</div>
+    <ul class="bio-list">
+      <li>University of Illinois College of Law, J.D., magna cum laude</li>
+      <li>Canisius College, B.A., magna cum laude</li>
+    </ul>
+
+    <div class="bio-section-title">ADMISSIONS</div>
+    <ul class="bio-list">
+      <li>New York</li>
+      <li>Illinois</li>
+      <li>U.S. District Courts for the Northern and Southern Districts of Florida</li>
+      <li>U.S. District Courts for the Northern and Southern Districts of Illinois</li>
+      <li>U.S. District Courts for the Eastern, Southern, and Western Districts of New York</li>
+      <li>U.S. Courts of Appeals for the Second and Tenth Circuits</li>
+    </ul>
+
+    <div class="bio-section-title">HONORS AND RECOGNITION</div>
+    <ul class="bio-list">
+      <li>The Best Lawyers in America</li>
+      <li>Recommended by The Legal 500 United States</li>
+      <li>New York Metro Super Lawyers Rising Star</li>
+      <li>Legal Services of NYC, Outstanding Contribution to Pro Bono, Honoree</li>
+    </ul>
+
+    <div class="bio-section-title">PROFESSIONAL ASSOCIATIONS</div>
+    <ul class="bio-list">
+      <li>American Bar Association, Section of Dispute Resolution and Litigation Section</li>
+      <li>Bar Association of Erie County</li>
+      <li>New York State Bar Association, Commercial & Federal Litigation Section and Trial Lawyers Section</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="site-footer-top">
+    <div class="site-footer-cta">
+      <div class="section-label" style="color: rgba(255,255,255,0.3); border-bottom-color: rgba(255,255,255,0.12);">[ GET IN TOUCH ]</div>
+      <h2>Start with the right counsel.</h2>
+      <p>Blanchet represents clients in litigation, investigations, and disputes that call for experience, direct involvement, and disciplined execution.</p>
+      <button class="btn-white">Contact Us</button>
+    </div>
+    <div class="site-footer-nav">
+      <div class="site-footer-cols">
+        <div class="footer-col">
+          <div class="col-title">EXPLORE</div>
+          <span>Practice Areas</span>
+          <span>About</span>
+          <span>Approach</span>
+          <span>Insights</span>
+        </div>
+        <div class="footer-col">
+          <div class="col-title">OFFICES</div>
+          <span class="address">Buffalo</span>
+          <span class="address">New York City</span>
+          <span class="address">Chicago</span>
+        </div>
+      </div>
+      <div class="site-footer-meta">
+        <span>Litigation and Investigations</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-watermark">
+    <img src="assets/logos/Wordmark-White.png" alt="Blanchet">
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
