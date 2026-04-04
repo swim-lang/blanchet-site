@@ -4,6 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Joel Blanchet | BLANCHET</title>
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#0c222c">
+<!-- Open Graph -->
+<meta name="description" content="Joel Blanchet is the founding partner of Blanchet, focused on complex litigation, investigations, and trial work.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BLANCHET">
+<meta property="og:title" content="Joel Blanchet | BLANCHET">
+<meta property="og:description" content="Joel Blanchet is the founding partner of Blanchet, focused on complex litigation, investigations, and trial work.">
+<meta property="og:image" content="assets/favicon/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="assets/favicon/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -24,7 +42,7 @@
 
   /* Bio layout */
   .bio-hero { display: flex; position: relative; }
-  .bio-photo { flex: 1; position: sticky; top: 0; height: 100vh; overflow: hidden; position: relative; }
+  .bio-photo { flex: 1; position: sticky; top: 0; height: 100vh; overflow: hidden; align-self: flex-start; }
   .bio-photo > img:not(.bio-photo-logo) { width: 100%; height: 100%; object-fit: cover; }
   .bio-photo-logo { position: absolute; top: 40px; left: 48px; width: 60px !important; height: auto !important; object-fit: contain !important; z-index: 2; opacity: 0; animation: logoMarkFadeIn 2s ease 1s forwards; }
   @keyframes logoMarkFadeIn { to { opacity: 0.5; } }
@@ -33,16 +51,16 @@
   .bio-back:hover { opacity: 0.6; }
   .bio-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; color: rgba(12,34,44,0.35); margin-bottom: 16px; }
   .bio-name { font-family: 'Inter', sans-serif; font-size: 52px; font-weight: 700; color: #0c222c; line-height: 1.05; text-transform: uppercase; margin-bottom: 12px; }
-  .bio-offices { font-family: 'Inter', sans-serif; font-size: 14px; color: #6b7280; letter-spacing: 0.5px; margin-bottom: 40px; }
+  .bio-offices { font-family: 'Inter', sans-serif; font-size: 14px; color: #4b5563; letter-spacing: 0.5px; margin-bottom: 40px; }
   .bio-rule { width: 40px; height: 2px; background: #0c222c; margin-bottom: 40px; }
-  .bio-text { font-family: 'Inter', sans-serif; font-size: 15px; color: #6b7280; line-height: 1.8; margin-bottom: 24px; max-width: 520px; }
-  .bio-section-title { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(12,34,44,0.35); margin-top: 40px; margin-bottom: 16px; padding-top: 32px; border-top: 1px solid #dcdcdc; }
+  .bio-text { font-family: 'Inter', sans-serif; font-size: 15px; color: #4b5563; line-height: 1.8; margin-bottom: 24px; max-width: 520px; }
+  .bio-section-title { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(12,34,44,0.35); margin-top: 40px; margin-bottom: 16px; padding-top: 32px; border-top: 1px solid #e5e7eb; }
   .bio-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; margin-bottom: 8px; max-width: 520px; }
   .bio-list li { font-family: 'Inter', sans-serif; font-size: 14px; color: #0c222c; padding-left: 16px; position: relative; line-height: 1.6; }
   .bio-list li::before { content: ''; position: absolute; left: 0; top: 9px; width: 4px; height: 4px; background: rgba(12,34,44,0.2); }
   .bio-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
   .bio-tags span { font-family: 'Inter', sans-serif; font-size: 13px; color: #0c222c; padding: 6px 14px; border: 1px solid rgba(12,34,44,0.12); }
-  .bio-rep-text { font-family: 'Inter', sans-serif; font-size: 15px; color: #6b7280; line-height: 1.7; margin-bottom: 16px; max-width: 520px; }
+  .bio-rep-text { font-family: 'Inter', sans-serif; font-size: 15px; color: #4b5563; line-height: 1.7; margin-bottom: 16px; max-width: 520px; }
   .bio-rep-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px; margin-bottom: 8px; max-width: 520px; }
   .bio-rep-list li { font-family: 'Inter', sans-serif; font-size: 14px; color: #0c222c; line-height: 1.65; padding-left: 16px; position: relative; }
   .bio-rep-list li::before { content: ''; position: absolute; left: 0; top: 9px; width: 4px; height: 4px; background: rgba(12,34,44,0.2); }
@@ -69,7 +87,7 @@
     </div>
     <a href="firm.html">FIRM</a>
     <a href="team.html">TEAM</a>
-    <a href="#">INSIGHTS</a>
+    <a href="insights.html">INSIGHTS</a>
     <a href="contact.html" class="bio-nav-cta">CONTACT</a>
   </div>
 </nav>
@@ -161,7 +179,7 @@
           <a href="practices.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Practice Areas</a>
           <a href="firm.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Firm</a>
           <a href="team.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Team</a>
-          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Insights</a>
+          <a href="insights.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Insights</a>
         </div>
         <div class="footer-col">
           <div class="col-title">OFFICES</div>

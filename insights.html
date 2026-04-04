@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insights | BLANCHET</title>
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#0c222c">
+<!-- Open Graph -->
+<meta name="description" content="Thinking that shapes the work. Insights on litigation, investigations, trial strategy, and legal technology from Blanchet.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BLANCHET">
+<meta property="og:title" content="Insights | BLANCHET">
+<meta property="og:description" content="Thinking that shapes the work. Insights on litigation, investigations, trial strategy, and legal technology.">
+<meta property="og:image" content="assets/favicon/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="assets/favicon/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>html{background:#0c222c}</style>
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  /* ============================================
+     Insights Landing — Hero
+     ============================================ */
+  .insights-hero {
+    background: #0c222c;
+    padding: 40px 80px 72px;
+    display: flex;
+    flex-direction: column;
+  }
+  .insights-hero-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 80px;
+  }
+  .insights-hero-nav .nav-logo img { height: 15px; width: auto; }
+  .insights-hero-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .insights-hero-nav-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .insights-hero-nav-links a:hover { color: #fff; }
+  .insights-hero-nav-links a.active { color: #fff; }
+  .insights-hero-nav-links .nav-cta {
+    padding: 8px 16px;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    transition: background 0.2s, color 0.2s;
+  }
+  .insights-hero-nav-links .nav-cta:hover { background: rgba(255,255,255,0.06); }
+
+  .insights-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 700px;
+  }
+  .insights-hero-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    color: rgba(255,255,255,0.3);
+  }
+  .insights-hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.05;
+    color: #fff;
+  }
+
+  /* Filter pills */
+  .insights-filters {
+    display: flex;
+    gap: 0;
+    padding-top: 8px;
+  }
+  .insights-filter {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.35);
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    background: none;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+    text-transform: uppercase;
+  }
+  .insights-filter:hover { color: rgba(255,255,255,0.7); }
+  .insights-filter.active {
+    color: #fff;
+    border-color: rgba(255,255,255,0.25);
+    border-radius: 2px;
+  }
+
+  /* ============================================
+     Content Area
+     ============================================ */
+  .insights-content { background: #eef0f1; }
+
+  /* ============================================
+     Featured Article
+     ============================================ */
+  .insights-featured {
+    padding: 48px 80px 0;
+  }
+  .insights-featured-card {
+    display: flex;
+    background: #0c222c;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .insights-featured-card:hover { transform: translateY(-2px); }
+  .insights-featured-left {
+    flex: 1;
+    padding: 64px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+  .insights-featured-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    color: rgba(255,255,255,0.3);
+  }
+  .insights-featured-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: none;
+    max-width: 540px;
+  }
+  .insights-featured-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 8px;
+  }
+  .insights-featured-meta span {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.25);
+  }
+  .insights-featured-meta .divider {
+    width: 16px;
+    height: 1px;
+    background: rgba(255,255,255,0.12);
+  }
+  .insights-featured-meta .author {
+    letter-spacing: 0.3px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.35);
+    text-transform: none;
+  }
+
+  /* Featured right panel */
+  .insights-featured-right {
+    width: 380px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: #1a3340;
+  }
+  .insights-featured-number {
+    font-family: 'Inter', sans-serif;
+    font-size: 220px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+  }
+  .insights-featured-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    margin-top: 4px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 3px;
+    padding: 14px 28px;
+    text-decoration: none;
+    transition: border-color 0.3s, background 0.3s, transform 0.2s;
+  }
+  .insights-featured-cta:hover {
+    border-color: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.05);
+    transform: translateX(3px);
+  }
+  .insights-featured-cta span {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    color: rgba(255,255,255,0.85);
+  }
+  .insights-featured-cta .arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  .insights-featured-card:hover .insights-featured-cta .arrow {
+    transform: translateX(4px);
+  }
+
+  /* ============================================
+     Card Grid
+     ============================================ */
+  .insights-grid {
+    display: flex;
+    gap: 2px;
+    padding: 24px 80px;
+  }
+  .insights-card {
+    flex: 1;
+    background: #fff;
+    padding: 44px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .insights-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+  .insights-card-cat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .insights-card-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #0c222c;
+    flex-shrink: 0;
+  }
+  .insights-card-cat span {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: rgba(12,34,44,0.4);
+    text-transform: uppercase;
+  }
+  .insights-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #0c222c;
+    line-height: 1.35;
+    text-transform: none;
+  }
+  .insights-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: rgba(12,34,44,0.45);
+    line-height: 1.75;
+  }
+  .insights-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid rgba(12,34,44,0.06);
+    margin-top: auto;
+  }
+  .insights-card-footer .author {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: rgba(12,34,44,0.35);
+  }
+  .insights-card-footer .arrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: rgba(12,34,44,0.25);
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  .insights-card:hover .arrow {
+    transform: translateX(4px);
+    color: #0c222c;
+  }
+
+  /* ============================================
+     Horizontal List Rows
+     ============================================ */
+  .insights-list {
+    padding: 24px 80px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .insights-row {
+    display: flex;
+    align-items: center;
+    padding: 36px 32px;
+    border-top: 1px solid rgba(12,34,44,0.06);
+    gap: 48px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  .insights-row:last-child { border-bottom: 1px solid rgba(12,34,44,0.06); }
+  .insights-row:hover { background: rgba(255,255,255,0.5); }
+  .insights-row-number {
+    font-family: 'Inter', sans-serif;
+    font-size: 72px;
+    font-weight: 800;
+    color: rgba(12,34,44,0.04);
+    line-height: 1;
+    width: 72px;
+    flex-shrink: 0;
+    user-select: none;
+  }
+  .insights-row-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .insights-row-cat {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: rgba(12,34,44,0.3);
+    text-transform: uppercase;
+  }
+  .insights-row h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0c222c;
+    line-height: 1.35;
+    text-transform: none;
+  }
+  .insights-row-right {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-shrink: 0;
+  }
+  .insights-row-author {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: rgba(12,34,44,0.3);
+  }
+  .insights-row-arrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: rgba(12,34,44,0.2);
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  .insights-row:hover .insights-row-arrow {
+    transform: translateX(6px);
+    color: #0c222c;
+  }
+  .insights-row:hover .insights-row-number {
+    color: rgba(12,34,44,0.08);
+    transition: color 0.3s ease;
+  }
+
+  /* ============================================
+     Load More
+     ============================================ */
+  .insights-loadmore {
+    display: flex;
+    justify-content: center;
+    padding: 56px 80px 72px;
+  }
+  .insights-loadmore-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: rgba(12,34,44,0.5);
+    padding: 16px 40px;
+    border: 1px solid rgba(12,34,44,0.12);
+    background: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: border-color 0.3s, color 0.3s, background 0.3s;
+  }
+  .insights-loadmore-btn:hover {
+    border-color: #0c222c;
+    color: #0c222c;
+    background: rgba(12,34,44,0.03);
+  }
+
+  /* ============================================
+     Responsive
+     ============================================ */
+  @media (max-width: 767px) {
+    .insights-hero { padding: 32px 24px 48px; }
+    .insights-hero-nav { padding-bottom: 48px; }
+    .insights-hero-nav-links { display: none; }
+    .insights-hero h1 { font-size: 36px; }
+    .insights-featured { padding: 32px 24px 0; }
+    .insights-featured-card { flex-direction: column; }
+    .insights-featured-left { padding: 40px 32px; }
+    .insights-featured-title { font-size: 26px; }
+    .insights-featured-right { width: 100%; height: 200px; }
+    .insights-grid { flex-direction: column; padding: 16px 24px; gap: 2px; }
+    .insights-list { padding: 16px 24px 0; }
+    .insights-row-number { display: none; }
+    .insights-row-right .insights-row-author { display: none; }
+    .insights-loadmore { padding: 40px 24px 56px; }
+  }
+  @media (min-width: 768px) and (max-width: 1279px) {
+    .insights-hero { padding: 32px 48px 56px; }
+    .insights-hero h1 { font-size: 48px; }
+    .insights-featured { padding: 36px 48px 0; }
+    .insights-featured-title { font-size: 28px; }
+    .insights-grid { padding: 20px 48px; }
+    .insights-list { padding: 20px 48px 0; }
+    .insights-loadmore { padding: 48px 48px 64px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-curtain"></div>
+<div class="cursor"></div>
+
+<nav class="scroll-nav">
+  <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
+  <div class="scroll-nav-links">
+    <div class="nav-dropdown">
+      <a href="practices.html">PRACTICE AREAS</a>
+      <div class="nav-dropdown-menu">
+        <a href="practices.html#litigation">Litigation</a>
+        <a href="white-collar.html">White Collar Defense</a>
+        <a href="practices.html#investigations">Government Investigations</a>
+        <a href="practices.html#product-liability">Product Liability</a>
+        <a href="practices.html#class-actions">Class Actions</a>
+        <a href="practices.html#environmental">Environmental & Regulatory</a>
+      </div>
+    </div>
+    <a href="firm.html">FIRM</a>
+    <a href="team.html">TEAM</a>
+    <a href="insights.html" class="active">INSIGHTS</a>
+  </div>
+  <a href="contact.html" class="scroll-nav-cta">CONTACT</a>
+</nav>
+
+<!-- Hero -->
+<section class="insights-hero">
+  <div class="insights-hero-nav">
+    <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
+    <div class="insights-hero-nav-links">
+      <div class="nav-dropdown">
+        <a href="practices.html">PRACTICE AREAS</a>
+        <div class="nav-dropdown-menu">
+          <a href="practices.html#litigation">Litigation</a>
+          <a href="white-collar.html">White Collar Defense</a>
+          <a href="practices.html#investigations">Government Investigations</a>
+          <a href="practices.html#product-liability">Product Liability</a>
+          <a href="practices.html#class-actions">Class Actions</a>
+          <a href="practices.html#environmental">Environmental & Regulatory</a>
+        </div>
+      </div>
+      <a href="firm.html">FIRM</a>
+      <a href="team.html">TEAM</a>
+      <a href="insights.html" class="active">INSIGHTS</a>
+      <a href="contact.html" class="nav-cta">CONTACT</a>
+    </div>
+  </div>
+  <div class="insights-hero-content">
+    <span class="insights-hero-label">[ INSIGHTS ]</span>
+    <h1>THINKING THAT SHAPES THE WORK.</h1>
+    <div class="insights-filters">
+      <button class="insights-filter active">All</button>
+      <button class="insights-filter">Litigation</button>
+      <button class="insights-filter">Investigations</button>
+      <button class="insights-filter">Trial</button>
+      <button class="insights-filter">Technology</button>
+    </div>
+  </div>
+</section>
+
+<!-- Content area -->
+<div class="insights-content">
+
+  <!-- Featured -->
+  <div class="insights-featured">
+    <a href="insights-article.html" class="insights-featured-card">
+      <div class="insights-featured-left">
+        <span class="insights-featured-label">FEATURED</span>
+        <h2 class="insights-featured-title">When the case turns on a record no one has read carefully enough.</h2>
+        <div class="insights-featured-meta">
+          <span>LITIGATION</span>
+          <div class="divider"></div>
+          <span class="author">Joel Blanchet</span>
+        </div>
+        <div class="insights-featured-cta">
+          <span>READ</span>
+          <span class="arrow">&#8594;</span>
+        </div>
+      </div>
+      <div class="insights-featured-right">
+        <span class="insights-featured-number">01</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Grid -->
+  <div class="insights-grid">
+    <a href="insights-article.html" class="insights-card">
+      <div class="insights-card-cat">
+        <div class="insights-card-dot"></div>
+        <span>Investigations</span>
+      </div>
+      <h3>Internal reviews that start late rarely finish well.</h3>
+      <p>The instinct to wait for more information before beginning an internal review is understandable. It is also, in most cases, a mistake.</p>
+      <div class="insights-card-footer">
+        <span class="author">Joel Blanchet</span>
+        <span class="arrow">&#8594;</span>
+      </div>
+    </a>
+    <a href="insights-article.html" class="insights-card">
+      <div class="insights-card-cat">
+        <div class="insights-card-dot"></div>
+        <span>Trial</span>
+      </div>
+      <h3>Preparation is not the same thing as readiness.</h3>
+      <p>You can prepare a case thoroughly and still not be ready for trial. Readiness requires something more than a complete binder.</p>
+      <div class="insights-card-footer">
+        <span class="author">Joel Blanchet</span>
+        <span class="arrow">&#8594;</span>
+      </div>
+    </a>
+    <a href="insights-article.html" class="insights-card">
+      <div class="insights-card-cat">
+        <div class="insights-card-dot"></div>
+        <span>Technology</span>
+      </div>
+      <h3>The tool is not the strategy.</h3>
+      <p>Legal technology has improved how cases are managed. It has not improved how they are thought through. Those remain different problems.</p>
+      <div class="insights-card-footer">
+        <span class="author">Joel Blanchet</span>
+        <span class="arrow">&#8594;</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- List rows -->
+  <div class="insights-list">
+    <a href="insights-article.html" class="insights-row">
+      <span class="insights-row-number">04</span>
+      <div class="insights-row-content">
+        <span class="insights-row-cat">Litigation</span>
+        <h3>Most cases are won or lost in the months no one is paying attention to.</h3>
+      </div>
+      <div class="insights-row-right">
+        <span class="insights-row-author">Joel Blanchet</span>
+        <span class="insights-row-arrow">&#8594;</span>
+      </div>
+    </a>
+    <a href="insights-article.html" class="insights-row">
+      <span class="insights-row-number">05</span>
+      <div class="insights-row-content">
+        <span class="insights-row-cat">Investigations</span>
+        <h3>Privilege does not protect what you wish it protected.</h3>
+      </div>
+      <div class="insights-row-right">
+        <span class="insights-row-author">Joel Blanchet</span>
+        <span class="insights-row-arrow">&#8594;</span>
+      </div>
+    </a>
+    <a href="insights-article.html" class="insights-row">
+      <span class="insights-row-number">06</span>
+      <div class="insights-row-content">
+        <span class="insights-row-cat">Trial</span>
+        <h3>A good cross-examination is not a performance. It is a sequence of facts.</h3>
+      </div>
+      <div class="insights-row-right">
+        <span class="insights-row-author">Joel Blanchet</span>
+        <span class="insights-row-arrow">&#8594;</span>
+      </div>
+    </a>
+    <a href="insights-article.html" class="insights-row">
+      <span class="insights-row-number">07</span>
+      <div class="insights-row-content">
+        <span class="insights-row-cat">Technology</span>
+        <h3>Document review is only as good as the questions behind it.</h3>
+      </div>
+      <div class="insights-row-right">
+        <span class="insights-row-author">Joel Blanchet</span>
+        <span class="insights-row-arrow">&#8594;</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Load more -->
+  <div class="insights-loadmore">
+    <button class="insights-loadmore-btn">LOAD MORE</button>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer-top">
+    <div class="site-footer-cta">
+      <div class="section-label" style="color: rgba(255,255,255,0.3); border-bottom-color: rgba(255,255,255,0.12);">[ GET IN TOUCH ]</div>
+      <h2>Start with the right counsel.</h2>
+      <p>Blanchet represents clients in litigation, investigations, and disputes that call for experience, direct involvement, and disciplined execution.</p>
+      <a href="contact.html" class="btn-white" style="display:inline-block;text-decoration:none;width:fit-content;margin-top:8px;">Contact</a>
+    </div>
+    <div class="site-footer-nav">
+      <div class="site-footer-cols">
+        <div class="footer-col">
+          <div class="col-title">EXPLORE</div>
+          <a href="practices.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Practice Areas</a>
+          <a href="firm.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Firm</a>
+          <a href="team.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Team</a>
+          <a href="insights.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Insights</a>
+        </div>
+        <div class="footer-col">
+          <div class="col-title">OFFICES</div>
+          <span class="address">Buffalo</span>
+          <span class="address">New York City</span>
+          <span class="address">Chicago</span>
+        </div>
+        <div class="footer-col">
+          <div class="col-title">CONNECT</div>
+          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">LinkedIn</a>
+        </div>
+      </div>
+      <div class="site-footer-meta">
+        <span>Litigation and Investigations</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-watermark">
+    <img src="assets/logos/Wordmark-White.png" alt="Blanchet">
+  </div>
+</footer>
+
+<script>
+(function() {
+  var c = document.querySelector('.page-curtain');
+  if (c) c.classList.add('reveal');
+})();
+</script>
+<script src="js/main.js"></script>
+<script>
+(function() {
+  // Filter pills
+  document.querySelectorAll('.insights-filter').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.insights-filter').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Stagger reveal for rows
+  const rows = document.querySelectorAll('.insights-row, .insights-card');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  rows.forEach((row, i) => {
+    row.style.opacity = '0';
+    row.style.transform = 'translateY(20px)';
+    row.style.transition = `opacity 0.5s ease ${i * 0.06}s, transform 0.5s ease ${i * 0.06}s`;
+    observer.observe(row);
+  });
+})();
+</script>
+</body>
+</html>

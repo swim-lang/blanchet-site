@@ -4,6 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Firm | BLANCHET</title>
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#0c222c">
+<!-- Open Graph -->
+<meta name="description" content="Built with focus, not sprawl. Blanchet is a litigation firm designed around precision, direct involvement, and results.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BLANCHET">
+<meta property="og:title" content="The Firm | BLANCHET">
+<meta property="og:description" content="Built with focus, not sprawl. A litigation firm designed around precision, direct involvement, and results.">
+<meta property="og:image" content="assets/favicon/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="assets/favicon/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -11,20 +29,22 @@
 <link rel="stylesheet" href="css/styles.css">
 <style>
   /* ============================================
-     Hero
+     Hero — Homepage-style split
      ============================================ */
-  .firm-hero { display: flex; min-height: 680px; position: relative; overflow: hidden; }
-  .firm-hero-left { width: 560px; flex-shrink: 0; background: #0c222c; padding: 40px 48px 56px; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 2; }
+  .firm-hero { display: flex; min-height: 100vh; }
+  .firm-hero-left { flex: 1; background: #0c222c; display: flex; flex-direction: column; padding: 40px 60px 60px; position: relative; z-index: 2; }
   .firm-hero-left .nav-logo img { height: 15px; width: auto; }
-  .firm-hero-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: rgba(255,255,255,0.3); padding-bottom: 24px; }
-  .firm-hero-title { font-family: 'Inter', sans-serif; font-size: 52px; font-weight: 700; line-height: 1.05; text-transform: uppercase; color: #fff; padding-bottom: 28px; }
-  .firm-hero-rule { width: 40px; height: 2px; background: rgba(255,255,255,0.15); margin-bottom: 28px; }
-  .firm-hero-intro { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.85; color: rgba(255,255,255,0.4); max-width: 400px; }
+  .firm-hero-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: rgba(255,255,255,0.3); padding: 8px 16px; border: 1px solid rgba(255,255,255,0.15); width: fit-content; margin-bottom: 32px; opacity: 0; transform: translateY(12px); animation: firmBadgeFadeIn 0.8s ease 0.6s forwards; }
+  @keyframes firmBadgeFadeIn { to { opacity: 1; transform: translateY(0); } }
+  .firm-hero-title { font-family: 'Inter', sans-serif; font-size: 60px; font-weight: 700; line-height: 1.05; text-transform: uppercase; color: #fff; padding-bottom: 24px; }
+  .firm-hero-intro { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.7; color: rgba(255,255,255,0.55); max-width: 460px; margin-bottom: 32px; }
+  .firm-hero-buttons { display: flex; gap: 16px; }
   .firm-hero-meta { display: flex; flex-direction: column; gap: 6px; }
   .firm-hero-meta span { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; color: rgba(255,255,255,0.2); }
   .firm-hero-meta span:last-child { font-weight: 400; letter-spacing: 1px; color: rgba(255,255,255,0.12); }
-  .firm-hero-right { flex: 1; position: relative; overflow: hidden; background: #0a1a22; }
-  .firm-hero-right > img:first-child { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
+  .firm-hero-right { flex: 1; position: relative; overflow: hidden; min-height: 100vh; }
+  .firm-hero-right video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .firm-hero-right > img:first-child { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .firm-hero-nav { position: absolute; top: 40px; right: 48px; display: flex; gap: 28px; align-items: center; z-index: 3; }
   .firm-hero-nav a { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
   .firm-hero-nav a:hover { color: #fff; }
@@ -163,7 +183,7 @@
   .firm-pov-card .card-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2px; color: rgba(12,34,44,0.25); }
   .firm-pov-card h3 { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 600; color: #0c222c; line-height: 1.35; }
   .firm-pov-card .card-rule { width: 32px; height: 1.5px; background: rgba(12,34,44,0.08); }
-  .firm-pov-card p { font-family: 'Inter', sans-serif; font-size: 14px; color: #6b7280; line-height: 1.85; }
+  .firm-pov-card p { font-family: 'Inter', sans-serif; font-size: 14px; color: #4b5563; line-height: 1.85; }
 
   /* ============================================
      Closing
@@ -181,7 +201,7 @@
     .firm-hero { flex-direction: column; min-height: auto; }
     .firm-hero-left { width: 100%; padding: 32px 24px 48px; }
     .firm-hero-title { font-size: 38px; }
-    .firm-hero-right { height: 320px; }
+    .firm-hero-right { min-height: 360px; height: 360px; }
     .firm-letter-wrap { padding: 60px 24px; }
     .firm-letter { width: 100%; padding: 48px 32px; }
     .firm-defines { flex-direction: column; min-height: auto; }
@@ -202,8 +222,8 @@
 
   /* Tablet */
   @media (min-width: 768px) and (max-width: 1279px) {
-    .firm-hero-left { width: 440px; }
-    .firm-hero-title { font-size: 42px; }
+    .firm-hero-left { padding: 32px 40px 48px; }
+    .firm-hero-title { font-size: 46px; }
     .firm-defines-video { width: 45%; }
     .firm-defines-right { width: 55%; padding: 80px 48px 80px 48px; }
     .firm-defines-right h2 { font-size: 36px; }
@@ -234,7 +254,7 @@
     </div>
     <a href="firm.html" class="active">FIRM</a>
     <a href="team.html">TEAM</a>
-    <a href="#">INSIGHTS</a>
+    <a href="insights.html">INSIGHTS</a>
   </div>
   <a href="contact.html" class="scroll-nav-cta">CONTACT</a>
 </nav>
@@ -244,37 +264,39 @@
      ============================================ -->
 <section class="firm-hero">
   <div class="firm-hero-left">
-    <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
+    <nav class="nav">
+      <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <a href="practices.html">PRACTICE AREAS</a>
+          <div class="nav-dropdown-menu">
+            <a href="practices.html#litigation">Litigation</a>
+            <a href="white-collar.html">White Collar Defense</a>
+            <a href="practices.html#investigations">Government Investigations</a>
+            <a href="practices.html#product-liability">Product Liability</a>
+            <a href="practices.html#class-actions">Class Actions</a>
+            <a href="practices.html#environmental">Environmental & Regulatory</a>
+          </div>
+        </div>
+        <a href="firm.html" class="active" style="color:#fff">FIRM</a>
+        <a href="team.html">TEAM</a>
+        <a href="insights.html">INSIGHTS</a>
+        <a href="contact.html" class="nav-cta">CONTACT</a>
+      </div>
+    </nav>
+    <div style="flex:1"></div>
     <div>
-      <div class="firm-hero-label">[ THE FIRM ]</div>
-      <h1 class="firm-hero-title">A firm<br>built to<br>stay close<br>to the work.</h1>
-      <div class="firm-hero-rule"></div>
-      <p class="firm-hero-intro">Blanchet is a litigation and investigations firm built by lawyers who wanted a more direct way to practice. The goal was not to add layers. It was to build a firm where experienced counsel stays close to the facts, close to the strategy, and close to the client.</p>
-    </div>
-    <div class="firm-hero-meta">
-      <span>LITIGATION AND INVESTIGATIONS</span>
-      <span>Buffalo  /  New York City  /  Chicago</span>
+      <div class="firm-hero-label">THE FIRM</div>
+      <h1 class="firm-hero-title">A firm built to stay close to the work.</h1>
+      <p class="firm-hero-intro">Blanchet is a litigation and investigations firm built by lawyers who wanted a more direct way to practice. Experienced counsel stays close to the facts, close to the strategy, and close to the client.</p>
+      <div class="firm-hero-buttons">
+        <a href="#founder-letter" class="btn-white" style="display:inline-block;text-decoration:none;">Read Joel's Letter</a>
+      </div>
     </div>
   </div>
   <div class="firm-hero-right">
-    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80" alt="Office">
-    <div class="firm-hero-nav">
-      <div class="nav-dropdown">
-        <a href="practices.html">PRACTICE AREAS</a>
-        <div class="nav-dropdown-menu">
-          <a href="practices.html#litigation">Litigation</a>
-          <a href="white-collar.html">White Collar Defense</a>
-          <a href="practices.html#investigations">Government Investigations</a>
-          <a href="practices.html#product-liability">Product Liability</a>
-          <a href="practices.html#class-actions">Class Actions</a>
-          <a href="practices.html#environmental">Environmental & Regulatory</a>
-        </div>
-      </div>
-      <a href="firm.html" class="active">FIRM</a>
-      <a href="team.html">TEAM</a>
-      <a href="#">INSIGHTS</a>
-      <a href="contact.html" class="nav-cta">CONTACT</a>
-    </div>
+    <video autoplay muted loop playsinline preload="none" data-src="assets/video/city.mp4"></video>
+    <!-- nav moved to left panel -->
     <img class="firm-hero-logo-mark" src="assets/logos/Logo-White.png" alt="Blanchet">
   </div>
 </section>
@@ -526,7 +548,7 @@
           <a href="practices.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Practice Areas</a>
           <a href="firm.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Firm</a>
           <a href="team.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Team</a>
-          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Insights</a>
+          <a href="insights.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Insights</a>
         </div>
         <div class="footer-col">
           <div class="col-title">OFFICES</div>
@@ -559,21 +581,20 @@
 <script src="js/main.js"></script>
 <script>
 (function() {
-  // Lazy-load defines video when near viewport
-  const lazyVideo = document.querySelector('.firm-defines-video video[data-src]');
-  if (lazyVideo) {
-    const videoObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+  // Lazy-load all videos with data-src when near viewport
+  document.querySelectorAll('video[data-src]').forEach(function(vid) {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
         if (entry.isIntersecting) {
-          lazyVideo.src = lazyVideo.dataset.src;
-          lazyVideo.load();
-          lazyVideo.play().catch(() => {});
-          videoObserver.unobserve(lazyVideo);
+          vid.src = vid.dataset.src;
+          vid.load();
+          vid.play().catch(function() {});
+          obs.unobserve(vid);
         }
       });
     }, { rootMargin: '200px' });
-    videoObserver.observe(lazyVideo);
-  }
+    obs.observe(vid);
+  });
 
   // IntersectionObserver for all reveals
   const revealObserver = new IntersectionObserver((entries) => {

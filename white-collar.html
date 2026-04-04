@@ -4,6 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>White Collar Defense | BLANCHET</title>
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#0c222c">
+<!-- Open Graph -->
+<meta name="description" content="Blanchet represents companies, executives, and individuals in white collar defense, regulatory investigations, and compliance matters.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BLANCHET">
+<meta property="og:title" content="White Collar Defense | BLANCHET">
+<meta property="og:description" content="Blanchet represents companies, executives, and individuals in white collar defense, regulatory investigations, and compliance matters.">
+<meta property="og:image" content="assets/favicon/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="assets/favicon/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -51,7 +69,7 @@
   .wc-body { display: flex; }
 
   /* Sticky sidebar nav */
-  .wc-sidebar { width: 260px; flex-shrink: 0; border-right: 1px solid #dcdcdc; position: sticky; top: 0; height: 100vh; align-self: flex-start; display: flex; flex-direction: column; padding: 64px 40px 64px 60px; }
+  .wc-sidebar { width: 260px; flex-shrink: 0; border-right: 1px solid #e5e7eb; position: sticky; top: 0; height: 100vh; align-self: flex-start; display: flex; flex-direction: column; padding: 64px 40px 64px 60px; }
   .wc-sidebar-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(12,34,44,0.2); padding-bottom: 20px; border-bottom: 1px solid rgba(12,34,44,0.08); margin-bottom: 8px; }
   .wc-sidebar-links { display: flex; flex-direction: column; gap: 0; position: relative; }
   /* Animated active indicator bar */
@@ -108,10 +126,10 @@
   /* ============================================
      Section base styles
      ============================================ */
-  .wc-section { padding: 72px 80px; border-bottom: 1px solid #dcdcdc; }
+  .wc-section { padding: 72px 80px; border-bottom: 1px solid #e5e7eb; }
   .wc-section-num { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(12,34,44,0.45); padding-bottom: 20px; }
   .wc-section-heading { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; line-height: 1.15; text-transform: uppercase; color: #0c222c; padding-bottom: 16px; }
-  .wc-body-text { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 400; line-height: 1.85; color: #6b7280; }
+  .wc-body-text { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 400; line-height: 1.85; color: #4b5563; }
   .wc-two-col { display: flex; gap: 64px; }
   .wc-two-col > div { flex: 1; }
   .wc-rule { width: 40px; height: 2px; background: #0c222c; margin-bottom: 32px; }
@@ -119,25 +137,25 @@
   /* ============================================
      Problems section
      ============================================ */
-  .wc-problem-intro { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 400; line-height: 1.75; color: #6b7280; padding-bottom: 40px; max-width: 560px; }
+  .wc-problem-intro { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 400; line-height: 1.75; color: #4b5563; padding-bottom: 40px; max-width: 560px; }
   .wc-problems-grid { display: flex; gap: 40px; }
   .wc-problems-col { flex: 1; display: flex; flex-direction: column; gap: 32px; }
   .wc-problem-item { border-left: 2px solid rgba(12,34,44,0.12); padding-left: 20px; display: flex; flex-direction: column; gap: 8px; transition: border-color 0.3s; }
   .wc-problem-item:hover { border-color: #0c222c; }
   .wc-problem-item h4 { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #0c222c; line-height: 1.5; text-transform: none; }
-  .wc-problem-item p { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; color: #6b7280; line-height: 1.7; }
+  .wc-problem-item p { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; color: #4b5563; line-height: 1.7; }
 
   /* ============================================
      Focus Areas — Mini cards
      ============================================ */
-  .wc-cards-grid { display: flex; flex-wrap: wrap; border: 1px solid #dcdcdc; }
-  .wc-mini-card { width: 50%; padding: 36px 32px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid #dcdcdc; transition: background 0.4s; }
-  .wc-mini-card:nth-child(odd) { border-right: 1px solid #dcdcdc; }
+  .wc-cards-grid { display: flex; flex-wrap: wrap; border: 1px solid #e5e7eb; }
+  .wc-mini-card { width: 50%; padding: 36px 32px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid #e5e7eb; transition: background 0.4s; }
+  .wc-mini-card:nth-child(odd) { border-right: 1px solid #e5e7eb; }
   .wc-mini-card:nth-child(n+3) { border-bottom: none; }
   .wc-mini-card:hover { background: #eef0f1; }
   .wc-mini-card .card-eyebrow { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(12,34,44,0.45); }
   .wc-mini-card h3 { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; line-height: 1.15; text-transform: uppercase; color: #0c222c; }
-  .wc-mini-card p { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.7; color: #6b7280; }
+  .wc-mini-card p { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.7; color: #4b5563; }
 
   /* ============================================
      Media break
@@ -153,7 +171,7 @@
   .wc-tags { display: flex; gap: 12px; flex-wrap: wrap; padding-bottom: 32px; }
   .wc-tags span { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: #0c222c; padding: 10px 20px; border: 1px solid rgba(12,34,44,0.12); background: #fff; transition: background 0.2s, border-color 0.2s; }
   .wc-tags span:hover { background: #0c222c; color: #fff; border-color: #0c222c; }
-  .wc-who-note { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.75; color: #6b7280; max-width: 560px; }
+  .wc-who-note { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.75; color: #4b5563; max-width: 560px; }
 
   /* ============================================
      Matter Types
@@ -169,7 +187,7 @@
      ============================================ */
   .wc-closing { border-bottom: none; }
   .wc-closing-heading { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; line-height: 1.3; text-transform: uppercase; color: #0c222c; max-width: 560px; padding-bottom: 20px; }
-  .wc-closing-note { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.75; color: #6b7280; max-width: 480px; }
+  .wc-closing-note { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.75; color: #4b5563; max-width: 480px; }
 
   /* ============================================
      Mobile
@@ -189,7 +207,7 @@
     .wc-two-col { flex-direction: column; gap: 24px; }
     .wc-problems-grid { flex-direction: column; gap: 24px; }
     .wc-cards-grid { flex-direction: column; }
-    .wc-mini-card { width: 100%; border-right: none !important; border-bottom: 1px solid #dcdcdc !important; }
+    .wc-mini-card { width: 100%; border-right: none !important; border-bottom: 1px solid #e5e7eb !important; }
     .wc-mini-card:last-child { border-bottom: none !important; }
     .wc-matters-grid { flex-direction: column; gap: 24px; }
     .wc-section-heading { font-size: 24px; }
@@ -226,7 +244,7 @@
     </div>
     <a href="firm.html">FIRM</a>
     <a href="team.html">TEAM</a>
-    <a href="#">INSIGHTS</a>
+    <a href="insights.html">INSIGHTS</a>
   </div>
   <a href="contact.html" class="scroll-nav-cta">CONTACT</a>
 </nav>
@@ -259,7 +277,7 @@
       </div>
       <a href="firm.html">FIRM</a>
       <a href="team.html">TEAM</a>
-      <a href="#">INSIGHTS</a>
+      <a href="insights.html">INSIGHTS</a>
       <a href="contact.html" class="nav-cta">CONTACT</a>
     </div>
     <span class="wc-dingbat">§</span>
@@ -473,7 +491,7 @@
           <a href="practices.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Practice Areas</a>
           <a href="firm.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Firm</a>
           <a href="team.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Team</a>
-          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Insights</a>
+          <a href="insights.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Insights</a>
         </div>
         <div class="footer-col">
           <div class="col-title">OFFICES</div>

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When the case turns on a record no one has read carefully enough | BLANCHET</title>
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#0c222c">
+<!-- Open Graph -->
+<meta name="description" content="Every litigator knows the feeling. The record is enormous. Somewhere inside is the detail that changes everything.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BLANCHET">
+<meta property="og:title" content="When the case turns on a record no one has read carefully enough | BLANCHET">
+<meta property="og:description" content="Every litigator knows the feeling. The record is enormous. Somewhere inside is the detail that changes everything.">
+<meta property="og:image" content="assets/favicon/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="assets/favicon/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>html{background:#0c222c}</style>
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  /* ============================================
+     Article Hero
+     ============================================ */
+  .article-hero {
+    background: #0c222c;
+    padding: 40px 80px 80px;
+    display: flex;
+    flex-direction: column;
+  }
+  .article-hero-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 72px;
+  }
+  .article-hero-nav .nav-logo img { height: 15px; width: auto; }
+  .article-hero-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .article-hero-nav-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .article-hero-nav-links a:hover { color: #fff; }
+  .article-hero-nav-links a.active { color: #fff; }
+  .article-hero-nav-links .nav-cta {
+    padding: 8px 16px;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    transition: background 0.2s;
+  }
+  .article-hero-nav-links .nav-cta:hover { background: rgba(255,255,255,0.06); }
+
+  .article-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 28px;
+  }
+  .article-breadcrumb a {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.35);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .article-breadcrumb a:hover { color: rgba(255,255,255,0.7); }
+  .article-breadcrumb .sep {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: rgba(255,255,255,0.15);
+  }
+  .article-breadcrumb .current {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.55);
+    text-transform: uppercase;
+  }
+
+  .article-hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    text-transform: none;
+    max-width: 780px;
+    padding-bottom: 36px;
+  }
+
+  .article-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .article-author-photo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .article-author-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .article-author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .article-author-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.85);
+  }
+  .article-author-role {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.35);
+  }
+
+  /* ============================================
+     Article Body
+     ============================================ */
+  .article-body-wrap {
+    display: flex;
+    padding: 72px 80px 80px;
+    gap: 64px;
+    background: #fff;
+  }
+  .article-body-main {
+    flex: 1;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .article-body {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .article-body .lede {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #0c222c;
+    line-height: 1.8;
+  }
+  .article-body .body-rule {
+    width: 40px;
+    height: 2px;
+    background: rgba(12,34,44,0.1);
+  }
+  .article-body p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(12,34,44,0.65);
+    line-height: 1.9;
+  }
+  .article-body h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0c222c;
+    line-height: 1.25;
+    text-transform: none;
+    padding-top: 16px;
+  }
+
+  /* ============================================
+     Sticky CTA Sidebar
+     ============================================ */
+  .article-sidebar {
+    width: 380px;
+    flex-shrink: 0;
+  }
+  .article-cta {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    background: #0c222c;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .article-cta-content {
+    padding: 44px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .article-cta-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    color: rgba(255,255,255,0.3);
+  }
+  .article-cta h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.35;
+    text-transform: none;
+  }
+  .article-cta-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.75;
+  }
+  .article-cta-rule {
+    width: 24px;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+  }
+  .article-cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 28px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 3px;
+    text-decoration: none;
+    transition: border-color 0.3s ease, background 0.3s ease, transform 0.2s ease;
+  }
+  .article-cta-btn:hover {
+    border-color: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.06);
+    transform: translateY(-1px);
+  }
+  .article-cta-btn span {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.9);
+  }
+  .article-cta-btn .arrow {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+  }
+  .article-cta-btn:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  /* Author in sidebar */
+  .article-cta-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 24px 40px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .article-cta-author:hover { background: rgba(255,255,255,0.03); }
+  .article-cta-author-photo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .article-cta-author-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .article-cta-author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .article-cta-author-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+  }
+  .article-cta-author-role {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* ============================================
+     Pull Quote (inline within body)
+     ============================================ */
+  .article-pullquote-inline {
+    padding: 48px 0;
+    border-top: 1px solid rgba(12,34,44,0.06);
+    border-bottom: 1px solid rgba(12,34,44,0.06);
+  }
+  .article-pullquote-inline blockquote {
+    font-family: 'Inter', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    font-style: italic;
+    color: #0c222c;
+    line-height: 1.5;
+  }
+
+  /* ============================================
+     Related Insights
+     ============================================ */
+  .article-related {
+    background: #eef0f1;
+    padding: 72px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .article-related-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .article-related-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    color: rgba(12,34,44,0.35);
+  }
+  .article-related-viewall {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: gap 0.3s ease;
+  }
+  .article-related-viewall:hover { gap: 12px; }
+  .article-related-viewall span {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: rgba(12,34,44,0.5);
+    transition: color 0.2s;
+  }
+  .article-related-viewall:hover span { color: #0c222c; }
+  .article-related-viewall .arrow {
+    font-size: 14px;
+    color: rgba(12,34,44,0.4);
+    transition: color 0.2s, transform 0.3s ease;
+  }
+  .article-related-viewall:hover .arrow {
+    color: #0c222c;
+    transform: translateX(3px);
+  }
+
+  .article-related-grid {
+    display: flex;
+    gap: 2px;
+  }
+  .article-related-card {
+    flex: 1;
+    background: #fff;
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .article-related-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+  .article-related-card-cat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .article-related-card-cat .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #0c222c;
+  }
+  .article-related-card-cat span {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: rgba(12,34,44,0.4);
+    text-transform: uppercase;
+  }
+  .article-related-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0c222c;
+    line-height: 1.35;
+    text-transform: none;
+  }
+  .article-related-card .arrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: rgba(12,34,44,0.25);
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  .article-related-card:hover .arrow {
+    transform: translateX(4px);
+    color: #0c222c;
+  }
+
+  /* ============================================
+     Responsive
+     ============================================ */
+  @media (max-width: 767px) {
+    .article-hero { padding: 32px 24px 56px; }
+    .article-hero-nav { padding-bottom: 40px; }
+    .article-hero-nav-links { display: none; }
+    .article-hero h1 { font-size: 32px; }
+    .article-body-wrap { flex-direction: column; padding: 48px 24px; gap: 40px; }
+    .article-sidebar { width: 100%; }
+    .article-cta { position: static; }
+    .article-pullquote-inline blockquote { font-size: 20px; }
+    .article-related { padding: 48px 24px; }
+    .article-related-grid { flex-direction: column; gap: 2px; }
+  }
+  @media (min-width: 768px) and (max-width: 1279px) {
+    .article-hero { padding: 32px 48px 64px; }
+    .article-hero h1 { font-size: 40px; }
+    .article-body-wrap { padding: 56px 48px; gap: 48px; }
+    .article-sidebar { width: 320px; }
+    .article-related { padding: 56px 48px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-curtain"></div>
+<div class="cursor"></div>
+
+<nav class="scroll-nav">
+  <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
+  <div class="scroll-nav-links">
+    <div class="nav-dropdown">
+      <a href="practices.html">PRACTICE AREAS</a>
+      <div class="nav-dropdown-menu">
+        <a href="practices.html#litigation">Litigation</a>
+        <a href="white-collar.html">White Collar Defense</a>
+        <a href="practices.html#investigations">Government Investigations</a>
+        <a href="practices.html#product-liability">Product Liability</a>
+        <a href="practices.html#class-actions">Class Actions</a>
+        <a href="practices.html#environmental">Environmental & Regulatory</a>
+      </div>
+    </div>
+    <a href="firm.html">FIRM</a>
+    <a href="team.html">TEAM</a>
+    <a href="insights.html" class="active">INSIGHTS</a>
+  </div>
+  <a href="contact.html" class="scroll-nav-cta">CONTACT</a>
+</nav>
+
+<!-- Hero -->
+<section class="article-hero">
+  <div class="article-hero-nav">
+    <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
+    <div class="article-hero-nav-links">
+      <div class="nav-dropdown">
+        <a href="practices.html">PRACTICE AREAS</a>
+        <div class="nav-dropdown-menu">
+          <a href="practices.html#litigation">Litigation</a>
+          <a href="white-collar.html">White Collar Defense</a>
+          <a href="practices.html#investigations">Government Investigations</a>
+          <a href="practices.html#product-liability">Product Liability</a>
+          <a href="practices.html#class-actions">Class Actions</a>
+          <a href="practices.html#environmental">Environmental & Regulatory</a>
+        </div>
+      </div>
+      <a href="firm.html">FIRM</a>
+      <a href="team.html">TEAM</a>
+      <a href="insights.html" class="active">INSIGHTS</a>
+      <a href="contact.html" class="nav-cta">CONTACT</a>
+    </div>
+  </div>
+
+  <div class="article-breadcrumb">
+    <a href="insights.html">INSIGHTS</a>
+    <span class="sep">/</span>
+    <span class="current">LITIGATION</span>
+  </div>
+
+  <h1>When the case turns on a record no one has read carefully enough.</h1>
+
+  <div class="article-author">
+    <div class="article-author-photo">
+      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80" alt="Joel Blanchet">
+    </div>
+    <div class="article-author-info">
+      <span class="article-author-name">Joel Blanchet</span>
+      <span class="article-author-role">Founding Partner</span>
+    </div>
+  </div>
+</section>
+
+<!-- Body + Sidebar (single wrap so sticky CTA spans full article) -->
+<div class="article-body-wrap">
+  <div class="article-body-main">
+    <div class="article-body">
+      <p class="lede">Every litigator knows the feeling. The record is enormous. The deadline is real. And somewhere inside a few thousand pages is the detail that changes everything. The instinct is to move quickly &mdash; to skim, summarize, delegate. But speed without precision is just motion.</p>
+      <div class="body-rule"></div>
+      <p>In our experience, the cases that turn on close reading are not rare. They are the norm. The transcript that contradicts the declaration. The metadata that disproves the timeline. The footnote in a regulatory filing that quietly concedes the point the other side is fighting hardest to deny.</p>
+      <p>None of this is dramatic. It is methodical. But it is also where cases are won &mdash; not in oral argument, not at trial, but in the months before, when someone reads what no one else bothered to read.</p>
+    </div>
+
+    <!-- Pull Quote -->
+    <div class="article-pullquote-inline">
+      <blockquote>&ldquo;The most important facts are rarely in the summary. They are in the attachments no one opened.&rdquo;</blockquote>
+    </div>
+
+    <div class="article-body">
+      <h2>The discipline of close reading</h2>
+      <p>Close reading is not a personality trait. It is a practice. It requires protected time, structured review, and a willingness to revisit material that has already been flagged as unimportant. It means trusting the process over the instinct to move on.</p>
+      <p>At Blanchet, this is not an aspiration. It is the way the firm operates. Every case begins with a thorough accounting of the record &mdash; not delegated to software, not reduced to summaries, but read. The partners read. The associates read. The record is the case, and the case is in the record.</p>
+      <p>This approach is not efficient in the way that most firms define efficiency. It is efficient in the way that matters: it produces results. Cases resolve faster when the facts are understood earlier. Arguments sharpen when they rest on evidence that has been examined, not assumed.</p>
+
+      <h2>What this means for clients</h2>
+      <p>Clients who work with the firm often remark on a specific feeling: the sense that their lawyers know the case better than they do. That is not a coincidence. It is a consequence of the work.</p>
+      <p>When you retain counsel who has read the record completely, conversations change. Strategy sessions become substantive. Depositions become targeted. And settlement discussions begin from a position of genuine understanding &mdash; not posture, not bluster, but knowledge.</p>
+    </div>
+  </div>
+
+  <!-- Sticky CTA -->
+  <div class="article-sidebar">
+    <div class="article-cta">
+      <div class="article-cta-content">
+        <span class="article-cta-label">WORK WITH US</span>
+        <h3>Facing a complex dispute?</h3>
+        <p class="article-cta-text">Our team brings focus and precision to every matter. Tell us about your situation.</p>
+        <div class="article-cta-rule"></div>
+        <a href="contact.html" class="article-cta-btn">
+          <span>SCHEDULE A CALL</span>
+          <span class="arrow">&#8594;</span>
+        </a>
+      </div>
+      <a href="bio-joel.html" class="article-cta-author">
+        <div class="article-cta-author-photo">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80" alt="Joel Blanchet">
+        </div>
+        <div class="article-cta-author-info">
+          <span class="article-cta-author-name">Joel Blanchet</span>
+          <span class="article-cta-author-role">Founding Partner</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Related Insights -->
+<section class="article-related">
+  <div class="article-related-header">
+    <span class="article-related-label">RELATED INSIGHTS</span>
+    <a href="insights.html" class="article-related-viewall">
+      <span>VIEW ALL</span>
+      <span class="arrow">&#8594;</span>
+    </a>
+  </div>
+  <div class="article-related-grid">
+    <a href="insights-article.html" class="article-related-card">
+      <div class="article-related-card-cat">
+        <div class="dot"></div>
+        <span>Investigations</span>
+      </div>
+      <h3>Internal reviews that start late rarely finish well.</h3>
+      <span class="arrow">&#8594;</span>
+    </a>
+    <a href="insights-article.html" class="article-related-card">
+      <div class="article-related-card-cat">
+        <div class="dot"></div>
+        <span>Trial</span>
+      </div>
+      <h3>Preparation is not the same thing as readiness.</h3>
+      <span class="arrow">&#8594;</span>
+    </a>
+    <a href="insights-article.html" class="article-related-card">
+      <div class="article-related-card-cat">
+        <div class="dot"></div>
+        <span>Technology</span>
+      </div>
+      <h3>The tool is not the strategy.</h3>
+      <span class="arrow">&#8594;</span>
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="site-footer-top">
+    <div class="site-footer-cta">
+      <div class="section-label" style="color: rgba(255,255,255,0.3); border-bottom-color: rgba(255,255,255,0.12);">[ GET IN TOUCH ]</div>
+      <h2>Start with the right counsel.</h2>
+      <p>Blanchet represents clients in litigation, investigations, and disputes that call for experience, direct involvement, and disciplined execution.</p>
+      <a href="contact.html" class="btn-white" style="display:inline-block;text-decoration:none;width:fit-content;margin-top:8px;">Contact</a>
+    </div>
+    <div class="site-footer-nav">
+      <div class="site-footer-cols">
+        <div class="footer-col">
+          <div class="col-title">EXPLORE</div>
+          <a href="practices.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Practice Areas</a>
+          <a href="firm.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Firm</a>
+          <a href="team.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Team</a>
+          <a href="insights.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Insights</a>
+        </div>
+        <div class="footer-col">
+          <div class="col-title">OFFICES</div>
+          <span class="address">Buffalo</span>
+          <span class="address">New York City</span>
+          <span class="address">Chicago</span>
+        </div>
+        <div class="footer-col">
+          <div class="col-title">CONNECT</div>
+          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">LinkedIn</a>
+        </div>
+      </div>
+      <div class="site-footer-meta">
+        <span>Litigation and Investigations</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-watermark">
+    <img src="assets/logos/Wordmark-White.png" alt="Blanchet">
+  </div>
+</footer>
+
+<script>
+(function() {
+  var c = document.querySelector('.page-curtain');
+  if (c) c.classList.add('reveal');
+})();
+</script>
+<script src="js/main.js"></script>
+<script>
+(function() {
+  // Reveal animations for body sections
+  const revealEls = document.querySelectorAll('.article-body p, .article-body h2, .article-pullquote-inner, .article-related-card');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealEls.forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(16px)';
+    el.style.transition = `opacity 0.5s ease, transform 0.5s ease`;
+    observer.observe(el);
+  });
+})();
+</script>
+</body>
+</html>
