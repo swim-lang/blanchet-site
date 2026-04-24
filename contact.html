@@ -30,6 +30,7 @@
 <script>document.documentElement.classList.add('auth-lock');</script>
 <link rel="stylesheet" href="css/styles.css">
 <script src="js/password-protect.js" defer></script>
+<script src="js/review-tools.js" defer></script>
 <style>
   .contact-page { display: flex; min-height: 100vh; }
 
@@ -101,12 +102,12 @@
   <a href="contact.html" class="scroll-nav-cta active">CONTACT</a>
 </nav>
 
-<section class="contact-page">
+<section class="contact-page" data-review-id="contact.page">
   <div class="contact-left">
     <div class="contact-left-nav">
       <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
     </div>
-    <div class="contact-left-content">
+    <div class="contact-left-content" data-review-id="contact.info">
       <span class="contact-label">[ CONTACT ]</span>
       <h1 class="contact-heading">Get in<br>Touch</h1>
       <p class="contact-intro">Blanchet is a litigation firm for serious disputes. The firm handles commercial litigation, environmental disputes, government investigations, and other complex matters from offices in Buffalo, New York City, and Chicago.</p>
@@ -148,7 +149,7 @@
       <a href="insights.html">INSIGHTS</a>
       <a href="contact.html" class="nav-cta active">CONTACT</a>
     </div>
-    <div class="contact-right-content">
+    <div class="contact-right-content" data-review-id="contact.form">
       <span class="form-section-label">SEND A MESSAGE</span>
       <p class="form-hint">If this relates to a new matter, a brief description of the dispute or investigation and the best way to reach you is helpful.</p>
       <form>
@@ -188,7 +189,7 @@
 </section>
 
 <!-- CTA + Footer -->
-<footer class="site-footer">
+<footer class="site-footer" data-review-id="global.footer">
   <div class="site-footer-top">
     <div class="site-footer-cta">
       <div class="section-label" style="color: rgba(255,255,255,0.3); border-bottom-color: rgba(255,255,255,0.12);">[ GET IN TOUCH ]</div>

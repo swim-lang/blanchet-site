@@ -30,6 +30,7 @@
 <script>document.documentElement.classList.add('auth-lock');</script>
 <link rel="stylesheet" href="css/styles.css">
 <script src="js/password-protect.js" defer></script>
+<script src="js/review-tools.js" defer></script>
 <style>
   /* ============================================
      Hero — Homepage-style split
@@ -265,7 +266,7 @@
 <!-- ============================================
      SECTION 1: Hero
      ============================================ -->
-<section class="firm-hero">
+<section class="firm-hero" data-review-id="firm.hero">
   <div class="firm-hero-left">
     <nav class="nav">
       <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
@@ -290,7 +291,7 @@
     <div style="flex:1"></div>
     <div>
       <div class="firm-hero-label">THE FIRM</div>
-      <h1 class="firm-hero-title">Elite litigation experience, closer to the work.</h1>
+      <h1 class="firm-hero-title" data-review-id="firm.hero.headline">Elite litigation experience, closer to the work.</h1>
       <p class="firm-hero-intro">Blanchet is a litigation firm built for sophisticated disputes. The firm brings top-tier trial pedigree, broad disputes capability, and a more accountable model than larger institutional firms.</p>
       <div class="firm-hero-buttons">
         <a href="#founder-letter" class="btn-white" style="display:inline-block;text-decoration:none;">Read Joel's Note</a>
@@ -307,7 +308,7 @@
 <!-- ============================================
      SECTION 2: Founder Letter
      ============================================ -->
-<section class="firm-letter-wrap">
+<section class="firm-letter-wrap" data-review-id="firm.letter">
   <div class="firm-letter" id="founder-letter">
     <div class="firm-letter-accent"></div>
     <img class="firm-letter-logo" src="assets/logos/Logo-Color.png" alt="B">
@@ -358,7 +359,7 @@
 <!-- ============================================
      SECTION 3: What Defines the Firm
      ============================================ -->
-<section class="firm-defines">
+<section class="firm-defines" data-review-id="firm.defines">
   <div class="firm-defines-video">
     <video muted loop playsinline preload="none" data-src="assets/video/city.mp4"></video>
   </div>
@@ -406,7 +407,7 @@
 <!-- ============================================
      SECTION 4: Timeline
      ============================================ -->
-<section class="firm-timeline">
+<section class="firm-timeline" data-review-id="firm.timeline">
   <div class="firm-timeline-header">
     <div class="firm-timeline-header-left">
       <span>[ TIMELINE ]</span>
@@ -460,7 +461,7 @@
 <!-- ============================================
      SECTION 5: Point of View
      ============================================ -->
-<section class="firm-pov">
+<section class="firm-pov" data-review-id="firm.pov">
   <div class="firm-pov-left">
     <span>[ POINT OF VIEW ]</span>
     <h2>A few things we believe.</h2>
@@ -527,7 +528,7 @@
 <!-- ============================================
      SECTION 6: Closing
      ============================================ -->
-<section class="firm-closing">
+<section class="firm-closing" data-review-id="firm.closing">
   <div class="firm-closing-inner">
     <div class="firm-closing-rule"></div>
     <p id="closing-text">Blanchet was built to handle serious disputes with the judgment, accountability, and practical discipline sophisticated clients expect.</p>
@@ -536,7 +537,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="site-footer">
+<footer class="site-footer" data-review-id="global.footer">
   <div class="site-footer-top">
     <div class="site-footer-cta">
       <div class="section-label" style="color: rgba(255,255,255,0.3); border-bottom-color: rgba(255,255,255,0.12);">[ GET IN TOUCH ]</div>

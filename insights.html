@@ -30,6 +30,7 @@
 <script>document.documentElement.classList.add('auth-lock');</script>
 <link rel="stylesheet" href="css/styles.css">
 <script src="js/password-protect.js" defer></script>
+<script src="js/review-tools.js" defer></script>
 <style>
   /* ============================================
      Insights Landing — Hero
@@ -486,7 +487,7 @@
 </nav>
 
 <!-- Hero -->
-<section class="insights-hero">
+<section class="insights-hero" data-review-id="insights.hero">
   <div class="insights-hero-nav">
     <div class="nav-logo"><a href="index.html"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></a></div>
     <div class="insights-hero-nav-links">
@@ -509,7 +510,7 @@
   </div>
   <div class="insights-hero-content">
     <span class="insights-hero-label">[ INSIGHTS ]</span>
-    <h1>PRACTICAL THINKING ON SERIOUS DISPUTES.</h1>
+    <h1 data-review-id="insights.hero.headline">PRACTICAL THINKING ON SERIOUS DISPUTES.</h1>
     <div class="insights-filters">
       <button class="insights-filter active">All</button>
       <button class="insights-filter">Litigation</button>
@@ -525,7 +526,7 @@
 
   <!-- Featured -->
   <div class="insights-featured">
-    <a href="insights-article.html" class="insights-featured-card">
+    <a href="insights-article.html" class="insights-featured-card" data-review-id="insights.featured">
       <div class="insights-featured-left">
         <span class="insights-featured-label">FEATURED</span>
         <h2 class="insights-featured-title">When the case turns on a record no one has read closely enough.</h2>
@@ -640,7 +641,7 @@
 
 </div>
 
-<footer class="site-footer">
+<footer class="site-footer" data-review-id="global.footer">
   <div class="site-footer-top">
     <div class="site-footer-cta">
       <div class="section-label" style="color: rgba(255,255,255,0.3); border-bottom-color: rgba(255,255,255,0.12);">[ GET IN TOUCH ]</div>

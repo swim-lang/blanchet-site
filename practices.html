@@ -30,6 +30,7 @@
 <script>document.documentElement.classList.add('auth-lock');</script>
 <link rel="stylesheet" href="css/styles.css">
 <script src="js/password-protect.js" defer></script>
+<script src="js/review-tools.js" defer></script>
 <style>
   /* Practice Areas Page */
   .practices-page { display: flex; min-height: 100vh; }
@@ -178,7 +179,7 @@
   <a href="contact.html" class="scroll-nav-cta">CONTACT</a>
 </nav>
 
-<section class="practices-page">
+<section class="practices-page" data-review-id="practices.page">
 
   <!-- Dark left panel -->
   <div class="practices-left">
@@ -187,7 +188,7 @@
     </div>
     <div class="practices-left-content">
       <span class="practices-label">[ PRACTICE AREAS ]</span>
-      <h1 class="practices-heading">What<br>We Do</h1>
+      <h1 class="practices-heading" data-review-id="practices.hero.headline">What<br>We Do</h1>
       <p class="practices-intro">Blanchet is a litigation firm. Litigation is the umbrella. Within it, the firm handles commercial litigation, government investigations, product liability and mass tort, class actions, and technically demanding environmental disputes.</p>
       <div class="practices-divider"></div>
       <div class="practices-index">
@@ -225,7 +226,7 @@
     </div>
 
     <!-- Featured: Litigation -->
-    <div id="litigation" class="practices-featured">
+    <div id="litigation" class="practices-featured" data-review-id="practices.litigation-featured">
       <img class="practices-featured-bg" src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1400&q=80" alt="New York City skyline">
       <div class="practices-featured-overlay"></div>
       <div class="practices-featured-content">
@@ -238,13 +239,13 @@
 
     <!-- Grid: White Collar + Government Investigations -->
     <div class="practices-grid-row">
-      <a href="white-collar.html" id="white-collar" class="practices-cell bordered" style="text-decoration:none;color:inherit;">
+      <a href="white-collar.html" id="white-collar" class="practices-cell bordered" data-review-id="practices.white-collar" style="text-decoration:none;color:inherit;">
         <span class="cell-tag">Enforcement</span>
         <h3>White Collar<br>Defense</h3>
         <p>Former federal prosecutors and trial lawyers representing companies, executives, and witnesses in criminal, regulatory, and parallel proceedings.</p>
         <span class="cell-link">Learn more →</span>
       </a>
-      <div id="investigations" class="practices-cell">
+      <div id="investigations" class="practices-cell" data-review-id="practices.investigations">
         <span class="cell-tag">Government</span>
         <h3>Government<br>Investigations</h3>
         <p>Advising clients facing SEC, DOJ, grand jury, and other government-facing matters, including internal investigations and parallel proceedings that require fast assessment and controlled communication.</p>
@@ -254,13 +255,13 @@
 
     <!-- Grid: Product Liability (dark) + Class Actions -->
     <div class="practices-grid-row">
-      <div id="product-liability" class="practices-cell bordered">
+      <div id="product-liability" class="practices-cell bordered" data-review-id="practices.product-liability">
         <span class="cell-tag">Mass Tort</span>
         <h3>Product Liability &amp; Mass Tort</h3>
         <p>Defending manufacturers and other institutional clients in MDL, bellwether, toxic tort, class, and other large-scale product-related matters.</p>
         <span class="cell-link">Learn more →</span>
       </div>
-      <div id="class-actions" class="practices-cell">
+      <div id="class-actions" class="practices-cell" data-review-id="practices.class-actions">
         <span class="cell-tag">Aggregate</span>
         <h3>Class<br>Actions</h3>
         <p>Defending class actions and other aggregate proceedings where certification, discovery, expert issues, and trial posture all shape the leverage.</p>
@@ -270,7 +271,7 @@
 
     <!-- Environmental & Regulatory — full width, same cell style -->
     <div class="practices-grid-row">
-      <div id="environmental" class="practices-cell">
+      <div id="environmental" class="practices-cell" data-review-id="practices.environmental">
         <span class="cell-tag">Environmental</span>
         <h3>CERCLA &amp; Environmental Disputes</h3>
         <p>Handling contamination disputes, CERCLA matters, agency-facing litigation, and expert-heavy environmental cases that turn on technical records and long factual timelines.</p>
@@ -282,7 +283,7 @@
 </section>
 
 <!-- CTA + Footer -->
-<footer class="site-footer">
+<footer class="site-footer" data-review-id="global.footer">
   <div class="site-footer-top">
     <div class="site-footer-cta">
       <div class="section-label" style="color: rgba(255,255,255,0.3); border-bottom-color: rgba(255,255,255,0.12);">[ GET IN TOUCH ]</div>

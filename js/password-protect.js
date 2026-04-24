@@ -15,6 +15,7 @@
     document.documentElement.classList.remove('auth-lock');
     const gate = document.querySelector('.password-gate');
     if (gate) gate.remove();
+    document.dispatchEvent(new CustomEvent('blanchet:unlocked'));
   }
 
   function showGate() {

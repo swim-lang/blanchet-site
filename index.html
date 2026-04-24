@@ -30,6 +30,7 @@
 <script>document.documentElement.classList.add('auth-lock');</script>
 <link rel="stylesheet" href="css/styles.css">
 <script src="js/password-protect.js" defer></script>
+<script src="js/review-tools.js" defer></script>
 </head>
 <body>
 
@@ -59,7 +60,7 @@
 </nav>
 
 <!-- Hero -->
-<section class="hero">
+<section class="hero" data-review-id="home.hero">
   <div class="hero-left">
     <nav class="nav">
       <div class="nav-logo"><img src="assets/logos/Wordmark-White.png" alt="Blanchet"></div>
@@ -85,7 +86,7 @@
     <div style="flex:1"></div>
     <div>
       <div class="hero-tag">LITIGATION FIRM</div>
-      <h1>Experienced trial lawyers, close to the work.</h1>
+      <h1 data-review-id="home.hero.headline">Experienced trial lawyers, close to the work.</h1>
       <p>Blanchet is a litigation firm for legal departments, companies, executives, and other sophisticated clients facing serious disputes. We bring good judgment, practical business sense, and direct partner involvement from start to finish.</p>
       <div class="hero-buttons">
         <a href="practices.html" class="btn-white" style="display:inline-block;text-decoration:none;">View Practices</a>
@@ -101,7 +102,7 @@
 </section>
 
 <!-- About -->
-<section class="about">
+<section class="about" data-review-id="home.about">
   <div class="about-label">
     <div class="section-label">[ ABOUT ]</div>
   </div>
@@ -114,33 +115,33 @@
 </section>
 
 <!-- Services -->
-<section class="services">
+<section class="services" data-review-id="home.why-blanchet">
   <div class="sticky-label">
     <div class="section-label">[ WHY BLANCHET ]</div>
   </div>
   <div class="services-grid">
-    <div class="service-card">
+    <div class="service-card" data-review-id="home.why-blanchet.trial-experience">
       <div class="card-image"><div class="hover-list"><span>State and federal trial experience</span><span>Early case assessment</span><span>Stronger leverage</span><span>Ready when trial matters</span></div></div>
       <div class="card-content">
         <h3>Trial Experience</h3>
         <p>Trial experience changes the work long before trial. It shapes how cases are assessed, where leverage is created, and how strategy holds up when the pressure increases.</p>
       </div>
     </div>
-    <div class="service-card">
+    <div class="service-card" data-review-id="home.why-blanchet.good-judgment">
       <div class="card-image"><div class="hover-list"><span>Clear strategic calls</span><span>Business-aware decision making</span><span>Calm under pressure</span><span>Strong sense of timing</span></div></div>
       <div class="card-content">
         <h3>Good Judgment</h3>
         <p>Good judgment is the throughline. It means knowing where to press, where to hold back, and how to make decisions that fit the facts, the forum, and the client's real objective.</p>
       </div>
     </div>
-    <div class="service-card">
+    <div class="service-card" data-review-id="home.why-blanchet.direct-involvement">
       <div class="card-image"><div class="hover-list"><span>Partner access</span><span>Lean teams</span><span>Clear ownership</span><span>Consistent communication</span></div></div>
       <div class="card-content">
         <h3>Direct Involvement</h3>
         <p>Clients work directly with the lawyers leading the matter. Strategy stays close to the file, accountability stays clear, and the work does not disappear into layers.</p>
       </div>
     </div>
-    <div class="service-card">
+    <div class="service-card" data-review-id="home.why-blanchet.practical-business-sense">
       <div class="card-image"><div class="hover-list"><span>Business-aware strategy</span><span>Cost and benefit discipline</span><span>Efficient staffing</span><span>Faster paths to resolution</span></div></div>
       <div class="card-content">
         <h3>Practical Business Sense</h3>
@@ -152,7 +153,7 @@
 
 <!-- Practice Areas -->
 <div class="practice-areas-wrapper">
-  <section class="practice-areas">
+  <section class="practice-areas" data-review-id="home.practice-areas">
     <div class="practice-left">
       <div>
         <div class="label">[ PRACTICE AREAS ]</div>
@@ -198,7 +199,7 @@
 </div>
 
 <!-- Founding Partners -->
-<section class="partners">
+<section class="partners" data-review-id="home.team-preview">
   <div class="partners-header">
     <div>
       <div class="label">[ TEAM ]</div>
@@ -229,7 +230,7 @@
 
 <!-- Approach -->
 <div class="process-wrapper">
-<section class="process">
+<section class="process" data-review-id="home.approach">
   <div class="process-left">
     <h2>Our Approach</h2>
     <p>Every matter begins with the same discipline: understand the record, define the real problem, and build a strategy that fits the client’s objective.</p>
@@ -280,7 +281,7 @@
 </div>
 
 <!-- Who We Represent -->
-<section class="who-we-represent wwr-light">
+<section class="who-we-represent wwr-light" data-review-id="home.who-we-represent">
   <div class="wwr-left">
     <div class="wwr-top">
       <div class="section-label">[ WHO WE REPRESENT ]</div>
@@ -387,7 +388,7 @@
 </div>
 
 <!-- CTA + Footer -->
-<footer class="site-footer">
+<footer class="site-footer" data-review-id="global.footer">
   <div class="site-footer-top">
     <div class="site-footer-cta">
       <div class="section-label" style="color: rgba(255,255,255,0.3); border-bottom-color: rgba(255,255,255,0.12);">[ GET IN TOUCH ]</div>

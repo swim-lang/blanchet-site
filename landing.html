@@ -23,6 +23,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="assets/favicon/og-image.png">
+<link rel="stylesheet" href="css/styles.css">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -39,8 +40,11 @@
     object-fit: contain;
   }
 </style>
+<script>document.documentElement.classList.add('auth-lock');</script>
+<script src="js/password-protect.js" defer></script>
+<script src="js/review-tools.js" defer></script>
 </head>
 <body>
-  <img class="logo" src="assets/logos/blanchet-mirror.gif" alt="Blanchet">
+  <img class="logo" src="assets/logos/blanchet-mirror.gif" alt="Blanchet" data-review-id="landing.logo">
 </body>
 </html>
