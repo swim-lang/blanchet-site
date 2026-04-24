@@ -9,6 +9,12 @@
   let activeTarget = null;
   let toolbar;
   let panel;
+  let fileInput;
+
+  const storageAdapter = {
+    load: comments,
+    save: saveComments
+  };
 
   const targetSelector = [
     '[data-review-id]',
@@ -100,6 +106,7 @@
       <button type="button" data-mode="comment">Comment</button>
       <button type="button" data-action="panel">Comments <span class="review-count">0</span></button>
       <button type="button" data-action="export">Export</button>
+      <button type="button" data-action="import">Import</button>
     `;
     document.body.appendChild(toolbar);
     toolbar.addEventListener('click', event => {
@@ -108,6 +115,7 @@
       if (button.dataset.mode) setMode(button.dataset.mode);
       if (button.dataset.action === 'panel') togglePanel();
       if (button.dataset.action === 'export') exportComments();
+      if (button.dataset.action === 'import') importComments();
     });
     updateCount();
   }
@@ -189,22 +197,22 @@
       viewport: { width: window.innerWidth, height: window.innerHeight },
       createdAt: new Date().toISOString()
     };
-    const items = comments();
+    const items = storageAdapter.load();
     items.push(item);
-    saveComments(items);
+    storageAdapter.save(items);
     updateCount();
     markCommentedTargets();
   }
 
   function updateCount() {
-    const count = comments().filter(item => item.status !== 'resolved').length;
+    const count = storageAdapter.load().filter(item => item.status !== 'resolved').length;
     document.querySelectorAll('.review-count').forEach(el => {
       el.textContent = count;
     });
   }
 
   function markCommentedTargets() {
-    const ids = new Set(comments().filter(item => item.status !== 'resolved').map(item => item.reviewId));
+    const ids = new Set(storageAdapter.load().filter(item => item.status !== 'resolved').map(item => item.reviewId));
     document.querySelectorAll('.review-target').forEach(el => {
       el.classList.toggle('has-review-comment', ids.has(el.dataset.reviewId));
     });
@@ -224,7 +232,7 @@
 
   function renderPanel() {
     if (!panel) return;
-    const items = comments();
+    const items = storageAdapter.load();
     panel.innerHTML = `
       <div class="review-panel-header">
         <div>
@@ -267,13 +275,13 @@
     }
     const resolve = event.target.closest('[data-resolve]');
     if (resolve) {
-      const items = comments().map(item => {
+      const items = storageAdapter.load().map(item => {
         if (item.id === resolve.dataset.resolve) {
           return { ...item, status: item.status === 'resolved' ? 'open' : 'resolved' };
         }
         return item;
       });
-      saveComments(items);
+      storageAdapter.save(items);
       updateCount();
       markCommentedTargets();
       renderPanel();
@@ -284,7 +292,7 @@
     const data = {
       project: PROJECT,
       exportedAt: new Date().toISOString(),
-      comments: comments()
+      comments: storageAdapter.load()
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
@@ -293,6 +301,36 @@
     link.download = `blanchet-review-comments-${new Date().toISOString().slice(0, 10)}.json`;
     link.click();
     URL.revokeObjectURL(url);
+  }
+
+  function importComments() {
+    if (!fileInput) {
+      fileInput = document.createElement('input');
+      fileInput.type = 'file';
+      fileInput.accept = 'application/json,.json';
+      fileInput.hidden = true;
+      document.body.appendChild(fileInput);
+      fileInput.addEventListener('change', async () => {
+        const file = fileInput.files && fileInput.files[0];
+        fileInput.value = '';
+        if (!file) return;
+        try {
+          const data = JSON.parse(await file.text());
+          const imported = Array.isArray(data) ? data : data.comments;
+          if (!Array.isArray(imported)) throw new Error('No comments array found.');
+          const existing = storageAdapter.load();
+          const seen = new Set(existing.map(item => item.id));
+          const merged = existing.concat(imported.filter(item => item && item.id && !seen.has(item.id)));
+          storageAdapter.save(merged);
+          updateCount();
+          markCommentedTargets();
+          if (panel) renderPanel();
+        } catch (error) {
+          alert('Could not import review comments. Please choose a valid review JSON export.');
+        }
+      });
+    }
+    fileInput.click();
   }
 
   function attachEvents() {
@@ -321,7 +359,7 @@
     }
   }
 
-  window.BlanchetReview = { promptMode, initReviewTools };
+  window.BlanchetReview = { promptMode, initReviewTools, comments, saveComments };
   document.addEventListener('blanchet:unlocked', initReviewTools);
 
   if (document.readyState !== 'loading' && !document.documentElement.classList.contains('auth-lock')) {
