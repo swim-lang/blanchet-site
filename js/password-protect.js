@@ -1,6 +1,6 @@
 /* BLANCHET preview gate */
 (function() {
-  const PASSWORD_HASH = '6e90f2aecbb79f2e792736a42a21eb48384e3d384225a1c83b534abcbf0cf36b';
+  const PASSWORD_HASH = 'da6457ddc30c7e809d7defa0d022c938e42a23cd39f3dfd522bd7cc89d68a056';
   const STORAGE_KEY = 'blanchet-preview-auth';
 
   async function sha256(value) {
