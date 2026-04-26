@@ -7,6 +7,7 @@
   const PROJECT = CONFIG.project || 'blanchet-site';
   const SUPABASE_URL = (CONFIG.supabaseUrl || '').replace(/\/$/, '');
   const SUPABASE_ANON_KEY = CONFIG.supabaseAnonKey || '';
+  const NOTIFICATION_FUNCTION = CONFIG.notificationFunction || '';
   const HAS_SUPABASE = Boolean(SUPABASE_URL && SUPABASE_ANON_KEY);
 
   let mode = sessionStorage.getItem(MODE_KEY) || '';
@@ -139,6 +140,23 @@
       throw new Error(body || `Supabase request failed: ${response.status}`);
     }
     if (response.status === 204) return [];
+    return response.json();
+  }
+
+  async function callSupabaseFunction(name, body) {
+    if (!HAS_SUPABASE || !name) return null;
+    const response = await fetch(`${SUPABASE_URL}/functions/v1/${name}`, {
+      method: 'POST',
+      headers: {
+        apikey: SUPABASE_ANON_KEY,
+        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+    if (!response.ok) {
+      throw new Error(await response.text());
+    }
     return response.json();
   }
 
@@ -323,6 +341,7 @@
         });
         const saved = rows[0] ? toClientComment(rows[0]) : item;
         remoteComments = remoteComments.map(comment => comment.id === item.id ? saved : comment);
+        notifyReviewActivity(saved);
         showNotice('Comment saved.');
       } catch (error) {
         console.warn('Could not save comment to Supabase.', error);
@@ -335,6 +354,19 @@
     updateCount();
     markCommentedTargets();
     if (panel) renderPanel();
+  }
+
+  function notifyReviewActivity(item) {
+    callSupabaseFunction(NOTIFICATION_FUNCTION, {
+      project: item.project,
+      page: item.page,
+      path: item.path,
+      reviewId: item.reviewId,
+      textQuote: item.textQuote,
+      comment: item.comment
+    }).catch(error => {
+      console.warn('Could not send review notification.', error);
+    });
   }
 
   function updateCount() {
