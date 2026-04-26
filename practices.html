@@ -12,11 +12,11 @@
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#0c222c">
 <!-- Open Graph -->
-<meta name="description" content="Blanchet is a litigation firm handling commercial litigation, government investigations, product liability and mass tort, class actions, and environmental disputes.">
+<meta name="description" content="Blanchet is a litigation firm handling commercial litigation, environmental disputes, product liability and mass tort, government investigations, white collar defense, IP and trade secret disputes, and other complex matters.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BLANCHET">
 <meta property="og:title" content="Practice Areas | BLANCHET">
-<meta property="og:description" content="Blanchet is a litigation firm handling commercial litigation, government investigations, product liability and mass tort, class actions, and environmental disputes.">
+<meta property="og:description" content="Blanchet is a litigation firm handling commercial litigation, environmental disputes, product liability and mass tort, government investigations, white collar defense, IP and trade secret disputes, and other complex matters.">
 <meta property="og:image" content="assets/favicon/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -84,6 +84,19 @@
   /* Featured "Learn more" link */
   .practices-featured .cell-link { color: rgba(255,255,255,0.7); padding-top: 16px; }
   .practices-featured:hover .cell-link { color: #fff; }
+  .practices-secondary { padding: 64px 60px; background: #eef0f1; }
+  .practices-secondary-header { display: flex; justify-content: space-between; gap: 60px; margin-bottom: 32px; }
+  .practices-secondary-header span { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(12,34,44,0.45); }
+  .practices-secondary-header h2 { font-size: 34px; line-height: 1.15; margin-top: 12px; }
+  .practices-secondary-header p { max-width: 420px; color: #4b5563; line-height: 1.7; font-size: 15px; }
+  .practices-secondary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(12,34,44,0.08); border: 1px solid rgba(12,34,44,0.08); }
+  .practices-small-card { background: #fff; padding: 28px; min-height: 220px; }
+  .practices-small-card h3 { font-size: 18px; line-height: 1.25; margin-bottom: 14px; }
+  .practices-small-card p { font-size: 14px; color: #4b5563; line-height: 1.65; }
+  .experience-snapshot { padding: 56px 60px 72px; background: #fff; }
+  .experience-snapshot h2 { font-size: 32px; margin: 12px 0 28px; }
+  .experience-snapshot ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; border-top: 1px solid rgba(12,34,44,0.08); }
+  .experience-snapshot li { padding: 18px 0; border-bottom: 1px solid rgba(12,34,44,0.08); color: #4b5563; line-height: 1.55; }
 
   /* Arrow cursors on hover */
   .practices-cell:hover, .practices-featured:hover { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%230c222c' stroke-width='1.5'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") 12 12, pointer; }
@@ -96,8 +109,8 @@
 
   /* Grid cell reveal — starts hidden, revealed by JS */
   .practices-cell, .practices-featured {
-    opacity: 0;
-    transform: translateY(32px);
+    opacity: 1;
+    transform: translateY(0);
     transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), background 0.4s ease;
   }
   .practices-cell.revealed, .practices-featured.revealed {
@@ -142,6 +155,9 @@
     .practices-featured-content { padding: 0 24px 40px; }
     .practices-grid-row { flex-direction: column; }
     .practices-cell.bordered { border-right: none; border-bottom: 1px solid #e5e5e5; }
+    .practices-secondary, .experience-snapshot { padding: 48px 24px; }
+    .practices-secondary-header { flex-direction: column; gap: 20px; }
+    .practices-secondary-grid, .experience-snapshot ul { grid-template-columns: 1fr; }
   }
 
   /* Tablet */
@@ -166,11 +182,11 @@
       <div class="nav-dropdown-menu">
 
         <a href="#litigation">Litigation</a>
-        <a href="white-collar.html">White Collar Defense</a>
-        <a href="#investigations">Government Investigations</a>
-        <a href="#product-liability">Product Liability &amp; Mass Tort</a>
-        <a href="#class-actions">Class Actions</a>
+        <a href="#commercial-litigation">Commercial Litigation</a>
         <a href="#environmental">CERCLA &amp; Environmental Disputes</a>
+        <a href="#product-liability">Product Liability &amp; Mass Tort</a>
+        <a href="white-collar.html">Government Investigations &amp; White Collar</a>
+        <a href="#ip-trade-secrets">IP &amp; Trade Secrets</a>
       </div>
     </div>
     <a href="firm.html">FIRM</a>
@@ -189,16 +205,16 @@
     </div>
     <div class="practices-left-content">
       <span class="practices-label">[ PRACTICE AREAS ]</span>
-      <h1 class="practices-heading" data-review-id="practices.hero.headline">What<br>We Do</h1>
-      <p class="practices-intro">Blanchet is a litigation firm. Litigation is the umbrella. Within it, the firm handles commercial litigation, government investigations, product liability and mass tort, class actions, and technically demanding environmental disputes.</p>
+      <h1 class="practices-heading" data-review-id="practices.hero.headline">Litigation, organized around serious disputes.</h1>
+      <p class="practices-intro">Blanchet is a litigation firm. Litigation is the umbrella. Within it, the firm handles commercial disputes, environmental and toxic tort matters, product liability and mass tort, government investigations, white collar defense, IP and trade secret disputes, and other complex matters.</p>
       <div class="practices-divider"></div>
       <div class="practices-index">
         <a href="#litigation" class="active">Litigation</a>
-        <a href="white-collar.html">White Collar Defense</a>
-        <a href="#investigations">Government Investigations</a>
-        <a href="#product-liability">Product Liability &amp; Mass Tort</a>
-        <a href="#class-actions">Class Actions</a>
+        <a href="#commercial-litigation">Commercial Litigation</a>
         <a href="#environmental">CERCLA &amp; Environmental Disputes</a>
+        <a href="#product-liability">Product Liability &amp; Mass Tort</a>
+        <a href="white-collar.html">Government Investigations &amp; White Collar</a>
+        <a href="#ip-trade-secrets">IP &amp; Trade Secrets</a>
       </div>
     </div>
   </div>
@@ -213,11 +229,11 @@
         <div class="nav-dropdown-menu">
 
           <a href="#litigation">Litigation</a>
-          <a href="white-collar.html">White Collar Defense</a>
-          <a href="#investigations">Government Investigations</a>
-          <a href="#product-liability">Product Liability &amp; Mass Tort</a>
-          <a href="#class-actions">Class Actions</a>
-          <a href="#environmental">CERCLA &amp; Environmental Disputes</a>
+        <a href="#commercial-litigation">Commercial Litigation</a>
+        <a href="#environmental">CERCLA &amp; Environmental Disputes</a>
+        <a href="#product-liability">Product Liability &amp; Mass Tort</a>
+        <a href="white-collar.html">Government Investigations &amp; White Collar</a>
+        <a href="#ip-trade-secrets">IP &amp; Trade Secrets</a>
         </div>
       </div>
       <a href="firm.html">FIRM</a>
@@ -231,54 +247,83 @@
       <img class="practices-featured-bg" src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1400&q=80" alt="New York City skyline">
       <div class="practices-featured-overlay"></div>
       <div class="practices-featured-content">
-        <span class="practices-featured-label">Core Practice</span>
+        <span class="practices-featured-label">Featured Practice</span>
         <h2>Litigation</h2>
-        <p>Litigation is the umbrella practice that holds the firm’s work together, including commercial litigation, motion practice, discovery-heavy disputes, and trial work in state and federal court.</p>
+        <p>Litigation is the center of gravity at Blanchet. The firm handles serious disputes in state and federal courts, including trial work, motion practice, discovery-heavy matters, and cases where commercial, environmental, product, investigative, and technical issues overlap.</p>
         <span class="cell-link">Learn more →</span>
       </div>
     </div>
 
-    <!-- Grid: White Collar + Government Investigations -->
+    <!-- Core practice grid -->
     <div class="practices-grid-row">
-      <a href="white-collar.html" id="white-collar" class="practices-cell bordered" data-review-id="practices.white-collar" style="text-decoration:none;color:inherit;">
-        <span class="cell-tag">Enforcement</span>
-        <h3>White Collar<br>Defense</h3>
-        <p>Former federal prosecutors and trial lawyers representing companies, executives, and witnesses in criminal, regulatory, and parallel proceedings.</p>
+      <div id="commercial-litigation" class="practices-cell bordered" data-review-id="practices.commercial-litigation">
+        <span class="cell-tag">Core</span>
+        <h3>Commercial Litigation</h3>
+        <p>Business-to-business disputes involving contracts, partnerships, business torts, fraud, supply and vendor issues, deal disputes, fiduciary claims, shareholder disputes, and other commercial conflicts.</p>
         <span class="cell-link">Learn more →</span>
-      </a>
-      <div id="investigations" class="practices-cell" data-review-id="practices.investigations">
-        <span class="cell-tag">Government</span>
-        <h3>Government<br>Investigations</h3>
-        <p>Advising clients facing SEC, DOJ, grand jury, and other government-facing matters, including internal investigations and parallel proceedings that require fast assessment and controlled communication.</p>
+      </div>
+      <div id="environmental" class="practices-cell" data-review-id="practices.environmental">
+        <span class="cell-tag">Technical</span>
+        <h3>CERCLA &amp; Environmental Disputes</h3>
+        <p>Environmental matters involving CERCLA, Superfund, contamination, natural resource damages, dioxane, PFAS and emerging contaminants, toxic tort, regulatory disputes, experts, and long factual records.</p>
         <span class="cell-link">Learn more →</span>
       </div>
     </div>
 
-    <!-- Grid: Product Liability (dark) + Class Actions -->
     <div class="practices-grid-row">
       <div id="product-liability" class="practices-cell bordered" data-review-id="practices.product-liability">
         <span class="cell-tag">Mass Tort</span>
         <h3>Product Liability &amp; Mass Tort</h3>
-        <p>Defending manufacturers and other institutional clients in MDL, bellwether, toxic tort, class, and other large-scale product-related matters.</p>
+        <p>Defense of manufacturers and institutional clients in product liability, toxic tort, consumer class action, MDL, bellwether, and expert-heavy matters.</p>
         <span class="cell-link">Learn more →</span>
       </div>
-      <div id="class-actions" class="practices-cell" data-review-id="practices.class-actions">
-        <span class="cell-tag">Aggregate</span>
-        <h3>Class<br>Actions</h3>
-        <p>Defending class actions and other aggregate proceedings where certification, discovery, expert issues, and trial posture all shape the leverage.</p>
+      <a href="white-collar.html" id="government-investigations-white-collar" class="practices-cell" data-review-id="practices.government-investigations-white-collar" style="text-decoration:none;color:inherit;">
+        <span class="cell-tag">Government</span>
+        <h3>Government Investigations &amp; White Collar</h3>
+        <p>Representation in internal investigations, DOJ and SEC matters, grand jury issues, parallel proceedings, executive representation, wire fraud, RICO, AML, cybercrime, and trade secret theft matters.</p>
+        <span class="cell-link">Learn more →</span>
+      </a>
+    </div>
+
+    <div class="practices-grid-row">
+      <div id="ip-trade-secrets" class="practices-cell" data-review-id="practices.ip-trade-secrets">
+        <span class="cell-tag">Technical</span>
+        <h3>IP &amp; Trade Secrets</h3>
+        <p>Patent, trade secret, software, licensing, semiconductor, technology commercial, cybercrime, and other disputes where the technical record and the business context both matter.</p>
         <span class="cell-link">Learn more →</span>
       </div>
     </div>
 
-    <!-- Environmental & Regulatory — full width, same cell style -->
-    <div class="practices-grid-row">
-      <div id="environmental" class="practices-cell" data-review-id="practices.environmental">
-        <span class="cell-tag">Environmental</span>
-        <h3>CERCLA &amp; Environmental Disputes</h3>
-        <p>Handling contamination disputes, CERCLA matters, agency-facing litigation, and expert-heavy environmental cases that turn on technical records and long factual timelines.</p>
-        <span class="cell-link">Learn more →</span>
+    <section class="practices-secondary" data-review-id="practices.additional-capabilities">
+      <div class="practices-secondary-header">
+        <div>
+          <span>[ ADDITIONAL CAPABILITIES ]</span>
+          <h2>Additional dispute capabilities.</h2>
+        </div>
+        <p>Not every capability needs to become a top-level practice. These areas support the firm’s litigation bench and often overlap with the core practices above.</p>
       </div>
-    </div>
+      <div class="practices-secondary-grid">
+        <div class="practices-small-card"><h3>Securities Litigation</h3><p>Public-company, shareholder, M&amp;A, securities class action, fiduciary, and related commercial disputes.</p></div>
+        <div class="practices-small-card"><h3>Bankruptcy &amp; Creditor Rights</h3><p>Chapter 11, creditor representation, priority disputes, avoidance actions, restructuring-related litigation, and commercial disputes in bankruptcy context.</p></div>
+        <div class="practices-small-card"><h3>Appellate</h3><p>Federal and state appeals, dispositive motion strategy, preservation, amicus briefing, en banc petitions, and Supreme Court cert practice.</p></div>
+        <div class="practices-small-card"><h3>Class Actions</h3><p>Consumer, product, securities, and mass-tort class action defense, including certification strategy, discovery, expert work, and settlement positioning.</p></div>
+        <div class="practices-small-card"><h3>Insurance Recovery</h3><p>Coverage and recovery disputes involving environmental, mass-tort, commercial, and energy-related losses.</p></div>
+        <div class="practices-small-card"><h3>Employment, Non-Compete &amp; Trade Secret Disputes</h3><p>Restrictive covenant, executive movement, confidentiality, and trade secret matters where business continuity and evidence control matter.</p></div>
+      </div>
+    </section>
+
+    <section class="experience-snapshot" data-review-id="practices.experience-snapshot">
+      <span class="practices-label" style="color:rgba(12,34,44,0.45);">[ EXPERIENCE SNAPSHOT ]</span>
+      <h2>Experience that crosses categories.</h2>
+      <ul>
+        <li>Dow, Union Carbide, and chemical-sector environmental and toxic tort matters.</li>
+        <li>Community Health Systems securities and M&amp;A litigation.</li>
+        <li>Briggs &amp; Stratton nationwide consumer class actions.</li>
+        <li>Osram Sylvania patent litigation and fee award.</li>
+        <li>Tower Automotive bankruptcy and trial settlement.</li>
+        <li>BP Deepwater Horizon-related matters.</li>
+      </ul>
+    </section>
 
   </div>
 </section>
