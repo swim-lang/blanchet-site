@@ -3,17 +3,32 @@
   const MODE_KEY = 'blanchet-review-mode';
   const COMMENTS_KEY = 'blanchet-review-comments';
   const PAGE = location.pathname.split('/').pop() || 'index.html';
-  const PROJECT = 'blanchet-site';
+  const CONFIG = window.BLANCHET_REVIEW_CONFIG || {};
+  const PROJECT = CONFIG.project || 'blanchet-site';
+  const SUPABASE_URL = (CONFIG.supabaseUrl || '').replace(/\/$/, '');
+  const SUPABASE_ANON_KEY = CONFIG.supabaseAnonKey || '';
+  const HAS_SUPABASE = Boolean(SUPABASE_URL && SUPABASE_ANON_KEY);
 
   let mode = sessionStorage.getItem(MODE_KEY) || '';
   let activeTarget = null;
   let toolbar;
   let panel;
   let fileInput;
+  let remoteComments = [];
+  let remoteLoaded = false;
+  let noticeTimer;
 
   const storageAdapter = {
-    load: comments,
-    save: saveComments
+    load() {
+      return HAS_SUPABASE ? remoteComments : localComments();
+    },
+    save(items) {
+      if (HAS_SUPABASE) {
+        remoteComments = items;
+        return;
+      }
+      saveLocalComments(items);
+    }
   };
 
   const targetSelector = [
@@ -53,7 +68,16 @@
       .slice(0, 42);
   }
 
-  function comments() {
+  function escapeHtml(value) {
+    return String(value || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function localComments() {
     try {
       return JSON.parse(localStorage.getItem(COMMENTS_KEY) || '[]');
     } catch {
@@ -61,8 +85,80 @@
     }
   }
 
-  function saveComments(items) {
+  function saveLocalComments(items) {
     localStorage.setItem(COMMENTS_KEY, JSON.stringify(items, null, 2));
+  }
+
+  function toClientComment(row) {
+    return {
+      id: row.id,
+      project: row.project,
+      page: row.page,
+      path: row.path,
+      reviewId: row.review_id,
+      selector: row.selector,
+      textQuote: row.text_quote || '',
+      comment: row.comment,
+      status: row.status || 'open',
+      viewport: row.viewport || null,
+      createdAt: row.created_at,
+      resolvedAt: row.resolved_at || null
+    };
+  }
+
+  function toSupabaseRow(item) {
+    return {
+      id: item.id,
+      project: item.project,
+      page: item.page,
+      path: item.path,
+      review_id: item.reviewId,
+      selector: item.selector,
+      text_quote: item.textQuote,
+      comment: item.comment,
+      status: item.status,
+      viewport: item.viewport,
+      created_at: item.createdAt,
+      resolved_at: item.resolvedAt || null
+    };
+  }
+
+  async function supabaseRequest(path, options = {}) {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/${path}`, {
+      ...options,
+      headers: {
+        apikey: SUPABASE_ANON_KEY,
+        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        'Content-Type': 'application/json',
+        Prefer: 'return=representation',
+        ...(options.headers || {})
+      }
+    });
+    if (!response.ok) {
+      const body = await response.text();
+      throw new Error(body || `Supabase request failed: ${response.status}`);
+    }
+    if (response.status === 204) return [];
+    return response.json();
+  }
+
+  async function loadRemoteComments() {
+    if (!HAS_SUPABASE) return;
+    try {
+      const rows = await supabaseRequest(`review_comments?project=eq.${encodeURIComponent(PROJECT)}&select=*&order=created_at.desc`);
+      remoteComments = rows.map(toClientComment);
+      remoteLoaded = true;
+      updateCount();
+      markCommentedTargets();
+      if (panel) renderPanel();
+    } catch (error) {
+      console.warn('Could not load review comments from Supabase. Falling back to local comments.', error);
+      remoteComments = localComments();
+      remoteLoaded = true;
+      showNotice('Could not sync comments. Saving locally for now.');
+      updateCount();
+      markCommentedTargets();
+    }
   }
 
   function textQuote(el) {
@@ -105,8 +201,8 @@
       <button type="button" data-mode="browse">Browse</button>
       <button type="button" data-mode="comment">Comment</button>
       <button type="button" data-action="panel">Comments <span class="review-count">0</span></button>
-      <button type="button" data-action="export">Export</button>
-      <button type="button" data-action="import">Import</button>
+      <button type="button" data-action="export">Export Comments</button>
+      ${isAdmin() ? '<button type="button" data-action="import">Import</button>' : ''}
     `;
     document.body.appendChild(toolbar);
     toolbar.addEventListener('click', event => {
@@ -120,6 +216,21 @@
     updateCount();
   }
 
+  function isAdmin() {
+    return new URLSearchParams(location.search).has('reviewAdmin') || localStorage.getItem('blanchet-review-admin') === 'true';
+  }
+
+  function showNotice(message) {
+    const existing = document.querySelector('.review-toast');
+    if (existing) existing.remove();
+    const toast = document.createElement('div');
+    toast.className = 'review-toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    clearTimeout(noticeTimer);
+    noticeTimer = setTimeout(() => toast.remove(), 2600);
+  }
+
   function promptMode() {
     if (sessionStorage.getItem(MODE_KEY) || document.querySelector('.review-mode-choice')) return;
     const choice = document.createElement('div');
@@ -128,6 +239,7 @@
       <div class="review-mode-card">
         <span>Private Preview</span>
         <h2>How are you using the site today?</h2>
+        <p>Choose review mode to leave comments directly on page sections. Choose view mode to browse without review tools.</p>
         <div class="review-mode-actions">
           <button type="button" data-choice="review">Review and leave comments</button>
           <button type="button" data-choice="view">Just view the site</button>
@@ -174,16 +286,19 @@
     popover.addEventListener('click', event => {
       if (event.target.matches('[data-close]')) popover.remove();
     });
-    popover.addEventListener('submit', event => {
+    popover.addEventListener('submit', async event => {
       event.preventDefault();
       const body = popover.elements.comment.value.trim();
       if (!body) return;
-      addComment(activeTarget, body);
+      const submit = popover.querySelector('button[type="submit"]');
+      submit.disabled = true;
+      submit.textContent = 'Saving';
+      await addComment(activeTarget, body);
       popover.remove();
     });
   }
 
-  function addComment(target, body) {
+  async function addComment(target, body) {
     const item = {
       id: `${Date.now()}-${Math.random().toString(16).slice(2)}`,
       project: PROJECT,
@@ -200,14 +315,36 @@
     const items = storageAdapter.load();
     items.push(item);
     storageAdapter.save(items);
+    if (HAS_SUPABASE) {
+      try {
+        const rows = await supabaseRequest('review_comments', {
+          method: 'POST',
+          body: JSON.stringify(toSupabaseRow(item))
+        });
+        const saved = rows[0] ? toClientComment(rows[0]) : item;
+        remoteComments = remoteComments.map(comment => comment.id === item.id ? saved : comment);
+        showNotice('Comment saved.');
+      } catch (error) {
+        console.warn('Could not save comment to Supabase.', error);
+        saveLocalComments(localComments().concat(item));
+        showNotice('Could not sync. Comment saved locally.');
+      }
+    } else {
+      showNotice('Comment saved locally.');
+    }
     updateCount();
     markCommentedTargets();
+    if (panel) renderPanel();
   }
 
   function updateCount() {
-    const count = storageAdapter.load().filter(item => item.status !== 'resolved').length;
+    const items = storageAdapter.load();
+    const count = items.filter(item => item.status !== 'resolved').length;
     document.querySelectorAll('.review-count').forEach(el => {
       el.textContent = count;
+    });
+    document.querySelectorAll('.review-sync-state').forEach(el => {
+      el.textContent = HAS_SUPABASE ? (remoteLoaded ? 'Synced' : 'Syncing') : 'Local';
     });
   }
 
@@ -238,15 +375,16 @@
         <div>
           <span>Review Comments</span>
           <h2>${items.length} total</h2>
+          <small class="review-sync-state">${HAS_SUPABASE ? (remoteLoaded ? 'Synced' : 'Syncing') : 'Local'}</small>
         </div>
         <button type="button" data-close>Close</button>
       </div>
       <div class="review-panel-list">
         ${items.length ? items.map(item => `
           <article class="review-panel-item" data-id="${item.id}">
-            <div class="review-panel-meta">${item.page} · ${item.reviewId}</div>
-            <p class="review-panel-quote">${item.textQuote || 'No text captured'}</p>
-            <p>${item.comment}</p>
+            <div class="review-panel-meta">${escapeHtml(item.page)} · ${escapeHtml(item.reviewId)}</div>
+            <p class="review-panel-quote">${escapeHtml(item.textQuote || 'No text captured')}</p>
+            <p>${escapeHtml(item.comment)}</p>
             <div class="review-panel-actions">
               <button type="button" data-jump="${item.reviewId}">Jump</button>
               <button type="button" data-resolve="${item.id}">${item.status === 'resolved' ? 'Reopen' : 'Resolve'}</button>
@@ -277,11 +415,29 @@
     if (resolve) {
       const items = storageAdapter.load().map(item => {
         if (item.id === resolve.dataset.resolve) {
-          return { ...item, status: item.status === 'resolved' ? 'open' : 'resolved' };
+          const nextStatus = item.status === 'resolved' ? 'open' : 'resolved';
+          return {
+            ...item,
+            status: nextStatus,
+            resolvedAt: nextStatus === 'resolved' ? new Date().toISOString() : null
+          };
         }
         return item;
       });
       storageAdapter.save(items);
+      const updated = items.find(item => item.id === resolve.dataset.resolve);
+      if (HAS_SUPABASE && updated) {
+        supabaseRequest(`review_comments?id=eq.${encodeURIComponent(updated.id)}`, {
+          method: 'PATCH',
+          body: JSON.stringify({
+            status: updated.status,
+            resolved_at: updated.resolvedAt
+          })
+        }).catch(error => {
+          console.warn('Could not update comment status in Supabase.', error);
+          showNotice('Could not sync status. Try again later.');
+        });
+      }
       updateCount();
       markCommentedTargets();
       renderPanel();
@@ -348,6 +504,7 @@
   function initReviewTools() {
     ensureAnchors();
     attachEvents();
+    loadRemoteComments();
     markCommentedTargets();
     if (mode === 'review' || mode === 'browse' || mode === 'comment') {
       createToolbar();
@@ -359,7 +516,7 @@
     }
   }
 
-  window.BlanchetReview = { promptMode, initReviewTools, comments, saveComments };
+  window.BlanchetReview = { promptMode, initReviewTools, comments: localComments, saveComments: saveLocalComments };
   document.addEventListener('blanchet:unlocked', initReviewTools);
 
   if (document.readyState !== 'loading' && !document.documentElement.classList.contains('auth-lock')) {

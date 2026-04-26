@@ -1,0 +1,35 @@
+create table if not exists review_comments (
+  id text primary key,
+  project text not null,
+  page text not null,
+  path text not null,
+  review_id text not null,
+  selector text not null,
+  text_quote text,
+  comment text not null,
+  status text not null default 'open',
+  viewport jsonb,
+  created_at timestamptz not null default now(),
+  resolved_at timestamptz
+);
+
+alter table review_comments enable row level security;
+
+drop policy if exists "Allow preview comment reads" on review_comments;
+create policy "Allow preview comment reads"
+on review_comments for select
+to anon
+using (project = 'blanchet-site');
+
+drop policy if exists "Allow preview comment inserts" on review_comments;
+create policy "Allow preview comment inserts"
+on review_comments for insert
+to anon
+with check (project = 'blanchet-site');
+
+drop policy if exists "Allow preview comment status updates" on review_comments;
+create policy "Allow preview comment status updates"
+on review_comments for update
+to anon
+using (project = 'blanchet-site')
+with check (project = 'blanchet-site');

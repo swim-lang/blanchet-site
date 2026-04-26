@@ -7,10 +7,11 @@ The review layer is intentionally static-site friendly for the first pass.
 1. Reviewer enters the site password.
 2. Reviewer chooses `Review and leave comments`.
 3. Reviewer switches between `Browse` and `Comment` in the bottom toolbar.
-4. Reviewer exports comments with `Export`.
-5. The exported JSON can be imported back into the site with `Import` for triage.
+4. Comments save to Supabase when `js/review-config.js` is configured.
+5. Comments can still be exported with `Export Comments` as a backup.
 
-Comments are stored in `localStorage` under `blanchet-review-comments`.
+If Supabase is not configured, comments fall back to `localStorage` under
+`blanchet-review-comments`.
 
 ## Comment shape
 
@@ -30,12 +31,19 @@ Each comment includes:
 The important field is `reviewId`. It maps to stable `data-review-id` attributes in
 the HTML where available, with runtime fallback IDs for unannotated elements.
 
-## Backend path
+## Supabase setup
 
-When a shared backend is needed, replace the local storage calls in
-`js/review-tools.js` with an adapter that loads and saves comments remotely.
+Add the Supabase Project URL and public anon key to `js/review-config.js`:
 
-The simplest Supabase table would be:
+```js
+window.BLANCHET_REVIEW_CONFIG = {
+  supabaseUrl: 'https://YOUR-PROJECT.supabase.co',
+  supabaseAnonKey: 'YOUR_PUBLIC_ANON_KEY',
+  project: 'blanchet-site'
+};
+```
+
+Run this SQL in the Supabase SQL editor:
 
 ```sql
 create table review_comments (
@@ -52,8 +60,38 @@ create table review_comments (
   created_at timestamptz not null default now(),
   resolved_at timestamptz
 );
+
+alter table review_comments enable row level security;
+
+create policy "Allow preview comment reads"
+on review_comments for select
+to anon
+using (project = 'blanchet-site');
+
+create policy "Allow preview comment inserts"
+on review_comments for insert
+to anon
+with check (project = 'blanchet-site');
+
+create policy "Allow preview comment status updates"
+on review_comments for update
+to anon
+using (project = 'blanchet-site')
+with check (project = 'blanchet-site');
 ```
 
 For a public static site, do not expose a service-role key in browser JavaScript.
-Use Supabase anonymous insert/read policies for this preview, or a small serverless
-proxy if the comments need stricter access control.
+Only the public anon key belongs in `js/review-config.js`.
+
+This is appropriate for a lightweight private preview behind the existing site
+password. For stricter access control, put a small serverless proxy in front of
+Supabase instead of writing directly from the browser.
+
+## Internal import
+
+The `Import` button is hidden from normal reviewers. To enable it locally, open a
+page with `?reviewAdmin=1` or run:
+
+```js
+localStorage.setItem('blanchet-review-admin', 'true')
+```
