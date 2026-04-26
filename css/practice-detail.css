@@ -1,0 +1,318 @@
+.practice-detail-hero {
+  display: flex;
+  min-height: 620px;
+  background: #0c222c;
+  color: #fff;
+}
+
+.practice-detail-hero-left {
+  width: 520px;
+  flex-shrink: 0;
+  padding: 40px 48px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.practice-detail-hero-left .nav-logo img {
+  height: 15px;
+  width: auto;
+}
+
+.practice-detail-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.32);
+  padding-bottom: 24px;
+}
+
+.practice-detail-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 1.02;
+  text-transform: uppercase;
+  padding-bottom: 28px;
+}
+
+.practice-detail-rule {
+  width: 40px;
+  height: 2px;
+  background: rgba(255,255,255,0.16);
+  margin-bottom: 28px;
+}
+
+.practice-detail-intro {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.82;
+  color: rgba(255,255,255,0.5);
+  max-width: 410px;
+}
+
+.practice-detail-hero-right {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: #0a1a22;
+}
+
+.practice-detail-hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.46;
+}
+
+.practice-detail-hero-nav {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  z-index: 3;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.practice-detail-hero-nav a {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.62);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.practice-detail-hero-nav a:hover,
+.practice-detail-hero-nav a.active {
+  color: #fff;
+}
+
+.practice-detail-hero-nav .nav-cta {
+  padding: 8px 16px;
+  border: 1px solid rgba(255,255,255,0.24);
+  color: #fff;
+}
+
+.practice-detail-mark {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  width: 80px !important;
+  height: auto !important;
+  object-fit: contain;
+  opacity: 0.68 !important;
+}
+
+.practice-detail-strip {
+  padding: 28px 60px;
+  background: #0c222c;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.practice-detail-strip p {
+  max-width: 760px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.38);
+}
+
+.practice-detail-body {
+  display: flex;
+  background: #fff;
+}
+
+.practice-detail-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  border-right: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  align-self: flex-start;
+  padding: 64px 40px 64px 60px;
+}
+
+.practice-detail-sidebar-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(12,34,44,0.24);
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(12,34,44,0.08);
+  margin-bottom: 8px;
+}
+
+.practice-detail-sidebar a {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(12,34,44,0.52);
+  text-decoration: none;
+  padding: 12px 0;
+}
+
+.practice-detail-sidebar a:hover {
+  color: #0c222c;
+}
+
+.practice-detail-sidebar .back-link {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(12,34,44,0.08);
+  color: rgba(12,34,44,0.45);
+}
+
+.practice-detail-content {
+  flex: 1;
+}
+
+.practice-detail-section {
+  padding: 72px 80px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.practice-detail-section:last-child {
+  border-bottom: none;
+}
+
+.practice-section-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(12,34,44,0.45);
+  padding-bottom: 20px;
+}
+
+.practice-detail-section h2 {
+  max-width: 720px;
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: #0c222c;
+  padding-bottom: 18px;
+}
+
+.practice-detail-section p {
+  max-width: 720px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #4b5563;
+}
+
+.practice-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px;
+  margin-top: 28px;
+  border: 1px solid rgba(12,34,44,0.08);
+  background: rgba(12,34,44,0.08);
+}
+
+.practice-detail-card {
+  min-height: 180px;
+  padding: 30px;
+  background: #fff;
+}
+
+.practice-detail-card span {
+  display: block;
+  margin-bottom: 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: rgba(12,34,44,0.45);
+}
+
+.practice-detail-card h3 {
+  font-size: 21px;
+  line-height: 1.18;
+  text-transform: uppercase;
+  color: #0c222c;
+  margin-bottom: 12px;
+}
+
+.practice-detail-card p {
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+.practice-detail-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 44px;
+  margin-top: 26px;
+  border-top: 1px solid rgba(12,34,44,0.08);
+  list-style: none;
+}
+
+.practice-detail-list li {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(12,34,44,0.08);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #0c222c;
+}
+
+.practice-detail-muted {
+  background: #eef0f1;
+}
+
+@media (max-width: 767px) {
+  .practice-detail-hero {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .practice-detail-hero-left {
+    width: 100%;
+    padding: 32px 24px 48px;
+  }
+
+  .practice-detail-title {
+    font-size: 42px;
+  }
+
+  .practice-detail-hero-right {
+    height: 320px;
+  }
+
+  .practice-detail-hero-nav,
+  .practice-detail-sidebar {
+    display: none;
+  }
+
+  .practice-detail-strip {
+    padding: 22px 24px;
+  }
+
+  .practice-detail-body {
+    display: block;
+  }
+
+  .practice-detail-section {
+    padding: 48px 24px;
+  }
+
+  .practice-detail-grid,
+  .practice-detail-list {
+    grid-template-columns: 1fr;
+  }
+}
