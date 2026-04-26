@@ -31,17 +31,19 @@ if (cursor && window.matchMedia('(hover: hover)').matches) {
 const scrollNav = document.querySelector('.scroll-nav');
 let lastScroll = 0;
 let scrollNavThreshold = window.innerHeight * 0.5;
-window.addEventListener('scroll', () => {
-  const current = window.scrollY;
-  if (current < scrollNavThreshold) {
-    scrollNav.classList.remove('visible');
-  } else if (current < lastScroll - 5) {
-    scrollNav.classList.add('visible');
-  } else if (current > lastScroll + 5) {
-    scrollNav.classList.remove('visible');
-  }
-  lastScroll = current;
-}, { passive: true });
+if (scrollNav) {
+  window.addEventListener('scroll', () => {
+    const current = window.scrollY;
+    if (current < scrollNavThreshold) {
+      scrollNav.classList.remove('visible');
+    } else if (current < lastScroll - 5) {
+      scrollNav.classList.add('visible');
+    } else if (current > lastScroll + 5) {
+      scrollNav.classList.remove('visible');
+    }
+    lastScroll = current;
+  }, { passive: true });
+}
 
 // Square window expand on scroll
 const windowSection = document.querySelector('.window-section');
@@ -272,4 +274,3 @@ window.addEventListener('resize', () => {
     setupStackingCards();
   }, 250);
 });
-
