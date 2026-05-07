@@ -25,7 +25,7 @@
     gate.className = 'password-gate';
     gate.innerHTML = `
       <form class="password-gate-card" autocomplete="off">
-        <img src="assets/logos/Wordmark-White.png" alt="Blanchet">
+        <img src="assets/logos/Wordmark-White.png" alt="Blanchet LLP">
         <div>
           <h1>Private Preview</h1>
           <p>This site is password protected while it is under review.</p>

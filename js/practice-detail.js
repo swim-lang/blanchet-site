@@ -3,10 +3,10 @@
     litigation: {
       title: 'Litigation',
       label: 'Core Practice',
-      intro: 'Litigation is the center of gravity at Blanchet. The firm handles serious disputes in state and federal courts, including trial work, motion practice, discovery-heavy matters, and cases where commercial, environmental, product, investigative, and technical issues overlap.',
+      intro: 'Litigation is the center of gravity at Blanchet LLP. The firm handles serious disputes in state and federal courts, including trial work, motion practice, discovery-heavy matters, and cases where commercial, environmental, product, investigative, and technical issues overlap.',
       strip: 'Trial experience changes the work long before trial. It shapes how cases are assessed, where leverage is created, and how strategy holds up when the pressure increases.',
       image: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1400&q=80',
-      overview: 'Blanchet is built for disputes that require judgment, disciplined staffing, and senior lawyers close to the work. The firm handles matters from early assessment through resolution or trial, with attention to both the legal record and the practical business context.',
+      overview: 'Blanchet LLP is built for disputes that require judgment, disciplined staffing, and senior lawyers close to the work. The firm handles matters from early assessment through resolution or trial, with attention to both the legal record and the practical business context.',
       focusHeading: 'Disputes that need experienced trial judgment.',
       focusIntro: 'The litigation practice includes the work that ties the firm together across industries, forums, and subject matter.',
       focus: [
@@ -34,12 +34,12 @@
     commercial: {
       title: 'Commercial Litigation',
       label: 'Core Practice',
-      intro: 'Blanchet handles business-to-business disputes involving contracts, partnerships, business torts, fraud, supply and vendor issues, deal disputes, fiduciary claims, shareholder disputes, and other commercial conflicts.',
+      intro: 'Blanchet LLP handles business-to-business disputes involving contracts, partnerships, business torts, fraud, supply and vendor issues, deal disputes, fiduciary claims, shareholder disputes, and other commercial conflicts.',
       strip: 'Commercial disputes need more than legal theory. They need practical judgment about cost, leverage, timing, business continuity, and the record that will matter if the case has to be tried.',
       image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1400&q=80',
       overview: 'The firm represents companies, executives, institutions, and legal departments in commercial matters where the business consequences and litigation strategy have to be understood together.',
       focusHeading: 'Business disputes with real operating stakes.',
-      focusIntro: 'Blanchet approaches commercial litigation with a practical view of leverage, disruption, and proof.',
+      focusIntro: 'Blanchet LLP approaches commercial litigation with a practical view of leverage, disruption, and proof.',
       focus: [
         ['Contracts and Business Torts', 'Contract claims, fraud, fiduciary disputes, business torts, and contested commercial relationships.'],
         ['Partnership and Ownership Disputes', 'Partnership, shareholder, governance, founder, and control disputes.'],
@@ -65,8 +65,8 @@
     environmental: {
       title: 'CERCLA & Environmental Disputes',
       label: 'Technical Practice',
-      intro: 'Blanchet handles environmental matters involving CERCLA, Superfund, contamination, natural resource damages, dioxane, PFAS and emerging contaminants, toxic tort, regulatory disputes, experts, and long factual records.',
-      strip: 'Environmental disputes often turn on years of documents, technical records, agency interaction, experts, and operational context. Blanchet is built for that kind of record.',
+      intro: 'Blanchet LLP handles environmental matters involving CERCLA, Superfund, contamination, natural resource damages, dioxane, PFAS and emerging contaminants, toxic tort, regulatory disputes, experts, and long factual records.',
+      strip: 'Environmental disputes often turn on years of documents, technical records, agency interaction, experts, and operational context. Blanchet LLP is built for that kind of record.',
       image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400&q=80',
       overview: 'The firm represents companies and institutional clients in environmental and toxic tort matters where science, regulation, litigation strategy, and business exposure overlap.',
       focusHeading: 'Environmental cases shaped by technical records.',
@@ -96,12 +96,12 @@
     product: {
       title: 'Product Liability & Mass Tort',
       label: 'Mass Tort Practice',
-      intro: 'Blanchet defends manufacturers and institutional clients in product liability, toxic tort, consumer class action, MDL, bellwether, and expert-heavy matters.',
+      intro: 'Blanchet LLP defends manufacturers and institutional clients in product liability, toxic tort, consumer class action, MDL, bellwether, and expert-heavy matters.',
       strip: 'Scaled product disputes require discipline: controlling the record, coordinating experts, preserving consistency, and keeping the business context in view.',
       image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=1400&q=80',
       overview: 'The firm represents manufacturers and other institutional clients in matters where product performance, causation, class issues, technical evidence, and litigation scale all matter at once.',
       focusHeading: 'Defense strategy for scaled product and exposure claims.',
-      focusIntro: 'Blanchet handles matters that require coordinated defense strategy and a practical understanding of industry operations.',
+      focusIntro: 'Blanchet LLP handles matters that require coordinated defense strategy and a practical understanding of industry operations.',
       focus: [
         ['Product Defense', 'Product liability, warranty, defect, warning, causation, and expert-intensive defense matters.'],
         ['Mass Tort and MDL', 'Aggregate litigation, MDL coordination, bellwether strategy, and long-running defense programs.'],
@@ -127,12 +127,12 @@
     ip: {
       title: 'Intellectual Property & Trade Secrets',
       label: 'Technical Practice',
-      intro: 'Blanchet handles patent, trade secret, software, licensing, semiconductor, technology commercial, cybercrime, and other disputes where the technical record and the business context both matter.',
+      intro: 'Blanchet LLP handles patent, trade secret, software, licensing, semiconductor, technology commercial, cybercrime, and other disputes where the technical record and the business context both matter.',
       strip: 'Technical disputes are rarely just technical. The proof has to be understood in context: the product, the people, the business relationship, and the record.',
       image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=80',
       overview: 'The firm represents companies and individuals in IP and technology disputes that require careful fact development, technical fluency, and litigation judgment.',
       focusHeading: 'Technical disputes with commercial consequences.',
-      focusIntro: 'Blanchet pairs litigation experience with practical attention to the technology, business context, and record.',
+      focusIntro: 'Blanchet LLP pairs litigation experience with practical attention to the technology, business context, and record.',
       focus: [
         ['Patent Litigation', 'Patent disputes, technical records, expert strategy, enforceability issues, and fee disputes.'],
         ['Trade Secrets', 'Misappropriation, employee movement, confidential information, and business continuity issues.'],
@@ -173,9 +173,9 @@
     if (el) el.setAttribute(name, value);
   }
 
-  document.title = data.title + ' | BLANCHET';
+  document.title = data.title + ' | BLANCHET LLP';
   attr('meta[name="description"]', 'content', data.intro);
-  attr('meta[property="og:title"]', 'content', data.title + ' | BLANCHET');
+  attr('meta[property="og:title"]', 'content', data.title + ' | BLANCHET LLP');
   attr('meta[property="og:description"]', 'content', data.intro);
 
   text('[data-practice-field="label"]', data.label);

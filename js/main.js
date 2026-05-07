@@ -1,5 +1,5 @@
 /* ============================================
-   BLANCHET — Main Scripts
+   BLANCHET LLP — Main Scripts
    ============================================ */
 
 // Lock service card heights to prevent jerk on hover (desktop only)

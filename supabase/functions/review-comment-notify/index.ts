@@ -26,7 +26,7 @@ Deno.serve(async (req) => {
   }
 
   const resendApiKey = Deno.env.get("RESEND_API_KEY")
-  const fromEmail = Deno.env.get("REVIEW_NOTIFY_FROM") || "Blanchet Review <onboarding@resend.dev>"
+  const fromEmail = Deno.env.get("REVIEW_NOTIFY_FROM") || "Blanchet LLP Review <onboarding@resend.dev>"
   const supabaseUrl = Deno.env.get("SUPABASE_URL")
   const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")
 
@@ -48,16 +48,16 @@ Deno.serve(async (req) => {
   const reviewId = body.reviewId || "Unknown review target"
   const siteUrl = "https://swim-lang.github.io/blanchet-site/"
 
-  const subject = "New Blanchet website review comment"
+  const subject = "New Blanchet LLP website review comment"
   const html = `
     <div style="font-family: Inter, Arial, sans-serif; color: #0c222c; line-height: 1.55;">
-      <h1 style="font-size: 20px; margin: 0 0 12px;">New Blanchet review activity</h1>
+      <h1 style="font-size: 20px; margin: 0 0 12px;">New Blanchet LLP review activity</h1>
       <p>A reviewer left their first comment in the current review window.</p>
       <p><strong>Page:</strong> ${escapeHtml(page)}<br>
       <strong>Review target:</strong> ${escapeHtml(reviewId)}</p>
       ${body.textQuote ? `<p><strong>Text:</strong><br>${escapeHtml(body.textQuote)}</p>` : ""}
       ${body.comment ? `<p><strong>Comment:</strong><br>${escapeHtml(body.comment)}</p>` : ""}
-      <p><a href="${siteUrl}">Open the Blanchet review site</a></p>
+      <p><a href="${siteUrl}">Open the Blanchet LLP review site</a></p>
     </div>
   `
 
