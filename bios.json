@@ -1,6 +1,6 @@
 {
-  "generatedFrom": "Blanchet website bio HTML pages",
-  "generatedAt": "2026-06-02T14:01:37.226Z",
+  "generatedFrom": "Blanchet LLP website bio HTML pages",
+  "generatedAt": "2026-06-08T15:11:05.710Z",
   "sourceDirectory": "/Users/homeoffice/Local Files/Documents Archive/Claude/blanchet-site",
   "count": 8,
   "bios": [
@@ -46,6 +46,11 @@
         "Represented an insurer in ERISA disputes with an insured in federal court lawsuits. Obtained complete dismissal.",
         "Represented a petroleum wholesaler in payment disputes across the East Coast, achieving substantial recoveries from counterparties."
       ],
+      "governmentService": [],
+      "clerkships": [],
+      "judicialClerkships": [
+        "Student Law Clerk, Honorable John T. Curtin, U.S. District Court for the Western District of New York, 2011-2012"
+      ],
       "education": [
         "State University of New York at Buffalo Law School, J.D., cum laude, 2012; Buffalo Law Review, Publications Editor",
         "Canisius College, B.S., 2005"
@@ -55,9 +60,6 @@
         "U.S. District Court for the Eastern District of Michigan",
         "U.S. District Courts for the Eastern, Northern, Southern, and Western Districts of New York",
         "U.S. Court of Appeals for the Second Circuit"
-      ],
-      "judicialClerkships": [
-        "Student Law Clerk, Honorable John T. Curtin, U.S. District Court for the Western District of New York, 2011-2012"
       ],
       "honorsAndRecognition": [
         "Selected for the Upstate New York Super Lawyers list, 2024-2025",
@@ -90,20 +92,24 @@
       "introduction": [
         "Craig Nolan is a trial attorney, appellate advocate, and former federal prosecutor who represents clients at trial and in government investigations and enforcement matters, white collar defense, commercial disputes, product liability litigation, regulatory matters, and appeals.",
         "With more than 30 jury trials and dozens of appeals before federal appellate and state supreme courts, Craig has served as White Collar Crimes Chief at the U.S. Attorney's Office for Hawaii, State's Attorney for Vermont's third-largest county, and a civil litigator at leading firms in Vermont and North Carolina.",
-        "Craig brings the perspective of a federal prosecutor, trial attorney, and appellate advocate to matters that require early control, nuanced judgment, and demonstrable trial-readiness. He is especially valuable where litigation risk, government attention, and appellate issues overlap, and where trial counsel is needed to assist or replace litigation counsel."
+        "Craig brings the perspective of a federal prosecutor, trial attorney, and appellate advocate to matters that require early control, nuanced judgment, and demonstrable trial-readiness. He is especially valuable where litigation risk, government scrutiny, and appellate issues overlap, and where trial counsel is needed to assist or replace litigation counsel."
       ],
       "areasOfFocus": [
         "Trials & Appeals",
         "Commercial, Product Liability & Complex Civil Litigation",
         "Government Investigations & Enforcement",
         "White Collar Defense",
-        "SEC / DOJ Matters",
+        "Whistleblower & Qui Tam",
+        "DOJ, SEC & State AG Enforcement Matters",
+        "Grand Jury & CID Subpoenas",
+        "Environmental Enforcement",
+        "RICO, Fraud, Money Laundering & Cybercrime Matters",
         "Regulatory Investigations & Disputes",
         "Internal Investigations"
       ],
       "representativeExperienceIntro": "Craig Nolan's experience includes:",
       "representativeExperience": [
-        "Served as White Collar Crimes Chief and Branch Chief as an Assistant U.S. Attorney in Hawaii and Vermont, respectively.",
+        "Served as White Collar Crimes Chief and Branch Chief as an Assistant U.S. Attorney in Hawaii and Vermont, respectively, during 15-year DOJ career.",
         "Represented Valero Energy Corp. in groundwater MTBE-contamination litigation by the State of Vermont.",
         "Represented a construction management company in the $200 million Jay Peak EB-5 fraud investigation by the Department of Justice.",
         "Represented a defendant in SEC enforcement litigation involving insider-trading allegations connected to Keurig Green Mountain stock.",
@@ -112,16 +118,16 @@
         "Served as appellate counsel in dozens of appeals in federal and state supreme courts, including the Second Circuit, Ninth Circuit, and Vermont Supreme Court.",
         "Brought former-prosecutor judgment to investigations, enforcement defense, and complex civil matters where early strategy and controlled communication matter."
       ],
+      "governmentService": [],
+      "clerkships": [],
+      "judicialClerkships": [],
       "education": [
         "William & Mary Law School, J.D., Order of the Coif Honors",
         "Dartmouth College, A.B., Honors in Major"
       ],
       "admissions": [
-        "Vermont",
-        "Maryland",
-        "North Carolina"
+        "Vermont"
       ],
-      "judicialClerkships": [],
       "honorsAndRecognition": [],
       "professionalAssociations": [],
       "activities": []
@@ -160,6 +166,9 @@
         "Representing distressed companies in bankruptcy litigation proceedings.",
         "Handling sophisticated commercial matters across technology, pharmaceutical, energy, telecommunications, petrochemical, financial services, and other industries."
       ],
+      "governmentService": [],
+      "clerkships": [],
+      "judicialClerkships": [],
       "education": [
         "Washington University in St. Louis School of Law, J.D., magna cum laude, Order of the Coif",
         "University of Kansas, B.A., with honors"
@@ -168,7 +177,6 @@
         "Illinois",
         "U.S. District Court for the Northern District of Illinois"
       ],
-      "judicialClerkships": [],
       "honorsAndRecognition": [
         "National Black Lawyers, 40 Under 40, Illinois",
         "Legal Assistance Foundation, Housing Volunteer of the Year"
@@ -215,6 +223,9 @@
         "Representing Dow in merger litigation involving Rohm and Haas, resolving the case on the first day of trial with a substantial reduction in cash consideration",
         "Handling commercial, environmental, product liability, securities, intellectual property, and bankruptcy disputes for major corporate clients across the country"
       ],
+      "governmentService": [],
+      "clerkships": [],
+      "judicialClerkships": [],
       "education": [
         "University of Illinois College of Law, J.D., magna cum laude",
         "Canisius College, B.A., magna cum laude"
@@ -227,7 +238,6 @@
         "U.S. District Courts for the Eastern, Southern, and Western Districts of New York",
         "U.S. Courts of Appeals for the Second and Tenth Circuits"
       ],
-      "judicialClerkships": [],
       "honorsAndRecognition": [
         "The Best Lawyers in America",
         "Recommended by The Legal 500 United States",
@@ -275,6 +285,9 @@
         "Represented chemical companies in toxic tort, environmental, insurance, and product liability matters, including matters involving contamination and chemical exposure claims.",
         "Handled complex commercial disputes in courts and arbitrations across the country."
       ],
+      "governmentService": [],
+      "clerkships": [],
+      "judicialClerkships": [],
       "education": [
         "Indiana University Maurer School of Law, J.D., magna cum laude, Order of the Coif",
         "University of Chicago Divinity School, M.A.",
@@ -284,7 +297,6 @@
         "Illinois",
         "Michigan"
       ],
-      "judicialClerkships": [],
       "honorsAndRecognition": [],
       "professionalAssociations": [],
       "activities": []
@@ -323,6 +335,9 @@
         "Represented an investment holding company in claims seeking hundreds of millions of dollars related to offshore oil interests.",
         "Led litigation teams in product liability, mass and toxic tort, environmental, securities, bankruptcy, and investigation matters."
       ],
+      "governmentService": [],
+      "clerkships": [],
+      "judicialClerkships": [],
       "education": [
         "Boston College Law School, J.D.",
         "United States Military Academy at West Point, B.S."
@@ -335,7 +350,6 @@
         "U.S. District Courts for the Eastern, Northern, and Southern Districts of New York",
         "U.S. Court of Appeals for the Second Circuit"
       ],
-      "judicialClerkships": [],
       "honorsAndRecognition": [
         "New York Metro Super Lawyers",
         "AV Preeminent rated by Martindale-Hubbell"
@@ -362,7 +376,7 @@
       "introduction": [
         "Robert Reagan is a litigator who represents clients in environmental litigation, mass tort, product liability, and chemical exposure matters.",
         "His practice focuses on complex disputes in state and federal court, with particular emphasis on groundwater and soil contamination, environmental records, and technical issues that require disciplined case management.",
-        "Rob works within Blanchet’s environmental and toxic tort bench on matters where the facts, science, and procedural strategy all matter."
+        "Rob works within Blanchet LLP’s environmental and toxic tort bench on matters where the facts, science, and procedural strategy all matter."
       ],
       "areasOfFocus": [
         "Environmental Litigation",
@@ -381,6 +395,9 @@
         "Working with chemical exposure and toxic tort teams on technically demanding environmental disputes.",
         "Supporting complex matters in state and federal court where environmental facts and litigation strategy overlap."
       ],
+      "governmentService": [],
+      "clerkships": [],
+      "judicialClerkships": [],
       "education": [
         "Vermont Law School, J.D., magna cum laude",
         "Elisabeth Haub School of Law at Pace University, LL.M., Environmental Law, summa cum laude",
@@ -389,7 +406,6 @@
       "admissions": [
         "New York"
       ],
-      "judicialClerkships": [],
       "honorsAndRecognition": [
         "Upstate New York Super Lawyers Rising Star"
       ],
@@ -409,35 +425,87 @@
       "page": "bio-wayne-myers.html",
       "url": "https://swim-lang.github.io/blanchet-site/bio-wayne-myers.html",
       "slug": "bio-wayne-myers",
-      "metaDescription": "Wayne Myers is a partner at Blanchet LLP focused on government investigations, enforcement, white collar defense, fraud, cybercrime, and appellate matters.",
+      "metaDescription": "Wayne Myers is a founding partner of Blanchet LLP and a former senior federal prosecutor focused on high-stakes litigation, complex civil disputes, government and grand jury investigations, white collar matters, cybercrime, and internal investigations.",
       "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=1200&q=80",
       "imageAlt": "Wayne Myers",
       "introduction": [
-        "Wayne Myers is a former federal prosecutor who represents clients in government investigations, enforcement matters, white collar defense, fraud, cybercrime, trade secret, and other sensitive disputes.",
-        "He has served as First Assistant U.S. Attorney and brings substantial experience in federal criminal matters, appellate work, financial fraud, trade secret theft, and matters involving parallel civil, criminal, and regulatory risk.",
-        "Wayne’s value is practical and direct: he helps clients understand what the government is likely to care about, where the real exposure sits, and how to respond without creating unnecessary motion or noise."
+        "Wayne Myers is a founding partner of Blanchet LLP. A trial-ready litigator and former senior federal prosecutor, Wayne represents companies, executives, professionals, and individuals in high-stakes litigation, complex civil disputes, government and grand jury investigations, white-collar matters, and internal investigations. He also handles select criminal matters.",
+        "Wayne held some of the highest positions in the U.S. Attorney’s Office for the District of Hawaii, including First Assistant U.S. Attorney, First Deputy U.S. Attorney, Criminal Chief, and Appellate Chief. His remit covered the full range of federal litigation: criminal prosecutions, civil litigation, appeals, sensitive investigations, and office operations. He worked regularly with Department leadership in Washington, federal agencies, law enforcement, the judiciary, and community stakeholders.",
+        "Before Hawaii, Wayne served as an Assistant U.S. Attorney in the Northern District of New York, where he was Chief of the Albany Branch Office, supervised Criminal Division AUSAs, managed a 40-person office, and built a nationally recognized cybercrime program.",
+        "Over the course of his career, Wayne has tried more than a dozen cases to verdict, supervised dozens more, personally handled hundreds of federal court hearings, and appeared in hundreds of grand jury proceedings. He knows the federal system from the inside: how prosecutors evaluate cases, how agents build investigations, how grand juries operate, where investigations and cases hit stress points, when Main Justice gets involved, and how federal judges assess contested facts and law.",
+        "Wayne’s experience spans national security and terrorism, financial crime, procurement fraud, health care fraud, public corruption, cybercrime, environmental crime, crimes against children, violent crime, firearms and explosives offenses, narcotics, and cryptocurrency. He has handled high-level national security and counterterrorism matters and held high-level federal security clearances.",
+        "Unusual among litigators, Wayne is genuinely fluent in the technology itself. He is comfortable in the details of digital forensics, networks, electronic evidence, cryptocurrency, and cyber investigations, not just the law that surrounds them. He has particular depth in digital evidence and surveillance, including the Stored Communications Act, ECPA, CFAA, search warrants, Fourth Amendment issues, and cross-border evidence collection.",
+        "Before joining the Department of Justice, Wayne practiced at Kirkland & Ellis LLP in Chicago and New York, where he handled complex commercial litigation, bankruptcy litigation, trade-secret matters, and high-stakes business disputes.",
+        "Wayne’s philosophy as a lawyer is simple: keep what matters, lose what does not, and know that telling the difference is the work. He is decisive under pressure and quick on his feet, as ready to make the call in a crisis as to make the argument in court."
       ],
       "areasOfFocus": [
+        "High-Stakes Litigation",
         "Government Investigations & Enforcement",
+        "Grand Jury Investigations",
         "White Collar Defense",
-        "Fraud & RICO",
-        "Cybercrime",
-        "Trade Secret Theft",
-        "Appellate",
+        "Financial Crime & Fraud",
+        "Cybercrime & Digital Evidence",
+        "Cryptocurrency",
+        "National Security & Terrorism",
+        "Public Corruption",
         "Internal Investigations",
-        "Environmental Enforcement"
+        "Trade Secrets",
+        "Appellate"
       ],
-      "representativeExperienceIntro": "Wayne Myers's experience includes:",
+      "representativeExperienceIntro": "Wayne Myers’s experience includes:",
       "representativeExperience": [
-        "Served as First Assistant U.S. Attorney and Anti-Terrorism Advisory Council Coordinator for the District of Hawaii.",
-        "Handled federal trade secret theft matters, including a GE-related investigation that led to guilty pleas.",
-        "Was recognized by the Department of Justice as part of a team involved in the investigation and prosecution of a significant investment fraud scheme.",
-        "Handled complex federal criminal, appellate, fraud, cybercrime, and enforcement matters that inform his work for clients facing government scrutiny."
+        "Prosecuted a $125 million Ponzi scheme involving unregistered securities.",
+        "Prosecuted a $100 million ACH fraud involving a national payroll processor.",
+        "Prosecuted a $50 million accounting fraud involving grain commodities.",
+        "Prosecuted a $25 million trade-secret theft involving proprietary computer models stolen from a Fortune 500 company.",
+        "Prosecuted a $6 million business-email-compromise scheme.",
+        "Prosecuted a $1 million debtor-impersonation scheme run through nationwide debt collectors.",
+        "Prosecuted numerous physicians and medical professionals for controlled-substance and health-care fraud offenses.",
+        "Served as national lead on multiple ransomware investigations.",
+        "Seized millions of dollars in cryptocurrency traced to pig-butchering scams.",
+        "Prosecuted a computer-hacking case involving a technology company, including obstruction during trial.",
+        "Prosecuted a first-of-its-kind CFAA case involving an insider who destroyed a company’s network and data.",
+        "Prosecuted a first-of-its-kind CFAA case involving fraudulent access to a state unemployment-insurance system, affirmed on appeal.",
+        "Prosecuted one of the world’s largest dark-net LSD vendors.",
+        "Led a witness-tampering investigation during a pending public-corruption trial.",
+        "Prosecuted a police officer for child-sex trafficking and cyberstalking.",
+        "Litigated attorney-as-witness disqualification issues in a racketeering case.",
+        "Developed obstruction charges arising from fraudulent character letters.",
+        "Prosecuted numerous obstruction, perjury, witness-tampering, and false-statement matters.",
+        "Prosecuted a Mexico-based fentanyl ring in a matter named 2025 HIDTA “Case of the Year.”",
+        "Handled dozens of firearm, narcotics, and violent-crime matters, including armed robbery, Hobbs Act robbery, bank robbery, drug conspiracies, homicide, arson, unlawful explosives, and illegal firearms.",
+        "Served as trial counsel to a hedge fund in a high-frequency-trading algorithm-theft arbitration.",
+        "Secured an eight-figure settlement from a microchip manufacturer.",
+        "Served as trial counsel for a secured-lender committee in a $1.5 billion bankruptcy.",
+        "Defended a healthcare provider in multiple securities-fraud and shareholder-derivative suits.",
+        "Won summary judgment in a nine-figure natural-gas-leak case after leading expert strategy on causation of a pipe-casing failure.",
+        "Handled key issues in a $1 billion dispute over a jointly owned polyethylene plant."
       ],
-      "education": [],
-      "admissions": [],
+      "governmentService": [
+        "First Assistant U.S. Attorney, First Deputy U.S. Attorney, Criminal Chief, and Appellate Chief, U.S. Attorney’s Office for the District of Hawaii",
+        "Assistant U.S. Attorney and Chief of the Albany Branch Office, U.S. Attorney’s Office for the Northern District of New York",
+        "Digital Asset and Computer Hacking and Intellectual Property Coordinator in the District of Hawaii and Northern District of New York",
+        "Member of a national Department of Justice Computer Hacking and Intellectual Property working group"
+      ],
+      "clerkships": [
+        "Law Clerk to the Honorable Paul C. Huck, U.S. District Court for the Southern District of Florida"
+      ],
       "judicialClerkships": [],
-      "honorsAndRecognition": [],
+      "education": [
+        "Northwestern University School of Law, J.D., with honors",
+        "University of Texas at Dallas, B.A., magna cum laude"
+      ],
+      "admissions": [
+        "California",
+        "Hawaii",
+        "Illinois",
+        "New York",
+        "Various federal district and appellate courts"
+      ],
+      "honorsAndRecognition": [
+        "Department of Justice Director’s Award for a landmark securities-fraud prosecution",
+        "Awards from every major federal law enforcement agency he worked with"
+      ],
       "professionalAssociations": [],
       "activities": []
     }
