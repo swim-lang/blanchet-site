@@ -79,7 +79,7 @@
 
   function renderClassic(data) {
     return `
-<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#0c222c;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#0c222c;background-color:#ffffff;">
   <tr>
     <td style="vertical-align:top;padding:0 18px 0 0;">
       <img src="${LOGO_URL}" width="58" height="58" alt="Blanchet LLP" style="display:block;width:58px;height:58px;border:0;outline:none;text-decoration:none;">

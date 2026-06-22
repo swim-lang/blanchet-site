@@ -103,8 +103,8 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
 .signature-form-wide { grid-column: 1 / -1; }
 .signature-actions button { min-height: 44px; border: 1px solid rgba(12,34,44,0.16); background: #fff; color: #0c222c; cursor: pointer; font: 600 12px/1 'Inter', sans-serif; letter-spacing: 1.1px; text-transform: uppercase; }
 .signature-preview-panel { position: sticky; top: 96px; }
-.signature-preview-wrap { background: #fff; border: 1px solid #e1e7ea; padding: 28px; overflow-x: auto; }
-.signature-preview { min-width: 560px; padding: 8px; background: #fff; }
+.signature-preview-wrap { background: #fff; border: 1px solid #e1e7ea; padding: 0; overflow-x: auto; }
+.signature-preview { min-width: 560px; padding: 28px; background: #fff; }
 .signature-preview img { width: auto; height: auto; object-fit: contain; }
 .signature-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
 .signature-actions button:first-child { background: #0c222c; color: #fff; border-color: #0c222c; }
@@ -128,7 +128,7 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
   .signature-form,
   .signature-preview-panel { padding: 24px; }
   .signature-form-grid { grid-template-columns: 1fr; }
-  .signature-preview-wrap { padding: 16px; }
+  .signature-preview { padding: 16px; }
 }
 
 /* Custom Cursor */
