@@ -77,6 +77,65 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
   .review-mode-card h2 { font-size: 28px; }
 }
 
+/* ============================================
+   Email Signature Generator
+   ============================================ */
+.signature-tool-page { background: #f4f6f7; color: #0c222c; min-height: 100vh; padding-top: 96px; }
+.signature-tool-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 500; display: flex; align-items: center; padding: 18px 60px; background: rgba(12,34,44,0.94); border-bottom: 1px solid rgba(255,255,255,0.08); transform: none !important; }
+.signature-tool-hero { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 56px; padding: 72px 80px 52px; align-items: end; }
+.signature-tool-hero-copy { max-width: 760px; }
+.signature-tool-hero h1 { font-size: 56px; line-height: 1.02; margin-top: 28px; max-width: 760px; }
+.signature-tool-hero p { color: #4b5563; font-size: 16px; line-height: 1.7; max-width: 620px; margin-top: 22px; }
+.signature-tool-note { border-left: 2px solid #0c222c; padding-left: 22px; }
+.signature-tool-note span { display: block; font-size: 12px; letter-spacing: 1.8px; text-transform: uppercase; color: rgba(12,34,44,0.48); margin-bottom: 8px; }
+.signature-tool-note p { margin: 0; font-size: 14px; line-height: 1.6; color: rgba(12,34,44,0.62); }
+.signature-tool-shell { display: grid; grid-template-columns: minmax(340px, 0.85fr) minmax(420px, 1.15fr); gap: 2px; padding: 0 80px 96px; align-items: start; }
+.signature-tool-shell > * { min-width: 0; }
+.signature-form,
+.signature-preview-panel { background: #fff; border: 1px solid rgba(12,34,44,0.08); padding: 34px; min-height: 100%; }
+.signature-panel-heading { margin-bottom: 26px; }
+.signature-panel-heading span { display: block; font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase; color: rgba(12,34,44,0.42); margin-bottom: 7px; }
+.signature-panel-heading h2 { font-size: 24px; line-height: 1.15; }
+.signature-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.signature-form label { display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: rgba(12,34,44,0.48); }
+.signature-form input { width: 100%; min-width: 0; height: 44px; border: 1px solid #dce2e5; background: #fff; color: #0c222c; padding: 0 12px; font: 14px/1.4 'Inter', sans-serif; outline: none; }
+.signature-form input:focus { border-color: #0c222c; }
+.signature-form-wide { grid-column: 1 / -1; }
+.signature-layout-picker { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 26px; }
+.signature-layout-picker button,
+.signature-actions button { min-height: 44px; border: 1px solid rgba(12,34,44,0.16); background: #fff; color: #0c222c; cursor: pointer; font: 600 12px/1 'Inter', sans-serif; letter-spacing: 1.1px; text-transform: uppercase; }
+.signature-layout-picker button.active,
+.signature-layout-picker button:hover { background: #0c222c; color: #fff; }
+.signature-preview-panel { position: sticky; top: 96px; }
+.signature-preview-wrap { background: #f8fafb; border: 1px solid #e1e7ea; padding: 28px; overflow-x: auto; }
+.signature-preview { min-width: 560px; padding: 8px; background: #fff; }
+.signature-preview img { width: auto; height: auto; object-fit: contain; }
+.signature-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+.signature-actions button:first-child { background: #0c222c; color: #fff; border-color: #0c222c; }
+.signature-actions button { padding: 0 18px; }
+.signature-actions button:hover { opacity: 0.88; }
+.signature-status { min-height: 20px; margin-top: 12px; font-size: 13px; color: #314956; }
+.signature-instructions { margin-top: 22px; padding-top: 20px; border-top: 1px solid #e1e7ea; }
+.signature-instructions h3 { font-size: 14px; letter-spacing: 1.2px; margin-bottom: 8px; }
+.signature-instructions p { color: #4b5563; font-size: 13px; line-height: 1.65; max-width: 620px; }
+.signature-html-output { width: 100%; min-height: 132px; margin-top: 18px; border: 1px solid #dce2e5; color: #0c222c; padding: 12px; font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; resize: vertical; }
+
+@media (max-width: 980px) {
+  .signature-tool-hero { grid-template-columns: 1fr; padding: 56px 28px 36px; gap: 28px; }
+  .signature-tool-hero h1 { font-size: 38px; }
+  .signature-tool-shell { grid-template-columns: 1fr; padding: 0 28px 64px; }
+  .signature-preview-panel { position: static; }
+}
+
+@media (max-width: 640px) {
+  .signature-tool-page { padding-top: 74px; }
+  .signature-form,
+  .signature-preview-panel { padding: 24px; }
+  .signature-form-grid,
+  .signature-layout-picker { grid-template-columns: 1fr; }
+  .signature-preview-wrap { padding: 16px; }
+}
+
 /* Custom Cursor */
 .cursor { display: none; }
 
@@ -99,7 +158,7 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
 .nav { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 0 0 24px; gap: 40px; }
 .nav .nav-logo { display: flex; align-items: center; flex-shrink: 0; }
 .nav .nav-logo img { height: 15px; width: auto; }
-.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links { display: flex; gap: 22px; align-items: center; }
 .nav-links span, .nav-links a:not(.nav-cta) { font-size: 12px; font-weight: 500; color: #fff; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; text-decoration: none; }
 .nav-links span:hover, .nav-links a:not(.nav-cta):hover { opacity: 0.7; }
 .nav-cta { padding: 8px 16px; border: 1px solid rgba(255,255,255,0.2); font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: #fff; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
@@ -554,6 +613,13 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
   .contact-bar { padding: 24px; flex-direction: column; gap: 12px; align-items: flex-start; }
   .contact-bar .links { gap: 20px; }
   .footer { padding: 48px 24px; }
+  .site-footer-top { flex-direction: column; padding: 56px 24px; gap: 42px; }
+  .site-footer-cta { padding-right: 0; border-right: 0; }
+  .site-footer-cta h2 { font-size: 32px; }
+  .site-footer-nav { flex: 1 1 auto; padding-left: 0; }
+  .site-footer-cols { flex-direction: column; gap: 28px; }
+  .site-footer-meta { margin-top: 36px; }
+  .footer-watermark { max-width: none; padding: 0 24px 40px; }
   .scroll-nav { padding: 14px 24px; }
 
   /* Hide nav links on mobile, keep logo + CTA */
