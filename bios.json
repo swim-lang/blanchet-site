@@ -1,189 +1,115 @@
 {
-  "generatedFrom": "Blanchet LLP website bio HTML pages",
-  "generatedAt": "2026-06-08T15:11:05.710Z",
-  "sourceDirectory": "/Users/homeoffice/Local Files/Documents Archive/Claude/blanchet-site",
-  "count": 8,
+  "count": 14,
+  "generatedAt": "2026-06-23T15:52:15.457Z",
+  "generatedFrom": "Blanchet LLP website bio HTML pages and blanchet-new-attorney-bios-master-v2.json",
+  "sourceDirectory": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site",
   "bios": [
     {
-      "name": "Andrew Devine",
-      "role": "PARTNER",
-      "offices": [
-        "Buffalo",
-        "New York City"
-      ],
-      "page": "bio-andrew-devine.html",
-      "url": "https://swim-lang.github.io/blanchet-site/bio-andrew-devine.html",
-      "slug": "bio-andrew-devine",
-      "metaDescription": "Andrew Devine is a partner at Blanchet LLP who handles product liability, environmental, class and mass action, commercial, construction, investment, and CERCLA-related disputes.",
-      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=1200&q=80",
-      "imageAlt": "Andrew Devine",
-      "introduction": [
-        "Andrew Devine is a litigator who handles hard-to-resolve disputes with a strategic, tech-savvy, and practical approach.",
-        "Andrew represents multinational corporations, manufacturers, construction owners and general contractors, banks, and investment companies in product liability, environmental, class and mass action, personal injury, commercial, construction, and investment matters in federal and state courts and arbitrations across the country.",
-        "He starts with the result a client is after, shapes an efficient and focused path to get there, and executes. Clients rely on him to manage complexity, including motion and appellate briefing, removal and jurisdictional issues, large-scale document review, depositions, and expert practice.",
-        "Andrew brings particular depth to environmental disputes, including the defense of claims involving groundwater and the remediation of sites under CERCLA. He is also comfortable with the technology that defines modern litigation, using experience and e-discovery tools to surface the facts that matter."
-      ],
-      "areasOfFocus": [
-        "Product Liability & Mass Tort",
-        "CERCLA & Environmental Disputes",
-        "Environmental Litigation",
-        "Commercial Litigation",
-        "Class Actions",
-        "Construction Litigation",
-        "Real Estate Litigation",
-        "Securities Litigation",
-        "Investment Product Disputes",
-        "Appellate"
-      ],
-      "representativeExperienceIntro": "Andrew Devine's experience includes:",
-      "representativeExperience": [
-        "Represented a construction project owner in state and federal lawsuits seeking damages and injunctive relief relating to breach of construction agreement and alleged tort claims. Won a preliminary injunction hearing, obtained dismissal and summary judgment dismissing tort and certain contract claims, secured affirmance on appeal, and resolved the remaining claims on favorable terms.",
-        "Represented a chemical company in a class action alleging that contamination from a remediated CERCLA site caused personal injuries to nearby residents under common law tort theories. Following removal to federal court, obtained complete dismissal and secured affirmance on appeal.",
-        "Represented a group of potentially responsible parties that cooperated in the cleanup of a CERCLA site in a New York State court action brought by a neighboring landowner alleging that remedial operations damaged adjacent property. Obtained dismissal and secured affirmance on appeal.",
-        "Represented a general contractor in a construction, breach of contract, and lien dispute with a surety and subcontractor. Obtained near-complete recovery through a favorable settlement reached before discovery began.",
-        "Represented a financial services company in an investment suitability lawsuit filed by a customer of a former investment advisor. Obtained complete dismissal.",
-        "Represented a financial services company in an investment suitability arbitration before the Financial Industry Regulatory Authority. Resolved the matter on favorable terms.",
-        "Represented an insurer in ERISA disputes with an insured in federal court lawsuits. Obtained complete dismissal.",
-        "Represented a petroleum wholesaler in payment disputes across the East Coast, achieving substantial recoveries from counterparties."
-      ],
-      "governmentService": [],
-      "clerkships": [],
-      "judicialClerkships": [
-        "Student Law Clerk, Honorable John T. Curtin, U.S. District Court for the Western District of New York, 2011-2012"
-      ],
-      "education": [
-        "State University of New York at Buffalo Law School, J.D., cum laude, 2012; Buffalo Law Review, Publications Editor",
-        "Canisius College, B.S., 2005"
-      ],
-      "admissions": [
-        "New York",
-        "U.S. District Court for the Eastern District of Michigan",
-        "U.S. District Courts for the Eastern, Northern, Southern, and Western Districts of New York",
-        "U.S. Court of Appeals for the Second Circuit"
-      ],
-      "honorsAndRecognition": [
-        "Selected for the Upstate New York Super Lawyers list, 2024-2025",
-        "The Best Lawyers in America",
-        "Named Upstate New York Super Lawyers Rising Star, 2015-2023",
-        "40 Under 40, Buffalo Business First, 2022",
-        "Honoree of the New York State Bar Association Empire State Counsel Program for pro bono work, 2018"
-      ],
-      "professionalAssociations": [
-        "Greater Buffalo Metropolitan Crime Stoppers, Inc., Board of Directors, Legal Counsel"
-      ],
-      "activities": [
-        "Leadership Buffalo Rising Leaders, Class of 2015",
-        "FINRA Series 7, 24, 53, and 66 licenses, inactive"
-      ]
-    },
-    {
-      "name": "Craig Nolan",
-      "role": "PARTNER",
-      "offices": [
-        "Chicago",
-        "Honolulu"
-      ],
-      "page": "bio-craig-nolan.html",
-      "url": "https://swim-lang.github.io/blanchet-site/bio-craig-nolan.html",
-      "slug": "bio-craig-nolan",
-      "metaDescription": "Craig Nolan is a partner at Blanchet LLP focused on trials, appeals, government investigations, enforcement matters, white collar defense, complex civil litigation, regulatory matters, and product liability litigation.",
-      "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1200&q=80",
-      "imageAlt": "Craig Nolan",
-      "introduction": [
-        "Craig Nolan is a trial attorney, appellate advocate, and former federal prosecutor who represents clients at trial and in government investigations and enforcement matters, white collar defense, commercial disputes, product liability litigation, regulatory matters, and appeals.",
-        "With more than 30 jury trials and dozens of appeals before federal appellate and state supreme courts, Craig has served as White Collar Crimes Chief at the U.S. Attorney's Office for Hawaii, State's Attorney for Vermont's third-largest county, and a civil litigator at leading firms in Vermont and North Carolina.",
-        "Craig brings the perspective of a federal prosecutor, trial attorney, and appellate advocate to matters that require early control, nuanced judgment, and demonstrable trial-readiness. He is especially valuable where litigation risk, government scrutiny, and appellate issues overlap, and where trial counsel is needed to assist or replace litigation counsel."
-      ],
-      "areasOfFocus": [
-        "Trials & Appeals",
-        "Commercial, Product Liability & Complex Civil Litigation",
-        "Government Investigations & Enforcement",
-        "White Collar Defense",
-        "Whistleblower & Qui Tam",
-        "DOJ, SEC & State AG Enforcement Matters",
-        "Grand Jury & CID Subpoenas",
-        "Environmental Enforcement",
-        "RICO, Fraud, Money Laundering & Cybercrime Matters",
-        "Regulatory Investigations & Disputes",
-        "Internal Investigations"
-      ],
-      "representativeExperienceIntro": "Craig Nolan's experience includes:",
-      "representativeExperience": [
-        "Served as White Collar Crimes Chief and Branch Chief as an Assistant U.S. Attorney in Hawaii and Vermont, respectively, during 15-year DOJ career.",
-        "Represented Valero Energy Corp. in groundwater MTBE-contamination litigation by the State of Vermont.",
-        "Represented a construction management company in the $200 million Jay Peak EB-5 fraud investigation by the Department of Justice.",
-        "Represented a defendant in SEC enforcement litigation involving insider-trading allegations connected to Keurig Green Mountain stock.",
-        "Represented Vermont Gas before the Vermont Supreme Court in multiple appeals from the Public Utilities Commission.",
-        "Tried 26 matters to jury verdict and dozens of bench trials and administrative evidentiary hearings.",
-        "Served as appellate counsel in dozens of appeals in federal and state supreme courts, including the Second Circuit, Ninth Circuit, and Vermont Supreme Court.",
-        "Brought former-prosecutor judgment to investigations, enforcement defense, and complex civil matters where early strategy and controlled communication matter."
-      ],
-      "governmentService": [],
-      "clerkships": [],
-      "judicialClerkships": [],
-      "education": [
-        "William & Mary Law School, J.D., Order of the Coif Honors",
-        "Dartmouth College, A.B., Honors in Major"
-      ],
-      "admissions": [
-        "Vermont"
-      ],
-      "honorsAndRecognition": [],
-      "professionalAssociations": [],
-      "activities": []
-    },
-    {
-      "name": "Jaran Moten",
-      "role": "PARTNER",
+      "name": "Hannah Amundsen",
+      "fullName": "Hannah E. Amundsen",
+      "role": "ASSOCIATE",
       "offices": [
         "Chicago"
       ],
-      "page": "bio-jaran-moten.html",
-      "url": "https://swim-lang.github.io/blanchet-site/bio-jaran-moten.html",
-      "slug": "bio-jaran-moten",
-      "metaDescription": "Jaran Moten is a partner at Blanchet LLP focused on commercial litigation, mass and toxic tort matters, antitrust, bankruptcy litigation, and complex business disputes.",
-      "image": "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=1200&q=80",
-      "imageAlt": "Jaran Moten",
+      "page": "bio-hannah-amundsen.html",
+      "metaDescription": "Hannah E. Amundsen is an associate at Blanchet LLP focused on commercial litigation, product liability, mass tort, toxic tort, and life sciences disputes.",
       "introduction": [
-        "Jaran Moten is a litigator who represents companies, private equity firms, and other sophisticated clients in complex commercial disputes, mass and toxic tort matters, bankruptcy-related litigation, and high-stakes business conflicts.",
-        "Before joining Blanchet LLP, Jaran was a litigation partner at Kirkland & Ellis and later joined Phillips Lytle’s Chicago office. His experience spans technology, pharmaceuticals, medical and dental devices, energy, telecommunications, retail, petrochemicals, packaging, and financial services.",
-        "Jaran is known for learning the client’s business, mastering the subject matter, and bringing practical judgment to disputes that do not fit neatly into one category."
+        "Hannah E. Amundsen is a litigator who represents companies in commercial disputes, product liability and mass tort matters, toxic tort litigation, and cases involving life sciences and health effects.",
+        "She has experience in state and federal court and with the full lifecycle of a case, from pleadings and discovery through motion practice and trial preparation. Before beginning her law practice, Hannah worked in government and politics, experience that informs how she approaches matters shaped by public institutions, regulatory context, and competing constituencies.",
+        "Hannah brings a thoughtful, organized approach to complex records and evolving disputes. She focuses on understanding the facts early, keeping the work moving, and helping the team prepare each matter with the client's objective in view."
+      ],
+      "areasOfFocus": [
+        "Litigation",
+        "Commercial Litigation",
+        "Product Liability & Mass Tort",
+        "Chemical Exposure & Toxic Torts",
+        "Life Sciences & Health Effects",
+        "Class Actions"
+      ],
+      "representativeExperienceIntro": "Hannah's experience includes:",
+      "representativeExperience": [
+        "Representing clients in state and federal court through the lifecycle of litigation, from initial pleadings through trial preparation.",
+        "Handling commercial disputes involving detailed factual records, competing business interests, and significant motion practice.",
+        "Working on product liability, mass tort, chemical exposure, and toxic tort matters for corporate clients.",
+        "Assisting with disputes involving life sciences, alleged health effects, causation, and expert evidence.",
+        "Managing document review, discovery, factual development, legal research, briefing, and trial preparation.",
+        "Bringing prior experience in government and politics to matters involving public institutions, regulatory context, and sensitive stakeholder concerns."
+      ],
+      "education": [
+        "Loyola University Chicago School of Law, J.D., 2022",
+        "University of Chicago, B.A., 2015"
+      ],
+      "admissions": [
+        "Illinois"
+      ],
+      "judicialClerkships": [],
+      "honorsAndRecognition": [
+        "New York State Bar Association Empire State Counsel Program for Pro Bono Work Honoree, 2025"
+      ],
+      "professionalAssociations": [],
+      "activities": [],
+      "governmentService": [],
+      "clerkships": [],
+      "image": "",
+      "imageAlt": "Hannah Amundsen",
+      "url": "https://swim-lang.github.io/blanchet-site/bio-hannah-amundsen.html"
+    },
+    {
+      "name": "Myles Bartley",
+      "role": "PARTNER",
+      "offices": [
+        "New York City"
+      ],
+      "page": "bio-myles-bartley.html",
+      "url": "https://swim-lang.github.io/blanchet-site/bio-myles-bartley.html",
+      "slug": "bio-myles-bartley",
+      "metaDescription": "Myles Bartley is a partner at Blanchet LLP focused on complex business disputes, securities litigation, bankruptcy litigation, product liability, mass tort, and investigations.",
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1200&q=80",
+      "imageAlt": "Myles Bartley",
+      "introduction": [
+        "Myles Bartley is a trial lawyer with more than 25 years of experience handling complex business disputes in state and federal courts, arbitral forums, FINRA, AAA, JAMS, and other demanding venues.",
+        "His practice includes product liability, mass and toxic torts, environmental litigation, securities litigation, bankruptcy litigation, fraud and RICO matters, and internal investigations. He has represented Fortune 500 companies, major privately held companies, directors, officers, senior executives, and non-U.S. entities in U.S. litigation.",
+        "Myles brings discipline and practical judgment to matters where litigation risk, business pressure, and forum strategy all need to be managed at the same time."
       ],
       "areasOfFocus": [
         "Commercial Litigation",
-        "Mass Tort & Toxic Tort",
-        "Product Liability & Mass Tort",
-        "Class Actions",
-        "Antitrust & Trade Practices",
+        "Securities Litigation",
+        "Fraud & RICO",
         "Bankruptcy Litigation",
-        "Banking & Commercial Finance Disputes",
-        "Chemical Exposure & Toxic Torts"
+        "Product Liability & Mass Tort",
+        "Environmental Litigation",
+        "Class Actions",
+        "Government Investigations & Enforcement"
       ],
-      "representativeExperienceIntro": "Jaran Moten's experience includes:",
+      "representativeExperienceIntro": "Myles Bartley's experience includes:",
       "representativeExperience": [
-        "Representing Fortune 500 companies in mass and toxic tort matters.",
-        "Representing private equity firms in disputes arising from mergers and acquisitions.",
-        "Representing distressed companies in bankruptcy litigation proceedings.",
-        "Handling sophisticated commercial matters across technology, pharmaceutical, energy, telecommunications, petrochemical, financial services, and other industries."
+        "Represented the Lehman estate from its initial Chapter 11 filing in matters involving major financial institutions.",
+        "Handled multiyear litigation involving civil RICO, tortious interference, and foreign law claims connected to ownership of a Western Siberian oilfield.",
+        "Represented an investment holding company in claims seeking hundreds of millions of dollars related to offshore oil interests.",
+        "Led litigation teams in product liability, mass and toxic tort, environmental, securities, bankruptcy, and investigation matters."
       ],
       "governmentService": [],
       "clerkships": [],
       "judicialClerkships": [],
       "education": [
-        "Washington University in St. Louis School of Law, J.D., magna cum laude, Order of the Coif",
-        "University of Kansas, B.A., with honors"
+        "Boston College Law School, J.D.",
+        "United States Military Academy at West Point, B.S."
       ],
       "admissions": [
-        "Illinois",
-        "U.S. District Court for the Northern District of Illinois"
+        "New York",
+        "Massachusetts",
+        "U.S. District Court for the District of Connecticut",
+        "U.S. District Court for the District of Massachusetts",
+        "U.S. District Courts for the Eastern, Northern, and Southern Districts of New York",
+        "U.S. Court of Appeals for the Second Circuit"
       ],
       "honorsAndRecognition": [
-        "National Black Lawyers, 40 Under 40, Illinois",
-        "Legal Assistance Foundation, Housing Volunteer of the Year"
+        "New York Metro Super Lawyers",
+        "AV Preeminent rated by Martindale-Hubbell"
       ],
       "professionalAssociations": [
-        "American Bar Association, Litigation Section",
-        "Center for Conflict Resolution, Board Member"
+        "West Point Association of Graduates’ Advisory Council, Class Advisor",
+        "New York City Bar Association Military and Veterans Affairs Committee, former Chair"
       ],
       "activities": []
     },
@@ -258,167 +184,352 @@
       "activities": []
     },
     {
-      "name": "John Worth",
-      "role": "PARTNER",
+      "name": "Caroline Creagan",
+      "fullName": "Caroline E. Creagan",
+      "role": "ASSOCIATE",
       "offices": [
         "Chicago"
       ],
-      "page": "bio-john-worth.html",
-      "url": "https://swim-lang.github.io/blanchet-site/bio-john-worth.html",
-      "slug": "bio-john-worth",
-      "metaDescription": "John Worth is a partner at Blanchet LLP focused on complex commercial disputes, environmental and toxic tort matters, class actions, product liability, and energy litigation.",
-      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1200&q=80",
-      "imageAlt": "John Worth",
+      "page": "bio-caroline-creagan.html",
+      "metaDescription": "Caroline E. Creagan is an associate at Blanchet LLP who supports clients in complex civil litigation, investigations, briefing, discovery, and trial preparation.",
       "introduction": [
-        "John Worth is a veteran trial lawyer who represents clients in complex commercial disputes, class actions, environmental and toxic tort matters, product liability, consumer fraud, and energy-related litigation.",
-        "Before joining Blanchet LLP, John spent more than a decade as a litigation partner at Kirkland & Ellis and later led the launch of Phillips Lytle's Chicago office. He has tried and litigated cases in federal and state courts, appellate courts, and arbitrations across the country.",
-        "John is known for distilling complicated factual and legal records into a strategy that clients, courts, and decision-makers can understand."
+        "Caroline E. Creagan is a litigator who assists clients in civil disputes and brings prior experience preparing and overseeing casework in public-sector and judicial settings.",
+        "Before entering private practice, Caroline served as a law clerk in the New York Attorney General's Law Enforcement Misconduct Investigative Office, a judicial intern for Judge Lawrence E. Kahn of the U.S. District Court for the Northern District of New York, and a law clerk with the Edward P. Swyer Justice Center. She also served as an executive editor of Albany Law Review.",
+        "Caroline brings strong research, writing, and oral advocacy skills to litigation. She works carefully through the record, supports briefing and discovery, and helps prepare matters for efficient resolution or trial."
       ],
       "areasOfFocus": [
+        "Litigation",
         "Commercial Litigation",
-        "Product Liability & Mass Tort",
-        "Class Actions",
-        "Environmental Litigation",
-        "Chemical Exposure & Toxic Torts",
-        "Energy Disputes",
-        "Insurance Coverage",
-        "Trial Work"
+        "Government Investigations & Enforcement",
+        "Trial Advocacy",
+        "Appellate Advocacy",
+        "Civil Litigation"
       ],
-      "representativeExperienceIntro": "John Worth's experience includes:",
+      "representativeExperienceIntro": "Caroline's background includes:",
       "representativeExperience": [
-        "Served as lead trial counsel for a company in drinking-water contamination litigation that ended in a complete defense verdict after a multiday jury trial.",
-        "Represented petroleum and energy companies in disputes involving LNG businesses, offshore production, royalty interests, refinery issues, and product claims.",
-        "Represented chemical companies in toxic tort, environmental, insurance, and product liability matters, including matters involving contamination and chemical exposure claims.",
-        "Handled complex commercial disputes in courts and arbitrations across the country."
+        "Supporting litigation through factual investigation, legal research, briefing, discovery, and trial preparation.",
+        "Preparing and overseeing public-sector casework while serving in the New York Attorney General's Law Enforcement Misconduct Investigative Office.",
+        "Working as a judicial intern for Judge Lawrence E. Kahn of the U.S. District Court for the Northern District of New York.",
+        "Assisting clients and supervising attorneys as a law clerk with the Edward P. Swyer Justice Center.",
+        "Serving as executive editor for notes and comments and as a subeditor of Albany Law Review.",
+        "Winning Albany Law School's Karen C. McGovern Senior Prize Trials Competition and receiving Best Oral Advocate honors.",
+        "Reaching the final round of the Domenick L. Gabrielli Appellate Advocacy Competition and receiving Best Brief honors."
       ],
-      "governmentService": [],
-      "clerkships": [],
-      "judicialClerkships": [],
       "education": [
-        "Indiana University Maurer School of Law, J.D., magna cum laude, Order of the Coif",
-        "University of Chicago Divinity School, M.A.",
-        "Wabash College, B.A., magna cum laude, Phi Beta Kappa"
+        "Albany Law School of Union University, J.D., summa cum laude, 2025",
+        "St. Lawrence University, B.A., magna cum laude, 2021"
       ],
       "admissions": [
         "Illinois",
-        "Michigan"
+        "New York"
       ],
-      "honorsAndRecognition": [],
+      "judicialClerkships": [],
+      "honorsAndRecognition": [
+        "Karen C. McGovern Senior Prize Trials Competition, Winner and Best Oral Advocate, 2024",
+        "Domenick L. Gabrielli Appellate Advocacy Competition, Finalist and Best Brief, 2024"
+      ],
       "professionalAssociations": [],
-      "activities": []
-    },
-    {
-      "name": "Myles Bartley",
-      "role": "PARTNER",
-      "offices": [
-        "New York City"
-      ],
-      "page": "bio-myles-bartley.html",
-      "url": "https://swim-lang.github.io/blanchet-site/bio-myles-bartley.html",
-      "slug": "bio-myles-bartley",
-      "metaDescription": "Myles Bartley is a partner at Blanchet LLP focused on complex business disputes, securities litigation, bankruptcy litigation, product liability, mass tort, and investigations.",
-      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1200&q=80",
-      "imageAlt": "Myles Bartley",
-      "introduction": [
-        "Myles Bartley is a trial lawyer with more than 25 years of experience handling complex business disputes in state and federal courts, arbitral forums, FINRA, AAA, JAMS, and other demanding venues.",
-        "His practice includes product liability, mass and toxic torts, environmental litigation, securities litigation, bankruptcy litigation, fraud and RICO matters, and internal investigations. He has represented Fortune 500 companies, major privately held companies, directors, officers, senior executives, and non-U.S. entities in U.S. litigation.",
-        "Myles brings discipline and practical judgment to matters where litigation risk, business pressure, and forum strategy all need to be managed at the same time."
-      ],
-      "areasOfFocus": [
-        "Commercial Litigation",
-        "Securities Litigation",
-        "Fraud & RICO",
-        "Bankruptcy Litigation",
-        "Product Liability & Mass Tort",
-        "Environmental Litigation",
-        "Class Actions",
-        "Government Investigations & Enforcement"
-      ],
-      "representativeExperienceIntro": "Myles Bartley's experience includes:",
-      "representativeExperience": [
-        "Represented the Lehman estate from its initial Chapter 11 filing in matters involving major financial institutions.",
-        "Handled multiyear litigation involving civil RICO, tortious interference, and foreign law claims connected to ownership of a Western Siberian oilfield.",
-        "Represented an investment holding company in claims seeking hundreds of millions of dollars related to offshore oil interests.",
-        "Led litigation teams in product liability, mass and toxic tort, environmental, securities, bankruptcy, and investigation matters."
+      "activities": [
+        "Edward P. Swyer Justice Center, Law Clerk, 2024",
+        "New York State Attorney General, Law Enforcement Misconduct Investigative Office, Law Clerk, 2023",
+        "Hon. Lawrence E. Kahn, U.S. District Court for the Northern District of New York, Judicial Intern, 2023",
+        "Albany Law Review, Executive Editor for Notes and Comments, 2025",
+        "Albany Law Review, Subeditor, 2024"
       ],
       "governmentService": [],
       "clerkships": [],
-      "judicialClerkships": [],
-      "education": [
-        "Boston College Law School, J.D.",
-        "United States Military Academy at West Point, B.S."
-      ],
-      "admissions": [
-        "New York",
-        "Massachusetts",
-        "U.S. District Court for the District of Connecticut",
-        "U.S. District Court for the District of Massachusetts",
-        "U.S. District Courts for the Eastern, Northern, and Southern Districts of New York",
-        "U.S. Court of Appeals for the Second Circuit"
-      ],
-      "honorsAndRecognition": [
-        "New York Metro Super Lawyers",
-        "AV Preeminent rated by Martindale-Hubbell"
-      ],
-      "professionalAssociations": [
-        "West Point Association of Graduates’ Advisory Council, Class Advisor",
-        "New York City Bar Association Military and Veterans Affairs Committee, former Chair"
-      ],
-      "activities": []
+      "image": "",
+      "imageAlt": "Caroline Creagan",
+      "url": "https://swim-lang.github.io/blanchet-site/bio-caroline-creagan.html"
     },
     {
-      "name": "Robert Reagan",
+      "name": "Timothy Cronin",
+      "fullName": "Timothy Cronin",
+      "role": "ASSOCIATE",
+      "offices": [
+        "Chicago"
+      ],
+      "page": "bio-timothy-cronin.html",
+      "metaDescription": "Timothy Cronin is an associate at Blanchet LLP focused on commercial litigation, product liability, toxic tort, and environmental contamination disputes.",
+      "introduction": [
+        "Timothy Cronin is a litigator whose practice includes commercial litigation, product liability, toxic tort, and environmental contamination disputes.",
+        "His work includes representing a Fortune 500 chemical company in matters involving claims by state and regulatory agencies that its products contributed to groundwater contamination in multiple jurisdictions. Before entering full-time practice, Tim also gained experience in personal injury and mergers and acquisitions matters.",
+        "Tim approaches disputes with a focus on careful factual development, efficient case management, and practical resolution. He supports complex matters through document review, discovery, motion practice, and trial preparation, including cases with substantial technical and regulatory records."
+      ],
+      "areasOfFocus": [
+        "Litigation",
+        "Product Liability & Mass Tort",
+        "Chemical Exposure & Toxic Torts",
+        "Environmental & Contamination Disputes",
+        "Commercial Litigation",
+        "Regulatory Disputes"
+      ],
+      "representativeExperienceIntro": "Tim's experience includes:",
+      "representativeExperience": [
+        "Representing a Fortune 500 chemical company in matters involving claims by state and regulatory agencies concerning alleged groundwater contamination.",
+        "Supporting coordinated defense work in environmental and toxic tort matters involving multiple jurisdictions, technical records, and expert evidence.",
+        "Handling commercial litigation and product liability matters from factual investigation through discovery and motion practice.",
+        "Reviewing and organizing substantial document records and assisting with depositions, expert development, and trial preparation.",
+        "Working on personal injury and mergers and acquisitions matters before entering full-time litigation practice."
+      ],
+      "education": [
+        "DePaul University College of Law, J.D., 2022",
+        "DePaul University, B.A., 2016"
+      ],
+      "admissions": [
+        "Illinois"
+      ],
+      "judicialClerkships": [],
+      "honorsAndRecognition": [
+        "New York State Bar Association Empire State Counsel Program for Pro Bono Work Honoree, 2025"
+      ],
+      "professionalAssociations": [
+        "Illinois State Bar Association",
+        "American Bar Association, Toxic Torts and Environmental Law Committee"
+      ],
+      "activities": [
+        "Big Brothers Big Sisters, Chicago",
+        "DePaul University College of Law National Trial Team"
+      ],
+      "governmentService": [],
+      "clerkships": [],
+      "image": "",
+      "imageAlt": "Timothy Cronin",
+      "url": "https://swim-lang.github.io/blanchet-site/bio-timothy-cronin.html"
+    },
+    {
+      "name": "Andrew Devine",
       "role": "PARTNER",
       "offices": [
         "Buffalo",
         "New York City"
       ],
-      "page": "bio-robert-reagan.html",
-      "url": "https://swim-lang.github.io/blanchet-site/bio-robert-reagan.html",
-      "slug": "bio-robert-reagan",
-      "metaDescription": "Robert Reagan is a partner at Blanchet LLP focused on environmental litigation, mass tort, product liability, and chemical exposure matters.",
-      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1200&q=80",
-      "imageAlt": "Robert Reagan",
+      "page": "bio-andrew-devine.html",
+      "url": "https://swim-lang.github.io/blanchet-site/bio-andrew-devine.html",
+      "slug": "bio-andrew-devine",
+      "metaDescription": "Andrew Devine is a partner at Blanchet LLP who handles product liability, environmental, class and mass action, commercial, construction, investment, and CERCLA-related disputes.",
+      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=1200&q=80",
+      "imageAlt": "Andrew Devine",
       "introduction": [
-        "Robert Reagan is a litigator who represents clients in environmental litigation, mass tort, product liability, and chemical exposure matters.",
-        "His practice focuses on complex disputes in state and federal court, with particular emphasis on groundwater and soil contamination, environmental records, and technical issues that require disciplined case management.",
-        "Rob works within Blanchet LLP’s environmental and toxic tort bench on matters where the facts, science, and procedural strategy all matter."
+        "Andrew Devine is a litigator who handles hard-to-resolve disputes with a strategic, tech-savvy, and practical approach.",
+        "Andrew represents multinational corporations, manufacturers, construction owners and general contractors, banks, and investment companies in product liability, environmental, class and mass action, personal injury, commercial, construction, and investment matters in federal and state courts and arbitrations across the country.",
+        "He starts with the result a client is after, shapes an efficient and focused path to get there, and executes. Clients rely on him to manage complexity, including motion and appellate briefing, removal and jurisdictional issues, large-scale document review, depositions, and expert practice.",
+        "Andrew brings particular depth to environmental disputes, including the defense of claims involving groundwater and the remediation of sites under CERCLA. He is also comfortable with the technology that defines modern litigation, using experience and e-discovery tools to surface the facts that matter."
       ],
       "areasOfFocus": [
-        "Environmental Litigation",
-        "CERCLA & Environmental Disputes",
         "Product Liability & Mass Tort",
-        "Chemical Exposure & Toxic Torts",
-        "Groundwater and Soil Contamination",
-        "Technical Records",
-        "Discovery-Heavy Disputes",
-        "Litigation"
+        "CERCLA & Environmental Disputes",
+        "Environmental Litigation",
+        "Commercial Litigation",
+        "Class Actions",
+        "Construction Litigation",
+        "Real Estate Litigation",
+        "Securities Litigation",
+        "Investment Product Disputes",
+        "Appellate"
       ],
-      "representativeExperienceIntro": "Robert Reagan's experience includes:",
+      "representativeExperienceIntro": "Andrew Devine's experience includes:",
       "representativeExperience": [
-        "Representing clients in mass tort, product liability, and environmental litigation.",
-        "Handling matters involving alleged groundwater and soil contamination.",
-        "Working with chemical exposure and toxic tort teams on technically demanding environmental disputes.",
-        "Supporting complex matters in state and federal court where environmental facts and litigation strategy overlap."
+        "Represented a construction project owner in state and federal lawsuits seeking damages and injunctive relief relating to breach of construction agreement and alleged tort claims. Won a preliminary injunction hearing, obtained dismissal and summary judgment dismissing tort and certain contract claims, secured affirmance on appeal, and resolved the remaining claims on favorable terms.",
+        "Represented a chemical company in a class action alleging that contamination from a remediated CERCLA site caused personal injuries to nearby residents under common law tort theories. Following removal to federal court, obtained complete dismissal and secured affirmance on appeal.",
+        "Represented a group of potentially responsible parties that cooperated in the cleanup of a CERCLA site in a New York State court action brought by a neighboring landowner alleging that remedial operations damaged adjacent property. Obtained dismissal and secured affirmance on appeal.",
+        "Represented a general contractor in a construction, breach of contract, and lien dispute with a surety and subcontractor. Obtained near-complete recovery through a favorable settlement reached before discovery began.",
+        "Represented a financial services company in an investment suitability lawsuit filed by a customer of a former investment advisor. Obtained complete dismissal.",
+        "Represented a financial services company in an investment suitability arbitration before the Financial Industry Regulatory Authority. Resolved the matter on favorable terms.",
+        "Represented an insurer in ERISA disputes with an insured in federal court lawsuits. Obtained complete dismissal.",
+        "Represented a petroleum wholesaler in payment disputes across the East Coast, achieving substantial recoveries from counterparties."
+      ],
+      "governmentService": [],
+      "clerkships": [],
+      "judicialClerkships": [
+        "Student Law Clerk, Honorable John T. Curtin, U.S. District Court for the Western District of New York, 2011-2012"
+      ],
+      "education": [
+        "State University of New York at Buffalo Law School, J.D., cum laude, 2012; Buffalo Law Review, Publications Editor",
+        "Canisius College, B.S., 2005"
+      ],
+      "admissions": [
+        "New York",
+        "U.S. District Court for the Eastern District of Michigan",
+        "U.S. District Courts for the Eastern, Northern, Southern, and Western Districts of New York",
+        "U.S. Court of Appeals for the Second Circuit"
+      ],
+      "honorsAndRecognition": [
+        "Selected for the Upstate New York Super Lawyers list, 2024-2025",
+        "The Best Lawyers in America",
+        "Named Upstate New York Super Lawyers Rising Star, 2015-2023",
+        "40 Under 40, Buffalo Business First, 2022",
+        "Honoree of the New York State Bar Association Empire State Counsel Program for pro bono work, 2018"
+      ],
+      "professionalAssociations": [
+        "Greater Buffalo Metropolitan Crime Stoppers, Inc., Board of Directors, Legal Counsel"
+      ],
+      "activities": [
+        "Leadership Buffalo Rising Leaders, Class of 2015",
+        "FINRA Series 7, 24, 53, and 66 licenses, inactive"
+      ]
+    },
+    {
+      "name": "Frank Dylewski",
+      "fullName": "Frank G. Dylewski",
+      "role": "PARTNER",
+      "offices": [
+        "Chicago"
+      ],
+      "page": "bio-frank-dylewski.html",
+      "metaDescription": "Frank G. Dylewski is a partner at Blanchet LLP who handles commercial litigation, class and mass actions, product liability, antitrust, insurance, and other complex disputes.",
+      "introduction": [
+        "Frank G. Dylewski is a litigator who represents companies, business owners, and individuals in commercial disputes, class and mass actions, product liability matters, antitrust cases, insurance disputes, and other complex litigation.",
+        "His experience spans energy, finance, manufacturing, technology, insurance, and private equity. Before joining Blanchet, Frank practiced at Kirkland & Ellis, Quinn Emanuel, Keller Postman, and Phillips Lytle, giving him substantial experience in national litigation and in matters brought on both sides of the docket.",
+        "Frank brings a practical, direct approach to disputes that require early case assessment, focused discovery, careful deposition work, and a clear view of the client's business objective. He is comfortable managing matters through motion practice, trial preparation, arbitration, or negotiated resolution."
+      ],
+      "areasOfFocus": [
+        "Commercial Litigation",
+        "Class Actions & Mass Arbitration",
+        "Antitrust & Trade Practices",
+        "Product Liability & Mass Tort",
+        "Insurance Coverage",
+        "Bankruptcy & Creditor Rights",
+        "Consumer Fraud",
+        "Government Investigations & Enforcement"
+      ],
+      "representativeExperienceIntro": "Frank's representative experience includes:",
+      "representativeExperience": [
+        "Representing clients in complex disputes involving fraud, breach of contract, partnership conflicts, professional negligence, defamation, consumer fraud, antitrust, insurance coverage, and business torts.",
+        "Handling nationwide class actions, mass torts, strategic mass arbitrations, complex business reorganizations, and government enforcement matters.",
+        "Representing clients ranging from family-owned businesses and individuals to Fortune 100 companies across energy, finance, manufacturing, technology, insurance, and private equity.",
+        "Litigating complex commercial matters at Kirkland & Ellis and Quinn Emanuel before rejoining former colleagues in the Chicago market."
+      ],
+      "education": [
+        "Northwestern University Pritzker School of Law, J.D., 2011",
+        "Bradley University, B.A., 2006"
+      ],
+      "admissions": [
+        "Illinois",
+        "U.S. District Court for the Northern District of Illinois",
+        "U.S. District Court for the Northern District of Illinois Trial Bar"
+      ],
+      "judicialClerkships": [],
+      "honorsAndRecognition": [
+        "Illinois Super Lawyers Rising Star, 2023",
+        "Best Lawyers: Ones to Watch, 2020-2023",
+        "Legal Aid Chicago Pro Bono Volunteer Award, 2014-2015"
+      ],
+      "professionalAssociations": [
+        "American Bar Association"
+      ],
+      "activities": [],
+      "governmentService": [],
+      "clerkships": [],
+      "image": "",
+      "imageAlt": "Frank Dylewski",
+      "url": "https://swim-lang.github.io/blanchet-site/bio-frank-dylewski.html"
+    },
+    {
+      "name": "Stefan Engelhardt",
+      "fullName": "Stefan W. Engelhardt",
+      "role": "PARTNER",
+      "offices": [
+        "New York City"
+      ],
+      "page": "bio-stefan-engelhardt.html",
+      "metaDescription": "Stefan W. Engelhardt is a partner at Blanchet LLP with more than 30 years of experience in commercial litigation, bankruptcy, antitrust, fraud, and product liability matters.",
+      "introduction": [
+        "Stefan W. Engelhardt is a trial lawyer with more than 30 years of experience resolving complex disputes in state, federal, and bankruptcy courts. He represents life sciences companies, manufacturers, financial institutions, and national corporations in commercial litigation, bankruptcy, antitrust, fraud, and product liability matters.",
+        "Stefan's work includes multidistrict litigation, price-fixing claims, contract disputes involving manufacturing and distribution businesses, financial fraud involving financing platforms and real estate transactions, and matters involving secured lenders and unsecured creditors. He has substantial experience as lead trial counsel and in proceedings where litigation and restructuring issues overlap.",
+        "Stefan brings a strategic, practical approach to difficult cases. He stays focused on the client's business objective, develops the record with the endgame in view, and works to move matters toward a durable resolution without unnecessary process."
+      ],
+      "areasOfFocus": [
+        "Commercial Litigation",
+        "Bankruptcy & Creditor Rights",
+        "Antitrust & Trade Practices",
+        "Breach of Contract",
+        "Fraud & Business Torts",
+        "Product Liability & Mass Tort",
+        "Class Actions & Multidistrict Litigation",
+        "Financial Services Disputes"
+      ],
+      "representativeExperienceIntro": "Stefan's representative experience includes:",
+      "representativeExperience": [
+        "Serving as lead trial counsel in complex commercial disputes in state, federal, and bankruptcy courts across multiple jurisdictions.",
+        "Handling antitrust litigation involving alleged price fixing and other restraints on competition.",
+        "Representing manufacturing and distribution businesses in significant breach-of-contract and commercial disputes.",
+        "Handling financial fraud matters involving financing platforms, real estate transactions, and related business claims.",
+        "Representing secured lenders, unsecured creditors, committees, debtors, and other stakeholders in high-profile Chapter 11 matters and related litigation.",
+        "Handling product liability, mass tort, and multidistrict litigation for life sciences companies, manufacturers, and other national businesses."
+      ],
+      "education": [
+        "Harvard Law School, J.D., 1989",
+        "Hamilton College, B.A., magna cum laude, 1986"
+      ],
+      "admissions": [
+        "New York",
+        "U.S. District Courts for the Eastern and Southern Districts of New York",
+        "U.S. Court of Appeals for the Second Circuit",
+        "U.S. Court of Appeals for the District of Columbia Circuit"
+      ],
+      "judicialClerkships": [],
+      "honorsAndRecognition": [],
+      "professionalAssociations": [],
+      "activities": [],
+      "governmentService": [],
+      "clerkships": [],
+      "image": "",
+      "imageAlt": "Stefan Engelhardt",
+      "url": "https://swim-lang.github.io/blanchet-site/bio-stefan-engelhardt.html"
+    },
+    {
+      "name": "Jaran Moten",
+      "role": "PARTNER",
+      "offices": [
+        "Chicago"
+      ],
+      "page": "bio-jaran-moten.html",
+      "url": "https://swim-lang.github.io/blanchet-site/bio-jaran-moten.html",
+      "slug": "bio-jaran-moten",
+      "metaDescription": "Jaran Moten is a partner at Blanchet LLP focused on commercial litigation, mass and toxic tort matters, antitrust, bankruptcy litigation, and complex business disputes.",
+      "image": "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=1200&q=80",
+      "imageAlt": "Jaran Moten",
+      "introduction": [
+        "Jaran Moten is a litigator who represents companies, private equity firms, and other sophisticated clients in complex commercial disputes, mass and toxic tort matters, bankruptcy-related litigation, and high-stakes business conflicts.",
+        "Before joining Blanchet LLP, Jaran was a litigation partner at Kirkland & Ellis and later joined Phillips Lytle’s Chicago office. His experience spans technology, pharmaceuticals, medical and dental devices, energy, telecommunications, retail, petrochemicals, packaging, and financial services.",
+        "Jaran is known for learning the client’s business, mastering the subject matter, and bringing practical judgment to disputes that do not fit neatly into one category."
+      ],
+      "areasOfFocus": [
+        "Commercial Litigation",
+        "Mass Tort & Toxic Tort",
+        "Product Liability & Mass Tort",
+        "Class Actions",
+        "Antitrust & Trade Practices",
+        "Bankruptcy Litigation",
+        "Banking & Commercial Finance Disputes",
+        "Chemical Exposure & Toxic Torts"
+      ],
+      "representativeExperienceIntro": "Jaran Moten's experience includes:",
+      "representativeExperience": [
+        "Representing Fortune 500 companies in mass and toxic tort matters.",
+        "Representing private equity firms in disputes arising from mergers and acquisitions.",
+        "Representing distressed companies in bankruptcy litigation proceedings.",
+        "Handling sophisticated commercial matters across technology, pharmaceutical, energy, telecommunications, petrochemical, financial services, and other industries."
       ],
       "governmentService": [],
       "clerkships": [],
       "judicialClerkships": [],
       "education": [
-        "Vermont Law School, J.D., magna cum laude",
-        "Elisabeth Haub School of Law at Pace University, LL.M., Environmental Law, summa cum laude",
-        "Centre College, B.A."
+        "Washington University in St. Louis School of Law, J.D., magna cum laude, Order of the Coif",
+        "University of Kansas, B.A., with honors"
       ],
       "admissions": [
-        "New York"
+        "Illinois",
+        "U.S. District Court for the Northern District of Illinois"
       ],
       "honorsAndRecognition": [
-        "Upstate New York Super Lawyers Rising Star"
+        "National Black Lawyers, 40 Under 40, Illinois",
+        "Legal Assistance Foundation, Housing Volunteer of the Year"
       ],
       "professionalAssociations": [
-        "American Bar Association, Section of Environment, Energy, and Resources",
-        "American Bar Association, Young Lawyers Division",
-        "New York State Bar Association, Environmental & Energy Law Section"
+        "American Bar Association, Litigation Section",
+        "Center for Conflict Resolution, Board Member"
       ],
       "activities": []
     },
@@ -512,6 +623,229 @@
         "Department of Justice Director’s Award for a landmark securities-fraud prosecution",
         "Awards from every major federal law enforcement agency he worked with"
       ],
+      "professionalAssociations": [],
+      "activities": []
+    },
+    {
+      "name": "Craig Nolan",
+      "role": "PARTNER",
+      "offices": [
+        "Chicago",
+        "Honolulu"
+      ],
+      "page": "bio-craig-nolan.html",
+      "url": "https://swim-lang.github.io/blanchet-site/bio-craig-nolan.html",
+      "slug": "bio-craig-nolan",
+      "metaDescription": "Craig Nolan is a partner at Blanchet LLP focused on trials, appeals, government investigations, enforcement matters, white collar defense, complex civil litigation, regulatory matters, and product liability litigation.",
+      "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1200&q=80",
+      "imageAlt": "Craig Nolan",
+      "introduction": [
+        "Craig Nolan is a trial attorney, appellate advocate, and former federal prosecutor who represents clients at trial and in government investigations and enforcement matters, white collar defense, commercial disputes, product liability litigation, regulatory matters, and appeals.",
+        "With more than 30 jury trials and dozens of appeals before federal appellate and state supreme courts, Craig has served as White Collar Crimes Chief at the U.S. Attorney's Office for Hawaii, State's Attorney for Vermont's third-largest county, and a civil litigator at leading firms in Vermont and North Carolina.",
+        "Craig brings the perspective of a federal prosecutor, trial attorney, and appellate advocate to matters that require early control, nuanced judgment, and demonstrable trial-readiness. He is especially valuable where litigation risk, government scrutiny, and appellate issues overlap, and where trial counsel is needed to assist or replace litigation counsel."
+      ],
+      "areasOfFocus": [
+        "Trials & Appeals",
+        "Commercial, Product Liability & Complex Civil Litigation",
+        "Government Investigations & Enforcement",
+        "White Collar Defense",
+        "Whistleblower & Qui Tam",
+        "DOJ, SEC & State AG Enforcement Matters",
+        "Grand Jury & CID Subpoenas",
+        "Environmental Enforcement",
+        "RICO, Fraud, Money Laundering & Cybercrime Matters",
+        "Regulatory Investigations & Disputes",
+        "Internal Investigations"
+      ],
+      "representativeExperienceIntro": "Craig Nolan's experience includes:",
+      "representativeExperience": [
+        "Served as White Collar Crimes Chief and Branch Chief as an Assistant U.S. Attorney in Hawaii and Vermont, respectively, during 15-year DOJ career.",
+        "Represented Valero Energy Corp. in groundwater MTBE-contamination litigation by the State of Vermont.",
+        "Represented a construction management company in the $200 million Jay Peak EB-5 fraud investigation by the Department of Justice.",
+        "Represented a defendant in SEC enforcement litigation involving insider-trading allegations connected to Keurig Green Mountain stock.",
+        "Represented Vermont Gas before the Vermont Supreme Court in multiple appeals from the Public Utilities Commission.",
+        "Tried 26 matters to jury verdict and dozens of bench trials and administrative evidentiary hearings.",
+        "Served as appellate counsel in dozens of appeals in federal and state supreme courts, including the Second Circuit, Ninth Circuit, and Vermont Supreme Court.",
+        "Brought former-prosecutor judgment to investigations, enforcement defense, and complex civil matters where early strategy and controlled communication matter."
+      ],
+      "governmentService": [],
+      "clerkships": [],
+      "judicialClerkships": [],
+      "education": [
+        "William & Mary Law School, J.D., Order of the Coif Honors",
+        "Dartmouth College, A.B., Honors in Major"
+      ],
+      "admissions": [
+        "Vermont"
+      ],
+      "honorsAndRecognition": [],
+      "professionalAssociations": [],
+      "activities": []
+    },
+    {
+      "name": "Robert Reagan",
+      "role": "PARTNER",
+      "offices": [
+        "Buffalo",
+        "New York City"
+      ],
+      "page": "bio-robert-reagan.html",
+      "url": "https://swim-lang.github.io/blanchet-site/bio-robert-reagan.html",
+      "slug": "bio-robert-reagan",
+      "metaDescription": "Robert Reagan is a partner at Blanchet LLP focused on environmental litigation, mass tort, product liability, and chemical exposure matters.",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1200&q=80",
+      "imageAlt": "Robert Reagan",
+      "introduction": [
+        "Robert Reagan is a litigator who represents clients in environmental litigation, mass tort, product liability, and chemical exposure matters.",
+        "His practice focuses on complex disputes in state and federal court, with particular emphasis on groundwater and soil contamination, environmental records, and technical issues that require disciplined case management.",
+        "Rob works within Blanchet LLP’s environmental and toxic tort bench on matters where the facts, science, and procedural strategy all matter."
+      ],
+      "areasOfFocus": [
+        "Environmental Litigation",
+        "CERCLA & Environmental Disputes",
+        "Product Liability & Mass Tort",
+        "Chemical Exposure & Toxic Torts",
+        "Groundwater and Soil Contamination",
+        "Technical Records",
+        "Discovery-Heavy Disputes",
+        "Litigation"
+      ],
+      "representativeExperienceIntro": "Robert Reagan's experience includes:",
+      "representativeExperience": [
+        "Representing clients in mass tort, product liability, and environmental litigation.",
+        "Handling matters involving alleged groundwater and soil contamination.",
+        "Working with chemical exposure and toxic tort teams on technically demanding environmental disputes.",
+        "Supporting complex matters in state and federal court where environmental facts and litigation strategy overlap."
+      ],
+      "governmentService": [],
+      "clerkships": [],
+      "judicialClerkships": [],
+      "education": [
+        "Vermont Law School, J.D., magna cum laude",
+        "Elisabeth Haub School of Law at Pace University, LL.M., Environmental Law, summa cum laude",
+        "Centre College, B.A."
+      ],
+      "admissions": [
+        "New York"
+      ],
+      "honorsAndRecognition": [
+        "Upstate New York Super Lawyers Rising Star"
+      ],
+      "professionalAssociations": [
+        "American Bar Association, Section of Environment, Energy, and Resources",
+        "American Bar Association, Young Lawyers Division",
+        "New York State Bar Association, Environmental & Energy Law Section"
+      ],
+      "activities": []
+    },
+    {
+      "name": "Bridget Ruschak",
+      "fullName": "Bridget Ruschak",
+      "role": "ASSOCIATE",
+      "offices": [
+        "Chicago"
+      ],
+      "page": "bio-bridget-ruschak.html",
+      "metaDescription": "Bridget Ruschak is an associate at Blanchet LLP focused on product liability, mass tort, chemical exposure, toxic tort, and complex civil litigation.",
+      "introduction": [
+        "Bridget Ruschak is a litigator who represents manufacturers and other companies in product liability, mass tort, chemical exposure, toxic tort, and related civil litigation.",
+        "Before entering private practice, Bridget clerked for Judge Michael F. Otto in the Circuit Court of Cook County, where she worked on a wide range of civil and commercial matters involving fraud, defamation, trade secrets, tortious interference, and other business and tort claims. Her earlier experience includes work with Northwestern's Community Justice and Civil Rights Clinic.",
+        "Bridget brings disciplined research, close attention to the record, and practical case management to fact-intensive matters. She works across discovery, motion practice, expert issues, and trial preparation, with particular experience in litigation involving alleged chemical exposure and environmental contamination."
+      ],
+      "areasOfFocus": [
+        "Litigation",
+        "Product Liability & Mass Tort",
+        "Chemical Exposure & Toxic Torts",
+        "Environmental & Contamination Disputes",
+        "Class Actions",
+        "Commercial Litigation"
+      ],
+      "representativeExperienceIntro": "Bridget's experience includes:",
+      "representativeExperience": [
+        "Defending manufacturers and other companies in product liability, mass tort, chemical exposure, and toxic tort matters.",
+        "Handling product liability and toxic tort matters involving technical records, experts, and complex discovery.",
+        "Managing discovery and factual development in cases involving alleged exposure, causation, product identification, and environmental contamination.",
+        "Researching and briefing dispositive, evidentiary, discovery, and procedural issues in complex civil litigation.",
+        "Working on civil and commercial matters involving fraud, defamation, trade secrets, tortious interference, and related claims while clerking in the Circuit Court of Cook County.",
+        "Representing clients and communities through Northwestern's Community Justice and Civil Rights Clinic."
+      ],
+      "education": [
+        "Northwestern University Pritzker School of Law, J.D., 2021",
+        "University of Pittsburgh, B.A., 2016"
+      ],
+      "admissions": [
+        "Illinois"
+      ],
+      "judicialClerkships": [
+        "Hon. Michael F. Otto, Circuit Court of Cook County, 2021-2023"
+      ],
+      "honorsAndRecognition": [
+        "New York State Bar Association Empire State Counsel Program for Pro Bono Work Honoree, 2025",
+        "Best Lawyers: Ones to Watch in America"
+      ],
+      "professionalAssociations": [
+        "Illinois State Bar Association"
+      ],
+      "activities": [
+        "Northwestern Community Justice and Civil Rights Clinic, Legal Intern, 2020",
+        "Pennsylvania Institutional Law Project, Legal Intern, 2019",
+        "Penn-Trafford High School Mock Trial, Assistant Coach, 2017-2018"
+      ],
+      "governmentService": [],
+      "clerkships": [
+        "Hon. Michael F. Otto, Circuit Court of Cook County, 2021-2023"
+      ],
+      "image": "",
+      "imageAlt": "Bridget Ruschak",
+      "url": "https://swim-lang.github.io/blanchet-site/bio-bridget-ruschak.html"
+    },
+    {
+      "name": "John Worth",
+      "role": "PARTNER",
+      "offices": [
+        "Chicago"
+      ],
+      "page": "bio-john-worth.html",
+      "url": "https://swim-lang.github.io/blanchet-site/bio-john-worth.html",
+      "slug": "bio-john-worth",
+      "metaDescription": "John Worth is a partner at Blanchet LLP focused on complex commercial disputes, environmental and toxic tort matters, class actions, product liability, and energy litigation.",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1200&q=80",
+      "imageAlt": "John Worth",
+      "introduction": [
+        "John Worth is a veteran trial lawyer who represents clients in complex commercial disputes, class actions, environmental and toxic tort matters, product liability, consumer fraud, and energy-related litigation.",
+        "Before joining Blanchet LLP, John spent more than a decade as a litigation partner at Kirkland & Ellis and later led the launch of Phillips Lytle's Chicago office. He has tried and litigated cases in federal and state courts, appellate courts, and arbitrations across the country.",
+        "John is known for distilling complicated factual and legal records into a strategy that clients, courts, and decision-makers can understand."
+      ],
+      "areasOfFocus": [
+        "Commercial Litigation",
+        "Product Liability & Mass Tort",
+        "Class Actions",
+        "Environmental Litigation",
+        "Chemical Exposure & Toxic Torts",
+        "Energy Disputes",
+        "Insurance Coverage",
+        "Trial Work"
+      ],
+      "representativeExperienceIntro": "John Worth's experience includes:",
+      "representativeExperience": [
+        "Served as lead trial counsel for a company in drinking-water contamination litigation that ended in a complete defense verdict after a multiday jury trial.",
+        "Represented petroleum and energy companies in disputes involving LNG businesses, offshore production, royalty interests, refinery issues, and product claims.",
+        "Represented chemical companies in toxic tort, environmental, insurance, and product liability matters, including matters involving contamination and chemical exposure claims.",
+        "Handled complex commercial disputes in courts and arbitrations across the country."
+      ],
+      "governmentService": [],
+      "clerkships": [],
+      "judicialClerkships": [],
+      "education": [
+        "Indiana University Maurer School of Law, J.D., magna cum laude, Order of the Coif",
+        "University of Chicago Divinity School, M.A.",
+        "Wabash College, B.A., magna cum laude, Phi Beta Kappa"
+      ],
+      "admissions": [
+        "Illinois",
+        "Michigan"
+      ],
+      "honorsAndRecognition": [],
       "professionalAssociations": [],
       "activities": []
     }
