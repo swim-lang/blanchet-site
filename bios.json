@@ -198,30 +198,36 @@
       "page": "bio-joel.html",
       "url": "https://swim-lang.github.io/blanchet-site/bio-joel.html",
       "slug": "bio-joel",
-      "metaDescription": "Joel Blanchet is a partner at Blanchet LLP, representing clients in commercial litigation, environmental disputes, product liability, and other complex matters.",
+      "metaDescription": "Joel Blanchet is a trial lawyer representing sophisticated clients in commercial, environmental, product liability, and other high-stakes disputes.",
       "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1200&q=80",
       "imageAlt": "Joel Blanchet",
       "introduction": [
-        "Joel Blanchet is a trial lawyer who represents legal departments, companies, and other sophisticated clients in commercial litigation, environmental disputes, product liability matters, and other high-stakes conflicts across the country.",
-        "Before launching Blanchet LLP, Joel spent more than a decade as a partner in the litigation department at Kirkland & Ellis and later helped lead litigation practice at Phillips Lytle. His experience spans commercial litigation, environmental and toxic tort matters, securities, intellectual property, bankruptcy, government-facing disputes, and other complex cases.",
-        "Joel is known for good judgment, direct involvement, and a practical approach to serious disputes. He stays close to the work, works closely with clients from the outset, and prepares matters in a way that creates leverage at every stage."
+        "Joel Blanchet is a trial lawyer and problem solver who represents companies, legal departments, executives, and other sophisticated clients in high-stakes disputes across the country. His work spans commercial litigation, environmental and toxic-tort matters, product liability, securities, intellectual property, bankruptcy, and government-facing disputes.",
+        "Before launching Blanchet LLP, Joel spent more than a decade as a partner in the litigation department at Kirkland & Ellis and later helped lead the litigation practice at Phillips Lytle. He has handled trials, arbitrations, appeals, and complex pretrial proceedings across industries and jurisdictions.",
+        "Joel stays close to the work and to the client. He brings practical business judgment to serious disputes, develops the record with trial in mind, and focuses the strategy on the result the client actually needs."
       ],
       "areasOfFocus": [
         "Litigation",
         "Commercial Litigation",
-        "Government Investigations & Enforcement",
+        "CERCLA & Environmental Disputes",
         "Product Liability & Mass Tort",
         "Class Actions",
-        "Securities Litigation",
+        "Securities & Shareholder Litigation",
         "Intellectual Property & Trade Secrets",
-        "CERCLA & Environmental Disputes"
+        "Government Investigations & Enforcement"
       ],
-      "representativeExperienceIntro": "Joel's public experience includes matters such as:",
+      "representativeExperienceIntro": "Joel's representative experience includes:",
       "representativeExperience": [
-        "Representing Dow in litigation arising from a natural gas leak in Louisiana, securing summary judgment on more than $100 million in damages claims and substantial recoveries on counterclaims",
-        "Representing BP in matters related to the Deepwater Horizon accident and oil spill",
-        "Representing Dow in merger litigation involving Rohm and Haas, resolving the case on the first day of trial with a substantial reduction in cash consideration",
-        "Handling commercial, environmental, product liability, securities, intellectual property, and bankruptcy disputes for major corporate clients across the country"
+        "Obtaining a complete defense judgment for Dow at the trial-court level after a 2025 bench trial in MDR Hotels, defeating negligence, nuisance, and trespass claims seeking more than $40 million.",
+        "Representing Dow in major CERCLA and 1,4-dioxane matters, including federal Superfund cost-recovery litigation, coordinated New York public water-provider actions, and New Jersey's statewide natural-resource damages action.",
+        "Securing summary judgment for Dow on more than $100 million in claims arising from a Louisiana natural gas leak while also obtaining substantial recoveries on counterclaims.",
+        "Securing summary judgment or dismissal of claims brought by more than 200 plaintiffs in June v. Union Carbide, with the judgments affirmed by the Tenth Circuit.",
+        "Serving as primary counsel to Columbus McKinnon and Magnetek in product-liability matters involving industrial hoists, chains, and material-handling equipment across the country, including dismissals and insurance recoveries.",
+        "Representing Dow in its long-running dispute with NOVA Chemicals over a jointly owned ethane cracker in Alberta, including trial responsibility for the plant-capacity issue central to the damages case.",
+        "Representing Dow in litigation over its approximately $15 billion agreement to acquire Rohm and Haas, resolved on the first day of trial with a reduction in the cash consideration paid.",
+        "Defending Osram Sylvania in Nilssen, where fifteen patents were held unenforceable and the client was awarded more than $6.1 million in fees and costs.",
+        "Defending Briggs & Stratton in nationwide multidistrict consumer-fraud litigation involving more than fifty proposed classes, resolved favorably before discovery.",
+        "Representing Fortune 100 companies in confidential SEC, internal, and regulatory investigations."
       ],
       "governmentService": [],
       "clerkships": [],
