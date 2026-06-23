@@ -63,7 +63,7 @@
       ]
     },
     environmental: {
-      title: 'CERCLA & Environmental Disputes',
+      title: 'Environmental Disputes',
       label: 'Technical Practice',
       intro: 'Blanchet LLP handles environmental matters involving CERCLA, Superfund, contamination, natural resource damages, dioxane, PFAS and emerging contaminants, toxic tort, regulatory disputes, experts, and long factual records.',
       strip: 'Environmental disputes often turn on years of documents, technical records, agency interaction, experts, and operational context. Blanchet LLP is built for that kind of record.',
@@ -127,21 +127,22 @@
     ip: {
       title: 'Intellectual Property & Trade Secrets',
       label: 'Technical Practice',
-      intro: 'Blanchet LLP handles patent, trade secret, software, licensing, semiconductor, technology commercial, cybercrime, and other disputes where the technical record and the business context both matter.',
+      intro: 'Blanchet LLP handles trade secret, confidential information, software, licensing, insider-threat, cybercrime, and technology commercial disputes where the technical record and the business context both matter.',
       strip: 'Technical disputes are rarely just technical. The proof has to be understood in context: the product, the people, the business relationship, and the record.',
       image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=80',
       overview: 'The firm represents companies and individuals in IP and technology disputes that require careful fact development, technical fluency, and litigation judgment.',
       focusHeading: 'Technical disputes with commercial consequences.',
       focusIntro: 'Blanchet LLP pairs litigation experience with practical attention to the technology, business context, and record.',
       focus: [
-        ['Patent Litigation', 'Patent disputes, technical records, expert strategy, enforceability issues, and fee disputes.'],
         ['Trade Secrets', 'Misappropriation, employee movement, confidential information, and business continuity issues.'],
+        ['Insider Threat and Data Misuse', 'Employee misconduct, misuse of company data, theft of confidential information, fraud, and related internal investigations.'],
         ['Software and Technology', 'Software, licensing, semiconductor, technology commercial, and cyber-related disputes.'],
         ['Parallel Technical Matters', 'Cybercrime, investigations, commercial claims, and disputes where IP and government-facing risk overlap.']
       ],
       matters: [
-        'Patent disputes',
         'Trade secret litigation',
+        'Insider-threat and employee misconduct matters',
+        'Misuse or theft of company data',
         'Software and licensing disputes',
         'Semiconductor and technology matters',
         'Confidential information claims',
@@ -150,8 +151,8 @@
         'Technical commercial litigation'
       ],
       proof: [
-        'Counsel to Osram Sylvania in a patent dispute where fifteen patents were held unenforceable and more than $6.1 million in fees and costs were awarded.',
-        'Experience in patent, trade secret, software, licensing, cybercrime, semiconductor, and technology commercial disputes.',
+        'Experience advising companies and individuals facing insider-threat issues, including employee misconduct, misuse of company data, theft of confidential information, fraud, and related internal investigations.',
+        'Experience in trade secret, software, licensing, cybercrime, semiconductor, and technology commercial disputes.',
         'A litigation-first approach to technical records, expert strategy, and business context.'
       ]
     }
