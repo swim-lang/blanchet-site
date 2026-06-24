@@ -46,7 +46,7 @@
     document.querySelectorAll('[data-signature-field]').forEach(field => {
       data[field.dataset.signatureField] = clean(field.value);
     });
-    data.websiteLabel = normalizeWebsite(data.website) || 'blanchetlaw.com';
+    data.websiteLabel = normalizeWebsite(data.website) || 'blanchetllp.com';
     data.websiteHref = hrefForWebsite(data.website);
     return data;
   }
@@ -58,15 +58,17 @@
     const content = href
       ? `<a href="${href}" style="color:#314956;text-decoration:none;">${safeValue}</a>`
       : safeValue;
-    return `<span style="color:#7a858b;">${safeLabel}</span> ${content}`;
+    return safeLabel
+      ? `<span style="color:#7a858b;">${safeLabel}</span> ${content}`
+      : content;
   }
 
   function metaRows(data) {
     const rows = [
-      line('D', data.phone),
+      line('', data.phone),
       line('M', data.mobile),
-      line('E', data.email, data.email ? `mailto:${escapeHtml(data.email)}` : ''),
-      line('W', data.websiteLabel, data.websiteHref),
+      line('', data.email, data.email ? `mailto:${escapeHtml(data.email)}` : ''),
+      line('', data.websiteLabel, data.websiteHref),
       line('L', data.linkedin, hrefForExternal(data.linkedin))
     ].filter(Boolean);
 
@@ -88,7 +90,7 @@
       <div style="font-size:16px;line-height:20px;font-weight:bold;letter-spacing:0.6px;text-transform:uppercase;color:#0c222c;">${escapeHtml(data.name || 'Name')}</div>
       <div style="font-size:12px;line-height:18px;letter-spacing:1.4px;text-transform:uppercase;color:#5d6a70;">${escapeHtml(data.title || 'Title')}</div>
       <div style="font-size:12px;line-height:19px;color:#314956;margin-top:9px;">${metaRows(data)}</div>
-      <div style="font-size:12px;line-height:18px;color:#6b767b;margin-top:7px;">${escapeHtml(data.office || '')}${data.office && data.address ? '<span style="color:#c9d0d3;"> &nbsp;|&nbsp; </span>' : ''}${escapeHtml(data.address || '')}</div>
+      <div style="font-size:12px;line-height:18px;color:#6b767b;margin-top:7px;">${escapeHtml(data.address || '')}${data.address && data.office ? '<span style="color:#c9d0d3;"> &nbsp;|&nbsp; </span>' : ''}${escapeHtml(data.office || '')}</div>
       <div style="font-size:10px;line-height:15px;color:#9aa3a7;margin-top:11px;max-width:420px;">${legalFooter()}</div>
     </td>
   </tr>
