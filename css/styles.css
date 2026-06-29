@@ -300,17 +300,8 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
 .about-text a { font-size: 14px; font-weight: 500; text-decoration: underline; text-underline-offset: 4px; }
 
 /* ============================================
-   Proof + Experience Sections
+   Experience Sections
    ============================================ */
-.proof-strip { padding: 96px 80px 120px; background: #fff; }
-.proof-intro { display: grid; grid-template-columns: 180px 1fr 1fr; gap: 60px; align-items: start; margin-bottom: 44px; }
-.proof-intro h2 { font-size: 40px; font-weight: 600; line-height: 1.15; }
-.proof-intro p { font-size: 16px; color: #4b5563; line-height: 1.7; }
-.proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(12,34,44,0.08); border: 1px solid rgba(12,34,44,0.08); }
-.proof-card { background: #eef0f1; padding: 36px; min-height: 260px; display: flex; flex-direction: column; justify-content: space-between; }
-.proof-metric { font-size: 42px; font-weight: 700; color: #0c222c; line-height: 1; letter-spacing: 0; }
-.proof-card h3 { font-size: 20px; font-weight: 600; color: #0c222c; margin-top: 28px; }
-.proof-card p { font-size: 14px; color: rgba(12,34,44,0.58); line-height: 1.65; margin-top: 12px; }
 
 .selected-experience { padding: 120px 80px; background: #eef0f1; }
 .selected-experience-header { display: flex; justify-content: space-between; gap: 80px; align-items: flex-start; margin-bottom: 48px; }
@@ -553,7 +544,7 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
    ============================================ */
 @media (max-width: 1279px) {
   /* Global padding */
-  .about, .services, .partners, .proof-strip, .selected-experience, .cta-banner, .contact-bar, .footer { padding-left: 48px; padding-right: 48px; }
+  .about, .services, .partners, .selected-experience, .cta-banner, .contact-bar, .footer { padding-left: 48px; padding-right: 48px; }
   .hero-left { padding: 32px 48px 48px; }
   .scroll-nav { padding: 16px 48px; }
   .nav-links { gap: 16px; }
@@ -576,8 +567,7 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
   /* Practice Areas */
   .practice-left { width: 300px; padding: 48px; }
   .practice-card { width: 380px; padding: 40px; }
-  .proof-intro { grid-template-columns: 1fr; gap: 24px; }
-  .proof-grid, .selected-experience-list { grid-template-columns: repeat(2, 1fr); }
+  .selected-experience-list { grid-template-columns: repeat(2, 1fr); }
   .selected-experience-header { flex-direction: column; gap: 20px; }
   .selected-experience-header p { padding-top: 0; }
 
@@ -604,7 +594,7 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
    ============================================ */
 @media (max-width: 767px) {
   /* Global padding */
-  .about, .services, .partners, .proof-strip, .selected-experience, .cta-banner { padding: 80px 24px; }
+  .about, .services, .partners, .selected-experience, .cta-banner { padding: 80px 24px; }
   .contact-bar { padding: 24px; flex-direction: column; gap: 12px; align-items: flex-start; }
   .contact-bar .links { gap: 20px; }
   .footer { padding: 48px 24px; }
@@ -642,10 +632,9 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
   .service-card .card-content { padding: 28px; }
   .service-card h3 { font-size: 22px; }
   .service-card .card-image { display: none; }
-  .proof-intro { display: flex; flex-direction: column; gap: 24px; margin-bottom: 32px; }
-  .proof-intro h2, .selected-experience-header h2 { font-size: 30px; }
-  .proof-grid, .selected-experience-list { grid-template-columns: 1fr; }
-  .proof-card, .experience-item { min-height: auto; padding: 28px; }
+  .selected-experience-header h2 { font-size: 30px; }
+  .selected-experience-list { grid-template-columns: 1fr; }
+  .experience-item { min-height: auto; padding: 28px; }
   .selected-experience-header { flex-direction: column; gap: 16px; margin-bottom: 32px; }
   .selected-experience-header p { padding-top: 0; }
 
