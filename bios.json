@@ -1,5 +1,5 @@
 {
-  "count": 14,
+  "count": 13,
   "generatedAt": "2026-06-23T15:52:15.457Z",
   "generatedFrom": "Blanchet LLP website bio HTML pages and blanchet-new-attorney-bios-master-v2.json",
   "sourceDirectory": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site",
@@ -534,104 +534,10 @@
       "activities": []
     },
     {
-      "name": "Wayne Myers",
-      "role": "PARTNER",
-      "offices": [
-        "Honolulu"
-      ],
-      "page": "bio-wayne-myers.html",
-      "url": "https://swim-lang.github.io/blanchet-site/bio-wayne-myers.html",
-      "slug": "bio-wayne-myers",
-      "metaDescription": "Wayne Myers is a founding partner of Blanchet LLP and a former senior federal prosecutor focused on high-stakes litigation, complex civil disputes, government and grand jury investigations, white collar matters, cybercrime, and internal investigations.",
-      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=1200&q=80",
-      "imageAlt": "Wayne Myers",
-      "introduction": [
-        "Wayne Myers is a founding partner of Blanchet LLP. A trial-ready litigator and former senior federal prosecutor, Wayne represents companies, executives, professionals, and individuals in high-stakes litigation, complex civil disputes, government and grand jury investigations, white-collar matters, and internal investigations. He also handles select criminal matters.",
-        "Wayne held some of the highest positions in the U.S. Attorney’s Office for the District of Hawaii, including First Assistant U.S. Attorney, First Deputy U.S. Attorney, Criminal Chief, and Appellate Chief. His remit covered the full range of federal litigation: criminal prosecutions, civil litigation, appeals, sensitive investigations, and office operations. He worked regularly with Department leadership in Washington, federal agencies, law enforcement, the judiciary, and community stakeholders.",
-        "Before Hawaii, Wayne served as an Assistant U.S. Attorney in the Northern District of New York, where he was Chief of the Albany Branch Office, supervised Criminal Division AUSAs, managed a 40-person office, and built a nationally recognized cybercrime program.",
-        "Over the course of his career, Wayne has tried more than a dozen cases to verdict, supervised dozens more, personally handled hundreds of federal court hearings, and appeared in hundreds of grand jury proceedings. He knows the federal system from the inside: how prosecutors evaluate cases, how agents build investigations, how grand juries operate, where investigations and cases hit stress points, when Main Justice gets involved, and how federal judges assess contested facts and law.",
-        "Wayne’s experience spans national security and terrorism, financial crime, procurement fraud, health care fraud, public corruption, cybercrime, environmental crime, crimes against children, violent crime, firearms and explosives offenses, narcotics, and cryptocurrency. He has handled high-level national security and counterterrorism matters and held high-level federal security clearances.",
-        "Unusual among litigators, Wayne is genuinely fluent in the technology itself. He is comfortable in the details of digital forensics, networks, electronic evidence, cryptocurrency, and cyber investigations, not just the law that surrounds them. He has particular depth in digital evidence and surveillance, including the Stored Communications Act, ECPA, CFAA, search warrants, Fourth Amendment issues, and cross-border evidence collection.",
-        "Before joining the Department of Justice, Wayne practiced at Kirkland & Ellis LLP in Chicago and New York, where he handled complex commercial litigation, bankruptcy litigation, trade-secret matters, and high-stakes business disputes.",
-        "Wayne’s philosophy as a lawyer is simple: keep what matters, lose what does not, and know that telling the difference is the work. He is decisive under pressure and quick on his feet, as ready to make the call in a crisis as to make the argument in court."
-      ],
-      "areasOfFocus": [
-        "High-Stakes Litigation",
-        "Government Investigations & Enforcement",
-        "Grand Jury Investigations",
-        "White Collar Defense",
-        "Financial Crime & Fraud",
-        "Cybercrime & Digital Evidence",
-        "Cryptocurrency",
-        "National Security & Terrorism",
-        "Public Corruption",
-        "Internal Investigations",
-        "Trade Secrets",
-        "Appellate"
-      ],
-      "representativeExperienceIntro": "Wayne Myers’s experience includes:",
-      "representativeExperience": [
-        "Prosecuted a $125 million Ponzi scheme involving unregistered securities.",
-        "Prosecuted a $100 million ACH fraud involving a national payroll processor.",
-        "Prosecuted a $50 million accounting fraud involving grain commodities.",
-        "Prosecuted a $25 million trade-secret theft involving proprietary computer models stolen from a Fortune 500 company.",
-        "Prosecuted a $6 million business-email-compromise scheme.",
-        "Prosecuted a $1 million debtor-impersonation scheme run through nationwide debt collectors.",
-        "Prosecuted numerous physicians and medical professionals for controlled-substance and health-care fraud offenses.",
-        "Served as national lead on multiple ransomware investigations.",
-        "Seized millions of dollars in cryptocurrency traced to pig-butchering scams.",
-        "Prosecuted a computer-hacking case involving a technology company, including obstruction during trial.",
-        "Prosecuted a first-of-its-kind CFAA case involving an insider who destroyed a company’s network and data.",
-        "Prosecuted a first-of-its-kind CFAA case involving fraudulent access to a state unemployment-insurance system, affirmed on appeal.",
-        "Prosecuted one of the world’s largest dark-net LSD vendors.",
-        "Led a witness-tampering investigation during a pending public-corruption trial.",
-        "Prosecuted a police officer for child-sex trafficking and cyberstalking.",
-        "Litigated attorney-as-witness disqualification issues in a racketeering case.",
-        "Developed obstruction charges arising from fraudulent character letters.",
-        "Prosecuted numerous obstruction, perjury, witness-tampering, and false-statement matters.",
-        "Prosecuted a Mexico-based fentanyl ring in a matter named 2025 HIDTA “Case of the Year.”",
-        "Handled dozens of firearm, narcotics, and violent-crime matters, including armed robbery, Hobbs Act robbery, bank robbery, drug conspiracies, homicide, arson, unlawful explosives, and illegal firearms.",
-        "Served as trial counsel to a hedge fund in a high-frequency-trading algorithm-theft arbitration.",
-        "Secured an eight-figure settlement from a microchip manufacturer.",
-        "Served as trial counsel for a secured-lender committee in a $1.5 billion bankruptcy.",
-        "Defended a healthcare provider in multiple securities-fraud and shareholder-derivative suits.",
-        "Won summary judgment in a nine-figure natural-gas-leak case after leading expert strategy on causation of a pipe-casing failure.",
-        "Handled key issues in a $1 billion dispute over a jointly owned polyethylene plant."
-      ],
-      "governmentService": [
-        "First Assistant U.S. Attorney, First Deputy U.S. Attorney, Criminal Chief, and Appellate Chief, U.S. Attorney’s Office for the District of Hawaii",
-        "Assistant U.S. Attorney and Chief of the Albany Branch Office, U.S. Attorney’s Office for the Northern District of New York",
-        "Digital Asset and Computer Hacking and Intellectual Property Coordinator in the District of Hawaii and Northern District of New York",
-        "Member of a national Department of Justice Computer Hacking and Intellectual Property working group"
-      ],
-      "clerkships": [
-        "Law Clerk to the Honorable Paul C. Huck, U.S. District Court for the Southern District of Florida"
-      ],
-      "judicialClerkships": [],
-      "education": [
-        "Northwestern University School of Law, J.D., with honors",
-        "University of Texas at Dallas, B.A., magna cum laude"
-      ],
-      "admissions": [
-        "California",
-        "Hawaii",
-        "Illinois",
-        "New York",
-        "Various federal district and appellate courts"
-      ],
-      "honorsAndRecognition": [
-        "Department of Justice Director’s Award for a landmark securities-fraud prosecution",
-        "Awards from every major federal law enforcement agency he worked with"
-      ],
-      "professionalAssociations": [],
-      "activities": []
-    },
-    {
       "name": "Craig Nolan",
       "role": "PARTNER",
       "offices": [
-        "Chicago",
-        "Honolulu"
+        "Chicago"
       ],
       "page": "bio-craig-nolan.html",
       "url": "https://swim-lang.github.io/blanchet-site/bio-craig-nolan.html",
