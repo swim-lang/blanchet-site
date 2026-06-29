@@ -703,6 +703,14 @@
 
   // Stagger reveal for rows
   const rows = document.querySelectorAll('.insights-row, .insights-card');
+  if (window.innerWidth < 900) {
+    rows.forEach(row => {
+      row.style.opacity = '1';
+      row.style.transform = 'none';
+    });
+    return;
+  }
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {

@@ -1,0 +1,1082 @@
+[
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "home",
+    "page": "index.html",
+    "url": "http://127.0.0.1:4173/index.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-home.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "firm",
+    "page": "firm.html",
+    "url": "http://127.0.0.1:4173/firm.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-firm.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "practices",
+    "page": "practices.html",
+    "url": "http://127.0.0.1:4173/practices.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-practices.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "litigation",
+    "page": "litigation.html",
+    "url": "http://127.0.0.1:4173/litigation.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-litigation.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "commercial-litigation",
+    "page": "commercial-litigation.html",
+    "url": "http://127.0.0.1:4173/commercial-litigation.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-commercial-litigation.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "environmental-disputes",
+    "page": "environmental-disputes.html",
+    "url": "http://127.0.0.1:4173/environmental-disputes.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-environmental-disputes.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "product-liability",
+    "page": "product-liability.html",
+    "url": "http://127.0.0.1:4173/product-liability.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-product-liability.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "white-collar",
+    "page": "white-collar.html",
+    "url": "http://127.0.0.1:4173/white-collar.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-white-collar.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "ip-trade-secrets",
+    "page": "ip-trade-secrets.html",
+    "url": "http://127.0.0.1:4173/ip-trade-secrets.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-ip-trade-secrets.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "team",
+    "page": "team.html",
+    "url": "http://127.0.0.1:4173/team.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-team.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "bio-hannah-amundsen",
+    "page": "bio-hannah-amundsen.html",
+    "url": "http://127.0.0.1:4173/bio-hannah-amundsen.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-bio-hannah-amundsen.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "bio-myles-bartley",
+    "page": "bio-myles-bartley.html",
+    "url": "http://127.0.0.1:4173/bio-myles-bartley.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-bio-myles-bartley.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "bio-joel",
+    "page": "bio-joel.html",
+    "url": "http://127.0.0.1:4173/bio-joel.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-bio-joel.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "bio-caroline-creagan",
+    "page": "bio-caroline-creagan.html",
+    "url": "http://127.0.0.1:4173/bio-caroline-creagan.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-bio-caroline-creagan.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "bio-timothy-cronin",
+    "page": "bio-timothy-cronin.html",
+    "url": "http://127.0.0.1:4173/bio-timothy-cronin.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-bio-timothy-cronin.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "bio-andrew-devine",
+    "page": "bio-andrew-devine.html",
+    "url": "http://127.0.0.1:4173/bio-andrew-devine.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-bio-andrew-devine.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "bio-frank-dylewski",
+    "page": "bio-frank-dylewski.html",
+    "url": "http://127.0.0.1:4173/bio-frank-dylewski.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-bio-frank-dylewski.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "bio-stefan-engelhardt",
+    "page": "bio-stefan-engelhardt.html",
+    "url": "http://127.0.0.1:4173/bio-stefan-engelhardt.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-bio-stefan-engelhardt.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "bio-jaran-moten",
+    "page": "bio-jaran-moten.html",
+    "url": "http://127.0.0.1:4173/bio-jaran-moten.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-bio-jaran-moten.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "bio-craig-nolan",
+    "page": "bio-craig-nolan.html",
+    "url": "http://127.0.0.1:4173/bio-craig-nolan.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-bio-craig-nolan.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "bio-robert-reagan",
+    "page": "bio-robert-reagan.html",
+    "url": "http://127.0.0.1:4173/bio-robert-reagan.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-bio-robert-reagan.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "bio-bridget-ruschak",
+    "page": "bio-bridget-ruschak.html",
+    "url": "http://127.0.0.1:4173/bio-bridget-ruschak.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-bio-bridget-ruschak.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "bio-john-worth",
+    "page": "bio-john-worth.html",
+    "url": "http://127.0.0.1:4173/bio-john-worth.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-bio-john-worth.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "insights",
+    "page": "insights.html",
+    "url": "http://127.0.0.1:4173/insights.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-insights.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "insights-article",
+    "page": "insights-article.html",
+    "url": "http://127.0.0.1:4173/insights-article.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-insights-article.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "contact",
+    "page": "contact.html",
+    "url": "http://127.0.0.1:4173/contact.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-contact.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-se",
+    "size": "375x667",
+    "slug": "email-signatures",
+    "page": "email-signatures.html",
+    "url": "http://127.0.0.1:4173/email-signatures.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-se-email-signatures.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "home",
+    "page": "index.html",
+    "url": "http://127.0.0.1:4173/index.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-home.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "firm",
+    "page": "firm.html",
+    "url": "http://127.0.0.1:4173/firm.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-firm.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "practices",
+    "page": "practices.html",
+    "url": "http://127.0.0.1:4173/practices.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-practices.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "litigation",
+    "page": "litigation.html",
+    "url": "http://127.0.0.1:4173/litigation.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-litigation.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "commercial-litigation",
+    "page": "commercial-litigation.html",
+    "url": "http://127.0.0.1:4173/commercial-litigation.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-commercial-litigation.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "environmental-disputes",
+    "page": "environmental-disputes.html",
+    "url": "http://127.0.0.1:4173/environmental-disputes.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-environmental-disputes.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "product-liability",
+    "page": "product-liability.html",
+    "url": "http://127.0.0.1:4173/product-liability.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-product-liability.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "white-collar",
+    "page": "white-collar.html",
+    "url": "http://127.0.0.1:4173/white-collar.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-white-collar.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "ip-trade-secrets",
+    "page": "ip-trade-secrets.html",
+    "url": "http://127.0.0.1:4173/ip-trade-secrets.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-ip-trade-secrets.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "team",
+    "page": "team.html",
+    "url": "http://127.0.0.1:4173/team.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-team.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "bio-hannah-amundsen",
+    "page": "bio-hannah-amundsen.html",
+    "url": "http://127.0.0.1:4173/bio-hannah-amundsen.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-bio-hannah-amundsen.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "bio-myles-bartley",
+    "page": "bio-myles-bartley.html",
+    "url": "http://127.0.0.1:4173/bio-myles-bartley.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-bio-myles-bartley.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "bio-joel",
+    "page": "bio-joel.html",
+    "url": "http://127.0.0.1:4173/bio-joel.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-bio-joel.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "bio-caroline-creagan",
+    "page": "bio-caroline-creagan.html",
+    "url": "http://127.0.0.1:4173/bio-caroline-creagan.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-bio-caroline-creagan.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "bio-timothy-cronin",
+    "page": "bio-timothy-cronin.html",
+    "url": "http://127.0.0.1:4173/bio-timothy-cronin.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-bio-timothy-cronin.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "bio-andrew-devine",
+    "page": "bio-andrew-devine.html",
+    "url": "http://127.0.0.1:4173/bio-andrew-devine.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-bio-andrew-devine.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "bio-frank-dylewski",
+    "page": "bio-frank-dylewski.html",
+    "url": "http://127.0.0.1:4173/bio-frank-dylewski.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-bio-frank-dylewski.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "bio-stefan-engelhardt",
+    "page": "bio-stefan-engelhardt.html",
+    "url": "http://127.0.0.1:4173/bio-stefan-engelhardt.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-bio-stefan-engelhardt.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "bio-jaran-moten",
+    "page": "bio-jaran-moten.html",
+    "url": "http://127.0.0.1:4173/bio-jaran-moten.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-bio-jaran-moten.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "bio-craig-nolan",
+    "page": "bio-craig-nolan.html",
+    "url": "http://127.0.0.1:4173/bio-craig-nolan.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-bio-craig-nolan.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "bio-robert-reagan",
+    "page": "bio-robert-reagan.html",
+    "url": "http://127.0.0.1:4173/bio-robert-reagan.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-bio-robert-reagan.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "bio-bridget-ruschak",
+    "page": "bio-bridget-ruschak.html",
+    "url": "http://127.0.0.1:4173/bio-bridget-ruschak.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-bio-bridget-ruschak.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "bio-john-worth",
+    "page": "bio-john-worth.html",
+    "url": "http://127.0.0.1:4173/bio-john-worth.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-bio-john-worth.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "insights",
+    "page": "insights.html",
+    "url": "http://127.0.0.1:4173/insights.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-insights.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "insights-article",
+    "page": "insights-article.html",
+    "url": "http://127.0.0.1:4173/insights-article.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-insights-article.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "contact",
+    "page": "contact.html",
+    "url": "http://127.0.0.1:4173/contact.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-contact.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "iphone-modern",
+    "size": "390x844",
+    "slug": "email-signatures",
+    "page": "email-signatures.html",
+    "url": "http://127.0.0.1:4173/email-signatures.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/iphone-modern-email-signatures.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "home",
+    "page": "index.html",
+    "url": "http://127.0.0.1:4173/index.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-home.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "firm",
+    "page": "firm.html",
+    "url": "http://127.0.0.1:4173/firm.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-firm.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "practices",
+    "page": "practices.html",
+    "url": "http://127.0.0.1:4173/practices.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-practices.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "litigation",
+    "page": "litigation.html",
+    "url": "http://127.0.0.1:4173/litigation.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-litigation.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "commercial-litigation",
+    "page": "commercial-litigation.html",
+    "url": "http://127.0.0.1:4173/commercial-litigation.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-commercial-litigation.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "environmental-disputes",
+    "page": "environmental-disputes.html",
+    "url": "http://127.0.0.1:4173/environmental-disputes.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-environmental-disputes.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "product-liability",
+    "page": "product-liability.html",
+    "url": "http://127.0.0.1:4173/product-liability.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-product-liability.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "white-collar",
+    "page": "white-collar.html",
+    "url": "http://127.0.0.1:4173/white-collar.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-white-collar.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "ip-trade-secrets",
+    "page": "ip-trade-secrets.html",
+    "url": "http://127.0.0.1:4173/ip-trade-secrets.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-ip-trade-secrets.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "team",
+    "page": "team.html",
+    "url": "http://127.0.0.1:4173/team.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-team.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "bio-hannah-amundsen",
+    "page": "bio-hannah-amundsen.html",
+    "url": "http://127.0.0.1:4173/bio-hannah-amundsen.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-bio-hannah-amundsen.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "bio-myles-bartley",
+    "page": "bio-myles-bartley.html",
+    "url": "http://127.0.0.1:4173/bio-myles-bartley.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-bio-myles-bartley.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "bio-joel",
+    "page": "bio-joel.html",
+    "url": "http://127.0.0.1:4173/bio-joel.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-bio-joel.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "bio-caroline-creagan",
+    "page": "bio-caroline-creagan.html",
+    "url": "http://127.0.0.1:4173/bio-caroline-creagan.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-bio-caroline-creagan.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "bio-timothy-cronin",
+    "page": "bio-timothy-cronin.html",
+    "url": "http://127.0.0.1:4173/bio-timothy-cronin.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-bio-timothy-cronin.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "bio-andrew-devine",
+    "page": "bio-andrew-devine.html",
+    "url": "http://127.0.0.1:4173/bio-andrew-devine.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-bio-andrew-devine.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "bio-frank-dylewski",
+    "page": "bio-frank-dylewski.html",
+    "url": "http://127.0.0.1:4173/bio-frank-dylewski.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-bio-frank-dylewski.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "bio-stefan-engelhardt",
+    "page": "bio-stefan-engelhardt.html",
+    "url": "http://127.0.0.1:4173/bio-stefan-engelhardt.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-bio-stefan-engelhardt.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "bio-jaran-moten",
+    "page": "bio-jaran-moten.html",
+    "url": "http://127.0.0.1:4173/bio-jaran-moten.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-bio-jaran-moten.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "bio-craig-nolan",
+    "page": "bio-craig-nolan.html",
+    "url": "http://127.0.0.1:4173/bio-craig-nolan.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-bio-craig-nolan.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "bio-robert-reagan",
+    "page": "bio-robert-reagan.html",
+    "url": "http://127.0.0.1:4173/bio-robert-reagan.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-bio-robert-reagan.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "bio-bridget-ruschak",
+    "page": "bio-bridget-ruschak.html",
+    "url": "http://127.0.0.1:4173/bio-bridget-ruschak.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-bio-bridget-ruschak.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "bio-john-worth",
+    "page": "bio-john-worth.html",
+    "url": "http://127.0.0.1:4173/bio-john-worth.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-bio-john-worth.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "insights",
+    "page": "insights.html",
+    "url": "http://127.0.0.1:4173/insights.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-insights.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "insights-article",
+    "page": "insights-article.html",
+    "url": "http://127.0.0.1:4173/insights-article.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-insights-article.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "contact",
+    "page": "contact.html",
+    "url": "http://127.0.0.1:4173/contact.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-contact.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "large-phone",
+    "size": "430x932",
+    "slug": "email-signatures",
+    "page": "email-signatures.html",
+    "url": "http://127.0.0.1:4173/email-signatures.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/large-phone-email-signatures.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "home",
+    "page": "index.html",
+    "url": "http://127.0.0.1:4173/index.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-home.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "firm",
+    "page": "firm.html",
+    "url": "http://127.0.0.1:4173/firm.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-firm.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "practices",
+    "page": "practices.html",
+    "url": "http://127.0.0.1:4173/practices.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-practices.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "litigation",
+    "page": "litigation.html",
+    "url": "http://127.0.0.1:4173/litigation.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-litigation.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "commercial-litigation",
+    "page": "commercial-litigation.html",
+    "url": "http://127.0.0.1:4173/commercial-litigation.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-commercial-litigation.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "environmental-disputes",
+    "page": "environmental-disputes.html",
+    "url": "http://127.0.0.1:4173/environmental-disputes.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-environmental-disputes.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "product-liability",
+    "page": "product-liability.html",
+    "url": "http://127.0.0.1:4173/product-liability.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-product-liability.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "white-collar",
+    "page": "white-collar.html",
+    "url": "http://127.0.0.1:4173/white-collar.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-white-collar.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "ip-trade-secrets",
+    "page": "ip-trade-secrets.html",
+    "url": "http://127.0.0.1:4173/ip-trade-secrets.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-ip-trade-secrets.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "team",
+    "page": "team.html",
+    "url": "http://127.0.0.1:4173/team.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-team.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "bio-hannah-amundsen",
+    "page": "bio-hannah-amundsen.html",
+    "url": "http://127.0.0.1:4173/bio-hannah-amundsen.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-bio-hannah-amundsen.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "bio-myles-bartley",
+    "page": "bio-myles-bartley.html",
+    "url": "http://127.0.0.1:4173/bio-myles-bartley.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-bio-myles-bartley.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "bio-joel",
+    "page": "bio-joel.html",
+    "url": "http://127.0.0.1:4173/bio-joel.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-bio-joel.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "bio-caroline-creagan",
+    "page": "bio-caroline-creagan.html",
+    "url": "http://127.0.0.1:4173/bio-caroline-creagan.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-bio-caroline-creagan.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "bio-timothy-cronin",
+    "page": "bio-timothy-cronin.html",
+    "url": "http://127.0.0.1:4173/bio-timothy-cronin.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-bio-timothy-cronin.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "bio-andrew-devine",
+    "page": "bio-andrew-devine.html",
+    "url": "http://127.0.0.1:4173/bio-andrew-devine.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-bio-andrew-devine.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "bio-frank-dylewski",
+    "page": "bio-frank-dylewski.html",
+    "url": "http://127.0.0.1:4173/bio-frank-dylewski.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-bio-frank-dylewski.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "bio-stefan-engelhardt",
+    "page": "bio-stefan-engelhardt.html",
+    "url": "http://127.0.0.1:4173/bio-stefan-engelhardt.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-bio-stefan-engelhardt.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "bio-jaran-moten",
+    "page": "bio-jaran-moten.html",
+    "url": "http://127.0.0.1:4173/bio-jaran-moten.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-bio-jaran-moten.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "bio-craig-nolan",
+    "page": "bio-craig-nolan.html",
+    "url": "http://127.0.0.1:4173/bio-craig-nolan.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-bio-craig-nolan.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "bio-robert-reagan",
+    "page": "bio-robert-reagan.html",
+    "url": "http://127.0.0.1:4173/bio-robert-reagan.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-bio-robert-reagan.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "bio-bridget-ruschak",
+    "page": "bio-bridget-ruschak.html",
+    "url": "http://127.0.0.1:4173/bio-bridget-ruschak.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-bio-bridget-ruschak.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "bio-john-worth",
+    "page": "bio-john-worth.html",
+    "url": "http://127.0.0.1:4173/bio-john-worth.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-bio-john-worth.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "insights",
+    "page": "insights.html",
+    "url": "http://127.0.0.1:4173/insights.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-insights.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "insights-article",
+    "page": "insights-article.html",
+    "url": "http://127.0.0.1:4173/insights-article.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-insights-article.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "contact",
+    "page": "contact.html",
+    "url": "http://127.0.0.1:4173/contact.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-contact.jpg",
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "viewport": "tablet",
+    "size": "768x1024",
+    "slug": "email-signatures",
+    "page": "email-signatures.html",
+    "url": "http://127.0.0.1:4173/email-signatures.html",
+    "screenshot": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site/docs/mobile-qa/screenshots/tablet-email-signatures.jpg",
+    "status": "ok",
+    "issues": []
+  }
+]

@@ -52,6 +52,14 @@ const windowBgVideo = document.querySelector('.window-video');
 const windowLogo = document.querySelector('.window-logo');
 if (windowSection && windowSquare) {
   window.addEventListener('scroll', () => {
+    if (window.innerWidth < 900) {
+      windowSquare.style.width = '';
+      windowSquare.style.height = '';
+      if (windowLogo) windowLogo.style.opacity = '';
+      if (windowBgVideo) windowBgVideo.style.opacity = '';
+      return;
+    }
+
     const rect = windowSection.getBoundingClientRect();
     const sectionHeight = windowSection.offsetHeight - window.innerHeight;
     const progress = Math.min(Math.max(-rect.top / sectionHeight, 0), 1);
@@ -119,7 +127,7 @@ const practiceTrack = document.querySelector('.practice-track');
 
 function setupPracticeScroll() {
   if (!practiceWrapper || !practiceTrack) return;
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 900) {
     practiceWrapper.style.height = 'auto';
     practiceTrack.style.transform = 'none';
     return;
@@ -137,7 +145,7 @@ function setupPracticeScroll() {
 let practiceMaxScroll = setupPracticeScroll();
 
 window.addEventListener('scroll', () => {
-  if (!practiceWrapper || !practiceTrack || window.innerWidth < 768) return;
+  if (!practiceWrapper || !practiceTrack || window.innerWidth < 900) return;
   const rect = practiceWrapper.getBoundingClientRect();
   const wrapperHeight = practiceWrapper.offsetHeight - window.innerHeight;
   if (wrapperHeight <= 0) return;
@@ -154,7 +162,7 @@ const stepCards = document.querySelectorAll('.step-card');
 
 function setupStackingCards() {
   if (!processWrapper || !stepCards.length) return;
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 900) {
     processWrapper.style.height = 'auto';
     stepCards.forEach(card => {
       card.style.transform = 'none';
@@ -169,7 +177,7 @@ function setupStackingCards() {
 setupStackingCards();
 
 window.addEventListener('scroll', () => {
-  if (!processWrapper || !stepCards.length || window.innerWidth < 768) return;
+  if (!processWrapper || !stepCards.length || window.innerWidth < 900) return;
   const cardCount = stepCards.length;
   const segmentSize = 1 / (cardCount + 1);
   const rect = processWrapper.getBoundingClientRect();

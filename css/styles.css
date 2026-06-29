@@ -696,3 +696,392 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
   .footer-watermark { padding: 32px 24px 48px; }
   .footer-watermark img { height: 60px; }
 }
+
+/* ============================================
+   Mobile QA Overrides (phone + narrow tablet)
+   ============================================ */
+@media (max-width: 900px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .scroll-nav .scroll-nav-links,
+  .nav .nav-links {
+    display: none !important;
+  }
+
+  .scroll-nav {
+    padding: 14px 24px !important;
+  }
+
+  .scroll-nav-cta,
+  .nav-cta {
+    font-size: 11px !important;
+    padding: 8px 12px !important;
+  }
+
+  .hero {
+    flex-direction: column !important;
+    min-height: auto !important;
+  }
+
+  .hero-left {
+    width: 100% !important;
+    min-height: auto !important;
+    padding: 32px 24px 48px !important;
+  }
+
+  .hero-right {
+    width: 100% !important;
+    min-height: 40vh !important;
+    height: 40vh !important;
+    flex: none !important;
+  }
+
+  .practice-areas {
+    position: static !important;
+    height: auto !important;
+    flex-direction: column !important;
+  }
+
+  .practice-left {
+    width: 100% !important;
+    height: auto !important;
+    padding: 48px 24px !important;
+  }
+
+  .practice-left h2 {
+    font-size: 32px !important;
+  }
+
+  .practice-track {
+    width: 100% !important;
+    transform: none !important;
+    flex-direction: column !important;
+  }
+
+  .practice-card {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 32px 24px !important;
+  }
+
+  .process {
+    position: static !important;
+    height: auto !important;
+    flex-direction: column !important;
+    overflow: visible !important;
+  }
+
+  .process-left {
+    height: 40vh !important;
+    min-height: 300px !important;
+    flex: none !important;
+    padding: 32px 24px !important;
+  }
+
+  .process-right {
+    height: auto !important;
+    position: relative !important;
+    padding: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .step-card {
+    position: static !important;
+    transform: none !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    left: auto !important;
+    box-shadow: none !important;
+  }
+
+  .site-footer-top {
+    flex-direction: column !important;
+    padding: 56px 24px !important;
+    gap: 42px !important;
+  }
+
+  .site-footer-cta {
+    padding-right: 0 !important;
+    border-right: 0 !important;
+  }
+
+  .site-footer-nav {
+    flex: 1 1 auto !important;
+    padding-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .site-footer-cols {
+    flex-direction: column !important;
+    gap: 28px !important;
+  }
+
+  .footer-watermark {
+    max-width: none !important;
+    padding: 0 24px 40px !important;
+  }
+
+  .bio-nav {
+    display: none !important;
+  }
+
+  .bio-hero {
+    display: flex !important;
+    flex-direction: column !important;
+    background: #fff !important;
+  }
+
+  .bio-photo {
+    position: relative !important;
+    width: 100% !important;
+    height: 38vh !important;
+    min-height: 280px !important;
+    flex: none !important;
+    align-self: auto !important;
+  }
+
+  .bio-content {
+    width: 100% !important;
+    max-width: none !important;
+    flex: none !important;
+    padding: 72px 24px 80px !important;
+  }
+
+  .bio-name {
+    font-size: clamp(38px, 12vw, 54px) !important;
+    overflow-wrap: anywhere;
+  }
+
+  .bio-text,
+  .bio-rep-text,
+  .bio-list,
+  .bio-rep-list {
+    max-width: 100% !important;
+  }
+
+  .bio-tags {
+    max-width: 100% !important;
+  }
+
+  .contact-page,
+  .practices-page,
+  .team-page {
+    flex-direction: column !important;
+    min-height: auto !important;
+  }
+
+  .contact-left,
+  .practices-left {
+    width: 100% !important;
+    position: relative !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 32px 24px 48px !important;
+  }
+
+  .contact-left-nav,
+  .practices-left-nav {
+    padding: 0 0 48px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .contact-left-content {
+    justify-content: flex-start !important;
+  }
+
+  .contact-heading,
+  .practices-heading {
+    font-size: 38px !important;
+  }
+
+  .contact-intro,
+  .practices-intro {
+    max-width: 100% !important;
+  }
+
+  .contact-right,
+  .practices-right {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .contact-right-nav,
+  .practices-right-nav {
+    display: none !important;
+  }
+
+  .contact-right-content {
+    padding: 56px 24px !important;
+    gap: 24px !important;
+  }
+
+  .form-row {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  .practices-featured {
+    min-height: 400px !important;
+  }
+
+  .practices-featured-content {
+    padding: 0 24px 40px !important;
+  }
+
+  .practices-featured h2 {
+    font-size: 36px !important;
+  }
+
+  .practices-grid-row,
+  .practices-secondary-header {
+    flex-direction: column !important;
+  }
+
+  .practices-cell.bordered {
+    border-right: 0 !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+  }
+
+  .practices-secondary,
+  .experience-snapshot {
+    padding: 48px 24px !important;
+  }
+
+  .practices-secondary-grid,
+  .experience-snapshot ul {
+    grid-template-columns: 1fr !important;
+  }
+
+  .team-featured {
+    width: 100% !important;
+    position: relative !important;
+    height: 50vh !important;
+    min-height: 420px !important;
+  }
+
+  .team-directory {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .team-nav {
+    padding: 24px !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+  }
+
+  .team-list {
+    padding: 0 24px !important;
+  }
+
+  .team-row-name {
+    font-size: 20px !important;
+  }
+
+  .team-row-title {
+    display: none !important;
+  }
+
+  .firm-pov-cards {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    overflow: hidden !important;
+    padding: 0 24px 60px !important;
+    gap: 12px !important;
+  }
+
+  .firm-pov-deck {
+    order: 1 !important;
+    flex: 0 0 100% !important;
+    width: 100% !important;
+  }
+
+  #pov-prev {
+    order: 2 !important;
+  }
+
+  #pov-next {
+    order: 3 !important;
+  }
+
+  .firm-pov-arrow {
+    width: 36px !important;
+    height: 36px !important;
+    flex: 0 0 36px !important;
+  }
+
+  .insights-filters {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .insights-filter {
+    padding: 9px 12px !important;
+    font-size: 10px !important;
+  }
+
+  .window-section {
+    height: auto !important;
+  }
+
+  .window-sticky {
+    position: relative !important;
+    height: 70vh !important;
+    min-height: 420px !important;
+  }
+
+  .window-square {
+    width: min(62vw, 320px) !important;
+    height: min(62vw, 320px) !important;
+  }
+
+  .window-logo {
+    opacity: 1 !important;
+  }
+
+  .window-video {
+    opacity: 0 !important;
+  }
+
+  .who-we-represent {
+    flex-direction: column !important;
+    padding: 80px 0 !important;
+  }
+
+  .wwr-left {
+    width: 100% !important;
+    padding: 0 24px 40px !important;
+  }
+
+  .wwr-left h2 {
+    font-size: 32px !important;
+  }
+
+  .wwr-right {
+    width: 100% !important;
+    padding: 0 24px !important;
+  }
+
+  .wwr-row-body {
+    padding-left: 0 !important;
+  }
+
+  .wwr-row.open .wwr-row-body {
+    padding-left: 0 !important;
+    padding-bottom: 20px !important;
+  }
+
+  .wwr-ticker-wrap {
+    width: 100% !important;
+  }
+}
