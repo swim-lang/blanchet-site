@@ -154,39 +154,39 @@
     </div>
     <div class="contact-right-content" data-review-id="contact.form">
       <span class="form-section-label">SEND A MESSAGE</span>
-      <p class="form-hint">If this relates to a new matter, a brief description of the dispute or investigation and the best way to reach you is helpful.</p>
-      <form>
+      <p class="form-hint" id="contact-form-hint">If this relates to a new matter, a brief description of the dispute or investigation and the best way to reach you is helpful.</p>
+      <form aria-describedby="contact-form-hint contact-form-disclaimer">
         <div style="display: flex; flex-direction: column; gap: 24px;">
           <div class="form-row">
             <div class="form-field">
-              <label>First Name</label>
-              <input type="text">
+              <label for="contact-first-name">First Name</label>
+              <input id="contact-first-name" name="firstName" type="text" autocomplete="given-name">
             </div>
             <div class="form-field">
-              <label>Last Name</label>
-              <input type="text">
+              <label for="contact-last-name">Last Name</label>
+              <input id="contact-last-name" name="lastName" type="text" autocomplete="family-name">
             </div>
           </div>
           <div class="form-field">
-            <label>Email</label>
-            <input type="email">
+            <label for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email">
           </div>
           <div class="form-field">
-            <label>Phone</label>
-            <input type="tel">
+            <label for="contact-phone">Phone</label>
+            <input id="contact-phone" name="phone" type="tel" autocomplete="tel">
           </div>
           <div class="form-field">
-            <label>Company / Organization</label>
-            <input type="text">
+            <label for="contact-company">Company / Organization</label>
+            <input id="contact-company" name="company" type="text" autocomplete="organization">
           </div>
           <div class="form-field">
-            <label>Message</label>
-            <textarea></textarea>
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message"></textarea>
           </div>
           <button type="submit" class="form-submit">Submit</button>
         </div>
       </form>
-      <p class="form-disclaimer">Contacting Blanchet LLP does not create an attorney-client relationship. Please do not include confidential or sensitive information unless and until the firm has confirmed that no conflict exists and agreed to the engagement.</p>
+      <p class="form-disclaimer" id="contact-form-disclaimer">Contacting Blanchet LLP does not create an attorney-client relationship. Please do not include confidential or sensitive information unless and until the firm has confirmed that no conflict exists and agreed to the engagement.</p>
     </div>
   </div>
 </section>
@@ -198,7 +198,7 @@
       <div class="section-label" style="color: rgba(255,255,255,0.3); border-bottom-color: rgba(255,255,255,0.12);">[ GET IN TOUCH ]</div>
       <h2>Start with the right counsel.</h2>
       <p>Blanchet LLP is a litigation firm for serious disputes, built around experienced trial lawyers, good judgment, and direct involvement.</p>
-      <button class="btn-white">Contact</button>
+      <a href="contact.html" class="btn-white" style="display:inline-block;text-decoration:none;">Contact</a>
     </div>
     <div class="site-footer-nav">
       <div class="site-footer-cols">
@@ -218,7 +218,7 @@
         </div>
         <div class="footer-col">
           <div class="col-title">CONNECT</div>
-          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">LinkedIn</a>
+          <span class="address">LinkedIn</span>
         </div>
       </div>
       <div class="site-footer-meta">

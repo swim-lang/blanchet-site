@@ -61,7 +61,7 @@
   }
   .team-featured-name {
     font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 700; color: #fff;
-    line-height: 1.0; text-transform: uppercase;
+    line-height: 1.0; text-transform: uppercase; margin: 0;
     opacity: 0; transform: translateY(16px);
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
@@ -243,7 +243,7 @@
       <img class="team-featured-img" data-index="12" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&amp;q=80" alt="John Worth">
     </div>
     <div class="team-featured-info" data-review-id="team.featured-profile">
-      <div class="team-featured-name visible" id="featured-name">Hannah<br>Amundsen</div>
+      <h1 class="team-featured-name visible" id="featured-name">Hannah<br>Amundsen</h1>
       <div class="team-featured-role visible" id="featured-role">ASSOCIATE</div>
       <div class="team-featured-rule"></div>
       <div class="team-featured-bio visible" id="featured-bio">Hannah E. Amundsen is a litigator who represents companies in commercial disputes, product liability and mass tort matters, toxic tort litigation, and cases involving life sciences and health effects.</div>
@@ -362,7 +362,7 @@
       <div class="section-label" style="color: rgba(255,255,255,0.3); border-bottom-color: rgba(255,255,255,0.12);">[ GET IN TOUCH ]</div>
       <h2>Start with the right counsel.</h2>
       <p>Blanchet LLP is a litigation firm for serious disputes, built around experienced trial lawyers, good judgment, and direct involvement.</p>
-      <button class="btn-white">Contact</button>
+      <a href="contact.html" class="btn-white" style="display:inline-block;text-decoration:none;">Contact</a>
     </div>
     <div class="site-footer-nav">
       <div class="site-footer-cols">
@@ -382,7 +382,7 @@
         </div>
         <div class="footer-col">
           <div class="col-title">CONNECT</div>
-          <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">LinkedIn</a>
+          <span class="address">LinkedIn</span>
         </div>
       </div>
       <div class="site-footer-meta">
