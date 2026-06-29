@@ -402,27 +402,37 @@
   function renderPanel() {
     if (!panel) return;
     const items = storageAdapter.load();
+    const openItems = items.filter(item => item.status !== 'resolved');
+    const resolvedItems = items.filter(item => item.status === 'resolved');
+    const renderItems = (sectionItems) => sectionItems.map(item => `
+      <article class="review-panel-item${item.status === 'resolved' ? ' is-resolved' : ''}" data-id="${item.id}">
+        <div class="review-panel-meta">${escapeHtml(item.page)} · ${escapeHtml(item.reviewId)}</div>
+        <p class="review-panel-quote">${escapeHtml(item.textQuote || 'No text captured')}</p>
+        <p>${escapeHtml(item.comment)}</p>
+        <div class="review-panel-actions">
+          <button type="button" data-jump="${item.reviewId}">Jump</button>
+          <button type="button" data-resolve="${item.id}">${item.status === 'resolved' ? 'Reopen' : 'Resolve'}</button>
+        </div>
+      </article>
+    `).join('');
     panel.innerHTML = `
       <div class="review-panel-header">
         <div>
           <span>Review Comments</span>
-          <h2>${items.length} total</h2>
+          <h2>${openItems.length} to do</h2>
           <small class="review-sync-state">${HAS_SUPABASE ? (remoteLoaded ? 'Synced' : 'Syncing') : 'Local'}</small>
         </div>
         <button type="button" data-close>Close</button>
       </div>
       <div class="review-panel-list">
-        ${items.length ? items.map(item => `
-          <article class="review-panel-item" data-id="${item.id}">
-            <div class="review-panel-meta">${escapeHtml(item.page)} · ${escapeHtml(item.reviewId)}</div>
-            <p class="review-panel-quote">${escapeHtml(item.textQuote || 'No text captured')}</p>
-            <p>${escapeHtml(item.comment)}</p>
-            <div class="review-panel-actions">
-              <button type="button" data-jump="${item.reviewId}">Jump</button>
-              <button type="button" data-resolve="${item.id}">${item.status === 'resolved' ? 'Reopen' : 'Resolve'}</button>
-            </div>
-          </article>
-        `).join('') : '<p class="review-panel-empty">No comments yet.</p>'}
+        <section class="review-panel-section">
+          <div class="review-panel-section-title">To Do</div>
+          ${openItems.length ? renderItems(openItems) : '<p class="review-panel-empty">No open comments.</p>'}
+        </section>
+        <details class="review-panel-section review-panel-resolved" ${openItems.length ? '' : 'open'}>
+          <summary>Completed <span>${resolvedItems.length}</span></summary>
+          ${resolvedItems.length ? renderItems(resolvedItems) : '<p class="review-panel-empty">Nothing resolved yet.</p>'}
+        </details>
       </div>
     `;
     panel.addEventListener('click', handlePanelClick);

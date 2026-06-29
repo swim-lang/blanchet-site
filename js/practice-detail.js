@@ -88,8 +88,12 @@
         'Agency-facing litigation strategy'
       ],
       proof: [
-        'Continuous counsel across chemical exposure, CERCLA, dioxane, insurance recovery, commercial litigation, and mass-tort defense.',
+        'Representing Dow in major CERCLA and 1,4-dioxane matters, including federal Superfund cost-recovery litigation, coordinated New York public water-provider actions, and New Jersey\'s statewide natural-resource damages action.',
+        'Defended a chemical company in a class action alleging that contamination from a remediated CERCLA site caused personal injuries to nearby residents, obtaining dismissal after removal to federal court and securing affirmance on appeal.',
+        'Represented potentially responsible parties cooperating in the cleanup of a CERCLA site in a New York state-court action by a neighboring landowner alleging that remedial operations damaged adjacent property, obtaining dismissal and affirmance on appeal.',
+        'Served as lead trial counsel in drinking-water contamination litigation that ended in a complete defense verdict after a multiday jury trial.',
         'Coordinated defense in 1,4-dioxane public water supplier litigation.',
+        'Representing a Fortune 500 chemical company in matters involving claims by state and regulatory agencies concerning alleged groundwater contamination.',
         'Counsel to Union Carbide in claims alleging mass bodily injury over more than 50 years, with summary judgment or dismissal secured for more than 200 plaintiffs and affirmed by the Tenth Circuit.'
       ]
     },
