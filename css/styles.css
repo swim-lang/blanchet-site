@@ -532,8 +532,19 @@ body.mobile-menu-open {
   display: inline-block !important;
   width: fit-content !important;
   max-width: 100%;
-  padding-bottom: 12px !important;
+  line-height: 1.2;
+  padding-bottom: 8px !important;
   border-bottom: 1px solid currentColor !important;
+}
+
+.section-label {
+  margin-bottom: 12px;
+}
+
+.practice-section-num,
+.wc-section-num,
+.firm-letter-label {
+  margin-bottom: 20px;
 }
 
 /* ============================================
