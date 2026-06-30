@@ -45,6 +45,102 @@ if (scrollNav) {
   }, { passive: true });
 }
 
+// Mobile menu
+const shouldMountMobileMenu = !document.querySelector('.signature-tool-nav');
+if (shouldMountMobileMenu) {
+  const currentPath = window.location.pathname
+    .replace(/\/index\.html$/, '/')
+    .replace(/\.html$/, '')
+    .replace(/\/$/, '') || '/';
+  const practiceLinks = [
+    ['/litigation', 'Litigation'],
+    ['/commercial-litigation', 'Commercial Litigation'],
+    ['/environmental-disputes', 'Environmental Disputes'],
+    ['/product-liability', 'Product Liability &amp; Mass Tort'],
+    ['/white-collar', 'Government Investigations &amp; Enforcement'],
+    ['/ip-trade-secrets', 'Intellectual Property &amp; Trade Secrets']
+  ];
+  const isPracticePage = ['/practices', ...practiceLinks.map(([href]) => href)].includes(currentPath);
+  const isActive = (href) => currentPath === href || (href === '/practices' && isPracticePage);
+  const navLink = (href, label) => (
+    `<a class="mobile-menu-link${isActive(href) ? ' active' : ''}" href="${href}"${isActive(href) ? ' aria-current="page"' : ''}>${label}</a>`
+  );
+  const practiceItems = practiceLinks.map(([href, label]) => (
+    `<a class="${currentPath === href ? 'active' : ''}" href="${href}">${label}</a>`
+  )).join('');
+
+  const menuButton = document.createElement('button');
+  menuButton.className = 'mobile-menu-toggle';
+  menuButton.type = 'button';
+  menuButton.setAttribute('aria-label', 'Open menu');
+  menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.setAttribute('aria-controls', 'mobile-menu-panel');
+  menuButton.innerHTML = '<span></span><span></span><span></span>';
+
+  const menuPanel = document.createElement('aside');
+  menuPanel.className = 'mobile-menu-panel';
+  menuPanel.id = 'mobile-menu-panel';
+  menuPanel.setAttribute('aria-hidden', 'true');
+  menuPanel.innerHTML = `
+    <div class="mobile-menu-inner">
+      <a class="mobile-menu-brand" href="/" aria-label="Blanchet LLP home">
+        <img src="assets/logos/Wordmark-White.png" alt="Blanchet LLP">
+      </a>
+      <nav class="mobile-menu-primary" aria-label="Mobile navigation">
+        ${navLink('/practices', 'Practices')}
+        <div class="mobile-menu-practices">
+          <span class="mobile-menu-kicker">Core areas</span>
+          <div class="mobile-menu-practice-grid">${practiceItems}</div>
+        </div>
+        ${navLink('/firm', 'Firm')}
+        ${navLink('/team', 'Team')}
+        ${navLink('/contact', 'Contact')}
+      </nav>
+      <div class="mobile-menu-footer">
+        <div class="mobile-menu-contact">
+          <span>Contact</span>
+          <a href="tel:+17165550100">(716) 555-0100</a>
+          <a href="mailto:contact@blanchetllp.com">contact@blanchetllp.com</a>
+        </div>
+        <div class="mobile-menu-cities">Buffalo / Chicago / New York City</div>
+      </div>
+    </div>
+  `;
+
+  document.body.prepend(menuPanel);
+  document.body.prepend(menuButton);
+
+  const setMobileMenuOpen = (isOpen) => {
+    document.documentElement.classList.toggle('mobile-menu-open', isOpen);
+    document.body.classList.toggle('mobile-menu-open', isOpen);
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    menuPanel.setAttribute('aria-hidden', String(!isOpen));
+  };
+
+  menuButton.addEventListener('click', () => {
+    setMobileMenuOpen(!document.body.classList.contains('mobile-menu-open'));
+  });
+
+  menuPanel.addEventListener('click', (event) => {
+    if (event.target.closest('a[href]')) {
+      setMobileMenuOpen(false);
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      setMobileMenuOpen(false);
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+      setMobileMenuOpen(false);
+    }
+  }, { passive: true });
+}
+
 // Square window expand on scroll
 const windowSection = document.querySelector('.window-section');
 const windowSquare = document.querySelector('.window-square');
