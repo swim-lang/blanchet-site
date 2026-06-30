@@ -505,6 +505,36 @@ body.mobile-menu-open {
    Section Label
    ============================================ */
 .section-label { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #0c222c; padding-bottom: 12px; border-bottom: 1px solid #0c222c; width: fit-content; }
+.section-label,
+.partners-header .label,
+.practice-left .label,
+.practices-label,
+.practices-featured-label,
+.practices-secondary-header span,
+.practice-detail-label,
+.practice-section-num,
+.wc-hero-label,
+.wc-section-num,
+.wc-mini-card .card-eyebrow,
+.firm-letter-label,
+.firm-defines-right .section-label-dark,
+.firm-timeline-header-left span,
+.firm-timeline-entry .entry-stage,
+.firm-pov-left > span,
+.firm-pov-card .card-label,
+.contact-label,
+.form-section-label,
+.bio-label,
+.insights-hero-label,
+.insights-featured-label,
+.article-cta-label,
+.article-related-label {
+  display: inline-block !important;
+  width: fit-content !important;
+  max-width: 100%;
+  padding-bottom: 12px !important;
+  border-bottom: 1px solid currentColor !important;
+}
 
 /* ============================================
    About
@@ -586,7 +616,6 @@ body.mobile-menu-open {
 .practice-areas { position: relative; min-height: 100vh; display: flex; overflow: hidden; }
 .practice-left { width: 420px; flex-shrink: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 60px; background: #0c222c; z-index: 2; }
 .practice-left .label { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4); }
-.practice-left-rule { width: 100%; max-width: 300px; height: 1px; background: rgba(255,255,255,0.2); margin-top: 12px; }
 .practice-left h2 { font-family: 'Inter', sans-serif; font-size: 48px; font-weight: 700; color: #fff; line-height: 1.1; }
 .practice-left p { font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.7; max-width: 300px; }
 .practice-left .scroll-hint { display: flex; align-items: center; gap: 16px; }
@@ -634,7 +663,7 @@ body.mobile-menu-open {
 .partners-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 48px; }
 .partners-header h2 { font-family: 'Inter', sans-serif; font-size: 48px; font-weight: 700; color: #0c222c; line-height: 1.1; margin-top: 12px; }
 .partners-header .label { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #4b5563; }
-.partners-header a { font-size: 13px; font-weight: 500; color: #0c222c; text-decoration: underline; text-underline-offset: 4px; padding-top: 40px; display: flex; align-items: center; gap: 8px; }
+.partners-header a { font-size: 13px; font-weight: 500; color: #0c222c; text-decoration: none; padding-top: 40px; padding-bottom: 4px; border-bottom: 1px solid currentColor; width: fit-content; display: flex; align-items: center; gap: 8px; }
 .partners-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
 .partner-card { min-width: 0; display: flex; flex-direction: column; gap: 16px; cursor: pointer; text-decoration: none; color: inherit; }
 .partner-card .portrait { height: 480px; overflow: hidden; position: relative; }
@@ -982,10 +1011,6 @@ body.mobile-menu-open {
     padding: 48px 24px !important;
   }
 
-  .practice-left-rule {
-    max-width: none !important;
-  }
-
   .practice-left h2 {
     font-size: 32px !important;
   }
@@ -1200,16 +1225,27 @@ body.mobile-menu-open {
     min-height: 420px !important;
   }
 
+  .team-featured-label-logo-link {
+    left: 24px !important;
+  }
+
+  .team-featured-info {
+    left: 24px !important;
+    right: 24px !important;
+    bottom: 40px !important;
+  }
+
+  .team-featured-bio {
+    max-width: 100% !important;
+  }
+
   .team-directory {
     width: 100% !important;
     flex: none !important;
   }
 
   .team-nav {
-    padding: 24px !important;
-    justify-content: flex-start !important;
-    flex-wrap: wrap !important;
-    gap: 16px !important;
+    display: none !important;
   }
 
   .team-list {
