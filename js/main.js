@@ -216,79 +216,65 @@ window.addEventListener('scroll', () => {
 checkCardVisibility();
 
 // ============================================
-// Horizontal scroll-lock for Practice Areas
+// Arrow browsing for Practice Areas
 // ============================================
 const practiceWrapper = document.querySelector('.practice-areas-wrapper');
 const practiceTrack = document.querySelector('.practice-track');
 const practiceArrows = document.querySelectorAll('[data-practice-arrow]');
 let currentPracticeIndex = 0;
+let practiceMaxScroll = 0;
+let practiceStepSize = 0;
+let practiceMaxIndex = 0;
 
 function setupPracticeScroll() {
   if (!practiceWrapper || !practiceTrack) return;
+  practiceWrapper.style.height = 'auto';
   if (window.innerWidth < 900) {
-    practiceWrapper.style.height = 'auto';
     practiceTrack.style.transform = 'none';
-    return;
+    practiceArrows.forEach(button => {
+      button.disabled = true;
+    });
+    return 0;
   }
   const leftPanel = document.querySelector('.practice-left');
   const leftWidth = leftPanel ? leftPanel.offsetWidth : 420;
   const totalTrackWidth = practiceTrack.scrollWidth;
   const viewportWidth = window.innerWidth - leftWidth;
   const maxScroll = Math.max(totalTrackWidth - viewportWidth, 0);
-  const neededHeight = maxScroll + window.innerHeight + window.innerHeight * 0.8;
-  practiceWrapper.style.height = neededHeight + 'px';
+  const firstCard = practiceCards[0];
+  const trackStyles = getComputedStyle(practiceTrack);
+  const trackGap = parseFloat(trackStyles.columnGap || trackStyles.gap) || 0;
+  practiceStepSize = firstCard ? firstCard.offsetWidth + trackGap : maxScroll;
+  practiceMaxIndex = practiceStepSize ? Math.ceil(maxScroll / practiceStepSize) : 0;
   return maxScroll;
 }
-
-let practiceMaxScroll = setupPracticeScroll();
-let practiceScrollFrame = null;
 
 function refreshPracticeScroll() {
   practiceMaxScroll = setupPracticeScroll() || 0;
   return practiceMaxScroll;
 }
 
-function practiceScrollProgress() {
-  if (!practiceWrapper || !practiceTrack || window.innerWidth < 900) return 0;
-  const rect = practiceWrapper.getBoundingClientRect();
-  const wrapperHeight = practiceWrapper.offsetHeight - window.innerHeight;
-  if (wrapperHeight <= 0) return 0;
-  const rawProgress = Math.min(Math.max(-rect.top / wrapperHeight, 0), 0.75);
-  return Math.min(rawProgress / 0.75, 1);
-}
-
-function applyPracticeProgress(progress) {
-  if (!practiceTrack || !practiceMaxScroll) return;
-  const clampedProgress = Math.min(Math.max(progress, 0), 1);
-  practiceTrack.style.transform = `translateX(${-clampedProgress * practiceMaxScroll}px)`;
-}
-
 function applyPracticeIndex(index) {
-  if (!practiceCards.length) return;
-  const maxIndex = practiceCards.length - 1;
-  currentPracticeIndex = Math.min(Math.max(index, 0), maxIndex);
-  const progress = maxIndex ? currentPracticeIndex / maxIndex : 0;
-  applyPracticeProgress(progress);
+  if (!practiceCards.length || window.innerWidth < 900 || practiceMaxScroll <= 0) {
+    if (practiceTrack) practiceTrack.style.transform = 'none';
+    practiceArrows.forEach(button => {
+      button.disabled = true;
+    });
+    return;
+  }
+  currentPracticeIndex = Math.min(Math.max(index, 0), practiceMaxIndex);
+  const offset = Math.min(currentPracticeIndex * practiceStepSize, practiceMaxScroll);
+  practiceTrack.style.transform = `translateX(${-offset}px)`;
+  practiceArrows.forEach(button => {
+    if (button.dataset.practiceArrow === 'prev') button.disabled = currentPracticeIndex === 0;
+    if (button.dataset.practiceArrow === 'next') button.disabled = currentPracticeIndex === practiceMaxIndex;
+  });
 }
 
 function scrollPracticeBy(direction) {
   if (!practiceWrapper || !practiceTrack || window.innerWidth < 900) return;
   refreshPracticeScroll();
-  const wrapperHeight = practiceWrapper.offsetHeight - window.innerHeight;
-  if (wrapperHeight <= 0 || !practiceMaxScroll) return;
-  const maxIndex = Math.max(practiceCards.length - 1, 1);
-  const progressIndex = Math.round(practiceScrollProgress() * maxIndex);
-  const activeIndex = direction > 0
-    ? Math.max(currentPracticeIndex, progressIndex)
-    : Math.min(currentPracticeIndex, progressIndex);
-  const nextIndex = Math.min(Math.max(activeIndex + direction, 0), maxIndex);
-  currentPracticeIndex = nextIndex;
-  const nextProgress = currentPracticeIndex / maxIndex;
-  const wrapperTop = practiceWrapper.getBoundingClientRect().top + window.scrollY;
-  window.scrollTo({
-    top: wrapperTop + wrapperHeight * nextProgress * 0.75,
-    behavior: 'smooth'
-  });
+  applyPracticeIndex(Math.min(Math.max(currentPracticeIndex + direction, 0), practiceMaxIndex));
 }
 
 practiceArrows.forEach((button) => {
@@ -302,23 +288,6 @@ window.addEventListener('load', () => {
   refreshPracticeScroll();
   applyPracticeIndex(currentPracticeIndex);
 }, { once: true });
-
-function syncPracticeWithScroll() {
-  practiceScrollFrame = null;
-  if (!practiceWrapper || !practiceTrack || window.innerWidth < 900) return;
-  const rect = practiceWrapper.getBoundingClientRect();
-  const wrapperHeight = practiceWrapper.offsetHeight - window.innerHeight;
-  if (wrapperHeight <= 0) return;
-  const rawProgress = Math.min(Math.max(-rect.top / wrapperHeight, 0), 1);
-  const scrollProgress = Math.min(rawProgress / 0.75, 1);
-  currentPracticeIndex = Math.round(scrollProgress * Math.max(practiceCards.length - 1, 0));
-  applyPracticeProgress(scrollProgress);
-}
-
-window.addEventListener('scroll', () => {
-  if (practiceScrollFrame) return;
-  practiceScrollFrame = window.requestAnimationFrame(syncPracticeWithScroll);
-}, { passive: true });
 
 window.addEventListener('resize', () => {
   refreshPracticeScroll();
