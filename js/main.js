@@ -98,7 +98,6 @@ if (shouldMountMobileMenu) {
       <div class="mobile-menu-footer">
         <div class="mobile-menu-contact">
           <span>Contact</span>
-          <a href="tel:+17165550100">(716) 555-0100</a>
           <a href="mailto:contact@blanchetllp.com">contact@blanchetllp.com</a>
         </div>
         <div class="mobile-menu-cities">Buffalo / Chicago / New York City</div>
