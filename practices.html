@@ -53,23 +53,14 @@
   .practices-index a.active { color: #fff; }
 
   /* Right panel */
-  .practices-right { flex: 1; display: flex; flex-direction: column; background: #fff; }
+  .practices-right { flex: 1; display: flex; flex-direction: column; background: #fff; padding-top: 112px; }
 
   /* Right nav */
   .practices-right-nav { position: absolute; top: 0; right: 0; z-index: 10; display: flex; justify-content: flex-end; align-items: center; padding: 40px 60px; gap: 24px; }
-  .practices-right-nav a { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
-  .practices-right-nav a:hover, .practices-right-nav a.active { color: #fff; }
-  .practices-right-nav .nav-cta { padding: 8px 16px; border: 1px solid rgba(255,255,255,0.3); color: #fff; }
-  .practices-right-nav .nav-cta:hover { background: rgba(255,255,255,0.08); }
-
-  /* Featured hero */
-  .practices-featured { position: relative; min-height: 560px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; }
-  .practices-featured-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .practices-featured-overlay { position: absolute; inset: 0; background: rgba(12,34,44,0.78); }
-  .practices-featured-content { position: relative; padding: 0 60px 56px; display: flex; flex-direction: column; gap: 0; }
-  .practices-featured-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: 16px; }
-  .practices-featured h2 { font-family: 'Inter', sans-serif; font-size: 56px; font-weight: 700; color: #fff; line-height: 1.0; text-transform: uppercase; margin-bottom: 24px; }
-  .practices-featured p { font-family: 'Inter', sans-serif; font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.8; max-width: 480px; }
+  .practices-right-nav a { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(12,34,44,0.58); text-decoration: none; transition: color 0.2s; }
+  .practices-right-nav a:hover, .practices-right-nav a.active { color: #0c222c; }
+  .practices-right-nav .nav-cta { padding: 8px 16px; border: 1px solid rgba(12,34,44,0.24); color: #0c222c; }
+  .practices-right-nav .nav-cta:hover { background: rgba(12,34,44,0.06); }
 
   /* Grid cells — white by default, brand gray (#e5e7eb) on hover */
   .practices-grid-row { display: flex; border-bottom: 1px solid #e5e5e5; }
@@ -83,9 +74,6 @@
   .practices-cell:hover p { color: #4b5563; }
   .practices-cell .cell-link { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: #0c222c; padding-top: 8px; }
 
-  /* Featured "Learn more" link */
-  .practices-featured .cell-link { color: rgba(255,255,255,0.7); padding-top: 16px; }
-  .practices-featured:hover .cell-link { color: #fff; }
   .practices-secondary { padding: 64px 60px; background: #eef0f1; }
   .practices-secondary-header { display: flex; justify-content: space-between; gap: 60px; margin-bottom: 32px; }
   .practices-secondary-header span { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(12,34,44,0.45); }
@@ -101,32 +89,17 @@
   .experience-snapshot li { padding: 18px 0; border-bottom: 1px solid rgba(12,34,44,0.08); color: #4b5563; line-height: 1.55; }
 
   /* Arrow cursors on hover */
-  .practices-cell:hover, .practices-featured:hover { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%230c222c' stroke-width='1.5'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") 12 12, pointer; }
-  .practices-featured:hover { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='white' stroke-width='1.5'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") 12 12, pointer; }
-
-  /* Featured hover */
-  .practices-featured { cursor: pointer; }
-  .practices-featured:hover .practices-featured-overlay { background: rgba(12,34,44,0.7); }
-  .practices-featured-overlay { transition: background 0.3s ease; }
+  .practices-cell:hover { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%230c222c' stroke-width='1.5'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") 12 12, pointer; }
 
   /* Grid cell reveal — starts hidden, revealed by JS */
-  .practices-cell, .practices-featured {
+  .practices-cell {
     opacity: 1;
     transform: translateY(0);
     transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), background 0.4s ease;
   }
-  .practices-cell.revealed, .practices-featured.revealed {
+  .practices-cell.revealed {
     opacity: 1;
     transform: translateY(0);
-  }
-
-  /* Featured image slow zoom on load */
-  .practices-featured-bg {
-    transition: transform 12s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transform: scale(1.08);
-  }
-  .practices-featured.revealed .practices-featured-bg {
-    transform: scale(1);
   }
 
   /* Left panel index links stagger in */
@@ -151,10 +124,8 @@
     .practices-left { width: 100%; position: relative; height: auto; padding: 40px 24px; }
     .practices-heading { font-size: 42px; }
     .practices-index { display: none; }
+    .practices-right { padding-top: 0; }
     .practices-right-nav { padding: 24px; }
-    .practices-featured { min-height: 400px; }
-    .practices-featured h2 { font-size: 36px; }
-    .practices-featured-content { padding: 0 24px 40px; }
     .practices-grid-row { flex-direction: column; }
     .practices-cell.bordered { border-right: none; border-bottom: 1px solid #e5e5e5; }
     .practices-secondary, .experience-snapshot { padding: 48px 24px; }
@@ -166,8 +137,6 @@
   @media (min-width: 768px) and (max-width: 1279px) {
     .practices-left { width: 360px; padding: 0 36px 48px; }
     .practices-heading { font-size: 48px; }
-    .practices-featured h2 { font-size: 44px; }
-    .practices-featured-content { padding: 0 48px 48px; }
     .practices-cell { padding: 40px 32px; }
   }
 </style>
@@ -182,8 +151,6 @@
     <div class="nav-dropdown">
       <a href="/practices" class="active">PRACTICE AREAS</a>
       <div class="nav-dropdown-menu">
-
-        <a href="/litigation">Litigation</a>
         <a href="/commercial-litigation">Commercial Litigation</a>
         <a href="/environmental-disputes">Environmental Disputes</a>
         <a href="/product-liability">Product Liability &amp; Mass Tort</a>
@@ -206,11 +173,10 @@
     </div>
     <div class="practices-left-content">
       <span class="practices-label">[ PRACTICE AREAS ]</span>
-      <h1 class="practices-heading" data-review-id="practices.hero.headline">Litigation, organized around serious disputes.</h1>
+      <h1 class="practices-heading" data-review-id="practices.hero.headline">Practice areas organized around serious disputes.</h1>
       <div class="practices-divider"></div>
       <div class="practices-index">
-        <a href="/litigation" class="active">Litigation</a>
-        <a href="/commercial-litigation">Commercial Litigation</a>
+        <a href="/commercial-litigation" class="active">Commercial Litigation</a>
         <a href="/environmental-disputes">Environmental Disputes</a>
         <a href="/product-liability">Product Liability &amp; Mass Tort</a>
         <a href="/white-collar">Government Investigations &amp; Enforcement</a>
@@ -227,8 +193,6 @@
       <div class="nav-dropdown">
         <a href="/practices" class="active">PRACTICE AREAS</a>
         <div class="nav-dropdown-menu">
-
-          <a href="/litigation">Litigation</a>
         <a href="/commercial-litigation">Commercial Litigation</a>
         <a href="/environmental-disputes">Environmental Disputes</a>
         <a href="/product-liability">Product Liability &amp; Mass Tort</a>
@@ -240,20 +204,6 @@
       <a href="/team">TEAM</a>
       <a href="/contact" class="nav-cta">CONTACT</a>
     </div>
-
-    <!-- Featured: Litigation -->
-    <a href="/litigation" id="litigation" class="practices-featured" data-review-id="practices.litigation-featured" style="text-decoration:none;color:inherit;">
-      <video class="practices-featured-bg" autoplay muted loop playsinline preload="metadata" aria-label="Aerial cityscape of Chicago">
-        <source src="assets/video/pexels-chicago-lake-michigan.mp4?v=20260630-hq" type="video/mp4">
-      </video>
-      <div class="practices-featured-overlay"></div>
-      <div class="practices-featured-content">
-        <span class="practices-featured-label">Featured Practice</span>
-        <h2>Litigation</h2>
-        <p>Litigation is the center of gravity at Blanchet LLP. The firm handles serious disputes in state and federal courts, including trial work, motion practice, discovery-heavy matters, and cases where commercial, environmental, product, investigative, and technical issues overlap.</p>
-        <span class="cell-link">Learn more →</span>
-      </div>
-    </a>
 
     <!-- Core practice grid -->
     <div class="practices-grid-row">
@@ -374,21 +324,20 @@
   if (c) c.classList.add('reveal');
 })();
 </script>
-<script src="js/main.js?v=20260630-practice-arrows"></script>
+<script src="js/main.js?v=20260630-hide-litigation"></script>
 <script>
 // Practice Areas — hover/click sync between grid cells and left index
 (function() {
   const indexLinks = document.querySelectorAll('.practices-index a');
-  const sections = document.querySelectorAll('.practices-featured, .practices-cell, .practices-wide-row');
+  const sections = document.querySelectorAll('.practices-cell, .practices-wide-row');
 
   // Map each hoverable section to its corresponding index link
   const sectionMap = {
-    'litigation': 0,
-    'commercial-litigation': 1,
-    'environmental': 2,
-    'product-liability': 3,
-    'government-investigations-white-collar': 4,
-    'ip-trade-secrets': 5
+    'commercial-litigation': 0,
+    'environmental': 1,
+    'product-liability': 2,
+    'government-investigations-white-collar': 3,
+    'ip-trade-secrets': 4
   };
 
   function setActiveIndex(idx) {
@@ -427,9 +376,9 @@
   }
 })();
 
-// Scroll-triggered reveal for grid cells and featured section
+// Scroll-triggered reveal for grid cells
 (function() {
-  const revealEls = document.querySelectorAll('.practices-cell, .practices-featured');
+  const revealEls = document.querySelectorAll('.practices-cell');
   if (!revealEls.length) return;
 
   let delay = 0;

@@ -53,7 +53,6 @@ if (shouldMountMobileMenu) {
     .replace(/\.html$/, '')
     .replace(/\/$/, '') || '/';
   const practiceLinks = [
-    ['/litigation', 'Litigation'],
     ['/commercial-litigation', 'Commercial Litigation'],
     ['/environmental-disputes', 'Environmental Disputes'],
     ['/product-liability', 'Product Liability &amp; Mass Tort'],
