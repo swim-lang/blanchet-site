@@ -2,6 +2,7 @@
 (function() {
   const MODE_KEY = 'blanchet-review-mode';
   const COMMENTS_KEY = 'blanchet-review-comments';
+  const PENDING_JUMP_KEY = 'blanchet-review-pending-jump';
   const PAGE = location.pathname.split('/').pop() || 'index.html';
   const CONFIG = window.BLANCHET_REVIEW_CONFIG || {};
   const PROJECT = CONFIG.project || 'blanchet-site';
@@ -76,6 +77,35 @@
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#039;');
+  }
+
+  function scrollToReviewTarget(reviewId, attempt = 0) {
+    if (!reviewId) return false;
+    const target = document.querySelector(`[data-review-id="${CSS.escape(reviewId)}"]`);
+    if (!target) {
+      if (attempt < 10) {
+        setTimeout(() => scrollToReviewTarget(reviewId, attempt + 1), 120);
+      } else {
+        showNotice('Could not find that section on this page.');
+      }
+      return false;
+    }
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    target.classList.add('review-jump');
+    setTimeout(() => target.classList.remove('review-jump'), 1400);
+    return true;
+  }
+
+  function handlePendingJump() {
+    let pending;
+    try {
+      pending = JSON.parse(sessionStorage.getItem(PENDING_JUMP_KEY) || 'null');
+    } catch {
+      pending = null;
+    }
+    if (!pending || pending.page !== PAGE) return;
+    sessionStorage.removeItem(PENDING_JUMP_KEY);
+    setTimeout(() => scrollToReviewTarget(pending.reviewId), 150);
   }
 
   function localComments() {
@@ -410,7 +440,7 @@
         <p class="review-panel-quote">${escapeHtml(item.textQuote || 'No text captured')}</p>
         <p>${escapeHtml(item.comment)}</p>
         <div class="review-panel-actions">
-          <button type="button" data-jump="${item.reviewId}">Jump</button>
+          <button type="button" data-jump="${escapeHtml(item.reviewId)}" data-jump-page="${escapeHtml(item.page)}">Jump</button>
           <button type="button" data-resolve="${item.id}">${item.status === 'resolved' ? 'Reopen' : 'Resolve'}</button>
         </div>
       </article>
@@ -446,12 +476,14 @@
     }
     const jump = event.target.closest('[data-jump]');
     if (jump) {
-      const target = document.querySelector(`[data-review-id="${CSS.escape(jump.dataset.jump)}"]`);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        target.classList.add('review-jump');
-        setTimeout(() => target.classList.remove('review-jump'), 1200);
+      const reviewId = jump.dataset.jump;
+      const page = jump.dataset.jumpPage || PAGE;
+      if (page && page !== PAGE) {
+        sessionStorage.setItem(PENDING_JUMP_KEY, JSON.stringify({ page, reviewId }));
+        window.location.href = page;
+        return;
       }
+      scrollToReviewTarget(reviewId);
     }
     const resolve = event.target.closest('[data-resolve]');
     if (resolve) {
@@ -546,6 +578,7 @@
   function initReviewTools() {
     ensureAnchors();
     attachEvents();
+    handlePendingJump();
     loadRemoteComments();
     markCommentedTargets();
     if (mode === 'review' || mode === 'browse' || mode === 'comment') {

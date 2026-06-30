@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /docs/
 Disallow: /bio-craig-nolan.html
+Disallow: /email-signatures.html
 Disallow: /insights.html
 Disallow: /insights-article.html
 
