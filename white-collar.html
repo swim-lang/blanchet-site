@@ -156,17 +156,15 @@
      Focus Areas — Mini cards
      ============================================ */
   .wc-cards-grid { display: flex; flex-wrap: wrap; border: 1px solid #e5e7eb; }
-  .wc-mini-card { width: 50%; padding: 36px 32px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid #e5e7eb; transition: background 0.4s; }
+  .wc-mini-card { width: 50%; padding: 36px 32px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid #e5e7eb; }
   .wc-mini-card:nth-child(odd) { border-right: 1px solid #e5e7eb; }
   .wc-mini-card:nth-child(n+3) { border-bottom: none; }
-  .wc-mini-card:hover { background: #eef0f1; }
   .wc-mini-card .card-eyebrow { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(12,34,44,0.45); }
   .wc-mini-card h3 { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; line-height: 1.15; text-transform: uppercase; color: #0c222c; }
   .wc-mini-card p { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.7; color: #4b5563; }
   .wc-credentials { background: #eef0f1; }
-  .wc-credentials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: rgba(12,34,44,0.08); border: 1px solid rgba(12,34,44,0.08); margin-top: 28px; }
-  .wc-credential-card { background: #fff; padding: 34px; display: block; text-decoration: none; transition: background 0.2s; }
-  .wc-credential-card:hover { background: #f8fafb; }
+  .wc-credentials-grid { display: block; max-width: 760px; border-top: 1px solid rgba(12,34,44,0.12); border-bottom: 1px solid rgba(12,34,44,0.12); margin-top: 28px; }
+  .wc-credential-card { background: transparent; padding: 32px 0; display: block; text-decoration: none; }
   .wc-credential-card span { display: block; font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; color: rgba(12,34,44,0.45); margin-bottom: 18px; }
   .wc-credential-card h3 { font-size: 24px; line-height: 1.2; margin-bottom: 14px; }
   .wc-credential-card p { font-size: 14px; color: #4b5563; line-height: 1.7; }
@@ -182,9 +180,9 @@
      Who We Represent
      ============================================ */
   .wc-who { background: #eef0f1; }
-  .wc-tags { display: flex; gap: 12px; flex-wrap: wrap; padding-bottom: 32px; }
-  .wc-tags span { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: #0c222c; padding: 10px 20px; border: 1px solid rgba(12,34,44,0.12); background: #fff; transition: background 0.2s, border-color 0.2s; }
-  .wc-tags span:hover { background: #0c222c; color: #fff; border-color: #0c222c; }
+  .wc-tags { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 56px; padding-bottom: 32px; max-width: 920px; }
+  .wc-tags span { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #0c222c; line-height: 1.45; padding: 14px 0; border-bottom: 1px solid rgba(12,34,44,0.1); display: flex; align-items: baseline; gap: 12px; background: transparent; }
+  .wc-tags span::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: rgba(12,34,44,0.28); flex: 0 0 auto; transform: translateY(-1px); }
   .wc-who-note { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.75; color: #4b5563; max-width: 560px; }
 
   /* ============================================
@@ -224,6 +222,7 @@
     .wc-mini-card { width: 100%; border-right: none !important; border-bottom: 1px solid #e5e7eb !important; }
     .wc-mini-card:last-child { border-bottom: none !important; }
     .wc-credentials-grid { grid-template-columns: 1fr; }
+    .wc-tags { grid-template-columns: 1fr; column-gap: 0; }
     .wc-matters-grid { flex-direction: column; gap: 24px; }
     .wc-section-heading { font-size: 24px; }
   }
