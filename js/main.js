@@ -145,6 +145,7 @@ function setupPracticeScroll() {
 }
 
 let practiceMaxScroll = setupPracticeScroll();
+let practiceScrollFrame = null;
 
 function refreshPracticeScroll() {
   practiceMaxScroll = setupPracticeScroll() || 0;
@@ -184,8 +185,8 @@ function scrollPracticeBy(direction) {
   const activeIndex = direction > 0
     ? Math.max(currentPracticeIndex, progressIndex)
     : Math.min(currentPracticeIndex, progressIndex);
-  const nextIndex = activeIndex + direction;
-  applyPracticeIndex(nextIndex);
+  const nextIndex = Math.min(Math.max(activeIndex + direction, 0), maxIndex);
+  currentPracticeIndex = nextIndex;
   const nextProgress = currentPracticeIndex / maxIndex;
   const wrapperTop = practiceWrapper.getBoundingClientRect().top + window.scrollY;
   window.scrollTo({
@@ -206,7 +207,8 @@ window.addEventListener('load', () => {
   applyPracticeIndex(currentPracticeIndex);
 }, { once: true });
 
-window.addEventListener('scroll', () => {
+function syncPracticeWithScroll() {
+  practiceScrollFrame = null;
   if (!practiceWrapper || !practiceTrack || window.innerWidth < 900) return;
   const rect = practiceWrapper.getBoundingClientRect();
   const wrapperHeight = practiceWrapper.offsetHeight - window.innerHeight;
@@ -215,6 +217,11 @@ window.addEventListener('scroll', () => {
   const scrollProgress = Math.min(rawProgress / 0.75, 1);
   currentPracticeIndex = Math.round(scrollProgress * Math.max(practiceCards.length - 1, 0));
   applyPracticeProgress(scrollProgress);
+}
+
+window.addEventListener('scroll', () => {
+  if (practiceScrollFrame) return;
+  practiceScrollFrame = window.requestAnimationFrame(syncPracticeWithScroll);
 }, { passive: true });
 
 window.addEventListener('resize', () => {
