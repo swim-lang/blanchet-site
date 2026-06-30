@@ -67,7 +67,7 @@
       label: 'Technical Practice',
       intro: 'Blanchet LLP handles environmental matters involving CERCLA, Superfund, contamination, natural resource damages, dioxane, PFAS and emerging contaminants, toxic tort, regulatory disputes, experts, and long factual records.',
       strip: 'Environmental disputes often turn on years of documents, technical records, agency interaction, experts, and operational context. Blanchet LLP is built for that kind of record.',
-      image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400&q=80',
+      image: 'https://plus.unsplash.com/premium_photo-1712685912274-2483dade540f?w=1800&auto=format&fit=crop&q=80',
       overview: 'The firm represents companies and institutional clients in environmental and toxic tort matters where science, regulation, litigation strategy, and business exposure overlap.',
       focusHeading: 'Environmental cases shaped by technical records.',
       focusIntro: 'The work includes contamination disputes, agency-facing issues, toxic tort matters, and related commercial and insurance questions.',
