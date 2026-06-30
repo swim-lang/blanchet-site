@@ -28,13 +28,14 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>html{background:#0c222c}</style>
 <script>document.documentElement.classList.add('auth-lock');</script>
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/styles.css?v=20260630-ui">
 <script src="js/password-protect.js" defer></script>
 <script src="js/review-config.js" defer></script>
-<script src="js/review-tools.js" defer></script>
+<script src="js/review-tools.js?v=20260630-ui" defer></script>
 <style>
   html { scroll-behavior: smooth; }
-  .bio-nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 40px 60px; }
+  .bio-nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 40px 60px; pointer-events: none; }
+  .bio-nav a, .bio-nav .nav-dropdown { pointer-events: auto; }
   .bio-nav .nav-logo img { height: 15px; width: auto; }
   .bio-nav-links { display: flex; gap: 24px; align-items: center; }
   .bio-nav-links a { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: #0c222c; text-decoration: none; transition: opacity 0.2s; }
@@ -45,7 +46,8 @@
   .bio-hero { display: flex; position: relative; }
   .bio-photo { flex: 1; position: sticky; top: 0; height: 100vh; overflow: hidden; align-self: flex-start; background: #0c222c; }
   .bio-photo > img:not(.bio-photo-logo) { width: 100%; height: 100%; object-fit: cover; }
-  .bio-photo-logo { position: absolute; top: 40px; left: 48px; width: 60px !important; height: auto !important; object-fit: contain !important; z-index: 2; opacity: 0; animation: logoMarkFadeIn 2s ease 1s forwards; }
+  .bio-photo-logo-link { position: absolute; top: 40px; left: 48px; width: 60px; z-index: 2; opacity: 0; animation: logoMarkFadeIn 2s ease 1s forwards; display: block; }
+  .bio-photo-logo { display: block; width: 100% !important; height: auto !important; object-fit: contain !important; }
   @keyframes logoMarkFadeIn { to { opacity: 0.5; } }
   .bio-content { flex: 1; padding: 140px 80px 120px; display: flex; flex-direction: column; }
   .bio-back { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: #0c222c; text-decoration: none; display: flex; align-items: center; gap: 8px; margin-bottom: 32px; }
@@ -94,7 +96,7 @@
 <section class="bio-hero" data-review-id="bio-myles-bartley.hero">
   <div class="bio-photo">
     <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1200&amp;q=80" alt="Myles Bartley">
-    <img class="bio-photo-logo" src="assets/logos/Logo-White.png" alt="Blanchet LLP">
+    <a class="bio-photo-logo-link" href="index.html" aria-label="Blanchet LLP home"><img class="bio-photo-logo" src="assets/logos/Logo-White.png" alt="Blanchet LLP"></a>
   </div>
   <div class="bio-content">
     <a href="team.html" class="bio-back"><span>&#8592;</span> Back to Team</a>
@@ -199,7 +201,7 @@
   if (c) c.classList.add('reveal');
 })();
 </script>
-<script src="js/main.js"></script>
+<script src="js/main.js?v=20260630-ui"></script>
 
 </body>
 </html>

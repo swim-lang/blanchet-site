@@ -146,6 +146,11 @@ function setupPracticeScroll() {
 
 let practiceMaxScroll = setupPracticeScroll();
 
+function refreshPracticeScroll() {
+  practiceMaxScroll = setupPracticeScroll() || 0;
+  return practiceMaxScroll;
+}
+
 function practiceScrollProgress() {
   if (!practiceWrapper || !practiceTrack || window.innerWidth < 900) return 0;
   const rect = practiceWrapper.getBoundingClientRect();
@@ -170,14 +175,17 @@ function applyPracticeIndex(index) {
 }
 
 function scrollPracticeBy(direction) {
-  if (!practiceWrapper || window.innerWidth < 900) return;
+  if (!practiceWrapper || !practiceTrack || window.innerWidth < 900) return;
+  refreshPracticeScroll();
   const wrapperHeight = practiceWrapper.offsetHeight - window.innerHeight;
-  if (wrapperHeight <= 0) return;
-  const progressIndex = Math.round(practiceScrollProgress() * Math.max(practiceCards.length - 1, 1));
-  const activeIndex = Math.max(currentPracticeIndex, progressIndex);
+  if (wrapperHeight <= 0 || !practiceMaxScroll) return;
+  const maxIndex = Math.max(practiceCards.length - 1, 1);
+  const progressIndex = Math.round(practiceScrollProgress() * maxIndex);
+  const activeIndex = direction > 0
+    ? Math.max(currentPracticeIndex, progressIndex)
+    : Math.min(currentPracticeIndex, progressIndex);
   const nextIndex = activeIndex + direction;
   applyPracticeIndex(nextIndex);
-  const maxIndex = Math.max(practiceCards.length - 1, 1);
   const nextProgress = currentPracticeIndex / maxIndex;
   const wrapperTop = practiceWrapper.getBoundingClientRect().top + window.scrollY;
   window.scrollTo({
@@ -187,10 +195,16 @@ function scrollPracticeBy(direction) {
 }
 
 practiceArrows.forEach((button) => {
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
     scrollPracticeBy(button.dataset.practiceArrow === 'next' ? 1 : -1);
   });
 });
+
+window.addEventListener('load', () => {
+  refreshPracticeScroll();
+  applyPracticeIndex(currentPracticeIndex);
+}, { once: true });
 
 window.addEventListener('scroll', () => {
   if (!practiceWrapper || !practiceTrack || window.innerWidth < 900) return;
@@ -204,7 +218,8 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 window.addEventListener('resize', () => {
-  practiceMaxScroll = setupPracticeScroll();
+  refreshPracticeScroll();
+  applyPracticeIndex(currentPracticeIndex);
 }, { passive: true });
 
 // ============================================
@@ -332,6 +347,7 @@ window.addEventListener('resize', () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => {
     practiceMaxScroll = setupPracticeScroll();
+    applyPracticeIndex(currentPracticeIndex);
     setupStackingCards();
   }, 250);
 });
