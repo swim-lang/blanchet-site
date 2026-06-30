@@ -749,7 +749,7 @@ body.mobile-menu-open {
 .footer-col span { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: #fff; cursor: pointer; }
 .footer-col .address { font-weight: 400; color: rgba(255,255,255,0.45); cursor: default; }
 .footer-watermark { padding: 0 80px 50px; overflow: hidden; max-width: calc(100% - 480px); }
-.footer-watermark img { width: 100%; height: auto; opacity: 0.04; }
+.footer-watermark img { width: 100%; height: auto; object-fit: contain; opacity: 0.04; }
 
 /* ============================================
    Touch Device — Disable Custom Cursor
@@ -916,7 +916,7 @@ body.mobile-menu-open {
   .footer-cols { flex-wrap: wrap; gap: 32px; }
   .footer-col .address { white-space: normal; }
   .footer-watermark { padding: 32px 24px 48px; }
-  .footer-watermark img { height: 60px; }
+  .footer-watermark img { height: auto; }
 }
 
 /* ============================================
