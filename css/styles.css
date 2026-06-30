@@ -6,9 +6,16 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 /* Page transition curtain */
-.page-curtain { position: fixed; inset: 0; background: #0c222c; z-index: 99999; pointer-events: none; opacity: 1; transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1); }
-.page-curtain.reveal { opacity: 0; }
-.page-curtain.exit { opacity: 1; transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+html.page-transition-active,
+html.page-transition-active body { background: #0c222c; }
+.page-curtain { position: fixed; inset: 0; background: #0c222c; z-index: 99999; pointer-events: none; opacity: 1; visibility: visible; transition: opacity 0.42s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s; }
+.page-curtain.reveal { opacity: 0; visibility: hidden; transition: opacity 0.42s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.42s; }
+.page-curtain.exit { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity 0.32s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s; }
+@media (prefers-reduced-motion: reduce) {
+  .page-curtain,
+  .page-curtain.reveal,
+  .page-curtain.exit { transition-duration: 0.01ms; }
+}
 html { scroll-behavior: smooth; }
 body { font-family: 'Inter', sans-serif; color: #0c222c; background: #fff; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, h4, h5 { font-family: 'Inter', sans-serif; text-transform: uppercase; }

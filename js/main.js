@@ -324,27 +324,74 @@ document.querySelectorAll('.wwr-row[data-accordion]').forEach(row => {
 // Page transition curtain
 const curtain = document.querySelector('.page-curtain');
 if (curtain) {
-  const revealCurtain = () => requestAnimationFrame(() => curtain.classList.add('reveal'));
-  // Reveal on load
-  window.addEventListener('load', revealCurtain);
-  // Also reveal on DOMContentLoaded (don't wait for video/images)
-  document.addEventListener('DOMContentLoaded', revealCurtain);
-  // Reveal if already complete
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let isNavigating = false;
+
+  const revealCurtain = () => {
+    if (isNavigating) return;
+    document.documentElement.classList.remove('page-transition-active');
+    curtain.classList.remove('exit');
+    requestAnimationFrame(() => curtain.classList.add('reveal'));
+  };
+
+  const internalNavigationUrl = (link) => {
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) return null;
+    if (link.target && link.target !== '_self') return null;
+    if (link.hasAttribute('download')) return null;
+
+    const url = new URL(href, window.location.href);
+    if (url.origin !== window.location.origin) return null;
+    if (!['http:', 'https:'].includes(url.protocol)) return null;
+    if (url.pathname === window.location.pathname && url.search === window.location.search && url.hash) return null;
+    return url;
+  };
+
+  const navigateAfterCurtain = (url) => {
+    const destination = url.href;
+    let hasNavigated = false;
+    const go = () => {
+      if (hasNavigated) return;
+      hasNavigated = true;
+      window.location.href = destination;
+    };
+
+    document.documentElement.classList.add('page-transition-active');
+    curtain.classList.remove('reveal');
+    curtain.classList.add('exit');
+
+    if (prefersReducedMotion) {
+      go();
+      return;
+    }
+
+    curtain.addEventListener('transitionend', go, { once: true });
+    setTimeout(go, 420);
+  };
+
   if (document.readyState === 'complete' || document.readyState === 'interactive') {
     revealCurtain();
   }
-  // Safety timeout — never block page for more than 1.5s
+  window.addEventListener('load', revealCurtain);
+  window.addEventListener('pageshow', () => {
+    isNavigating = false;
+    revealCurtain();
+  });
+  document.addEventListener('DOMContentLoaded', revealCurtain);
+  document.addEventListener('blanchet:unlocked', revealCurtain);
   setTimeout(revealCurtain, 1500);
-  // Exit on internal link click — curtain fades in, then navigate
+
   document.addEventListener('click', (e) => {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     const link = e.target.closest('a[href]');
     if (!link) return;
-    const href = link.getAttribute('href');
-    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('javascript')) return;
+    const url = internalNavigationUrl(link);
+    if (!url) return;
+
     e.preventDefault();
-    curtain.classList.remove('reveal');
-    curtain.classList.add('exit');
-    setTimeout(() => { window.location.href = href; }, 350);
+    if (isNavigating) return;
+    isNavigating = true;
+    navigateAfterCurtain(url);
   });
 }
 
