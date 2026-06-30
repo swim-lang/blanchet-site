@@ -3,7 +3,8 @@
   const MODE_KEY = 'blanchet-review-mode';
   const COMMENTS_KEY = 'blanchet-review-comments';
   const PENDING_JUMP_KEY = 'blanchet-review-pending-jump';
-  const PAGE = location.pathname.split('/').pop() || 'index.html';
+  const rawPage = location.pathname.split('/').pop() || 'index';
+  const PAGE = rawPage.includes('.') ? rawPage : `${rawPage}.html`;
   const CONFIG = window.BLANCHET_REVIEW_CONFIG || {};
   const PROJECT = CONFIG.project || 'blanchet-site';
   const SUPABASE_URL = (CONFIG.supabaseUrl || '').replace(/\/$/, '');

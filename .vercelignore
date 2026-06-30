@@ -1,0 +1,8 @@
+.git
+.DS_Store
+.claude
+docs
+scripts
+supabase
+supabase-review-comments.sql
+REVIEW_WORKFLOW.md
