@@ -16,6 +16,208 @@ html.page-transition-active body { background: #0c222c; }
   .page-curtain.reveal,
   .page-curtain.exit { transition-duration: 0.01ms; }
 }
+
+/* Temporary compact attorney portrait mode, 2026-06-30.
+   The original large split-photo bio layout remains in each bio page's inline
+   styles. Remove this block when final attorney headshots are approved. */
+.bio-hero {
+  min-height: 100vh !important;
+  background: #fff !important;
+}
+
+.bio-photo {
+  flex: 0 0 clamp(260px, 24vw, 340px) !important;
+  height: 100vh !important;
+  min-height: 620px !important;
+  position: sticky !important;
+  top: 0 !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  padding-top: 168px !important;
+  background:
+    linear-gradient(180deg, rgba(12,34,44,0.96), rgba(7,24,32,0.98)),
+    radial-gradient(circle at 35% 20%, rgba(255,255,255,0.08), transparent 36%) !important;
+  border-right: 1px solid rgba(12,34,44,0.08) !important;
+}
+
+.bio-photo > img:not(.bio-photo-logo) {
+  width: clamp(108px, 10vw, 150px) !important;
+  height: clamp(108px, 10vw, 150px) !important;
+  flex: 0 0 auto !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  border-radius: 999px !important;
+  filter: grayscale(1) contrast(0.92) brightness(0.96) !important;
+  opacity: 0.84 !important;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.18), 0 24px 60px rgba(0,0,0,0.28) !important;
+}
+
+.bio-photo-placeholder {
+  background:
+    linear-gradient(180deg, rgba(12,34,44,0.96), rgba(7,24,32,0.98)),
+    radial-gradient(circle at 35% 20%, rgba(255,255,255,0.08), transparent 36%) !important;
+}
+
+.bio-photo-placeholder::before {
+  width: clamp(108px, 10vw, 150px) !important;
+  height: clamp(108px, 10vw, 150px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 999px !important;
+  font-size: clamp(34px, 4vw, 52px) !important;
+  color: rgba(255,255,255,0.22) !important;
+  background: rgba(255,255,255,0.035) !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.16), 0 24px 60px rgba(0,0,0,0.22) !important;
+}
+
+.bio-photo-placeholder::after {
+  display: none !important;
+}
+
+.bio-photo-logo-link {
+  top: 42px !important;
+  left: 42px !important;
+  width: 158px !important;
+  opacity: 0.78 !important;
+}
+
+.bio-content {
+  flex: 1 1 auto !important;
+  padding: 132px clamp(44px, 7vw, 96px) 120px !important;
+}
+
+.bio-text,
+.bio-rep-text,
+.bio-list,
+.bio-rep-list {
+  max-width: 660px !important;
+}
+
+.team-featured {
+  width: clamp(260px, 24vw, 340px) !important;
+  background:
+    linear-gradient(180deg, rgba(12,34,44,0.98), rgba(7,24,32,1)),
+    radial-gradient(circle at 35% 20%, rgba(255,255,255,0.08), transparent 36%) !important;
+}
+
+.team-featured::after {
+  display: none !important;
+}
+
+.team-featured-images {
+  inset: auto 0 auto 0 !important;
+  top: 156px !important;
+  height: 170px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  pointer-events: none !important;
+}
+
+.team-featured-img {
+  inset: auto !important;
+  width: clamp(108px, 10vw, 150px) !important;
+  height: clamp(108px, 10vw, 150px) !important;
+  border-radius: 999px !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  filter: grayscale(1) contrast(0.92) brightness(0.96) !important;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.18), 0 24px 60px rgba(0,0,0,0.28) !important;
+}
+
+.team-featured-img.active {
+  opacity: 0.84 !important;
+}
+
+.team-featured-info {
+  bottom: 64px !important;
+  left: 40px !important;
+  right: 40px !important;
+}
+
+.team-featured-label-logo-link {
+  width: 150px !important;
+  opacity: 0.72 !important;
+}
+
+.team-featured-name {
+  font-size: clamp(28px, 3vw, 38px) !important;
+}
+
+.team-featured-bio {
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+}
+
+.team-mobile-brand {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .bio-photo {
+    height: 188px !important;
+    min-height: 188px !important;
+    width: 100% !important;
+    padding-top: 56px !important;
+    position: relative !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(12,34,44,0.08) !important;
+  }
+
+  .bio-photo > img:not(.bio-photo-logo),
+  .bio-photo-placeholder::before {
+    width: 104px !important;
+    height: 104px !important;
+  }
+
+  .bio-photo-placeholder::before {
+    font-size: 34px !important;
+  }
+
+  .bio-photo-logo-link {
+    top: 24px !important;
+    left: 24px !important;
+    width: 142px !important;
+  }
+
+  .bio-content {
+    padding: 56px 24px 80px !important;
+  }
+
+  .team-featured {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 300px !important;
+    padding-top: 0 !important;
+  }
+
+  .team-featured-images {
+    top: 82px !important;
+    left: auto !important;
+    right: 24px !important;
+    width: 112px !important;
+    height: 124px !important;
+    justify-content: flex-end !important;
+  }
+
+  .team-featured-img {
+    width: 104px !important;
+    height: 104px !important;
+    opacity: 0.42 !important;
+  }
+
+  .team-featured-img.active {
+    opacity: 0.42 !important;
+  }
+
+  .team-featured-info {
+    left: 24px !important;
+    right: 24px !important;
+    bottom: 32px !important;
+  }
+}
 html { scroll-behavior: smooth; }
 body { font-family: 'Inter', sans-serif; color: #0c222c; background: #fff; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, h4, h5 { font-family: 'Inter', sans-serif; text-transform: uppercase; }
@@ -539,6 +741,22 @@ body.mobile-menu-open {
 
 .section-label {
   margin-bottom: 12px;
+}
+
+.section-label,
+.partners-header .label,
+.practice-left .label,
+.practices-label,
+.practices-secondary-header span,
+.firm-letter-label,
+.firm-defines-right .section-label-dark,
+.firm-timeline-header-left span,
+.firm-pov-left > span,
+.contact-label,
+.bio-label,
+.insights-hero-label {
+  padding-bottom: 0 !important;
+  border-bottom: 0 !important;
 }
 
 .practice-section-num,
@@ -1364,5 +1582,87 @@ body.mobile-menu-open {
 
   .wwr-ticker-wrap {
     width: 100% !important;
+  }
+}
+
+/* Final mobile correction for compact attorney portrait mode.
+   This stays at the end because older mobile rules above also use !important. */
+@media (max-width: 900px) {
+  .bio-photo {
+    height: 188px !important;
+    min-height: 188px !important;
+    width: 100% !important;
+    padding-top: 56px !important;
+    position: relative !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(12,34,44,0.08) !important;
+  }
+
+  .bio-photo > img:not(.bio-photo-logo),
+  .bio-photo-placeholder::before {
+    width: 104px !important;
+    height: 104px !important;
+  }
+
+  .bio-photo-placeholder::before {
+    font-size: 34px !important;
+  }
+
+  .bio-photo-logo-link {
+    top: 24px !important;
+    left: 24px !important;
+    width: 142px !important;
+  }
+
+  .bio-content {
+    padding: 56px 24px 80px !important;
+  }
+
+  .team-featured {
+    display: none !important;
+  }
+
+  .team-featured-info {
+    left: 24px !important;
+    right: 24px !important;
+    bottom: 32px !important;
+  }
+
+  .team-directory {
+    position: relative !important;
+    min-height: 100vh !important;
+  }
+
+  .team-mobile-brand {
+    display: block !important;
+    position: absolute !important;
+    top: 28px !important;
+    left: 24px !important;
+    width: 142px !important;
+    z-index: 3 !important;
+    opacity: 0.78 !important;
+  }
+
+  .team-mobile-brand img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .team-list {
+    padding-top: 104px !important;
+  }
+
+  .team-row-name {
+    color: rgba(255,255,255,0.76) !important;
+  }
+
+  .team-row.is-active .team-row-name {
+    color: #fff !important;
+  }
+
+  .team-row-num,
+  .team-row-arrow {
+    color: rgba(255,255,255,0.22) !important;
   }
 }
