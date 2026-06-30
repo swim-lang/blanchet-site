@@ -586,6 +586,7 @@ body.mobile-menu-open {
 .practice-areas { position: relative; min-height: 100vh; display: flex; overflow: hidden; }
 .practice-left { width: 420px; flex-shrink: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 60px; background: #0c222c; z-index: 2; }
 .practice-left .label { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+.practice-left-rule { width: 100%; max-width: 300px; height: 1px; background: rgba(255,255,255,0.2); margin-top: 12px; }
 .practice-left h2 { font-family: 'Inter', sans-serif; font-size: 48px; font-weight: 700; color: #fff; line-height: 1.1; }
 .practice-left p { font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.7; max-width: 300px; }
 .practice-left .scroll-hint { display: flex; align-items: center; gap: 16px; }
@@ -979,6 +980,10 @@ body.mobile-menu-open {
     width: 100% !important;
     height: auto !important;
     padding: 48px 24px !important;
+  }
+
+  .practice-left-rule {
+    max-width: none !important;
   }
 
   .practice-left h2 {
