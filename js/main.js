@@ -125,6 +125,7 @@ checkCardVisibility();
 const practiceWrapper = document.querySelector('.practice-areas-wrapper');
 const practiceTrack = document.querySelector('.practice-track');
 const practiceArrows = document.querySelectorAll('[data-practice-arrow]');
+let currentPracticeIndex = 0;
 
 function setupPracticeScroll() {
   if (!practiceWrapper || !practiceTrack) return;
@@ -154,12 +155,30 @@ function practiceScrollProgress() {
   return Math.min(rawProgress / 0.75, 1);
 }
 
+function applyPracticeProgress(progress) {
+  if (!practiceTrack || !practiceMaxScroll) return;
+  const clampedProgress = Math.min(Math.max(progress, 0), 1);
+  practiceTrack.style.transform = `translateX(${-clampedProgress * practiceMaxScroll}px)`;
+}
+
+function applyPracticeIndex(index) {
+  if (!practiceCards.length) return;
+  const maxIndex = practiceCards.length - 1;
+  currentPracticeIndex = Math.min(Math.max(index, 0), maxIndex);
+  const progress = maxIndex ? currentPracticeIndex / maxIndex : 0;
+  applyPracticeProgress(progress);
+}
+
 function scrollPracticeBy(direction) {
   if (!practiceWrapper || window.innerWidth < 900) return;
   const wrapperHeight = practiceWrapper.offsetHeight - window.innerHeight;
   if (wrapperHeight <= 0) return;
-  const step = practiceCards.length > 1 ? 1 / (practiceCards.length - 1) : 1;
-  const nextProgress = Math.min(Math.max(practiceScrollProgress() + direction * step, 0), 1);
+  const progressIndex = Math.round(practiceScrollProgress() * Math.max(practiceCards.length - 1, 1));
+  const activeIndex = Math.max(currentPracticeIndex, progressIndex);
+  const nextIndex = activeIndex + direction;
+  applyPracticeIndex(nextIndex);
+  const maxIndex = Math.max(practiceCards.length - 1, 1);
+  const nextProgress = currentPracticeIndex / maxIndex;
   const wrapperTop = practiceWrapper.getBoundingClientRect().top + window.scrollY;
   window.scrollTo({
     top: wrapperTop + wrapperHeight * nextProgress * 0.75,
@@ -180,7 +199,8 @@ window.addEventListener('scroll', () => {
   if (wrapperHeight <= 0) return;
   const rawProgress = Math.min(Math.max(-rect.top / wrapperHeight, 0), 1);
   const scrollProgress = Math.min(rawProgress / 0.75, 1);
-  practiceTrack.style.transform = `translateX(${-scrollProgress * practiceMaxScroll}px)`;
+  currentPracticeIndex = Math.round(scrollProgress * Math.max(practiceCards.length - 1, 0));
+  applyPracticeProgress(scrollProgress);
 }, { passive: true });
 
 window.addEventListener('resize', () => {
