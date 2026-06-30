@@ -73,16 +73,7 @@
   .firm-letter-body { display: flex; flex-direction: column; gap: 18px; padding-bottom: 36px; }
   .firm-letter-body p { font-family: 'Inter', sans-serif; font-size: 14px; color: #4b5563; line-height: 1.9; }
   .firm-letter-sig { display: flex; flex-direction: column; gap: 6px; padding-top: 28px; border-top: 1px solid rgba(12,34,44,0.06); align-items: flex-start; }
-  .firm-letter-sig-svg { height: 48px; width: auto; margin-bottom: 8px; align-self: flex-start; }
-  .firm-letter-sig-svg path {
-    stroke: #0c222c; stroke-width: 2; fill: none;
-    stroke-dasharray: 600; stroke-dashoffset: 600;
-    stroke-linecap: round; stroke-linejoin: round;
-  }
-  .firm-letter-sig-svg.animate path { animation: drawSig 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
-  @keyframes drawSig {
-    to { stroke-dashoffset: 0; }
-  }
+  .firm-letter-sig-text { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 600; color: #0c222c; letter-spacing: 0; line-height: 1.1; }
   .firm-letter-sig-name { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; color: rgba(12,34,44,0.5); }
 
   /* Letter entrance */
@@ -259,7 +250,6 @@
     </div>
     <a href="firm.html" class="active">FIRM</a>
     <a href="team.html">TEAM</a>
-    <a href="insights.html">INSIGHTS</a>
     <a href="email-signatures.html">SIGNATURES</a>
   </div>
   <a href="contact.html" class="scroll-nav-cta">CONTACT</a>
@@ -286,7 +276,6 @@
         </div>
         <a href="firm.html" class="active" style="color:#fff">FIRM</a>
         <a href="team.html">TEAM</a>
-        <a href="insights.html">INSIGHTS</a>
     <a href="email-signatures.html">SIGNATURES</a>
         <a href="contact.html" class="nav-cta">CONTACT</a>
       </div>
@@ -328,32 +317,7 @@
       <p>That is what Blanchet LLP was built to deliver: the sophistication of top-tier litigation, with more accountability, better judgment, and closer attention to how the work serves the client.</p>
     </div>
     <div class="firm-letter-sig">
-      <svg class="firm-letter-sig-svg" viewBox="0 0 280 60" xmlns="http://www.w3.org/2000/svg">
-        <!-- J -->
-        <path d="M8 8 L8 36 Q8 52 22 52 Q36 52 36 36" />
-        <!-- o -->
-        <path d="M44 28 Q44 20 52 20 Q60 20 60 28 Q60 40 52 40 Q44 40 44 28Z" />
-        <!-- e -->
-        <path d="M66 30 L82 30 Q82 20 74 20 Q66 20 66 30 Q66 40 74 40 Q80 40 82 36" />
-        <!-- l -->
-        <path d="M90 8 L90 40" />
-        <!-- space + B flourish -->
-        <path d="M110 10 L110 48 M110 10 Q132 10 132 22 Q132 30 118 30 M110 30 Q136 30 136 38 Q136 48 110 48" />
-        <!-- l -->
-        <path d="M148 8 L148 40" />
-        <!-- a -->
-        <path d="M168 28 Q168 20 160 20 Q154 20 154 28 Q154 40 160 40 Q168 40 168 40 L168 20" />
-        <!-- n -->
-        <path d="M176 40 L176 22 Q176 18 184 18 Q190 18 190 24 L190 40" />
-        <!-- c -->
-        <path d="M210 24 Q204 18 198 18 Q194 18 194 28 Q194 40 200 40 Q206 40 210 36" />
-        <!-- h -->
-        <path d="M216 8 L216 40 M216 24 Q216 18 224 18 Q230 18 230 24 L230 40" />
-        <!-- e -->
-        <path d="M238 30 L254 30 Q254 20 246 20 Q238 20 238 30 Q238 40 246 40 Q252 40 254 36" />
-        <!-- t -->
-        <path d="M262 14 L262 36 Q262 40 266 40 M256 22 L270 22" />
-      </svg>
+      <span class="firm-letter-sig-text">Joel Blanchet</span>
       <span class="firm-letter-sig-name">PARTNER</span>
     </div>
   </div>
@@ -544,7 +508,6 @@
           <a href="practices.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Practice Areas</a>
           <a href="firm.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Firm</a>
           <a href="team.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Team</a>
-          <a href="insights.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Insights</a>
           <a href="email-signatures.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Email Signatures</a>
         </div>
         <div class="footer-col">
@@ -610,11 +573,6 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           letter.classList.add('revealed');
-          // Trigger signature draw after letter fades in
-          setTimeout(() => {
-            const sig = letter.querySelector('.firm-letter-sig-svg');
-            if (sig) sig.classList.add('animate');
-          }, 900);
           letterObserver.unobserve(letter);
         }
       });

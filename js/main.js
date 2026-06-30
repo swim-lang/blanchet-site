@@ -124,6 +124,7 @@ checkCardVisibility();
 // ============================================
 const practiceWrapper = document.querySelector('.practice-areas-wrapper');
 const practiceTrack = document.querySelector('.practice-track');
+const practiceArrows = document.querySelectorAll('[data-practice-arrow]');
 
 function setupPracticeScroll() {
   if (!practiceWrapper || !practiceTrack) return;
@@ -144,6 +145,34 @@ function setupPracticeScroll() {
 
 let practiceMaxScroll = setupPracticeScroll();
 
+function practiceScrollProgress() {
+  if (!practiceWrapper || !practiceTrack || window.innerWidth < 900) return 0;
+  const rect = practiceWrapper.getBoundingClientRect();
+  const wrapperHeight = practiceWrapper.offsetHeight - window.innerHeight;
+  if (wrapperHeight <= 0) return 0;
+  const rawProgress = Math.min(Math.max(-rect.top / wrapperHeight, 0), 0.75);
+  return Math.min(rawProgress / 0.75, 1);
+}
+
+function scrollPracticeBy(direction) {
+  if (!practiceWrapper || window.innerWidth < 900) return;
+  const wrapperHeight = practiceWrapper.offsetHeight - window.innerHeight;
+  if (wrapperHeight <= 0) return;
+  const step = practiceCards.length > 1 ? 1 / (practiceCards.length - 1) : 1;
+  const nextProgress = Math.min(Math.max(practiceScrollProgress() + direction * step, 0), 1);
+  const wrapperTop = practiceWrapper.getBoundingClientRect().top + window.scrollY;
+  window.scrollTo({
+    top: wrapperTop + wrapperHeight * nextProgress * 0.75,
+    behavior: 'smooth'
+  });
+}
+
+practiceArrows.forEach((button) => {
+  button.addEventListener('click', () => {
+    scrollPracticeBy(button.dataset.practiceArrow === 'next' ? 1 : -1);
+  });
+});
+
 window.addEventListener('scroll', () => {
   if (!practiceWrapper || !practiceTrack || window.innerWidth < 900) return;
   const rect = practiceWrapper.getBoundingClientRect();
@@ -152,6 +181,10 @@ window.addEventListener('scroll', () => {
   const rawProgress = Math.min(Math.max(-rect.top / wrapperHeight, 0), 1);
   const scrollProgress = Math.min(rawProgress / 0.75, 1);
   practiceTrack.style.transform = `translateX(${-scrollProgress * practiceMaxScroll}px)`;
+}, { passive: true });
+
+window.addEventListener('resize', () => {
+  practiceMaxScroll = setupPracticeScroll();
 }, { passive: true });
 
 // ============================================

@@ -111,16 +111,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://swim-lang.github.io/blanchet-site/insights.html</loc>
-    <lastmod>2026-06-29</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://swim-lang.github.io/blanchet-site/insights-article.html</loc>
-    <lastmod>2026-06-29</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://swim-lang.github.io/blanchet-site/contact.html</loc>
     <lastmod>2026-06-29</lastmod>
     <priority>0.8</priority>

@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /docs/
 Disallow: /bio-craig-nolan.html
+Disallow: /insights.html
+Disallow: /insights-article.html
 
 Sitemap: https://swim-lang.github.io/blanchet-site/sitemap.xml
