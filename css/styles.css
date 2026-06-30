@@ -183,7 +183,8 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
   top: calc(100% + 16px);
   left: 50%;
   transform: translateX(-50%) translateY(8px);
-  min-width: 280px;
+  width: 300px;
+  max-width: calc(100vw - 48px);
   padding: 28px 32px;
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(32px) saturate(1.6);
@@ -216,7 +217,7 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
   right: 0;
   height: 20px;
 }
-.nav-dropdown-menu a {
+.nav-dropdown .nav-dropdown-menu a {
   font-family: 'Inter', sans-serif;
   font-size: 13px;
   font-weight: 500;
@@ -232,21 +233,21 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
   line-height: 1.25;
   opacity: 1;
   text-shadow: none;
-  white-space: nowrap;
+  white-space: normal;
 }
-.nav-dropdown-menu a::before,
-.nav-dropdown-menu a::after {
+.nav-dropdown .nav-dropdown-menu a::before,
+.nav-dropdown .nav-dropdown-menu a::after {
   content: none !important;
   display: none !important;
 }
-.nav-dropdown-menu a:last-child { border-bottom: none; }
-.nav-dropdown-menu a:hover {
+.nav-dropdown .nav-dropdown-menu a:last-child { border-bottom: none; }
+.nav-dropdown .nav-dropdown-menu a:hover {
   color: #fff;
   padding-left: 6px;
   background: transparent;
   opacity: 1;
 }
-.nav-dropdown-menu a:first-child { padding-top: 0; }
+.nav-dropdown .nav-dropdown-menu a:first-child { padding-top: 0; }
 /* Light background variant (for navs on white bg) */
 .nav-dropdown-light .nav-dropdown-menu {
   background: rgba(255,255,255,0.72);
