@@ -3,16 +3,16 @@
     litigation: {
       title: 'Litigation',
       label: 'Core Practice',
-      intro: 'Litigation is the center of gravity at Blanchet LLP. The firm handles serious disputes in state and federal courts, including trial work, motion practice, discovery-heavy matters, and cases where commercial, environmental, product, investigative, and technical issues overlap.',
+      intro: 'Litigation is the center of gravity at Blanchet LLP. The firm handles serious disputes in state and federal courts, and arbitrations, including trial work, motion practice, discovery-heavy matters, and cases where commercial, environmental, product, investigative, and technical issues overlap.',
       strip: 'Trial experience changes the work long before trial. It shapes how cases are assessed, where leverage is created, and how strategy holds up when the pressure increases.',
       image: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1400&q=80',
       overview: 'Blanchet LLP is built for disputes that require judgment, disciplined staffing, and senior lawyers close to the work. The firm handles matters from early assessment through resolution or trial, with attention to both the legal record and the practical business context.',
       focusHeading: 'Disputes that need experienced trial judgment.',
       focusIntro: 'The litigation practice includes the work that ties the firm together across industries, forums, and subject matter.',
       focus: [
-        ['Trial Readiness', 'State and federal litigation, trial preparation, hearings, witness work, and courtroom strategy.'],
-        ['Motion Practice', 'Dispositive motions, injunctions, evidentiary disputes, preservation, and case-shaping briefing.'],
-        ['Discovery and Experts', 'Discovery-heavy records, technical experts, fact development, and efficient case management.'],
+        ['Trial Readiness', 'State and federal litigation, arbitration proceedings, trial preparations, contested hearings, witness preparation, and courtroom strategy.'],
+        ['Motion Practice', 'Dispositive motions, injunctions, evidentiary disputes, preservation, and other creative case-shaping briefing.'],
+        ['Discovery and Experts', 'Document- and electronic evidence-heavy records and related fact developments, technical and other experts, and efficient case management.'],
         ['Complex Disputes', 'Commercial, environmental, product, IP, financial, investigative, and appellate matters.']
       ],
       matters: [
@@ -125,23 +125,23 @@
       proof: [
         'Counsel to Union Carbide in claims alleging mass bodily injury over more than 50 years, with summary judgment or dismissal secured for more than 200 plaintiffs.',
         'Counsel to Briggs & Stratton in nationwide multidistrict consumer-fraud class actions involving more than 50 proposed classes, resolved favorably before discovery began.',
-        'Experience for manufacturers in matters where product, technical, commercial, and operational facts overlap.'
+        'Experience with manufacturers in matters where product, technical, commercial, and operational facts overlap.'
       ]
     },
     ip: {
       title: 'Intellectual Property & Trade Secrets',
       label: 'Technical Practice',
-      intro: 'Blanchet LLP handles trade secret, confidential information, software, licensing, insider-threat, cybercrime, and technology commercial disputes where the technical record and the business context both matter.',
+      intro: 'Blanchet LLP handles trade secret, confidential information, software, licensing, insider-threat, cybercrime, and technology disputes where the technical record and the business context both matter.',
       strip: 'Technical disputes are rarely just technical. The proof has to be understood in context: the product, the people, the business relationship, and the record.',
       image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=80',
       overview: 'The firm represents companies and individuals in IP and technology disputes that require careful fact development, technical fluency, and litigation judgment.',
-      focusHeading: 'Technical disputes with commercial consequences.',
+      focusHeading: 'Technical disputes with business consequences.',
       focusIntro: 'Blanchet LLP pairs litigation experience with practical attention to the technology, business context, and record.',
       focus: [
         ['Trade Secrets', 'Misappropriation, employee movement, confidential information, and business continuity issues.'],
         ['Insider Threat and Data Misuse', 'Employee misconduct, misuse of company data, theft of confidential information, fraud, and related internal investigations.'],
-        ['Software and Technology', 'Software, licensing, semiconductor, technology commercial, and cyber-related disputes.'],
-        ['Parallel Technical Matters', 'Cybercrime, investigations, commercial claims, and disputes where IP and government-facing risk overlap.']
+        ['Software and Technology', 'Software, licensing, semiconductor, technology, and cyber-related disputes.'],
+        ['Parallel Technical Matters', 'Cybercrime, investigations, claims, and disputes where IP and government-facing risk overlap.']
       ],
       matters: [
         'Trade secret litigation',
@@ -152,11 +152,11 @@
         'Confidential information claims',
         'Employee movement disputes',
         'Cybercrime-related disputes',
-        'Technical commercial litigation'
+        'Technical litigation'
       ],
       proof: [
         'Experience advising companies and individuals facing insider-threat issues, including employee misconduct, misuse of company data, theft of confidential information, fraud, and related internal investigations.',
-        'Experience in trade secret, software, licensing, cybercrime, semiconductor, and technology commercial disputes.',
+        'Experience in trade secret, software, licensing, cybercrime, semiconductor, and technology disputes.',
         'A litigation-first approach to technical records, expert strategy, and business context.'
       ]
     }
