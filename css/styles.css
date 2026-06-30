@@ -156,7 +156,7 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
 .scroll-nav { display: none; }
 .scroll-nav.visible { transform: translateY(0); }
 .scroll-nav .nav-logo { display: flex; align-items: center; }
-.scroll-nav .nav-logo img { height: 14px; width: auto; }
+.scroll-nav .nav-logo img { height: 16.1px; width: auto; }
 .scroll-nav a { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
 .scroll-nav a:hover, .scroll-nav a.active { color: #fff; }
 .scroll-nav .scroll-nav-links { display: flex; align-items: center; gap: 0; flex: 1; justify-content: space-evenly; margin: 0 40px; }
@@ -166,7 +166,7 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
 /* Hero nav */
 .nav { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 0 0 24px; gap: 40px; }
 .nav .nav-logo { display: flex; align-items: center; flex-shrink: 0; }
-.nav .nav-logo img { height: 15px; width: auto; }
+.nav .nav-logo img { height: 17.25px; width: auto; }
 .nav-links { display: flex; gap: 22px; align-items: center; }
 .nav-links span, .nav-links a:not(.nav-cta) { font-size: 12px; font-weight: 500; color: #fff; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; text-decoration: none; }
 .nav-links span:hover, .nav-links a:not(.nav-cta):hover { opacity: 0.7; }
