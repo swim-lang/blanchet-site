@@ -1712,6 +1712,12 @@ html.launch-lock *::after {
   display: none !important;
 }
 
+/* Temporary home hold, 2026-07-01.
+   Keep team preview markup available while removing it from launch review. */
+.partners[data-review-id="home.team-preview"] {
+  display: none !important;
+}
+
 /* Launch no-photo mode, 2026-07-01.
    Attorney image markup was removed from current templates; earlier portrait
    layouts remain recoverable from git history when approved headshots arrive. */
