@@ -2177,7 +2177,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   gap: 0 !important;
   padding: 0 !important;
   border-top: 1px solid rgba(12,34,44,0.12);
-  border-bottom: 1px solid rgba(12,34,44,0.12);
+  border-bottom: 0;
 }
 
 .partners-split .partners-content {
