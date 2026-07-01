@@ -2110,6 +2110,11 @@ html.launch-lock *::after {
     right: 18px !important;
   }
 
+  body:has(.hero .nav) .mobile-menu-toggle {
+    top: 29px !important;
+    right: 24px !important;
+  }
+
   .partners-header {
     display: flex !important;
     flex-direction: column !important;
