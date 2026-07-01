@@ -2143,3 +2143,176 @@ html.launch-lock *::after {
     font-size: 15px !important;
   }
 }
+
+/* Team page roster blocks, 2026-07-01.
+   Mirrors the homepage no-photo grid while preserving alphabetical order. */
+.team-page {
+  background: #0c222c !important;
+}
+
+.team-directory {
+  display: block !important;
+  padding-bottom: 96px !important;
+}
+
+.team-mobile-brand {
+  width: 214px !important;
+  margin: 44px 56px 0 !important;
+}
+
+.team-nav {
+  min-height: 76px !important;
+  align-items: center !important;
+  padding: 32px 56px !important;
+  margin-top: -66px !important;
+}
+
+.team-nav a {
+  line-height: 1 !important;
+}
+
+.team-list {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  max-width: 1280px !important;
+  margin: clamp(88px, 10vw, 138px) auto 0 !important;
+  padding: 0 56px !important;
+  border-top: 1px solid rgba(255,255,255,0.16) !important;
+  border-left: 1px solid rgba(255,255,255,0.16) !important;
+}
+
+.team-row {
+  min-height: 194px !important;
+  display: grid !important;
+  grid-template-columns: 1fr auto !important;
+  grid-template-rows: auto 1fr auto !important;
+  gap: 0 22px !important;
+  align-items: start !important;
+  padding: 28px 30px !important;
+  border: 0 !important;
+  border-right: 1px solid rgba(255,255,255,0.16) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.16) !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+  transition: background 0.25s ease, border-color 0.25s ease !important;
+}
+
+.team-row:hover {
+  background: rgba(255,255,255,0.045) !important;
+  border-color: rgba(255,255,255,0.24) !important;
+}
+
+.team-row-num {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  display: block !important;
+  width: auto !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 1.8px !important;
+  color: rgba(255,255,255,0.28) !important;
+}
+
+.team-row-name {
+  grid-column: 1 / -1 !important;
+  grid-row: 3 !important;
+  align-self: end !important;
+  font-size: clamp(25px, 2.25vw, 36px) !important;
+  line-height: 1.02 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  color: rgba(255,255,255,0.82) !important;
+  transform: none !important;
+  max-width: 10ch !important;
+}
+
+.team-row-title {
+  grid-column: 1 !important;
+  grid-row: 2 !important;
+  display: block !important;
+  align-self: start !important;
+  margin-top: 22px !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 1.7px !important;
+  color: rgba(255,255,255,0.34) !important;
+}
+
+.team-row-arrow {
+  grid-column: 2 !important;
+  grid-row: 3 !important;
+  align-self: end !important;
+  width: 34px !important;
+  height: 34px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
+  color: rgba(255,255,255,0.52) !important;
+  transform: none !important;
+}
+
+.team-row:hover .team-row-name,
+.team-row.is-active:hover .team-row-name {
+  color: #fff !important;
+  transform: none !important;
+}
+
+.team-row.is-active .team-row-name {
+  color: rgba(255,255,255,0.82) !important;
+  transform: none !important;
+}
+
+.team-row:hover .team-row-num,
+.team-row:hover .team-row-title,
+.team-row:hover .team-row-arrow {
+  color: rgba(255,255,255,0.72) !important;
+}
+
+.team-row:hover .team-row-arrow {
+  border-color: rgba(255,255,255,0.34) !important;
+}
+
+@media (max-width: 1100px) {
+  .team-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .team-directory {
+    padding-bottom: 56px !important;
+  }
+
+  .team-mobile-brand {
+    width: 174px !important;
+    margin: 30px 24px 48px !important;
+  }
+
+  .team-nav {
+    display: none !important;
+  }
+
+  .team-list {
+    grid-template-columns: 1fr !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+  }
+
+  .team-row {
+    min-height: 146px !important;
+    padding: 24px !important;
+  }
+
+  .team-row-name {
+    max-width: none !important;
+    font-size: 26px !important;
+  }
+
+  .team-row-title {
+    display: block !important;
+  }
+}
