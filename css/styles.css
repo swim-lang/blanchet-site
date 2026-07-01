@@ -2031,6 +2031,16 @@ html.launch-lock *::after {
   margin-bottom: 18px !important;
 }
 
+@media (min-width: 901px) {
+  .bio-name {
+    position: sticky !important;
+    top: 112px !important;
+    z-index: 3 !important;
+    align-self: start !important;
+    background: #fff !important;
+  }
+}
+
 .bio-label {
   margin-top: 54px !important;
 }
