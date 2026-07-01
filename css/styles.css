@@ -2170,6 +2170,71 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   border-color: rgba(12,34,44,0.36) !important;
 }
 
+.partners.partners-split {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  gap: 0 !important;
+  padding: 0 !important;
+  border-top: 1px solid rgba(12,34,44,0.12);
+  border-bottom: 1px solid rgba(12,34,44,0.12);
+}
+
+.partners-split .partners-content {
+  min-width: 0;
+  padding: clamp(96px, 8vw, 148px) clamp(44px, 5vw, 80px) !important;
+}
+
+.partners-split .partners-header {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 28px !important;
+  margin-bottom: 48px !important;
+}
+
+.partners-split .partners-header h2 {
+  max-width: 620px !important;
+}
+
+.partners-split .partners-header > a {
+  justify-self: start !important;
+  align-self: flex-start !important;
+  margin-left: 0 !important;
+}
+
+.partners-split .partners-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.partners-split .partner-card {
+  min-height: 178px !important;
+}
+
+.partners-video {
+  position: relative;
+  min-height: 720px;
+  overflow: hidden;
+  background: #0c222c;
+}
+
+.partners-video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.72) contrast(0.92);
+}
+
+.partners-video::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(12,34,44,0.72), rgba(12,34,44,0.18) 46%, rgba(12,34,44,0.52)),
+    linear-gradient(0deg, rgba(12,34,44,0.28), rgba(12,34,44,0.06));
+}
+
 .bio-content {
   max-width: 1120px !important;
   display: grid !important;
@@ -2322,6 +2387,26 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   .partner-card .info h4 {
     max-width: none !important;
     font-size: 24px !important;
+  }
+
+  .partners.partners-split {
+    grid-template-columns: 1fr !important;
+  }
+
+  .partners-split .partners-content {
+    padding: 84px 24px !important;
+  }
+
+  .partners-split .partners-header {
+    margin-bottom: 34px !important;
+  }
+
+  .partners-split .partners-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .partners-video {
+    min-height: 360px;
   }
 
   .bio-content {
