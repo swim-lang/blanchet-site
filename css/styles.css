@@ -1668,6 +1668,19 @@ body.mobile-menu-open {
   }
 }
 
+/* Silent launch lock.
+   Public visitors see a blank page; reviewers unlock the site with the
+   unlisted preview URL, without a password gate or visible holding page. */
+html.launch-lock,
+html.launch-lock body {
+  min-height: 100%;
+  background: #0c222c;
+}
+
+html.launch-lock body > * {
+  display: none !important;
+}
+
 /* Launch no-photo mode, 2026-07-01.
    Attorney image markup was removed from current templates; earlier portrait
    layouts remain recoverable from git history when approved headshots arrive. */
