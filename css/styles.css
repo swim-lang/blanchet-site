@@ -1211,15 +1211,21 @@ body.mobile-menu-open {
     display: none !important;
   }
 
-  .hero {
+  .hero,
+  .firm-hero {
     flex-direction: column !important;
     min-height: auto !important;
   }
 
-  .hero-left {
+  .hero-left,
+  .firm-hero-left {
     width: 100% !important;
-    min-height: auto !important;
-    padding: 32px 24px 48px !important;
+    min-height: min(690px, 100svh) !important;
+    padding: 32px 24px 56px !important;
+  }
+
+  .firm-hero-title {
+    font-size: 36px !important;
   }
 
   .hero-right {
@@ -2111,7 +2117,8 @@ html.launch-lock *::after {
     right: 18px !important;
   }
 
-  body:has(.hero .nav) .mobile-menu-toggle {
+  body:has(.hero .nav) .mobile-menu-toggle,
+  body:has(.firm-hero .nav) .mobile-menu-toggle {
     top: 29px !important;
     right: 24px !important;
   }
