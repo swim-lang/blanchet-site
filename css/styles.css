@@ -224,7 +224,8 @@ h1, h2, h3, h4, h5 { font-family: 'Inter', sans-serif; text-transform: uppercase
 a { color: inherit; text-decoration: none; }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
-/* Preview password gate */
+/* Preview password gate styles retained only for rollback/reference.
+   The launch HTML no longer loads js/password-protect.js. */
 html.auth-lock body > :not(.password-gate) { display: none !important; }
 html.auth-lock,
 html.auth-lock body { min-height: 100%; background: #0c222c; }
@@ -1664,5 +1665,175 @@ body.mobile-menu-open {
   .team-row-num,
   .team-row-arrow {
     color: rgba(255,255,255,0.22) !important;
+  }
+}
+
+/* Launch no-photo mode, 2026-07-01.
+   Attorney image markup was removed from current templates; earlier portrait
+   layouts remain recoverable from git history when approved headshots arrive. */
+.bio-hero {
+  display: block !important;
+}
+
+.bio-photo,
+.bio-photo-placeholder::before,
+.bio-photo-placeholder::after {
+  display: none !important;
+}
+
+.bio-content {
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  padding: 150px 48px 128px !important;
+}
+
+.bio-nav {
+  position: fixed !important;
+  display: flex !important;
+  background: #0c222c !important;
+  padding: 28px 48px !important;
+}
+
+.bio-nav .nav-logo img {
+  height: 20px !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+.bio-nav-links a,
+.bio-nav-cta {
+  color: rgba(255,255,255,0.66) !important;
+}
+
+.bio-nav-links a:hover,
+.bio-nav-links a.active,
+.bio-nav-cta:hover {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+.bio-nav-cta {
+  border-color: rgba(255,255,255,0.22) !important;
+}
+
+.bio-text,
+.bio-rep-text,
+.bio-list,
+.bio-rep-list {
+  max-width: 760px !important;
+}
+
+.team-page {
+  display: block !important;
+  min-height: 100vh !important;
+  background: #0c222c !important;
+}
+
+.team-featured {
+  display: none !important;
+}
+
+.team-directory {
+  width: 100% !important;
+  min-height: 100vh !important;
+  border-left: 0 !important;
+  background: #0c222c !important;
+  position: relative !important;
+}
+
+.team-mobile-brand {
+  display: block !important;
+  position: static !important;
+  width: 192px !important;
+  margin: 42px 48px 10px !important;
+  opacity: 0.84 !important;
+}
+
+.team-mobile-brand img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+.team-nav {
+  margin-top: -54px !important;
+}
+
+.team-list {
+  max-width: 1180px !important;
+  margin: 76px auto 72px !important;
+  padding: 0 48px !important;
+}
+
+.team-row.is-active .team-row-name {
+  color: rgba(255,255,255,0.4) !important;
+}
+
+.team-row.is-active:hover .team-row-name {
+  color: #fff !important;
+}
+
+.partners-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.partner-card {
+  min-height: 188px !important;
+  padding: 28px !important;
+  border: 1px solid rgba(12,34,44,0.12) !important;
+  justify-content: flex-end !important;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease !important;
+}
+
+.partner-card:hover {
+  background: rgba(12,34,44,0.025) !important;
+  border-color: rgba(12,34,44,0.28) !important;
+  transform: translateY(-2px) !important;
+}
+
+.partner-card .portrait {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .bio-content {
+    max-width: none !important;
+    padding: 104px 24px 84px !important;
+  }
+
+  .bio-nav {
+    padding: 18px 24px !important;
+  }
+
+  .bio-nav-links,
+  .bio-nav-cta {
+    display: none !important;
+  }
+
+  .bio-nav .nav-logo img {
+    height: 20px !important;
+  }
+
+  .team-mobile-brand {
+    width: 174px !important;
+    margin: 30px 24px 44px !important;
+  }
+
+  .team-nav {
+    margin-top: 0 !important;
+  }
+
+  .team-list {
+    margin: 0 auto 56px !important;
+    padding: 0 24px !important;
+  }
+
+  .partners-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .partner-card {
+    min-height: 132px !important;
   }
 }

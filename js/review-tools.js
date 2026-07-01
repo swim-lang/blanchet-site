@@ -11,8 +11,11 @@
   const SUPABASE_ANON_KEY = CONFIG.supabaseAnonKey || '';
   const NOTIFICATION_FUNCTION = CONFIG.notificationFunction || '';
   const HAS_SUPABASE = Boolean(SUPABASE_URL && SUPABASE_ANON_KEY);
+  const params = new URLSearchParams(location.search);
+  const reviewParamPresent = params.has('review');
+  const requestedMode = params.get('review') || '';
 
-  let mode = sessionStorage.getItem(MODE_KEY) || '';
+  let mode = requestedMode || sessionStorage.getItem(MODE_KEY) || '';
   let activeTarget = null;
   let toolbar;
   let panel;
@@ -577,6 +580,7 @@
   }
 
   function initReviewTools() {
+    if (!reviewParamPresent && !sessionStorage.getItem(MODE_KEY)) return;
     ensureAnchors();
     attachEvents();
     handlePendingJump();
@@ -587,7 +591,7 @@
       setMode(mode === 'review' ? 'browse' : mode);
     } else if (mode === 'view') {
       setMode('view');
-    } else {
+    } else if (reviewParamPresent) {
       promptMode();
     }
   }
