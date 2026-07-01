@@ -2193,9 +2193,10 @@ html.launch-lock *::after {
   display: grid !important;
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   gap: 0 !important;
+  width: calc(100% - 112px) !important;
   max-width: 1280px !important;
   margin: clamp(96px, 10vw, 132px) auto 0 !important;
-  padding: 0 56px !important;
+  padding: 0 !important;
   border-top: 1px solid rgba(12,34,44,0.13) !important;
   border-left: 1px solid rgba(12,34,44,0.13) !important;
 }
@@ -2321,8 +2322,9 @@ html.launch-lock *::after {
 
   .team-list {
     grid-template-columns: 1fr !important;
+    width: calc(100% - 48px) !important;
     margin: 0 auto !important;
-    padding: 0 24px !important;
+    padding: 0 !important;
   }
 
   .team-row {
