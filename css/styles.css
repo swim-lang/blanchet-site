@@ -1732,7 +1732,8 @@ nav a[href="/firm"],
 }
 
 html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-preview"] {
-  display: block !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
 }
 
 .home-partners-note {
@@ -2390,6 +2391,10 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   }
 
   .partners.partners-split {
+    grid-template-columns: 1fr !important;
+  }
+
+  html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-preview"] {
     grid-template-columns: 1fr !important;
   }
 
