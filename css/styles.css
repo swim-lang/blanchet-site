@@ -1733,7 +1733,7 @@ nav a[href="/firm"],
 
 html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-preview"] {
   display: grid !important;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  grid-template-columns: minmax(0, 1.18fr) minmax(360px, 0.82fr) !important;
 }
 
 .home-partners-note {
@@ -2213,7 +2213,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 
 .partners.partners-split {
   display: grid !important;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  grid-template-columns: minmax(0, 1.18fr) minmax(360px, 0.82fr) !important;
   gap: 0 !important;
   padding: 0 !important;
   border-top: 1px solid rgba(12,34,44,0.12);
