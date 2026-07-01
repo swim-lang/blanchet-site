@@ -2428,7 +2428,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   .bio-name {
     font-size: clamp(42px, 13vw, 58px) !important;
     line-height: 1.12 !important;
-    margin-bottom: 30px !important;
+    margin-bottom: 56px !important;
   }
 
   .bio-offices {
