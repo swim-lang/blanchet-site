@@ -2147,28 +2147,46 @@ html.launch-lock *::after {
 /* Team page roster blocks, 2026-07-01.
    Mirrors the homepage no-photo grid while preserving alphabetical order. */
 .team-page {
-  background: #0c222c !important;
+  background: #fff !important;
 }
 
 .team-directory {
   display: block !important;
   padding-bottom: 96px !important;
+  background: linear-gradient(180deg, #0c222c 0, #0c222c 132px, #fff 132px, #fff 100%) !important;
 }
 
 .team-mobile-brand {
-  width: 214px !important;
+  display: inline-block !important;
+  width: auto !important;
+  height: 17.25px !important;
   margin: 44px 56px 0 !important;
+  opacity: 1 !important;
+}
+
+.team-mobile-brand img {
+  width: auto !important;
+  height: 17.25px !important;
+  object-fit: contain !important;
 }
 
 .team-nav {
   min-height: 76px !important;
   align-items: center !important;
   padding: 32px 56px !important;
-  margin-top: -66px !important;
+  margin-top: -61px !important;
 }
 
 .team-nav a {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 1.5px !important;
   line-height: 1 !important;
+}
+
+.team-nav .nav-cta {
+  padding: 8px 16px !important;
+  border-color: rgba(255,255,255,0.2) !important;
 }
 
 .team-list {
@@ -2176,10 +2194,10 @@ html.launch-lock *::after {
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   gap: 0 !important;
   max-width: 1280px !important;
-  margin: clamp(88px, 10vw, 138px) auto 0 !important;
+  margin: clamp(96px, 10vw, 132px) auto 0 !important;
   padding: 0 56px !important;
-  border-top: 1px solid rgba(255,255,255,0.16) !important;
-  border-left: 1px solid rgba(255,255,255,0.16) !important;
+  border-top: 1px solid rgba(12,34,44,0.13) !important;
+  border-left: 1px solid rgba(12,34,44,0.13) !important;
 }
 
 .team-row {
@@ -2191,9 +2209,9 @@ html.launch-lock *::after {
   align-items: start !important;
   padding: 28px 30px !important;
   border: 0 !important;
-  border-right: 1px solid rgba(255,255,255,0.16) !important;
-  border-bottom: 1px solid rgba(255,255,255,0.16) !important;
-  background: transparent !important;
+  border-right: 1px solid rgba(12,34,44,0.13) !important;
+  border-bottom: 1px solid rgba(12,34,44,0.13) !important;
+  background: #fff !important;
   opacity: 1 !important;
   transform: none !important;
   animation: none !important;
@@ -2201,8 +2219,8 @@ html.launch-lock *::after {
 }
 
 .team-row:hover {
-  background: rgba(255,255,255,0.045) !important;
-  border-color: rgba(255,255,255,0.24) !important;
+  background: #f5f7f8 !important;
+  border-color: rgba(12,34,44,0.26) !important;
 }
 
 .team-row-num {
@@ -2213,7 +2231,7 @@ html.launch-lock *::after {
   font-size: 11px !important;
   font-weight: 600 !important;
   letter-spacing: 1.8px !important;
-  color: rgba(255,255,255,0.28) !important;
+  color: rgba(12,34,44,0.34) !important;
 }
 
 .team-row-name {
@@ -2224,7 +2242,7 @@ html.launch-lock *::after {
   line-height: 1.02 !important;
   font-weight: 600 !important;
   letter-spacing: 0 !important;
-  color: rgba(255,255,255,0.82) !important;
+  color: rgba(12,34,44,0.9) !important;
   transform: none !important;
   max-width: 10ch !important;
 }
@@ -2238,7 +2256,7 @@ html.launch-lock *::after {
   font-size: 11px !important;
   font-weight: 600 !important;
   letter-spacing: 1.7px !important;
-  color: rgba(255,255,255,0.34) !important;
+  color: rgba(12,34,44,0.44) !important;
 }
 
 .team-row-arrow {
@@ -2250,30 +2268,30 @@ html.launch-lock *::after {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  border: 1px solid rgba(255,255,255,0.18) !important;
-  color: rgba(255,255,255,0.52) !important;
+  border: 1px solid rgba(12,34,44,0.14) !important;
+  color: rgba(12,34,44,0.46) !important;
   transform: none !important;
 }
 
 .team-row:hover .team-row-name,
 .team-row.is-active:hover .team-row-name {
-  color: #fff !important;
+  color: #0c222c !important;
   transform: none !important;
 }
 
 .team-row.is-active .team-row-name {
-  color: rgba(255,255,255,0.82) !important;
+  color: rgba(12,34,44,0.9) !important;
   transform: none !important;
 }
 
 .team-row:hover .team-row-num,
 .team-row:hover .team-row-title,
 .team-row:hover .team-row-arrow {
-  color: rgba(255,255,255,0.72) !important;
+  color: rgba(12,34,44,0.72) !important;
 }
 
 .team-row:hover .team-row-arrow {
-  border-color: rgba(255,255,255,0.34) !important;
+  border-color: rgba(12,34,44,0.3) !important;
 }
 
 @media (max-width: 1100px) {
@@ -2288,8 +2306,13 @@ html.launch-lock *::after {
   }
 
   .team-mobile-brand {
-    width: 174px !important;
+    width: auto !important;
+    height: 17.25px !important;
     margin: 30px 24px 48px !important;
+  }
+
+  .team-mobile-brand img {
+    height: 17.25px !important;
   }
 
   .team-nav {
