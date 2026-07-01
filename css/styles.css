@@ -2057,7 +2057,7 @@ html.launch-lock *::after {
 
 .bio-name {
   font-size: clamp(54px, 6vw, 86px) !important;
-  line-height: 0.94 !important;
+  line-height: 1.02 !important;
   letter-spacing: 0 !important;
   margin-bottom: 18px !important;
 }
@@ -2188,7 +2188,7 @@ html.launch-lock *::after {
 
   .bio-name {
     font-size: clamp(42px, 13vw, 58px) !important;
-    line-height: 0.98 !important;
+    line-height: 1.04 !important;
   }
 
   .bio-offices {
