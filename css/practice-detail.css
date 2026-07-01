@@ -29,10 +29,18 @@
   color: rgba(255,255,255,0.32);
   display: inline-block;
   width: fit-content;
-  padding-bottom: 16px !important;
-  margin-bottom: 10px;
-  border-bottom: 1px solid rgba(255,255,255,0.22) !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 18px;
+  border-bottom: 0 !important;
   line-height: 1.2;
+}
+
+.practice-detail-label::before {
+  content: "[ ";
+}
+
+.practice-detail-label::after {
+  content: " ]";
 }
 
 .practice-detail-title {
