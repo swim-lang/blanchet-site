@@ -2284,6 +2284,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
     align-self: start !important;
     background: #fff !important;
     font-size: clamp(48px, 5.1vw, 74px) !important;
+    line-height: 1.08 !important;
     white-space: nowrap !important;
   }
 
@@ -2426,7 +2427,8 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 
   .bio-name {
     font-size: clamp(42px, 13vw, 58px) !important;
-    line-height: 1.04 !important;
+    line-height: 1.12 !important;
+    margin-bottom: 30px !important;
   }
 
   .bio-offices {
