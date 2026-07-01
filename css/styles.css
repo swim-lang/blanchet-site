@@ -1701,6 +1701,17 @@ html.launch-lock *::after {
   display: none !important;
 }
 
+/* Temporary launch hold, 2026-07-01.
+   Representative examples/experience remain in markup for later review. */
+.selected-experience,
+.practice-detail-sidebar a[href="#proof"],
+.practice-detail-section#proof,
+.bio-section-title:has(+ .bio-rep-text),
+.bio-rep-text,
+.bio-rep-list {
+  display: none !important;
+}
+
 /* Launch no-photo mode, 2026-07-01.
    Attorney image markup was removed from current templates; earlier portrait
    layouts remain recoverable from git history when approved headshots arrive. */
