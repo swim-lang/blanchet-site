@@ -1712,10 +1712,158 @@ html.launch-lock *::after {
   display: none !important;
 }
 
-/* Temporary home hold, 2026-07-01.
-   Keep team preview markup available while removing it from launch review. */
-.partners[data-review-id="home.team-preview"] {
+/* Temporary launch surface, 2026-07-01.
+   Firm and practice material stays in the codebase, but the review surface is
+   limited to home, team, and contact until the client reopens those sections. */
+.nav-dropdown,
+.mobile-menu-practices,
+nav a[href="/practices"],
+nav a[href="/firm"],
+.team-nav a[href="/practices"],
+.team-nav a[href="/firm"],
+.contact-right-nav a[href="/practices"],
+.contact-right-nav a[href="/firm"],
+.site-footer a[href="/practices"],
+.site-footer a[href="/firm"],
+.home-launch-simple .practice-areas-wrapper,
+.home-launch-simple .process-wrapper,
+.home-launch-simple .who-we-represent {
   display: none !important;
+}
+
+html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-preview"] {
+  display: block !important;
+}
+
+.home-partners-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(96px, 10vw, 160px) 80px;
+  background: #eef0f1;
+}
+
+.home-partners-note .firm-letter {
+  position: relative;
+  width: min(760px, 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 72px 80px 64px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  opacity: 1;
+  transform: none;
+}
+
+.home-partners-note .firm-letter-accent {
+  position: absolute;
+  top: 0;
+  left: 80px;
+  right: 80px;
+  height: 1px;
+  background: #0c222c;
+}
+
+.home-partners-note .firm-letter-logo {
+  position: absolute;
+  top: 56px;
+  right: 64px;
+  width: 24px;
+  height: auto;
+  opacity: 0.18;
+}
+
+.home-partners-note .firm-letter-label {
+  padding: 0 0 32px !important;
+  border-bottom: 0 !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  line-height: 1.2;
+  color: rgba(12, 34, 44, 0.45);
+}
+
+.home-partners-note .firm-letter h2 {
+  max-width: 520px;
+  padding-bottom: 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0;
+  color: #0c222c;
+}
+
+.home-partners-note .firm-letter-rule {
+  width: 32px;
+  height: 1.5px;
+  margin-bottom: 28px;
+  background: rgba(12, 34, 44, 0.12);
+}
+
+.home-partners-note .firm-letter-body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-bottom: 36px;
+}
+
+.home-partners-note .firm-letter-body p {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #4b5563;
+}
+
+.home-partners-note .firm-letter-sig {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(12, 34, 44, 0.06);
+}
+
+.home-partners-note .firm-letter-sig-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: #0c222c;
+}
+
+.home-partners-note .firm-letter-sig-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: rgba(12, 34, 44, 0.5);
+}
+
+@media (max-width: 900px) {
+  .home-partners-note {
+    padding: 72px 24px;
+  }
+
+  .home-partners-note .firm-letter {
+    padding: 48px 32px;
+  }
+
+  .home-partners-note .firm-letter-accent {
+    left: 32px;
+    right: 32px;
+  }
+
+  .home-partners-note .firm-letter-logo {
+    top: 42px;
+    right: 32px;
+  }
+
+  .home-partners-note .firm-letter h2 {
+    font-size: 24px;
+  }
 }
 
 /* Launch no-photo mode, 2026-07-01.

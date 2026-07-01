@@ -86,12 +86,7 @@ if (shouldMountMobileMenu) {
         <img src="assets/logos/Wordmark-White.png" alt="Blanchet LLP">
       </a>
       <nav class="mobile-menu-primary" aria-label="Mobile navigation">
-        ${navLink('/practices', 'Practices')}
-        <div class="mobile-menu-practices">
-          <span class="mobile-menu-kicker">Core areas</span>
-          <div class="mobile-menu-practice-grid">${practiceItems}</div>
-        </div>
-        ${navLink('/firm', 'Firm')}
+        ${navLink('/', 'Home')}
         ${navLink('/team', 'Team')}
         ${navLink('/contact', 'Contact')}
       </nav>
