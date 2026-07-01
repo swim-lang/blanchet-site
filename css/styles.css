@@ -1681,6 +1681,12 @@ html.launch-lock body > * {
   display: none !important;
 }
 
+html.launch-lock *::before,
+html.launch-lock *::after {
+  content: none !important;
+  display: none !important;
+}
+
 /* Launch no-photo mode, 2026-07-01.
    Attorney image markup was removed from current templates; earlier portrait
    layouts remain recoverable from git history when approved headshots arrive. */
@@ -1848,5 +1854,292 @@ html.launch-lock body > * {
 
   .partner-card {
     min-height: 132px !important;
+  }
+}
+
+/* No-photo refinement pass, 2026-07-01.
+   Makes the launch-mode roster and bios feel designed without headshots. */
+.nav,
+.scroll-nav,
+.bio-nav {
+  min-height: 76px !important;
+  align-items: center !important;
+}
+
+.nav .nav-logo,
+.scroll-nav .nav-logo,
+.bio-nav .nav-logo {
+  display: flex !important;
+  align-items: center !important;
+  height: 24px !important;
+}
+
+.nav .nav-logo img,
+.scroll-nav .nav-logo img,
+.bio-nav .nav-logo img {
+  display: block !important;
+  height: 20px !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+.nav-links,
+.scroll-nav .scroll-nav-links,
+.bio-nav-links {
+  align-items: center !important;
+}
+
+.partners {
+  padding-top: clamp(112px, 11vw, 174px) !important;
+  padding-bottom: clamp(112px, 11vw, 174px) !important;
+}
+
+.partners-header {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.95fr) minmax(240px, 0.55fr) !important;
+  gap: clamp(40px, 7vw, 112px) !important;
+  align-items: end !important;
+  margin-bottom: 56px !important;
+}
+
+.partners-header h2 {
+  max-width: 720px !important;
+  margin-top: 18px !important;
+}
+
+.partners-header p {
+  max-width: 620px !important;
+}
+
+.partners-header > a {
+  justify-self: end !important;
+  align-self: end !important;
+  padding-top: 0 !important;
+}
+
+.partners-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  border-top: 1px solid rgba(12,34,44,0.16) !important;
+  border-left: 1px solid rgba(12,34,44,0.16) !important;
+}
+
+.partner-card {
+  min-height: 184px !important;
+  padding: 28px 30px !important;
+  border: 0 !important;
+  border-right: 1px solid rgba(12,34,44,0.16) !important;
+  border-bottom: 1px solid rgba(12,34,44,0.16) !important;
+  background: #fff !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+  transform: none !important;
+}
+
+.partner-card::before {
+  content: "Attorney";
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: rgba(12,34,44,0.32);
+}
+
+.partner-card .info {
+  width: 100% !important;
+  align-items: flex-end !important;
+  gap: 18px !important;
+}
+
+.partner-card .info h4 {
+  font-size: clamp(24px, 2.2vw, 34px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: 0 !important;
+  max-width: 10ch !important;
+}
+
+.partner-card .info p {
+  margin-top: 10px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 1.7px !important;
+  text-transform: uppercase !important;
+  color: rgba(12,34,44,0.46) !important;
+}
+
+.partner-card .info span {
+  flex: 0 0 auto !important;
+  width: 34px !important;
+  height: 34px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid rgba(12,34,44,0.18) !important;
+  color: rgba(12,34,44,0.58) !important;
+}
+
+.partner-card:hover {
+  background: #f6f8f8 !important;
+  border-color: rgba(12,34,44,0.24) !important;
+  transform: none !important;
+}
+
+.partner-card:hover .info span {
+  transform: translateX(0) !important;
+  border-color: rgba(12,34,44,0.36) !important;
+}
+
+.bio-content {
+  max-width: 1120px !important;
+  display: grid !important;
+  grid-template-columns: minmax(260px, 0.52fr) minmax(0, 1fr) !important;
+  column-gap: clamp(52px, 8vw, 118px) !important;
+  row-gap: 34px !important;
+  padding: 156px 56px 132px !important;
+}
+
+.bio-back,
+.bio-label,
+.bio-name,
+.bio-offices,
+.bio-rule {
+  grid-column: 1 !important;
+}
+
+.bio-text {
+  grid-column: 2 !important;
+}
+
+.bio-content .bio-text:first-of-type {
+  margin-top: 32px !important;
+}
+
+.bio-section-title,
+.bio-tags,
+.bio-rep-text,
+.bio-rep-list,
+.bio-list {
+  grid-column: 2 !important;
+}
+
+.bio-name {
+  font-size: clamp(54px, 6vw, 86px) !important;
+  line-height: 0.94 !important;
+  letter-spacing: 0 !important;
+  margin-bottom: 18px !important;
+}
+
+.bio-label {
+  margin-top: 54px !important;
+}
+
+.bio-offices {
+  max-width: 260px !important;
+  line-height: 1.7 !important;
+}
+
+.bio-rule {
+  width: 100% !important;
+  max-width: 220px !important;
+  margin-bottom: 0 !important;
+}
+
+.bio-text,
+.bio-rep-text,
+.bio-list,
+.bio-rep-list {
+  max-width: 720px !important;
+}
+
+.bio-text {
+  font-size: 17px !important;
+  line-height: 1.78 !important;
+}
+
+.bio-section-title {
+  margin-top: 54px !important;
+}
+
+.bio-tags span {
+  background: #fff !important;
+}
+
+@media (max-width: 900px) {
+  .nav,
+  .scroll-nav,
+  .bio-nav {
+    min-height: 62px !important;
+  }
+
+  .nav .nav-logo img,
+  .scroll-nav .nav-logo img,
+  .bio-nav .nav-logo img {
+    height: 18px !important;
+  }
+
+  .mobile-menu-toggle {
+    top: 14px !important;
+    right: 18px !important;
+  }
+
+  .partners-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 24px !important;
+    margin-bottom: 38px !important;
+  }
+
+  .partners-header > a {
+    justify-self: start !important;
+    align-self: flex-start !important;
+  }
+
+  .partners-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .partner-card {
+    min-height: 136px !important;
+    padding: 24px !important;
+  }
+
+  .partner-card .info h4 {
+    max-width: none !important;
+    font-size: 24px !important;
+  }
+
+  .bio-content {
+    display: block !important;
+    max-width: none !important;
+    padding: 104px 24px 84px !important;
+  }
+
+  .bio-label {
+    margin-top: 0 !important;
+  }
+
+  .bio-name {
+    font-size: clamp(42px, 13vw, 58px) !important;
+    line-height: 0.98 !important;
+  }
+
+  .bio-offices {
+    max-width: none !important;
+  }
+
+  .bio-rule {
+    max-width: 96px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .bio-content .bio-text:first-of-type {
+    margin-top: 0 !important;
+  }
+
+  .bio-text {
+    font-size: 15px !important;
   }
 }
