@@ -1737,21 +1737,21 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 }
 
 .home-partners-note {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: clamp(96px, 10vw, 160px) 80px;
+  display: block;
+  padding: clamp(72px, 8vw, 128px) clamp(32px, 5vw, 80px);
   background: #eef0f1;
 }
 
 .home-partners-note .firm-letter {
   position: relative;
-  width: min(760px, 100%);
-  display: flex;
-  flex-direction: column;
-  padding: 72px 80px 64px;
-  background: #fff;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.42fr) minmax(0, 1fr);
+  column-gap: clamp(56px, 7vw, 112px);
+  padding: clamp(64px, 7vw, 96px);
+  background: linear-gradient(90deg, #0c222c 0, #0c222c 38%, #fff 38%, #fff 100%);
+  box-shadow: 0 18px 60px rgba(12, 34, 44, 0.08);
   opacity: 1;
   transform: none;
 }
@@ -1759,22 +1759,26 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 .home-partners-note .firm-letter-accent {
   position: absolute;
   top: 0;
-  left: 80px;
-  right: 80px;
+  left: clamp(64px, 7vw, 96px);
+  right: clamp(64px, 7vw, 96px);
   height: 1px;
-  background: #0c222c;
+  background: rgba(255,255,255,0.22);
 }
 
 .home-partners-note .firm-letter-logo {
-  position: absolute;
-  top: 56px;
-  right: 64px;
-  width: 24px;
+  grid-column: 1;
+  grid-row: 1;
+  position: static;
+  width: 42px;
   height: auto;
-  opacity: 0.18;
+  margin-bottom: 42px;
+  filter: brightness(0) invert(1);
+  opacity: 0.22;
 }
 
 .home-partners-note .firm-letter-label {
+  grid-column: 1;
+  grid-row: 2;
   padding: 0 0 32px !important;
   border-bottom: 0 !important;
   font-family: 'Inter', sans-serif;
@@ -1782,48 +1786,57 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   font-weight: 500;
   letter-spacing: 2.5px;
   line-height: 1.2;
-  color: rgba(12, 34, 44, 0.45);
+  color: rgba(255, 255, 255, 0.48);
 }
 
 .home-partners-note .firm-letter h2 {
+  grid-column: 1;
+  grid-row: 3;
   max-width: 520px;
   padding-bottom: 28px;
   font-family: 'Inter', sans-serif;
-  font-size: 28px;
+  font-size: clamp(32px, 4vw, 56px);
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.04;
   letter-spacing: 0;
-  color: #0c222c;
+  color: #fff;
 }
 
 .home-partners-note .firm-letter-rule {
+  grid-column: 1;
+  grid-row: 4;
   width: 32px;
   height: 1.5px;
   margin-bottom: 28px;
-  background: rgba(12, 34, 44, 0.12);
+  background: rgba(255, 255, 255, 0.22);
 }
 
 .home-partners-note .firm-letter-body {
+  grid-column: 2;
+  grid-row: 1 / span 5;
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  padding-bottom: 36px;
+  gap: 20px;
+  padding: 4px 0 0;
 }
 
 .home-partners-note .firm-letter-body p {
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  line-height: 1.9;
+  font-size: 16px;
+  line-height: 1.82;
   color: #4b5563;
 }
 
 .home-partners-note .firm-letter-sig {
+  grid-column: 1;
+  grid-row: 5;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
-  padding-top: 28px;
-  border-top: 1px solid rgba(12, 34, 44, 0.06);
+  align-self: end;
+  padding-top: 36px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .home-partners-note .firm-letter-sig-text {
@@ -1832,7 +1845,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: 0;
-  color: #0c222c;
+  color: #fff;
 }
 
 .home-partners-note .firm-letter-sig-name {
@@ -1840,30 +1853,74 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 1.5px;
-  color: rgba(12, 34, 44, 0.5);
+  color: rgba(255, 255, 255, 0.48);
 }
 
 @media (max-width: 900px) {
   .home-partners-note {
-    padding: 72px 24px;
+    padding: 56px 24px;
   }
 
   .home-partners-note .firm-letter {
+    grid-template-columns: 1fr;
+    row-gap: 0;
     padding: 48px 32px;
+    background: #fff;
   }
 
   .home-partners-note .firm-letter-accent {
     left: 32px;
     right: 32px;
+    background: #0c222c;
   }
 
   .home-partners-note .firm-letter-logo {
-    top: 42px;
-    right: 32px;
+    width: 30px;
+    margin-bottom: 34px;
+    filter: none;
+    opacity: 0.18;
+  }
+
+  .home-partners-note .firm-letter-label,
+  .home-partners-note .firm-letter h2,
+  .home-partners-note .firm-letter-rule,
+  .home-partners-note .firm-letter-body,
+  .home-partners-note .firm-letter-sig {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .home-partners-note .firm-letter-label,
+  .home-partners-note .firm-letter-sig-name {
+    color: rgba(12, 34, 44, 0.45);
   }
 
   .home-partners-note .firm-letter h2 {
-    font-size: 24px;
+    font-size: 30px;
+    line-height: 1.12;
+    color: #0c222c;
+  }
+
+  .home-partners-note .firm-letter-rule {
+    background: rgba(12, 34, 44, 0.12);
+  }
+
+  .home-partners-note .firm-letter-body {
+    padding-top: 0;
+  }
+
+  .home-partners-note .firm-letter-body p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .home-partners-note .firm-letter-sig {
+    margin-top: 34px;
+    border-top-color: rgba(12, 34, 44, 0.08);
+  }
+
+  .home-partners-note .firm-letter-sig-text {
+    color: #0c222c;
   }
 }
 
@@ -2549,14 +2606,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 }
 
 .team-row-num {
-  grid-column: 1 !important;
-  grid-row: 1 !important;
-  display: block !important;
-  width: auto !important;
-  font-size: 11px !important;
-  font-weight: 600 !important;
-  letter-spacing: 1.8px !important;
-  color: rgba(12,34,44,0.34) !important;
+  display: none !important;
 }
 
 .team-row-name {
@@ -2574,10 +2624,10 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 
 .team-row-title {
   grid-column: 1 !important;
-  grid-row: 2 !important;
+  grid-row: 1 !important;
   display: block !important;
   align-self: start !important;
-  margin-top: 22px !important;
+  margin-top: 0 !important;
   font-size: 11px !important;
   font-weight: 600 !important;
   letter-spacing: 1.7px !important;
