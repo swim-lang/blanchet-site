@@ -2244,6 +2244,105 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   }
 }
 
+/* Alternate homepage, close-to-current version.
+   Keeps the active homepage structure and swaps media areas for quiet color fields. */
+.alt-home-page .alt-quiet-hero .hero-left h1 {
+  max-width: 780px;
+  font-size: clamp(56px, 5.4vw, 82px);
+}
+
+.alt-home-page .alt-quiet-hero .hero-left p {
+  max-width: 560px;
+}
+
+.alt-home-page .alt-color-field {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0) 52%),
+    linear-gradient(180deg, #102b36 0%, #0c222c 100%);
+  border-left: 1px solid rgba(255,255,255,0.08);
+}
+
+.alt-field-lines,
+.alt-note-lines {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 92px 92px;
+  opacity: 0.22;
+}
+
+.alt-field-lines::after,
+.alt-note-lines::after {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.alt-field-caption {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 60px 60px;
+  padding-left: 22px;
+  border-left: 2px solid rgba(255,255,255,0.18);
+}
+
+.alt-field-caption span {
+  color: rgba(255,255,255,0.34);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+}
+
+.alt-field-caption strong {
+  color: rgba(255,255,255,0.64);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.alt-home-page .alt-partners-note {
+  margin-top: 0;
+}
+
+.alt-home-page .alt-note-field {
+  background:
+    linear-gradient(135deg, rgba(12,34,44,0.98), rgba(20,49,61,0.96)),
+    #0c222c;
+}
+
+.alt-home-page .alt-note-field::after {
+  background:
+    linear-gradient(90deg, rgba(12,34,44,0.2), rgba(12,34,44,0.08) 46%, rgba(12,34,44,0.32));
+}
+
+.alt-home-page .alt-home-team {
+  background: #fff;
+}
+
+@media (max-width: 820px) {
+  .alt-home-page .alt-quiet-hero .hero-left h1 {
+    font-size: clamp(48px, 13vw, 64px);
+  }
+
+  .alt-home-page .alt-color-field {
+    min-height: 360px;
+    border-left: 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .alt-field-caption {
+    margin: 0 24px 38px;
+  }
+}
+
 .home-partners-note {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
