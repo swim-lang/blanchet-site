@@ -38,7 +38,7 @@
   if (sessionStorage.getItem(key) !== '1') document.documentElement.classList.add('launch-lock');
 })();
 </script>
-<link rel="stylesheet" href="css/styles.css?v=20260701-firm-letter-home">
+<link rel="stylesheet" href="css/styles.css?v=20260701-note-video-split">
 <script src="js/review-config.js" defer></script>
 <script src="js/review-tools.js?v=20260701-open-review" defer></script>
 </head>
@@ -89,6 +89,11 @@
 
 <!-- Partners Note -->
 <section class="home-partners-note" data-review-id="home.partners-note">
+  <div class="home-note-video" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="metadata">
+      <source src="assets/video/pexels-approach-nyc-skyline.mp4?v=20260630-hq" type="video/mp4">
+    </video>
+  </div>
   <div class="firm-letter" id="partners-note">
     <div class="firm-letter-accent"></div>
     <img class="firm-letter-logo" src="assets/logos/Logo-Color.png" alt="B">
@@ -203,11 +208,6 @@
         <div class="info"><div><h4>Myles Bartley</h4><p>Partner</p></div><span>&#8594;</span></div>
       </a>
     </div>
-  </div>
-  <div class="partners-video" aria-hidden="true">
-    <video autoplay muted loop playsinline preload="metadata">
-      <source src="assets/video/pexels-approach-nyc-skyline.mp4?v=20260630-hq" type="video/mp4">
-    </video>
   </div>
 </section>
 
