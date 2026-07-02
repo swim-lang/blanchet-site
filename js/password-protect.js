@@ -24,27 +24,18 @@
     const gate = document.createElement('div');
     gate.className = 'password-gate';
     gate.innerHTML = `
-      <form class="password-gate-card" autocomplete="off">
-        <img src="assets/logos/Wordmark-White.png" alt="Blanchet LLP">
-        <div>
-          <h1>Private Preview</h1>
-          <p>This site is password protected while it is under review.</p>
-        </div>
-        <label for="preview-password">Password</label>
-        <input id="preview-password" name="password" type="password" autocomplete="current-password" autofocus>
-        <button type="submit">Enter Site</button>
-        <p class="password-gate-error" role="alert" aria-live="polite"></p>
+      <form class="password-gate-card" autocomplete="off" aria-label="Password gate">
+        <input id="preview-password" name="password" type="password" autocomplete="current-password" aria-label="Password" autofocus>
       </form>
     `;
     document.body.appendChild(gate);
 
     const form = gate.querySelector('form');
     const input = gate.querySelector('input');
-    const error = gate.querySelector('.password-gate-error');
 
     form.addEventListener('submit', async event => {
       event.preventDefault();
-      error.textContent = '';
+      input.removeAttribute('aria-invalid');
       const candidate = input.value.trim();
       if (!candidate) return;
 
@@ -53,8 +44,8 @@
         unlock();
       } else {
         input.value = '';
+        input.setAttribute('aria-invalid', 'true');
         input.focus();
-        error.textContent = 'Incorrect password.';
       }
     });
   }
