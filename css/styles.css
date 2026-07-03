@@ -536,7 +536,7 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
 }
 
 .mobile-menu-brand img {
-  height: 18px;
+  height: 14px;
   width: auto;
 }
 
@@ -1119,7 +1119,7 @@ body.mobile-menu-open {
   .site-footer-cols { flex-direction: column; gap: 28px; }
   .site-footer-meta { margin-top: 36px; }
   .footer-watermark { max-width: none; padding: 0 24px 40px; }
-  .footer-brand-logo img { width: 52px; }
+  .footer-brand-logo img { width: 34px; }
   .site-footer-legal { padding: 0 24px 38px; font-size: 10px; }
   .scroll-nav { padding: 14px 24px; }
 
@@ -3223,7 +3223,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   .nav .nav-logo img,
   .scroll-nav .nav-logo img,
   .bio-nav .nav-logo img {
-    height: 18px !important;
+    height: 14px !important;
   }
 
   .mobile-menu-toggle {
