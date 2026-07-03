@@ -239,8 +239,9 @@
   }
 
   body.team-minimal-page .team-simple-list {
-    display: flex !important;
-    flex-direction: column !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 56px !important;
     width: min(calc(100% - 112px), 1120px) !important;
     max-width: 1120px !important;
     margin: clamp(96px, 10vw, 132px) auto 0 !important;
@@ -274,9 +275,9 @@
     max-width: none !important;
     align-self: flex-start !important;
     color: #fff !important;
-    font-size: clamp(32px, 4.2vw, 64px) !important;
+    font-size: clamp(30px, 2.8vw, 40px) !important;
     font-weight: 650 !important;
-    line-height: 0.98 !important;
+    line-height: 1.04 !important;
     letter-spacing: 0 !important;
     transform: none !important;
   }
@@ -308,6 +309,8 @@
     }
 
     body.team-minimal-page .team-simple-list {
+      grid-template-columns: 1fr !important;
+      column-gap: 0 !important;
       width: calc(100% - 48px) !important;
       margin: 0 auto !important;
     }
@@ -328,7 +331,7 @@
 <div class="page-curtain"></div>
 
 <nav class="scroll-nav">
-  <div class="nav-logo"><a href="/"><img src="assets/logos/Wordmark-White.png" alt="Blanchet LLP"></a></div>
+  <div class="nav-logo"><a href="/"><img src="assets/logos/Primary Lockup-White.png" alt="Blanchet LLP"></a></div>
   <div class="scroll-nav-links">
     <div class="nav-dropdown">
       <a href="/practices">PRACTICE AREAS</a>
@@ -363,7 +366,7 @@
   <!-- Right: Directory -->
   <div class="team-directory">
     <a class="team-mobile-brand" href="/" aria-label="Blanchet LLP home">
-      <img src="assets/logos/Wordmark-White.png" alt="Blanchet LLP">
+      <img src="assets/logos/Primary Lockup-White.png" alt="Blanchet LLP">
     </a>
     <div class="team-nav">
       <div class="nav-dropdown">
@@ -383,19 +386,19 @@
 
     <div class="team-list team-simple-list" data-review-id="team.directory">
       <div class="team-row"><span class="team-row-name">Joel A. Blanchet</span><span class="team-row-title">Partner</span></div>
-      <div class="team-row"><span class="team-row-name">Myles K. Bartley</span><span class="team-row-title">Partner</span></div>
       <div class="team-row"><span class="team-row-name">Andrew P. Devine</span><span class="team-row-title">Partner</span></div>
+      <div class="team-row"><span class="team-row-name">Jaran R. Moten</span><span class="team-row-title">Partner</span></div>
+      <div class="team-row"><span class="team-row-name">John R. Worth</span><span class="team-row-title">Partner</span></div>
+      <div class="team-row"><span class="team-row-name">Myles K. Bartley</span><span class="team-row-title">Partner</span></div>
+      <div class="team-row"><span class="team-row-name">Robert Reagan</span><span class="team-row-title">Partner</span></div>
       <div class="team-row"><span class="team-row-name">Frank G. Dylewski</span><span class="team-row-title">Partner</span></div>
       <div class="team-row"><span class="team-row-name">Stefan W. Engelhardt</span><span class="team-row-title">Partner</span></div>
-      <div class="team-row"><span class="team-row-name">Jaran R. Moten</span><span class="team-row-title">Partner</span></div>
-      <div class="team-row"><span class="team-row-name">Robert Reagan</span><span class="team-row-title">Partner</span></div>
-      <div class="team-row"><span class="team-row-name">John R. Worth</span><span class="team-row-title">Partner</span></div>
+      <div class="team-row"><span class="team-row-name">James Doody</span><span class="team-row-title">Partner</span></div>
       <div class="team-row"><span class="team-row-name">Hannah E. Amundsen</span><span class="team-row-title">Associate</span></div>
       <div class="team-row"><span class="team-row-name">Caroline E. Creagan</span><span class="team-row-title">Associate</span></div>
       <div class="team-row"><span class="team-row-name">Timothy Cronin</span><span class="team-row-title">Associate</span></div>
       <div class="team-row"><span class="team-row-name">Bridget Ruschak</span><span class="team-row-title">Associate</span></div>
-      <div class="team-row"><span class="team-row-name">Joshua S. Wallace</span><span class="team-row-title">Partner</span></div>
-      <div class="team-row"><span class="team-row-name">James Doody</span><span class="team-row-title">Partner</span></div>
+      <div class="team-row"><span class="team-row-name">Joshua S. Wallace</span><span class="team-row-title">Associate</span></div>
     </div>
 
   </div>
@@ -403,20 +406,21 @@
 </section>
 
 <footer class="site-footer" data-review-id="global.footer">
-  <div class="site-footer-top">
-    <div class="site-footer-cta">
-      <div class="section-label" style="color: rgba(255,255,255,0.3); border-bottom-color: rgba(255,255,255,0.12);">[ GET IN TOUCH ]</div>
-      <h2>Start with the right counsel.</h2>
-      <p>Top-tier litigation experience without the distance or drag of a traditional large-firm model.</p>
-      <a href="/contact" class="btn-white" style="display:inline-block;text-decoration:none;">Contact</a>
+  <div class="site-footer-top site-footer-brand-top">
+    <div class="site-footer-cta site-footer-brand-cta">
+      <a href="/" class="footer-brand-logo" aria-label="Blanchet LLP home">
+        <img src="assets/logos/Primary Lockup-White.png" alt="Blanchet LLP">
+      </a>
+      <p class="footer-offices">Offices in Buffalo, New York, and Chicago</p>
+      <a href="/contact" class="btn-white footer-contact-button">Contact</a>
     </div>
     <div class="site-footer-nav">
       <div class="site-footer-cols">
         <div class="footer-col">
           <div class="col-title">EXPLORE</div>
-          <a href="/practices" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Practice Areas</a>
-          <a href="/firm" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Firm</a>
-          <span>Team</span>
+          <a href="/" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Home</a>
+          <a href="/team" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Team</a>
+          <a href="/contact" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Contact</a>
         </div>
         <div class="footer-col">
           <div class="col-title">OFFICES</div>
@@ -434,9 +438,7 @@
       </div>
     </div>
   </div>
-  <div class="footer-watermark">
-    <img src="assets/logos/Wordmark-White.png" alt="Blanchet LLP">
-  </div>
+  <div class="site-footer-legal">ATTORNEY ADVERTISING. This website is for general information only and does not constitute legal advice. Prior results do not guarantee similar outcomes.</div>
 </footer>
 
 <script>
