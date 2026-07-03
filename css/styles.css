@@ -1017,7 +1017,7 @@ body.mobile-menu-open {
   text-decoration: none;
 }
 .footer-brand-logo img {
-  width: min(100%, 360px);
+  width: 58px;
   height: auto;
   object-fit: contain;
 }
@@ -1119,7 +1119,7 @@ body.mobile-menu-open {
   .site-footer-cols { flex-direction: column; gap: 28px; }
   .site-footer-meta { margin-top: 36px; }
   .footer-watermark { max-width: none; padding: 0 24px 40px; }
-  .footer-brand-logo img { width: min(100%, 280px); }
+  .footer-brand-logo img { width: 52px; }
   .site-footer-legal { padding: 0 24px 38px; font-size: 10px; }
   .scroll-nav { padding: 14px 24px; }
 
