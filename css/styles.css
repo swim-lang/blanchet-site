@@ -8,7 +8,7 @@
 /* Page transition curtain */
 html.page-transition-active,
 html.page-transition-active body { background: #0c222c; }
-.page-curtain { position: fixed; inset: 0; background: #0c222c; z-index: 99999; pointer-events: none; opacity: 1; visibility: visible; transition: opacity 0.42s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s; }
+.page-curtain { position: fixed; inset: 0; background: #0c222c; z-index: 99999; pointer-events: none; opacity: 0; visibility: hidden; transition: opacity 0.42s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.42s; }
 .page-curtain.reveal { opacity: 0; visibility: hidden; transition: opacity 0.42s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.42s; }
 .page-curtain.exit { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity 0.32s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s; }
 @media (prefers-reduced-motion: reduce) {

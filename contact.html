@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>html{background:#fff}</style>
-<link rel="stylesheet" href="css/styles.css?v=20260701-note-video-pair">
+<link rel="stylesheet" href="css/styles.css?v=20260703-launch-polish">
 <script>document.documentElement.classList.add("auth-lock");</script>
 <script src="js/password-protect.js?v=20260702-dolly" defer></script>
 <script src="js/review-config.js" defer></script>
@@ -38,15 +38,15 @@
   .contact-page { display: flex; min-height: 100vh; }
 
   /* Navy left panel */
-  .contact-left { width: 520px; flex-shrink: 0; background: #0c222c; padding: 0 60px 60px; display: flex; flex-direction: column; }
-  .contact-left-nav { display: flex; justify-content: space-between; align-items: center; padding: 40px 0; margin-bottom: 60px; }
-  .contact-left-nav .nav-logo img { height: 17.25px; width: auto; }
+  .contact-left { width: clamp(460px, 36vw, 540px); flex-shrink: 0; background: #0c222c; padding: 0 clamp(48px, 4vw, 64px) 60px; display: flex; flex-direction: column; }
+  .contact-left-nav { display: flex; justify-content: space-between; align-items: center; padding: 40px 0; margin-bottom: clamp(42px, 5vw, 64px); }
+  .contact-left-nav .nav-logo img { height: 20px; width: auto; }
   .contact-left-nav a { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
   .contact-left-nav a:hover { color: #fff; }
   .contact-left-content { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 32px; }
   .contact-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; color: rgba(255,255,255,0.35); }
-  .contact-heading { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 700; color: #fff; line-height: 1.1; text-transform: uppercase; }
-  .contact-intro { font-family: 'Inter', sans-serif; font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.75; max-width: 360px; }
+  .contact-heading { font-family: 'Inter', sans-serif; font-size: clamp(44px, 4vw, 58px); font-weight: 700; color: #fff; line-height: 1.04; text-transform: uppercase; }
+  .contact-intro { font-family: 'Inter', sans-serif; font-size: 16px; color: rgba(255,255,255,0.54); line-height: 1.75; max-width: 380px; }
   .contact-divider { width: 40px; height: 2px; background: rgba(255,255,255,0.15); }
   .contact-info-group { display: flex; flex-direction: column; gap: 20px; }
   .contact-info-item { display: flex; flex-direction: column; gap: 6px; }
@@ -115,7 +115,7 @@
     <div class="contact-left-content" data-review-id="contact.info">
       <span class="contact-label">[ CONTACT ]</span>
       <h1 class="contact-heading">Get in<br>Touch</h1>
-      <p class="contact-intro">Blanchet LLP is a litigation firm for serious disputes. The firm handles commercial litigation, environmental disputes, government investigations, product liability and mass tort, IP and trade secret disputes, and other complex matters from offices in Buffalo, New York City, and Chicago.</p>
+      <p class="contact-intro">Blanchet LLP represents companies, boards, executives, and individuals in serious disputes where judgment, urgency, and ownership matter.</p>
       <div class="contact-divider"></div>
       <div class="contact-info-group">
         <div class="contact-info-item">
@@ -236,7 +236,7 @@
   if (c) c.classList.add('reveal');
 })();
 </script>
-<script src="js/main.js?v=20260701-cache-refresh"></script>
+<script src="js/main.js?v=20260703-launch-polish"></script>
 <script src="js/contact-form.js?v=20260630-resend"></script>
 
 </body>
