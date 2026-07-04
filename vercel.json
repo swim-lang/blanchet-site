@@ -1,24 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
-    { "source": "/firm", "destination": "/", "statusCode": 302 },
-    { "source": "/firm.html", "destination": "/", "statusCode": 302 },
-    { "source": "/practices", "destination": "/", "statusCode": 302 },
-    { "source": "/practices.html", "destination": "/", "statusCode": 302 },
-    { "source": "/litigation", "destination": "/", "statusCode": 302 },
-    { "source": "/litigation.html", "destination": "/", "statusCode": 302 },
-    { "source": "/commercial-litigation", "destination": "/", "statusCode": 302 },
-    { "source": "/commercial-litigation.html", "destination": "/", "statusCode": 302 },
-    { "source": "/environmental-disputes", "destination": "/", "statusCode": 302 },
-    { "source": "/environmental-disputes.html", "destination": "/", "statusCode": 302 },
-    { "source": "/product-liability", "destination": "/", "statusCode": 302 },
-    { "source": "/product-liability.html", "destination": "/", "statusCode": 302 },
-    { "source": "/white-collar", "destination": "/", "statusCode": 302 },
-    { "source": "/white-collar.html", "destination": "/", "statusCode": 302 },
-    { "source": "/ip-trade-secrets", "destination": "/", "statusCode": 302 },
-    { "source": "/ip-trade-secrets.html", "destination": "/", "statusCode": 302 }
-  ],
   "headers": [
     {
       "source": "/(.*)",
