@@ -1,4 +1,5 @@
 const RESEND_ENDPOINT = 'https://api.resend.com/emails';
+const CONTACT_RECIPIENT = 'Robert.Reagan@BlanchetLLP.com';
 
 function sendJson(response, status, payload) {
   response.statusCode = status;
@@ -107,11 +108,11 @@ module.exports = async function contactHandler(request, response) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL;
+  const to = CONTACT_RECIPIENT;
   const from = process.env.CONTACT_FROM_EMAIL || 'Blanchet LLP <onboarding@resend.dev>';
 
-  if (!apiKey || !to) {
-    console.error('Contact form is missing RESEND_API_KEY or CONTACT_TO_EMAIL.');
+  if (!apiKey) {
+    console.error('Contact form is missing RESEND_API_KEY.');
     return sendJson(response, 500, { ok: false, message: 'The contact form is not configured yet.' });
   }
 
