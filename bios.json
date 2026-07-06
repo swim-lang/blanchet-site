@@ -828,12 +828,37 @@
       ],
       "representativeExperienceIntro": "",
       "representativeExperience": [],
-      "education": [],
-      "admissions": [],
+      "education": [
+        "Houghton College, B.S., Chemistry",
+        "Houghton College, B.A., Political Science",
+        "The State University of New York - University at Buffalo, Ph.D.",
+        "The State University of New York - University at Buffalo School of Law, J.D."
+      ],
+      "admissions": [
+        "New York",
+        "U.S. District Court for the Eastern District of New York",
+        "U.S. District Court for the Southern District of New York",
+        "U.S. District Court for the Western District of New York"
+      ],
       "judicialClerkships": [],
-      "honorsAndRecognition": [],
-      "professionalAssociations": [],
+      "honorsAndRecognition": [
+        "Super Lawyers Rising Stars, 2024-2025",
+        "Best Lawyers: Ones to Watch in America, 2025",
+        "Dale S. Margulis Award, 2019",
+        "Carlos C. Alden Award, 2019",
+        "Order of the Barristers, 2019",
+        "Order of the Coif, 2019"
+      ],
+      "professionalAssociations": [
+        "American Bar Association",
+        "New York State Bar Association",
+        "Erie County Bar Association",
+        "American Chemical Society"
+      ],
       "activities": [],
+      "boards": [
+        "State Advisory Board, New York State Future Business Leaders of America"
+      ],
       "governmentService": [],
       "clerkships": []
     }
