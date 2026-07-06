@@ -151,6 +151,7 @@
     gap: 0;
     border-top: 1px solid var(--line);
     border-left: 1px solid rgba(255,255,255,0.08);
+    border-right: 1px solid rgba(255,255,255,0.08);
   }
 
   .practice-preview-card {
@@ -215,9 +216,6 @@
       border-right: 0;
     }
 
-    .practice-preview-card:nth-child(3n) {
-      border-right: 1px solid rgba(255,255,255,0.08);
-    }
   }
 
   @media (max-width: 760px) {
@@ -257,6 +255,7 @@
     .practice-preview-grid {
       grid-template-columns: 1fr;
       border-left: 0;
+      border-right: 0;
     }
 
     .practice-preview-card,
