@@ -2765,9 +2765,24 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 
 .bio-nav {
   position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 50 !important;
   display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 32px !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
   background: #0c222c !important;
   padding: 28px 48px !important;
+  pointer-events: none !important;
+}
+
+.bio-nav a,
+.bio-nav .nav-dropdown {
+  pointer-events: auto !important;
 }
 
 .bio-nav .nav-logo img {
@@ -2779,6 +2794,14 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 .bio-nav-links a,
 .bio-nav-cta {
   color: rgba(255,255,255,0.66) !important;
+}
+
+.bio-nav-links {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 22px !important;
+  min-width: 0 !important;
 }
 
 .bio-nav-links a:hover,
@@ -3170,16 +3193,16 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 
   .bio-offices {
     position: sticky !important;
-    top: clamp(265px, calc(164px + 11.28vw), 326px) !important;
-    z-index: 3 !important;
+    top: clamp(286px, calc(206px + 7vw), 334px) !important;
+    z-index: 4 !important;
     align-self: start !important;
     background: #fff !important;
   }
 
   .bio-rule {
     position: sticky !important;
-    top: clamp(325px, calc(224px + 11.28vw), 386px) !important;
-    z-index: 3 !important;
+    top: clamp(386px, calc(306px + 7vw), 434px) !important;
+    z-index: 4 !important;
     align-self: start !important;
     background: #0c222c !important;
   }
@@ -3192,7 +3215,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 .bio-offices {
   max-width: 260px !important;
   line-height: 1.7 !important;
-  margin-bottom: 18px !important;
+  margin-bottom: 20px !important;
 }
 
 .bio-rule {
@@ -3200,7 +3223,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   height: 2px !important;
   max-width: 100% !important;
   margin-bottom: 0 !important;
-  transform: translateY(-18px) !important;
+  transform: none !important;
 }
 
 .bio-text,
@@ -3296,6 +3319,10 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   .scroll-nav,
   .bio-nav {
     min-height: 62px !important;
+  }
+
+  .bio-nav {
+    display: none !important;
   }
 
   .nav .nav-logo img,
