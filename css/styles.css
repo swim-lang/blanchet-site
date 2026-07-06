@@ -2476,10 +2476,11 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   display: grid;
   grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1.28fr);
   gap: clamp(56px, 7vw, 120px);
+  align-items: start;
   width: 100%;
   max-width: none;
   margin: 0;
-  padding: clamp(82px, 9vw, 148px) clamp(52px, 7vw, 120px);
+  padding: clamp(70px, 7vw, 116px) clamp(52px, 7vw, 120px) clamp(38px, 4vw, 64px);
   background: #eef0f1;
   box-shadow: none;
   clip-path: none;
@@ -2514,8 +2515,8 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 .home-letter-photo {
   position: relative;
   width: min(100%, 430px);
-  aspect-ratio: 4 / 5;
-  margin-top: 46px;
+  aspect-ratio: 16 / 10;
+  margin-top: 38px;
   overflow: hidden;
   background: #d9dee1;
 }
@@ -2570,11 +2571,21 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   aspect-ratio: 16 / 7;
 }
 
+.home-closing-photo .home-photo-tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(12,34,44,0.12);
+  transition: background 0.45s ease;
+  pointer-events: none;
+}
+
 .home-photo-tile img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.7s ease, filter 0.45s ease;
 }
 
 .home-photo-chicago img {
@@ -2589,22 +2600,46 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   object-position: center center;
 }
 
-.home-photo-tile figcaption {
+.home-photo-logo-reveal {
   position: absolute;
-  left: clamp(18px, 2vw, 30px);
-  bottom: clamp(18px, 2vw, 30px);
-  color: rgba(255,255,255,0.72);
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  pointer-events: none;
+}
+
+.home-photo-logo-reveal img {
+  width: clamp(82px, 9vw, 148px);
+  height: auto;
+  opacity: 0.78;
+}
+
+.home-photo-tile:hover img,
+.home-photo-tile:focus-within img {
+  transform: scale(1.035);
+  filter: saturate(0.92) brightness(0.82);
+}
+
+.home-photo-tile:hover::after,
+.home-photo-tile:focus-within::after {
+  background: rgba(12,34,44,0.36);
+}
+
+.home-photo-tile:hover .home-photo-logo-reveal,
+.home-photo-tile:focus-within .home-photo-logo-reveal {
+  opacity: 1;
+  transform: scale(1);
 }
 
 @media (min-width: 901px) {
   .home-minimal-launch .home-visual-hero {
     display: grid;
-    grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.96fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 
   .home-minimal-launch .home-visual-hero .hero-left {
@@ -2682,6 +2717,11 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 @media (max-width: 600px) {
   .home-letter-photo {
     aspect-ratio: 4 / 5;
+  }
+
+  .home-photo-logo-reveal {
+    opacity: 0.48;
+    transform: scale(1);
   }
 }
 
