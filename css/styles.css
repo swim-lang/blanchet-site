@@ -3215,11 +3215,79 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 }
 
 .bio-section-title {
+  padding-top: 32px;
   margin-top: 54px !important;
+  margin-bottom: 16px;
+  border-top: 1px solid #e5e7eb;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(12,34,44,0.35);
+}
+
+.bio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .bio-tags span {
+  padding: 6px 14px;
+  border: 1px solid rgba(12,34,44,0.12);
   background: #fff !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #0c222c;
+}
+
+.bio-list,
+.bio-rep-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.bio-rep-list {
+  gap: 16px;
+}
+
+.bio-list li,
+.bio-rep-list li {
+  position: relative;
+  padding-left: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #0c222c;
+}
+
+.bio-rep-list li {
+  line-height: 1.65;
+}
+
+.bio-list li::before,
+.bio-rep-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 4px;
+  height: 4px;
+  background: rgba(12,34,44,0.2);
+}
+
+.bio-rep-text {
+  margin-bottom: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4b5563;
 }
 
 @media (max-width: 900px) {
