@@ -2501,6 +2501,54 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   line-height: 1.72;
 }
 
+.home-photo-triptych {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 0.78fr) minmax(0, 1.12fr);
+  gap: clamp(10px, 1.2vw, 18px);
+  padding: clamp(18px, 3.6vw, 58px);
+  background: #0c222c;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.home-photo-tile {
+  position: relative;
+  min-height: clamp(360px, 36vw, 610px);
+  margin: 0;
+  overflow: hidden;
+  background: #071c24;
+}
+
+.home-photo-tile img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-photo-chicago img {
+  object-position: center center;
+}
+
+.home-photo-new-york img {
+  object-position: center top;
+}
+
+.home-photo-buffalo img {
+  object-position: center center;
+}
+
+.home-photo-tile figcaption {
+  position: absolute;
+  left: clamp(18px, 2vw, 30px);
+  bottom: clamp(18px, 2vw, 30px);
+  color: rgba(255,255,255,0.72);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
 @media (max-width: 980px) {
   .alt-home-page .alt-letter-wide {
     grid-template-columns: 1fr;
@@ -2540,6 +2588,27 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 
   .alt-home-page .alt-letter-body {
     padding: 30px 24px;
+  }
+
+  .home-photo-triptych {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .home-photo-tile {
+    min-height: 0;
+    aspect-ratio: 16 / 11;
+  }
+
+  .home-photo-new-york {
+    aspect-ratio: 16 / 11;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-photo-new-york {
+    aspect-ratio: 4 / 5;
   }
 }
 
