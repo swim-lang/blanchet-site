@@ -112,7 +112,8 @@
         "West Point Association of Graduates’ Advisory Council, Class Advisor",
         "New York City Bar Association Military and Veterans Affairs Committee, former Chair"
       ],
-      "activities": []
+      "activities": [],
+      "fullName": "Myles K. Bartley"
     },
     {
       "name": "Joel Blanchet",
@@ -182,7 +183,8 @@
         "Bar Association of Erie County",
         "New York State Bar Association, Commercial & Federal Litigation Section and Trial Lawyers Section"
       ],
-      "activities": []
+      "activities": [],
+      "fullName": "Joel A. Blanchet"
     },
     {
       "name": "Caroline Creagan",
@@ -336,8 +338,8 @@
         "Student Law Clerk, Honorable John T. Curtin, U.S. District Court for the Western District of New York, 2011-2012"
       ],
       "education": [
-        "State University of New York at Buffalo Law School, J.D., cum laude, 2012; Buffalo Law Review, Publications Editor",
-        "Canisius College, B.S., 2005"
+        "State University of New York at Buffalo Law School, J.D., cum laude; Buffalo Law Review, Publications Editor",
+        "Canisius College, B.S."
       ],
       "admissions": [
         "New York",
@@ -358,7 +360,8 @@
       "activities": [
         "Leadership Buffalo Rising Leaders, Class of 2015",
         "FINRA Series 7, 24, 53, and 66 licenses, inactive"
-      ]
+      ],
+      "fullName": "Andrew P. Devine"
     },
     {
       "name": "Frank Dylewski",
@@ -522,7 +525,8 @@
         "American Bar Association, Litigation Section",
         "Center for Conflict Resolution, Board Member"
       ],
-      "activities": []
+      "activities": [],
+      "fullName": "Jaran R. Moten"
     },
     {
       "name": "Craig Nolan",
@@ -742,7 +746,8 @@
       ],
       "honorsAndRecognition": [],
       "professionalAssociations": [],
-      "activities": []
+      "activities": [],
+      "fullName": "John R. Worth"
     }
   ]
 }
