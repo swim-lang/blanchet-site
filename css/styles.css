@@ -3681,3 +3681,66 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   letter-spacing: 0.2px;
   text-transform: none;
 }
+
+/* Footer office layout cleanup, 2026-07-06.
+   The footer markup is repeated across static pages, so this reshapes the
+   shared pattern without hand-editing every footer instance. */
+@media (min-width: 901px) {
+  .site-footer-top {
+    display: grid !important;
+    grid-template-columns: minmax(300px, 1fr) minmax(112px, 150px) minmax(112px, 150px);
+    grid-template-areas:
+      "brand explore connect"
+      "offices offices offices"
+      "meta meta meta";
+    gap: 38px clamp(42px, 6vw, 96px) !important;
+    align-items: start;
+  }
+
+  .site-footer-cta {
+    grid-area: brand;
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .site-footer-nav,
+  .site-footer-cols {
+    display: contents;
+  }
+
+  .site-footer-cols .footer-col:nth-child(1) {
+    grid-area: explore;
+  }
+
+  .site-footer-cols .footer-col:nth-child(2) {
+    grid-area: offices;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 260px));
+    gap: 16px clamp(28px, 4vw, 64px);
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .site-footer-cols .footer-col:nth-child(2) .col-title {
+    grid-column: 1 / -1;
+  }
+
+  .site-footer-cols .footer-col:nth-child(3) {
+    grid-area: connect;
+  }
+
+  .site-footer-meta {
+    grid-area: meta;
+    margin-top: 0;
+  }
+
+  .footer-address {
+    max-width: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-footer-cols .footer-col:nth-child(2) {
+    gap: 16px;
+  }
+}
