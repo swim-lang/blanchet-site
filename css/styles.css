@@ -48,7 +48,6 @@ html.page-transition-active body { background: #0c222c; }
   object-fit: cover !important;
   object-position: center top !important;
   border-radius: 999px !important;
-  filter: grayscale(1) contrast(0.92) brightness(0.96) !important;
   opacity: 0.84 !important;
   box-shadow: 0 0 0 1px rgba(255,255,255,0.18), 0 24px 60px rgba(0,0,0,0.28) !important;
 }
@@ -123,7 +122,6 @@ html.page-transition-active body { background: #0c222c; }
   border-radius: 999px !important;
   object-fit: cover !important;
   object-position: center top !important;
-  filter: grayscale(1) contrast(0.92) brightness(0.96) !important;
   box-shadow: 0 0 0 1px rgba(255,255,255,0.18), 0 24px 60px rgba(0,0,0,0.28) !important;
 }
 
@@ -3363,7 +3361,6 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  filter: grayscale(1) contrast(0.96);
 }
 
 @media (max-width: 900px) {
