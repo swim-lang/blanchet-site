@@ -53,7 +53,8 @@
       "clerkships": [],
       "image": "",
       "imageAlt": "Hannah Amundsen",
-      "url": "https://swim-lang.github.io/blanchet-site/bio-hannah-amundsen.html"
+      "url": "https://swim-lang.github.io/blanchet-site/bio-hannah-amundsen.html",
+      "email": "hannah.amundsen@blanchetllp.com"
     },
     {
       "name": "Myles Bartley",
@@ -236,7 +237,8 @@
       "clerkships": [],
       "image": "",
       "imageAlt": "Caroline Creagan",
-      "url": "https://swim-lang.github.io/blanchet-site/bio-caroline-creagan.html"
+      "url": "https://swim-lang.github.io/blanchet-site/bio-caroline-creagan.html",
+      "email": "caroline.creagan@blanchetllp.com"
     },
     {
       "name": "Timothy Cronin",
@@ -288,7 +290,8 @@
       "clerkships": [],
       "image": "",
       "imageAlt": "Timothy Cronin",
-      "url": "https://swim-lang.github.io/blanchet-site/bio-timothy-cronin.html"
+      "url": "https://swim-lang.github.io/blanchet-site/bio-timothy-cronin.html",
+      "email": "timothy.cronin@blanchetllp.com"
     },
     {
       "name": "Andrew Devine",
@@ -678,7 +681,8 @@
         "American Bar Association, Young Lawyers Division",
         "New York State Bar Association, Environmental & Energy Law Section"
       ],
-      "activities": []
+      "activities": [],
+      "email": "robert.reagan@blanchetllp.com"
     },
     {
       "name": "Bridget Ruschak",
@@ -737,7 +741,8 @@
       ],
       "image": "",
       "imageAlt": "Bridget Ruschak",
-      "url": "https://swim-lang.github.io/blanchet-site/bio-bridget-ruschak.html"
+      "url": "https://swim-lang.github.io/blanchet-site/bio-bridget-ruschak.html",
+      "email": "bridget.ruschak@blanchetllp.com"
     },
     {
       "name": "John Worth",

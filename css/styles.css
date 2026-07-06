@@ -3577,3 +3577,38 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
     display: block !important;
   }
 }
+
+
+/* Contact details added for attorney bios and footer, 2026-07-06. */
+.bio-email {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.bio-email:hover {
+  color: #0c222c;
+}
+
+.footer-address {
+  max-width: 240px;
+  line-height: 1.55 !important;
+}
+
+.footer-address strong {
+  color: rgba(255,255,255,0.72);
+  font-weight: 600;
+}
+
+.team-row-email {
+  display: block;
+  order: 3;
+  align-self: flex-start;
+  margin-top: -2px;
+  color: rgba(255,255,255,0.34);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  text-transform: none;
+}
