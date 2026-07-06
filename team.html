@@ -246,7 +246,7 @@
     max-width: 1120px !important;
     margin: clamp(96px, 10vw, 132px) auto 0 !important;
     padding: 0 !important;
-    border-top: 1px solid rgba(255,255,255,0.12) !important;
+    border-top: 0 !important;
     border-left: 0 !important;
   }
 
@@ -256,6 +256,7 @@
     flex-direction: column !important;
     align-items: flex-start !important;
     gap: 10px !important;
+    position: relative !important;
     padding: 30px 0 !important;
     border: 0 !important;
     border-bottom: 1px solid rgba(255,255,255,0.12) !important;
@@ -264,6 +265,11 @@
     opacity: 1 !important;
     transform: none !important;
     animation: none !important;
+    transition: border-color 0.25s ease, color 0.25s ease !important;
+  }
+
+  body.team-minimal-page .team-simple-list .team-row:nth-child(-n + 2) {
+    border-top: 1px solid rgba(255,255,255,0.12) !important;
   }
 
   body.team-minimal-page .team-simple-list a.team-row {
@@ -280,6 +286,35 @@
   body.team-minimal-page .team-simple-list .team-row:hover {
     background: transparent !important;
     border-bottom-color: rgba(255,255,255,0.22) !important;
+  }
+
+  body.team-minimal-page .team-simple-list a.team-row::after {
+    content: "View bio \2192";
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    display: inline-block;
+    color: rgba(255,255,255,0.34);
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    line-height: 1;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.25s ease, transform 0.25s ease, color 0.25s ease;
+  }
+
+  body.team-minimal-page .team-simple-list a.team-row:hover::after,
+  body.team-minimal-page .team-simple-list a.team-row:focus-visible::after {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  body.team-minimal-page .team-simple-list a.team-row:hover .team-row-name,
+  body.team-minimal-page .team-simple-list a.team-row:focus-visible .team-row-name {
+    color: #fff !important;
   }
 
   body.team-minimal-page .team-simple-list .team-row-name {
@@ -328,6 +363,18 @@
 
     body.team-minimal-page .team-simple-list .team-row {
       padding: 24px 0 !important;
+    }
+
+    body.team-minimal-page .team-simple-list a.team-row::after {
+      bottom: 24px;
+    }
+
+    body.team-minimal-page .team-simple-list .team-row:nth-child(-n + 2) {
+      border-top: 0 !important;
+    }
+
+    body.team-minimal-page .team-simple-list .team-row:first-child {
+      border-top: 1px solid rgba(255,255,255,0.12) !important;
     }
 
     body.team-minimal-page .team-simple-list .team-row-name {

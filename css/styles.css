@@ -2427,6 +2427,41 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   margin-top: 0;
 }
 
+.home-minimal-launch .home-visual-hero {
+  overflow: hidden;
+}
+
+.home-hero-photo,
+.home-letter-photo,
+.home-closing-photo figure {
+  margin: 0;
+}
+
+.home-hero-photo {
+  position: relative;
+  display: none;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #071c24;
+}
+
+.home-hero-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(12,34,44,0.26), rgba(12,34,44,0.02));
+  pointer-events: none;
+}
+
+.home-hero-photo img,
+.home-letter-photo img,
+.home-closing-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .home-minimal-launch .footer-cities {
   margin: 28px 0 0;
 }
@@ -2476,6 +2511,19 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   border-top: 1px solid rgba(12,34,44,0.1);
 }
 
+.home-letter-photo {
+  position: relative;
+  width: min(100%, 430px);
+  aspect-ratio: 4 / 5;
+  margin-top: 46px;
+  overflow: hidden;
+  background: #d9dee1;
+}
+
+.home-letter-photo img {
+  object-position: center top;
+}
+
 .alt-home-page .alt-letter-body {
   min-width: 0;
   background: #fff;
@@ -2501,10 +2549,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   line-height: 1.72;
 }
 
-.home-photo-triptych {
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 0.78fr) minmax(0, 1.12fr);
-  gap: clamp(10px, 1.2vw, 18px);
+.home-closing-photo {
   padding: clamp(18px, 3.6vw, 58px);
   background: #0c222c;
   border-top: 1px solid rgba(255,255,255,0.1);
@@ -2512,10 +2557,17 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 
 .home-photo-tile {
   position: relative;
-  min-height: clamp(360px, 36vw, 610px);
+  min-height: clamp(360px, 35vw, 560px);
+  max-width: 1320px;
   margin: 0;
+  margin-inline: auto;
   overflow: hidden;
   background: #071c24;
+}
+
+.home-closing-photo .home-photo-tile {
+  min-height: 0;
+  aspect-ratio: 16 / 7;
 }
 
 .home-photo-tile img {
@@ -2547,6 +2599,21 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
+}
+
+@media (min-width: 901px) {
+  .home-minimal-launch .home-visual-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.96fr);
+  }
+
+  .home-minimal-launch .home-visual-hero .hero-left {
+    min-width: 0;
+  }
+
+  .home-hero-photo {
+    display: block;
+  }
 }
 
 @media (max-width: 980px) {
@@ -2590,9 +2657,19 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
     padding: 30px 24px;
   }
 
-  .home-photo-triptych {
-    grid-template-columns: 1fr;
-    gap: 12px;
+  .home-hero-photo {
+    display: block;
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .home-letter-photo {
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    margin-top: 34px;
+  }
+
+  .home-closing-photo {
     padding: 14px;
   }
 
@@ -2600,14 +2677,10 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
     min-height: 0;
     aspect-ratio: 16 / 11;
   }
-
-  .home-photo-new-york {
-    aspect-ratio: 16 / 11;
-  }
 }
 
 @media (max-width: 600px) {
-  .home-photo-new-york {
+  .home-letter-photo {
     aspect-ratio: 4 / 5;
   }
 }
