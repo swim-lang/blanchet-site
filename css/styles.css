@@ -3333,6 +3333,43 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   }
 }
 
+/* Bio headshot treatment, 2026-07-06.
+   Uses the current minimal bio grid without restoring the former full-bleed
+   portrait rail. */
+.bio-headshot-card {
+  grid-column: 2 !important;
+  width: min(100%, 360px);
+  aspect-ratio: 4 / 5;
+  margin: 20px 0 38px !important;
+  overflow: hidden;
+  border: 1px solid rgba(12,34,44,0.1);
+  background: #eef0f1;
+}
+
+@media (min-width: 901px) {
+  .bio-headshot-card {
+    grid-row: 2 / span 4 !important;
+    margin-top: 0 !important;
+    align-self: start;
+  }
+}
+
+.bio-headshot-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(1) contrast(0.96);
+}
+
+@media (max-width: 900px) {
+  .bio-headshot-card {
+    width: min(72vw, 260px);
+    margin: 0 0 34px !important;
+  }
+}
+
 /* Team page roster blocks, 2026-07-01.
    Mirrors the homepage no-photo grid while preserving alphabetical order. */
 .team-page {
