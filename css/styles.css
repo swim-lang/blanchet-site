@@ -3119,7 +3119,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   display: grid !important;
   grid-template-columns: minmax(360px, 0.72fr) minmax(0, 1fr) !important;
   column-gap: clamp(72px, 7vw, 132px) !important;
-  row-gap: 34px !important;
+  row-gap: 22px !important;
   padding: 156px 56px 132px !important;
 }
 
@@ -3136,7 +3136,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 }
 
 .bio-content .bio-text:first-of-type {
-  margin-top: 32px !important;
+  margin-top: 0 !important;
 }
 
 .bio-section-title,
@@ -3197,7 +3197,8 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 
 .bio-rule {
   width: 100% !important;
-  max-width: 220px !important;
+  height: 2px !important;
+  max-width: 100% !important;
   margin-bottom: 0 !important;
   transform: translateY(-18px) !important;
 }
@@ -3388,7 +3389,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   }
 
   .bio-rule {
-    max-width: 96px !important;
+    max-width: 100% !important;
     margin-bottom: 40px !important;
   }
 
@@ -3408,7 +3409,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   grid-column: 2 !important;
   width: min(100%, 360px);
   aspect-ratio: 4 / 5;
-  margin: 20px 0 38px !important;
+  margin: 20px 0 24px !important;
   overflow: hidden;
   border: 1px solid rgba(12,34,44,0.1);
   background: #eef0f1;
@@ -3433,7 +3434,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 @media (max-width: 900px) {
   .bio-headshot-card {
     width: min(72vw, 260px);
-    margin: 0 0 34px !important;
+    margin: 0 0 22px !important;
   }
 }
 
