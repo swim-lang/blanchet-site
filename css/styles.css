@@ -3147,6 +3147,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 }
 
 .bio-back,
+.bio-sticky-card,
 .bio-label,
 .bio-name,
 .bio-offices,
@@ -3170,6 +3171,13 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   grid-column: 2 !important;
 }
 
+.bio-sticky-card {
+  grid-column: 1 !important;
+  align-self: start !important;
+  max-width: 100% !important;
+  background: #fff !important;
+}
+
 .bio-name {
   font-size: clamp(54px, 6vw, 86px) !important;
   line-height: 1.02 !important;
@@ -3178,10 +3186,16 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 }
 
 @media (min-width: 901px) {
-  .bio-name {
+  .bio-sticky-card {
     position: sticky !important;
     top: 112px !important;
-    z-index: 3 !important;
+    z-index: 4 !important;
+  }
+
+  .bio-name {
+    position: static !important;
+    top: auto !important;
+    z-index: auto !important;
     align-self: start !important;
     background: #fff !important;
     font-size: clamp(42px, 4.2vw, 64px) !important;
@@ -3192,17 +3206,17 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   }
 
   .bio-offices {
-    position: sticky !important;
-    top: clamp(286px, calc(206px + 7vw), 334px) !important;
-    z-index: 4 !important;
+    position: static !important;
+    top: auto !important;
+    z-index: auto !important;
     align-self: start !important;
     background: #fff !important;
   }
 
   .bio-rule {
-    position: sticky !important;
-    top: clamp(386px, calc(306px + 7vw), 434px) !important;
-    z-index: 4 !important;
+    position: static !important;
+    top: auto !important;
+    z-index: auto !important;
     align-self: start !important;
     background: #0c222c !important;
   }

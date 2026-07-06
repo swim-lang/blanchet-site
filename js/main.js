@@ -92,10 +92,6 @@ if (shouldMountMobileMenu) {
         ${navLink('/contact', 'Contact')}
       </nav>
       <div class="mobile-menu-footer">
-        <div class="mobile-menu-contact">
-          <span>Contact</span>
-          <a href="mailto:contact@blanchetllp.com">contact@blanchetllp.com</a>
-        </div>
         <div class="mobile-menu-cities">Buffalo / Chicago / New York City</div>
       </div>
     </div>
