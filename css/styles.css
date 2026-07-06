@@ -1750,17 +1750,11 @@ html.launch-lock *::after {
 }
 
 /* Temporary launch surface, 2026-07-01.
-   Firm and practice material stays in the codebase, but the review surface is
-   limited to home, team, and contact until the client reopens those sections. */
-.nav-dropdown,
-.mobile-menu-practices,
-nav a[href="/practices"],
+   Firm material stays in the codebase, but the review surface keeps it hidden
+   until the client reopens that section. */
 nav a[href="/firm"],
-.team-nav a[href="/practices"],
 .team-nav a[href="/firm"],
-.contact-right-nav a[href="/practices"],
 .contact-right-nav a[href="/firm"],
-.site-footer a[href="/practices"],
 .site-footer a[href="/firm"],
 .home-launch-simple .practice-areas-wrapper,
 .home-launch-simple .process-wrapper,
@@ -2455,7 +2449,8 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 
 .home-hero-photo img,
 .home-letter-photo img,
-.home-closing-photo img {
+.home-closing-photo .window-video img,
+.home-closing-photo .window-square img {
   display: block;
   width: 100%;
   height: 100%;
@@ -2595,7 +2590,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 @media (min-width: 901px) {
   .home-minimal-launch .home-visual-hero {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   }
 
   .home-minimal-launch .home-visual-hero .hero-left {
@@ -2603,6 +2598,21 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   }
 
   .home-hero-photo {
+    display: block;
+  }
+}
+
+@media (max-width: 1100px) {
+  .alt-home-page .nav-links,
+  .alt-home-page .scroll-nav .scroll-nav-links {
+    display: none;
+  }
+
+  .alt-home-page .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .alt-home-page .mobile-menu-panel {
     display: block;
   }
 }

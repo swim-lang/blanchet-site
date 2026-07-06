@@ -87,6 +87,7 @@ if (shouldMountMobileMenu) {
       </a>
       <nav class="mobile-menu-primary" aria-label="Mobile navigation">
         ${navLink('/', 'Home')}
+        ${navLink('/practices', 'Practice Areas')}
         ${navLink('/team', 'Team')}
         ${navLink('/contact', 'Contact')}
       </nav>
