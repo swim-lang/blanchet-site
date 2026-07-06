@@ -1,5 +1,5 @@
 {
-  "count": 14,
+  "count": 15,
   "generatedAt": "2026-06-23T15:52:15.457Z",
   "generatedFrom": "Blanchet LLP website bio HTML pages and blanchet-new-attorney-bios-master-v2.json",
   "sourceDirectory": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site",
@@ -800,6 +800,42 @@
       "activities": [],
       "fullName": "John R. Worth",
       "email": "john.worth@blanchetllp.com"
+    },
+    {
+      "name": "Joshua Wallace",
+      "fullName": "Joshua S. Wallace",
+      "role": "ASSOCIATE",
+      "offices": [
+        "Buffalo"
+      ],
+      "page": "bio-joshua-wallace.html",
+      "url": "https://swim-lang.github.io/blanchet-site/bio-joshua-wallace.html",
+      "slug": "bio-joshua-wallace",
+      "metaDescription": "Joshua S. Wallace is an environmental litigator focused on complex environmental disputes, regulatory enforcement, and scientifically intensive litigation.",
+      "image": "assets/headshots/14_joshua-s-wallace.jpg",
+      "imageAlt": "Joshua S. Wallace",
+      "introduction": [
+        "Joshua Wallace, Ph.D., J.D. is an environmental litigator whose practice focuses on complex environmental disputes, regulatory enforcement, and scientifically intensive litigation. Drawing on advanced training in both science and law, Josh represents clients in matters requiring sophisticated technical analysis, including cases involving environmental contamination, chemical processes, technical testing, and regulatory compliance.",
+        "Josh advises and represents clients in litigation, enforcement actions, and other disputes arising under federal and state environmental laws. His scientific expertise provides a distinct advantage in matters involving complex technical evidence, environmental investigations, and scientific and engineering disputes, enabling development of cutting-edge litigation strategies grounded in rigorous technical analysis throughout all stages of litigation.",
+        "Josh has extensive experience managing expert witnesses, analyzing sophisticated technical and scientific evidence, and overseeing data-intensive discovery in high-stakes litigation. He integrates advanced scientific expertise with strategic legal advocacy to solve complex environmental challenges, position clients for success in litigation and regulatory proceedings, and advance their business objectives."
+      ],
+      "areasOfFocus": [
+        "Environmental Litigation",
+        "Environmental & Contamination Disputes",
+        "Regulatory Enforcement",
+        "Scientific & Technical Evidence",
+        "Regulatory Compliance"
+      ],
+      "representativeExperienceIntro": "",
+      "representativeExperience": [],
+      "education": [],
+      "admissions": [],
+      "judicialClerkships": [],
+      "honorsAndRecognition": [],
+      "professionalAssociations": [],
+      "activities": [],
+      "governmentService": [],
+      "clerkships": []
     }
   ]
 }
