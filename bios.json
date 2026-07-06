@@ -1,5 +1,5 @@
 {
-  "count": 13,
+  "count": 14,
   "generatedAt": "2026-06-23T15:52:15.457Z",
   "generatedFrom": "Blanchet LLP website bio HTML pages and blanchet-new-attorney-bios-master-v2.json",
   "sourceDirectory": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site",
@@ -471,6 +471,47 @@
       "image": "",
       "imageAlt": "Stefan Engelhardt",
       "url": "https://swim-lang.github.io/blanchet-site/bio-stefan-engelhardt.html"
+    },
+    {
+      "name": "James Doody",
+      "fullName": "James Doody",
+      "role": "PARTNER",
+      "offices": [
+        "New York"
+      ],
+      "page": "bio-james-doody.html",
+      "url": "https://swim-lang.github.io/blanchet-site/bio-james-doody.html",
+      "slug": "bio-james-doody",
+      "metaDescription": "James Doody is a partner at Blanchet LLP focused on high-stakes disputes, environmental law, mass torts, and commercial conflicts.",
+      "image": "",
+      "imageAlt": "James Doody",
+      "introduction": [
+        "James Doody is a litigator with extensive experience in high-stakes disputes. His practice areas include environmental law, mass torts, and commercial conflicts.",
+        "James has a deep command of every phase of the litigation lifecycle. He has a proven track record of securing wins for his clients, including briefing successful dispositive motions, spearheading large document productions and reviews, taking and defending high-value depositions, collaborating with experts, and negotiating favorable case outcomes.",
+        "As a core member of Blanchet LLP, James is trusted to design and execute the strategies that advance clients' objectives."
+      ],
+      "areasOfFocus": [
+        "Environmental Law",
+        "Product Liability & Mass Tort",
+        "Commercial Litigation",
+        "High-Stakes Disputes",
+        "Litigation"
+      ],
+      "representativeExperienceIntro": "",
+      "representativeExperience": [],
+      "governmentService": [],
+      "clerkships": [],
+      "judicialClerkships": [],
+      "education": [
+        "Cornell Law School, J.D., cum laude",
+        "Stony Brook University, B.A."
+      ],
+      "admissions": [
+        "New York"
+      ],
+      "honorsAndRecognition": [],
+      "professionalAssociations": [],
+      "activities": []
     },
     {
       "name": "Jaran Moten",
