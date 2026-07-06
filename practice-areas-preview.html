@@ -98,9 +98,8 @@
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
       linear-gradient(180deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-    background-size: 20% 100%, 100% 25%;
+    background-size: 100% 25%;
     opacity: 0.35;
     pointer-events: none;
   }
@@ -151,15 +150,20 @@
 
   .practice-preview-card {
     min-height: 300px;
-    padding: 28px clamp(24px, 2vw, 38px) 8px 0;
+    padding: 28px clamp(20px, 1.8vw, 34px) 8px;
     display: flex;
     flex-direction: column;
     border-right: 1px solid rgba(255,255,255,0.08);
     min-width: 0;
   }
 
+  .practice-preview-card:first-child {
+    padding-left: 0;
+  }
+
   .practice-preview-card:last-child {
     border-right: 0;
+    padding-right: 0;
   }
 
   .practice-preview-num {
@@ -206,9 +210,13 @@
       border-top: 1px solid var(--line);
     }
 
+    .practice-preview-card:nth-child(odd) {
+      padding-left: 0;
+    }
+
     .practice-preview-card:nth-child(even) {
       border-right: 0;
-      padding-left: clamp(18px, 3vw, 34px);
+      padding-right: 0;
     }
   }
 
