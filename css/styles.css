@@ -3181,7 +3181,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 
   .bio-rule {
     position: sticky !important;
-    top: clamp(371px, calc(270px + 11.28vw), 432px) !important;
+    top: clamp(325px, calc(224px + 11.28vw), 386px) !important;
     z-index: 3 !important;
     align-self: start !important;
     background: #0c222c !important;
@@ -3195,12 +3195,14 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 .bio-offices {
   max-width: 260px !important;
   line-height: 1.7 !important;
+  margin-bottom: 18px !important;
 }
 
 .bio-rule {
   width: 100% !important;
   max-width: 220px !important;
   margin-bottom: 0 !important;
+  transform: translateY(-18px) !important;
 }
 
 .bio-text,
@@ -3317,6 +3319,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 
   .bio-offices {
     max-width: none !important;
+    margin-bottom: 20px !important;
   }
 
   .bio-rule {
