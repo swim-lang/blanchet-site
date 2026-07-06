@@ -10,15 +10,15 @@
 <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#0c222c">
-<meta name="description" content="Blanchet LLP handles serious commercial, technical, regulatory, and trial-facing disputes across core practice areas.">
+<meta name="description" content="Blanchet LLP brings hard-won litigation skill to commercial, environmental, product liability, mass tort, investigations, trade secret, and employment disputes.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BLANCHET LLP">
 <meta property="og:title" content="Blanchet LLP | Practice Areas">
-<meta property="og:description" content="Blanchet LLP handles serious commercial, technical, regulatory, and trial-facing disputes across core practice areas.">
+<meta property="og:description" content="Blanchet LLP brings hard-won litigation skill to commercial, environmental, product liability, mass tort, investigations, trade secret, and employment disputes.">
 <meta property="og:image" content="assets/favicon/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Blanchet LLP | Practice Areas">
-<meta name="twitter:description" content="Blanchet LLP handles serious commercial, technical, regulatory, and trial-facing disputes across core practice areas.">
+<meta name="twitter:description" content="Blanchet LLP brings hard-won litigation skill to commercial, environmental, product liability, mass tort, investigations, trade secret, and employment disputes.">
 <meta name="twitter:image" content="assets/favicon/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,7 +107,7 @@
   .practice-preview-intro {
     position: relative;
     z-index: 1;
-    max-width: 980px;
+    max-width: 1180px;
     margin-bottom: clamp(52px, 8vh, 92px);
   }
 
@@ -124,46 +124,47 @@
   .practice-preview-intro h1 {
     margin: 0;
     color: #fff;
-    font-size: clamp(48px, 5.6vw, 92px);
+    font-size: clamp(46px, 5vw, 78px);
     font-weight: 700;
     letter-spacing: 0;
-    line-height: 0.98;
+    line-height: 1.02;
     max-width: 980px;
   }
 
   .practice-preview-intro p {
     margin: 24px 0 0;
-    max-width: 700px;
+    max-width: 980px;
     color: var(--mist);
-    font-size: clamp(18px, 1.35vw, 23px);
-    line-height: 1.5;
+    font-size: clamp(17px, 1.2vw, 21px);
+    line-height: 1.62;
+  }
+
+  .practice-preview-intro p + p {
+    margin-top: 18px;
   }
 
   .practice-preview-grid {
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0;
     border-top: 1px solid var(--line);
+    border-left: 1px solid rgba(255,255,255,0.08);
   }
 
   .practice-preview-card {
-    min-height: 300px;
-    padding: 28px clamp(20px, 1.8vw, 34px) 8px;
+    min-height: 360px;
+    padding: 32px clamp(24px, 2.2vw, 40px) 38px;
     display: flex;
     flex-direction: column;
     border-right: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     min-width: 0;
   }
 
-  .practice-preview-card:first-child {
-    padding-left: 0;
-  }
-
-  .practice-preview-card:last-child {
+  .practice-preview-card:nth-child(3n) {
     border-right: 0;
-    padding-right: 0;
   }
 
   .practice-preview-num {
@@ -175,10 +176,10 @@
   }
 
   .practice-preview-card h2 {
-    min-height: 96px;
+    min-height: 118px;
     margin: 0;
     color: #fff;
-    font-size: clamp(22px, 1.48vw, 30px);
+    font-size: clamp(23px, 1.7vw, 34px);
     font-weight: 700;
     line-height: 1.13;
     letter-spacing: 0;
@@ -195,8 +196,8 @@
   .practice-preview-card p {
     margin: 0;
     color: var(--mist);
-    font-size: clamp(14px, 0.95vw, 16px);
-    line-height: 1.55;
+    font-size: clamp(14px, 0.98vw, 16px);
+    line-height: 1.65;
   }
 
   @media (max-width: 1180px) {
@@ -210,13 +211,12 @@
       border-top: 1px solid var(--line);
     }
 
-    .practice-preview-card:nth-child(odd) {
-      padding-left: 0;
-    }
-
     .practice-preview-card:nth-child(even) {
       border-right: 0;
-      padding-right: 0;
+    }
+
+    .practice-preview-card:nth-child(3n) {
+      border-right: 1px solid rgba(255,255,255,0.08);
     }
   }
 
@@ -256,10 +256,12 @@
 
     .practice-preview-grid {
       grid-template-columns: 1fr;
+      border-left: 0;
     }
 
     .practice-preview-card,
-    .practice-preview-card:nth-child(even) {
+    .practice-preview-card:nth-child(even),
+    .practice-preview-card:nth-child(3n) {
       min-height: 0;
       padding: 28px 0 34px;
       border-right: 0;
@@ -293,40 +295,47 @@
 <main class="practice-preview-shell" data-review-id="practice-preview.page">
   <section class="practice-preview-intro" data-review-id="practice-preview.hero">
     <span class="practice-preview-label">[ PRACTICE AREAS ]</span>
-    <h1>Litigation is the umbrella.</h1>
-    <p>Blanchet LLP handles serious commercial, technical, regulatory, and trial-facing disputes across five core practice areas.</p>
+    <h1>Blanchet LLP</h1>
+    <p>Blanchet LLP goes where clients need it, takes disputes as they come, and brings hard-won litigation skills and experience to complex problems that cut across forums, specific industries, and artificial &ldquo;practice areas.&rdquo; It is built to solve hard problems, where the law, facts, industry context, forum, and stakes are all in motion, and where judgment, discipline, adaptability, and trial skill matter most.</p>
+    <p>From home offices in Buffalo, New York City, and Chicago, this mindset and model have proven successful in scores of forums across a broad range of practice areas, including the following:</p>
   </section>
 
   <section class="practice-preview-grid" aria-label="Core practice areas" data-review-id="practice-preview.grid">
     <article class="practice-preview-card">
       <div class="practice-preview-num">01</div>
-      <h2>Commercial<br>Litigation</h2>
+      <h2>Commercial and Business Disputes</h2>
       <div class="practice-preview-rule"></div>
-      <p>Contract claims, business torts, fraud, partnership disputes, and other commercial cases requiring practical judgment.</p>
+      <p>Blanchet represents companies, executives, owners, and investors in high-stakes business disputes, including contract claims, business torts, fiduciary-duty disputes, governance conflicts, fraud claims, partnership disputes, and post-transaction litigation. The firm focuses on cases where business realities, legal leverage, and litigation strategy must be managed together.</p>
     </article>
     <article class="practice-preview-card">
       <div class="practice-preview-num">02</div>
-      <h2>Environmental<br>Disputes</h2>
+      <h2>CERCLA, Environmental, and Natural Resources Litigation</h2>
       <div class="practice-preview-rule"></div>
-      <p>Contamination, toxic tort, regulatory agency, CERCLA, Superfund, and long-running private disputes.</p>
+      <p>Blanchet handles complex environmental disputes involving CERCLA, remediation claims, cost recovery, contribution, allocation, natural resource damages, toxic exposure, permitting, enforcement, and regulatory-adjacent litigation. The firm brings particular strength to matters involving scientific, technical, historical, and multi-party proof.</p>
     </article>
     <article class="practice-preview-card">
       <div class="practice-preview-num">03</div>
-      <h2>Product Liability<br>&amp; Mass Tort</h2>
+      <h2>Product Liability and Personal Injury</h2>
       <div class="practice-preview-rule"></div>
-      <p>Consumer product, chemical exposure, MDL, bellwether, and aggregate matters where expert strategy and fact development are critical.</p>
+      <p>Blanchet defends manufacturers, suppliers, premises owners, and corporate clients in product liability and personal injury cases involving alleged defects, warnings, causation, exposure, and damages. These matters often require disciplined expert strategy, careful factual development, and the ability to translate technical issues for judges, juries, and adversaries.</p>
     </article>
     <article class="practice-preview-card">
       <div class="practice-preview-num">04</div>
-      <h2>Government Investigations<br>&amp; Enforcement</h2>
+      <h2>Mass Tort and Class Actions</h2>
       <div class="practice-preview-rule"></div>
-      <p>Companies, executives, and individuals facing investigations, enforcement actions, internal reviews, and white collar defense.</p>
+      <p>Blanchet represents clients in coordinated, aggregated, and putative class litigation involving large claimant groups, recurring fact patterns, and enterprise-level exposure. The firm is experienced in managing the procedural, strategic, scientific, and settlement pressures that distinguish mass litigation from ordinary one-off disputes.</p>
     </article>
     <article class="practice-preview-card">
       <div class="practice-preview-num">05</div>
-      <h2>IP &amp; Trade<br>Secrets</h2>
+      <h2>Investigations and White Collar Defense</h2>
       <div class="practice-preview-rule"></div>
-      <p>Trade secret, confidential information, non-compete, software, licensing, and technically demanding disputes.</p>
+      <p>Blanchet represents companies and individuals in internal investigations, government inquiries, enforcement matters, and white collar defense involving alleged fraud, misconduct, regulatory violations, and corporate governance issues. The firm helps clients assess facts quickly, manage risk, protect privilege, and respond strategically before litigation or enforcement positions harden.</p>
+    </article>
+    <article class="practice-preview-card">
+      <div class="practice-preview-num">06</div>
+      <h2>Trade Secret and Employment Litigation</h2>
+      <div class="practice-preview-rule"></div>
+      <p>Blanchet handles disputes involving trade secrets, restrictive covenants, employee mobility, fiduciary duties, unfair competition, confidentiality obligations, executive departures, and workplace-related business claims. The firm focuses on fast-moving cases where injunctive relief, confidential information, business continuity, and reputational risk are often in play.</p>
     </article>
   </section>
 </main>
