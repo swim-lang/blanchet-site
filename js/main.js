@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // Custom dot cursor with dark/light detection (skip on touch)
 const cursor = document.querySelector('.cursor');
 if (cursor && window.matchMedia('(hover: hover)').matches) {
-  const darkSelectors = '.hero-left, .hero-right, .practice-areas, .partners-dark, .process-left, .window-sticky, .site-footer, .cta-banner';
+  const darkSelectors = '.hero-left, .hero-right, .alt-map-hero, .practice-areas, .partners-dark, .process-left, .window-sticky, .site-footer, .cta-banner';
   document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX - 6 + 'px';
     cursor.style.top = e.clientY - 6 + 'px';
