@@ -2603,11 +2603,19 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   }
 
   .city-hero-card {
-    min-height: 198px;
+    min-height: 220px;
   }
 
-  .city-hero-card img {
-    object-position: center;
+  .city-hero-card-buffalo img {
+    object-position: 50% 20%;
+  }
+
+  .city-hero-card-chicago img {
+    object-position: 53% 20%;
+  }
+
+  .city-hero-card-new-york img {
+    object-position: 52% 22%;
   }
 
   .city-hero-card span {
