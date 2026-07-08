@@ -1,6 +1,8 @@
 const RESEND_ENDPOINT = 'https://api.resend.com/emails';
 const CONTACT_RECIPIENTS = [
-  'Robert.Reagan@BlanchetLLP.com',
+  'Robert.Reagan@BlanchetLLP.com'
+];
+const INTERNAL_COPY_RECIPIENTS = [
   'sean@anchovies.agency'
 ];
 
@@ -77,6 +79,27 @@ function buildHtml(fields) {
   `;
 }
 
+async function sendResendEmail(apiKey, payload) {
+  const resendResponse = await fetch(RESEND_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  });
+
+  const result = await resendResponse.json().catch(() => ({}));
+
+  if (!resendResponse.ok) {
+    const error = new Error('Resend contact email failed.');
+    error.result = result;
+    throw error;
+  }
+
+  return result;
+}
+
 module.exports = async function contactHandler(request, response) {
   if (request.method !== 'POST') {
     response.setHeader('Allow', 'POST');
@@ -129,21 +152,20 @@ module.exports = async function contactHandler(request, response) {
     html: buildHtml(fields)
   };
 
-  const resendResponse = await fetch(RESEND_ENDPOINT, {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(payload)
-  });
+  const internalPayload = {
+    ...payload,
+    to: INTERNAL_COPY_RECIPIENTS,
+    subject: `[Internal copy] New website inquiry from ${subjectName}`
+  };
 
-  const result = await resendResponse.json().catch(() => ({}));
-
-  if (!resendResponse.ok) {
-    console.error('Resend contact email failed:', result);
+  try {
+    const [result, internalResult] = await Promise.all([
+      sendResendEmail(apiKey, payload),
+      sendResendEmail(apiKey, internalPayload)
+    ]);
+    return sendJson(response, 200, { ok: true, id: result.id, internalCopyId: internalResult.id });
+  } catch (error) {
+    console.error('Resend contact email failed:', error.result || error);
     return sendJson(response, 502, { ok: false, message: 'The message could not be sent. Please try again shortly.' });
   }
-
-  return sendJson(response, 200, { ok: true, id: result.id });
 };
