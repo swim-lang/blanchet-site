@@ -8,8 +8,8 @@
 /* Page transition curtain */
 html.page-transition-active,
 html.page-transition-active body { background: #0c222c; }
-.page-curtain { position: fixed; inset: 0; background: #0c222c; z-index: 99999; pointer-events: none; opacity: 0; visibility: hidden; transition: opacity 0.34s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.34s; }
-.page-curtain.reveal { opacity: 0; visibility: hidden; transition: opacity 0.24s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.24s; }
+.page-curtain { position: fixed; inset: 0; background: #0c222c; z-index: 99999; pointer-events: none; opacity: 1; visibility: visible; transition: opacity 0.34s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s; }
+.page-curtain.reveal { opacity: 0; visibility: hidden; transition: opacity 0.26s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.26s; }
 .page-curtain.exit { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity 0.28s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s; }
 body.has-site-header {
   animation: pageSoftEnter 0.22s cubic-bezier(0.22, 1, 0.36, 1) both;
