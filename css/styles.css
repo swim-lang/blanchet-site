@@ -230,15 +230,6 @@ h1, h2, h3, h4, h5 { font-family: 'Inter', sans-serif; text-transform: uppercase
 a { color: inherit; text-decoration: none; }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
-html.auth-lock body > :not(.password-gate) { display: none !important; }
-html.auth-lock,
-html.auth-lock body { min-height: 100%; background: #fff; }
-.password-gate { position: fixed; inset: 0; z-index: 100000; display: flex; align-items: center; justify-content: center; padding: 24px; background: #fff; }
-.password-gate-card { width: min(100%, 280px); }
-.password-gate-card input { width: 100%; height: 46px; border: 1px solid rgba(12,34,44,0.22); background: #fff; color: #0c222c; padding: 0 12px; font: 16px/1 'Inter', sans-serif; outline: none; }
-.password-gate-card input:focus { border-color: rgba(12,34,44,0.65); }
-.password-gate-card input[aria-invalid="true"] { border-color: rgba(150,35,20,0.55); }
-
 /* Review annotations */
 .review-mode-choice { position: fixed; inset: 0; z-index: 99990; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(12,34,44,0.72); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); color: #fff; }
 .review-mode-card { width: min(100%, 520px); background: #0c222c; border: 1px solid rgba(255,255,255,0.16); padding: 36px; box-shadow: 0 24px 80px rgba(0,0,0,0.32); display: flex; flex-direction: column; gap: 20px; }
@@ -622,7 +613,7 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
   margin-top: auto;
   padding-top: 44px;
   display: grid;
-  gap: 22px;
+  gap: 24px;
 }
 
 .mobile-menu-contact {
@@ -654,6 +645,42 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
 
 .mobile-menu-cities {
   line-height: 1.8;
+}
+
+.mobile-menu-offices {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.mobile-menu-offices .mobile-menu-kicker {
+  margin: 0 0 2px;
+}
+
+.mobile-menu-offices address {
+  margin: 0;
+  display: grid;
+  gap: 4px;
+  font-style: normal;
+}
+
+.mobile-menu-offices strong {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.82);
+}
+
+.mobile-menu-offices span {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.52);
 }
 
 html.mobile-menu-open,
@@ -2481,8 +2508,9 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.012);
+  transform: translate3d(0, var(--city-parallax-y, 0px), 0) scale(1.035);
   filter: saturate(0.72) contrast(1.08);
+  will-change: transform;
 }
 
 .city-hero-card-buffalo img {
@@ -4944,6 +4972,27 @@ body.team-minimal-page .team-mobile-brand img,
 
   .has-site-header .bio-content {
     padding-top: 72px !important;
+  }
+}
+
+@media (min-width: 901px) {
+  .has-site-header .mobile-menu-toggle,
+  .has-site-header .mobile-menu-panel {
+    display: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .has-site-header .site-header-nav {
+    display: none !important;
+  }
+
+  .has-site-header .mobile-menu-toggle {
+    display: flex !important;
+  }
+
+  .has-site-header .mobile-menu-panel {
+    display: block !important;
   }
 }
 

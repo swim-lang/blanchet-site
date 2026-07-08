@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://blanchetllp.com/sitemap.xml

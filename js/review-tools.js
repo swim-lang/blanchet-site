@@ -220,7 +220,7 @@
   function ensureAnchors() {
     const seen = new Map();
     document.querySelectorAll(targetSelector).forEach(el => {
-      if (el.closest('.password-gate, .review-toolbar, .review-popover, .review-panel, .review-mode-choice')) return;
+      if (el.closest('.review-toolbar, .review-popover, .review-panel, .review-mode-choice')) return;
       if (!el.dataset.reviewId) {
         const className = Array.from(el.classList || []).find(name => !name.startsWith('visible') && !name.startsWith('active'));
         const label = slug(el.getAttribute('id') || className || el.tagName.toLowerCase());
@@ -597,9 +597,7 @@
   }
 
   window.BlanchetReview = { promptMode, initReviewTools, comments: localComments, saveComments: saveLocalComments };
-  document.addEventListener('blanchet:unlocked', initReviewTools);
-
-  if (document.readyState !== 'loading' && !document.documentElement.classList.contains('auth-lock')) {
+  if (document.readyState !== 'loading') {
     initReviewTools();
   }
 })();

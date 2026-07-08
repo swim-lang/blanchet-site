@@ -92,7 +92,24 @@ if (shouldMountMobileMenu) {
         ${navLink('/contact', 'Contact')}
       </nav>
       <div class="mobile-menu-footer">
-        <div class="mobile-menu-cities">Buffalo / Chicago / New York City</div>
+        <div class="mobile-menu-offices" aria-label="Office locations">
+          <span class="mobile-menu-kicker">Offices</span>
+          <address>
+            <strong>Buffalo</strong>
+            <span>200 Delaware Ave., Suite 1170</span>
+            <span>Buffalo, NY 14202</span>
+          </address>
+          <address>
+            <strong>New York</strong>
+            <span>142 W. 57th St.</span>
+            <span>New York, NY 10019</span>
+          </address>
+          <address>
+            <strong>Chicago</strong>
+            <span>110 North Wacker Dr.</span>
+            <span>Chicago, IL 60606</span>
+          </address>
+        </div>
       </div>
     </div>
   `;
@@ -129,6 +146,50 @@ if (shouldMountMobileMenu) {
       setMobileMenuOpen(false);
     }
   }, { passive: true });
+}
+
+// Subtle homepage city-card parallax.
+const cityHero = document.querySelector('.city-image-hero');
+const cityHeroImages = cityHero ? Array.from(cityHero.querySelectorAll('.city-hero-card img')) : [];
+if (cityHeroImages.length) {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let cityParallaxTicking = false;
+
+  const resetCityParallax = () => {
+    cityHeroImages.forEach((img) => img.style.removeProperty('--city-parallax-y'));
+  };
+
+  const updateCityParallax = () => {
+    cityParallaxTicking = false;
+
+    if (reducedMotion.matches || window.innerWidth < 768) {
+      resetCityParallax();
+      return;
+    }
+
+    const rect = cityHero.getBoundingClientRect();
+    const progress = Math.min(Math.max(-rect.top / Math.max(window.innerHeight, 1), 0), 1);
+    const depths = [8, 10, 7];
+
+    cityHeroImages.forEach((img, index) => {
+      const offset = -Math.round(progress * (depths[index] || 8));
+      img.style.setProperty('--city-parallax-y', `${offset}px`);
+    });
+  };
+
+  const requestCityParallax = () => {
+    if (!cityParallaxTicking) {
+      cityParallaxTicking = true;
+      window.requestAnimationFrame(updateCityParallax);
+    }
+  };
+
+  window.addEventListener('scroll', requestCityParallax, { passive: true });
+  window.addEventListener('resize', requestCityParallax, { passive: true });
+  if (typeof reducedMotion.addEventListener === 'function') {
+    reducedMotion.addEventListener('change', requestCityParallax);
+  }
+  updateCityParallax();
 }
 
 // Square window expand on scroll
