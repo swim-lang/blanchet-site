@@ -108,17 +108,36 @@
     position: relative;
     z-index: 1;
     max-width: 1180px;
-    margin-bottom: clamp(52px, 8vh, 92px);
+    margin-bottom: clamp(44px, 7vh, 76px);
   }
 
   .practice-preview-label {
     display: inline-block;
-    margin-bottom: 28px;
+    margin-bottom: 18px;
     color: rgba(255,255,255,0.42);
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
+  }
+
+  .practice-preview-tagline {
+    max-width: 620px;
+    margin: 0;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(26px, 2.35vw, 34px);
+    font-weight: 700;
+    line-height: 1.24;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .practice-preview-intro-rule {
+    width: 32px;
+    height: 1.5px;
+    margin: 24px 0 24px;
+    background: rgba(255,255,255,0.18);
   }
 
   .practice-preview-intro h1 {
@@ -132,7 +151,7 @@
   }
 
   .practice-preview-intro p {
-    margin: 24px 0 0;
+    margin: 0;
     max-width: 980px;
     color: var(--mist);
     font-size: clamp(17px, 1.2vw, 21px);
@@ -236,6 +255,11 @@
       margin-bottom: 56px;
     }
 
+    .practice-preview-tagline {
+      max-width: 100%;
+      font-size: clamp(24px, 7.2vw, 30px);
+    }
+
     .practice-preview-intro h1 {
       font-size: clamp(42px, 13vw, 62px);
     }
@@ -292,6 +316,8 @@
   <section class="practice-preview-intro" data-review-id="practice-preview.hero">
     <span class="practice-preview-label">[ PRACTICE AREAS ]</span>
     <h1 class="visually-hidden">Practice Areas</h1>
+    <h2 class="practice-preview-tagline">Trial-tested judgment for complex disputes that cut across practice areas.</h2>
+    <div class="practice-preview-intro-rule"></div>
     <p>Blanchet LLP goes where clients need representation and brings hard-won litigation skill and experience to complex problems that cut across forums, industries, and narrowly defined practice areas. The Firm is built to solve hard problems where the law, facts, industry, context, forum, and stakes are all in motion, and where judgment, discipline, adaptability, and trial skill matter most.</p>
     <p>From offices in Buffalo, New York City, and Chicago, this mindset and model have proven successful in scores of forums and across a broad range of practice areas, including the following:</p>
   </section>

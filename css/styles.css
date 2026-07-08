@@ -2396,6 +2396,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
     linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
     linear-gradient(180deg, rgba(255,255,255,0.025) 1px, transparent 1px);
   background-size: 128px 128px;
+  background-position: 0 0, 0 72px;
   opacity: 0.1;
   pointer-events: none;
 }
@@ -4829,6 +4830,8 @@ body.team-minimal-page .team-mobile-brand img,
   padding: 0 clamp(48px, 4.8vw, 80px);
   box-sizing: border-box;
   background: #0c222c;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
 }
 
 .site-header-logo {
@@ -4886,6 +4889,7 @@ body.team-minimal-page .team-mobile-brand img,
 .has-site-header.city-home-page .city-image-hero {
   min-height: calc(100vh - 104px);
   background: #0c222c !important;
+  margin-top: -1px;
 }
 
 .has-site-header.city-home-page .city-image-hero::before,
