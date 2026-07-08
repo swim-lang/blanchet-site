@@ -1,5 +1,8 @@
 const RESEND_ENDPOINT = 'https://api.resend.com/emails';
-const CONTACT_RECIPIENT = 'Robert.Reagan@BlanchetLLP.com';
+const CONTACT_RECIPIENTS = [
+  'Robert.Reagan@BlanchetLLP.com',
+  'sean@anchovies.agency'
+];
 
 function sendJson(response, status, payload) {
   response.statusCode = status;
@@ -108,7 +111,7 @@ module.exports = async function contactHandler(request, response) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = CONTACT_RECIPIENT;
+  const to = CONTACT_RECIPIENTS;
   const from = process.env.CONTACT_FROM_EMAIL || 'Blanchet LLP <onboarding@resend.dev>';
 
   if (!apiKey) {
@@ -119,7 +122,7 @@ module.exports = async function contactHandler(request, response) {
   const subjectName = `${fields.firstName} ${fields.lastName}`.trim();
   const payload = {
     from,
-    to: [to],
+    to,
     reply_to: fields.email,
     subject: `New website inquiry from ${subjectName}`,
     text: buildPlainText(fields),
