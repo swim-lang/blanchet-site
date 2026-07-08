@@ -8,13 +8,21 @@
 /* Page transition curtain */
 html.page-transition-active,
 html.page-transition-active body { background: #0c222c; }
-.page-curtain { position: fixed; inset: 0; background: #0c222c; z-index: 99999; pointer-events: none; opacity: 1; visibility: visible; transition: opacity 0.42s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s; }
-.page-curtain.reveal { opacity: 0; visibility: hidden; transition: opacity 0.42s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.42s; }
-.page-curtain.exit { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity 0.32s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s; }
+.page-curtain { position: fixed; inset: 0; background: #0c222c; z-index: 99999; pointer-events: none; opacity: 0; visibility: hidden; transition: opacity 0.34s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.34s; }
+.page-curtain.reveal { opacity: 0; visibility: hidden; transition: opacity 0.24s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.24s; }
+.page-curtain.exit { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity 0.28s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s; }
+body.has-site-header {
+  animation: pageSoftEnter 0.22s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes pageSoftEnter {
+  from { opacity: 0.965; transform: translateY(2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 @media (prefers-reduced-motion: reduce) {
   .page-curtain,
   .page-curtain.reveal,
   .page-curtain.exit { transition-duration: 0.01ms; }
+  body.has-site-header { animation: none; }
 }
 
 /* Temporary compact attorney portrait mode, 2026-06-30.

@@ -421,7 +421,7 @@ if (curtain) {
     }
 
     curtain.addEventListener('transitionend', go, { once: true });
-    setTimeout(go, 420);
+    setTimeout(go, 340);
   };
 
   if (document.readyState === 'complete' || document.readyState === 'interactive') {
