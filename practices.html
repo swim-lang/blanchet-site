@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>html{background:#0c222c}</style>
-<link rel="stylesheet" href="css/styles.css?v=20260706-bio-sticky-card">
+<link rel="stylesheet" href="css/styles.css?v=20260707-bio-template-2">
 <script>document.documentElement.classList.add("auth-lock");</script>
 <script src="js/password-protect.js?v=20260702-dolly" defer></script>
 <script src="js/review-config.js" defer></script>
@@ -264,16 +264,25 @@
   }
 </style>
 </head>
-<body class="practice-preview-page">
+<body class="has-site-header practice-preview-page">
 
 <div class="page-curtain"></div>
 
+<header class="site-header" data-site-header>
+  <a class="site-header-logo" href="/" aria-label="Blanchet LLP home"><img src="assets/logos/Primary-Lockup-Grey.svg" alt="Blanchet LLP"></a>
+  <nav class="site-header-nav" aria-label="Primary navigation">
+    <a href="/practices" class="is-active" aria-current="page">PRACTICE AREAS</a>
+    <a href="/team">TEAM</a>
+    <a href="/contact">CONTACT</a>
+  </nav>
+</header>
+
 <nav class="practice-preview-nav" aria-label="Preview navigation">
   <a class="practice-preview-logo" href="/" aria-label="Blanchet LLP home">
-    <img src="assets/logos/Wordmark-White.png" alt="Blanchet LLP">
+    <img src="assets/logos/Primary-Lockup-Grey.svg" alt="Blanchet LLP">
   </a>
   <div class="practice-preview-links">
-    <a href="/">Home</a>
+    <a href="/practices" class="active">Practice Areas</a>
     <a href="/team">Team</a>
     <a href="/contact">Contact</a>
   </div>
@@ -282,9 +291,9 @@
 <main class="practice-preview-shell" data-review-id="practice-preview.page">
   <section class="practice-preview-intro" data-review-id="practice-preview.hero">
     <span class="practice-preview-label">[ PRACTICE AREAS ]</span>
-    <h1>Blanchet LLP</h1>
+    <h1 class="visually-hidden">Practice Areas</h1>
     <p>Blanchet LLP goes where clients need representation, takes disputes as they come, and brings hard-won litigation skills and experience to complex problems that cut across forums, static industries, and narrowly defined practice areas. It is built to solve hard problems where the law, facts, industry context, forum, and stakes are all in motion&mdash;and where judgment, discipline, adaptability, and trial skill matter most.</p>
-    <p>From home offices in Buffalo, New York City, and Chicago, this mindset and model has proven successful in scores of forums across a broad range of practice areas, including the following:</p>
+    <p>From offices in Buffalo, New York City, and Chicago, this mindset and model has proven successful in scores of forums across a broad range of practice areas, including the following:</p>
   </section>
 
   <section class="practice-preview-grid" aria-label="Core practice areas" data-review-id="practice-preview.grid">
@@ -330,10 +339,8 @@
   <div class="site-footer-top site-footer-brand-top">
     <div class="site-footer-cta site-footer-brand-cta">
       <a href="/" class="footer-brand-logo" aria-label="Blanchet LLP home">
-        <img src="assets/logos/Logo-White.png" alt="Blanchet LLP" width="34" height="29" style="width:34px;max-width:34px;height:auto;">
+        <img src="assets/logos/Primary-Lockup-Grey.svg" alt="Blanchet LLP">
       </a>
-      <p class="footer-offices">Offices in Buffalo, New York, and Chicago</p>
-      <a href="/contact" class="btn-white footer-contact-button">Contact</a>
     </div>
     <div class="site-footer-nav">
       <div class="site-footer-cols">
@@ -352,6 +359,7 @@
         <div class="footer-col">
           <div class="col-title">CONNECT</div>
           <span class="address">LinkedIn</span>
+          <a href="/contact" class="btn-white footer-contact-button">Contact</a>
         </div>
       </div>
       <div class="site-footer-meta">
@@ -368,6 +376,6 @@
   if (c) c.classList.add('reveal');
 })();
 </script>
-<script src="js/main.js?v=20260706-bio-sticky-card"></script>
+<script src="js/main.js?v=20260707-header-component"></script>
 </body>
 </html>

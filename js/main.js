@@ -83,7 +83,7 @@ if (shouldMountMobileMenu) {
   menuPanel.innerHTML = `
     <div class="mobile-menu-inner">
       <a class="mobile-menu-brand" href="/" aria-label="Blanchet LLP home">
-        <img src="assets/logos/Wordmark-White.png" alt="Blanchet LLP">
+        <img src="assets/logos/Primary-Lockup-Grey.svg" alt="Blanchet LLP">
       </a>
       <nav class="mobile-menu-primary" aria-label="Mobile navigation">
         ${navLink('/', 'Home')}

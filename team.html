@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>html{background:#fff}</style>
-<link rel="stylesheet" href="css/styles.css?v=20260706-bio-sticky-card">
+<link rel="stylesheet" href="css/styles.css?v=20260707-bio-template-2">
 <script>document.documentElement.classList.add("auth-lock");</script>
 <script src="js/password-protect.js?v=20260702-dolly" defer></script>
 <script src="js/review-config.js" defer></script>
@@ -202,10 +202,15 @@
   }
 
   /* Temporary launch list: no headshots, no bios, no click-throughs. */
+  body.team-minimal-page {
+    background: #0c222c !important;
+  }
+
   body.team-minimal-page .team-page {
     display: block !important;
     min-height: auto !important;
     background: #0c222c !important;
+    overflow: hidden !important;
   }
 
   body.team-minimal-page .team-featured {
@@ -215,20 +220,23 @@
   body.team-minimal-page .team-directory {
     display: block !important;
     min-height: 100vh !important;
+    padding-top: clamp(56px, 7vw, 92px) !important;
     padding-bottom: 96px !important;
     background: #0c222c !important;
     border-left: 0 !important;
   }
 
   body.team-minimal-page .team-mobile-brand {
-    display: inline-block !important;
-    height: 17.25px !important;
+    display: none !important;
+    width: clamp(276px, 23vw, 360px) !important;
+    height: auto !important;
     margin: 44px 56px 0 !important;
   }
 
   body.team-minimal-page .team-mobile-brand img {
-    height: 17.25px !important;
-    width: auto !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
   }
 
   body.team-minimal-page .team-nav {
@@ -238,13 +246,14 @@
     margin-top: -61px !important;
   }
 
+  body.has-site-header.team-minimal-page .team-simple-list,
   body.team-minimal-page .team-simple-list {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     column-gap: 56px !important;
     width: min(calc(100% - 112px), 1120px) !important;
     max-width: 1120px !important;
-    margin: clamp(96px, 10vw, 132px) auto 0 !important;
+    margin: 0 auto !important;
     padding: 0 !important;
     border-top: 0 !important;
     border-left: 0 !important;
@@ -347,6 +356,7 @@
 
   @media (max-width: 900px) {
     body.team-minimal-page .team-mobile-brand {
+      width: min(230px, 58vw) !important;
       margin: 30px 24px 56px !important;
     }
 
@@ -354,6 +364,7 @@
       display: none !important;
     }
 
+    body.has-site-header.team-minimal-page .team-simple-list,
     body.team-minimal-page .team-simple-list {
       grid-template-columns: 1fr !important;
       column-gap: 0 !important;
@@ -384,24 +395,23 @@
   }
 </style>
 </head>
-<body class="team-minimal-page">
+<body class="has-site-header team-minimal-page">
 
 <div class="page-curtain"></div>
 
+<header class="site-header" data-site-header>
+  <a class="site-header-logo" href="/" aria-label="Blanchet LLP home"><img src="assets/logos/Primary-Lockup-Grey.svg" alt="Blanchet LLP"></a>
+  <nav class="site-header-nav" aria-label="Primary navigation">
+    <a href="/practices">PRACTICE AREAS</a>
+    <a href="/team" class="is-active" aria-current="page">TEAM</a>
+    <a href="/contact">CONTACT</a>
+  </nav>
+</header>
+
 <nav class="scroll-nav">
-  <div class="nav-logo"><a href="/"><img src="assets/logos/Wordmark-White.png" alt="Blanchet LLP"></a></div>
+  <div class="nav-logo"><a href="/"><img src="assets/logos/Primary-Lockup-Grey.svg" alt="Blanchet LLP"></a></div>
   <div class="scroll-nav-links">
-    <div class="nav-dropdown">
-      <a href="/practices">PRACTICE AREAS</a>
-      <div class="nav-dropdown-menu">
-        <a href="/commercial-litigation">Commercial Litigation</a>
-        <a href="/environmental-disputes">Environmental Disputes</a>
-        <a href="/product-liability">Product Liability &amp; Mass Tort</a>
-        <a href="/white-collar">Government Investigations &amp; Enforcement</a>
-        <a href="/ip-trade-secrets">Intellectual Property &amp; Trade Secrets</a>
-      </div>
-    </div>
-    <a href="/firm">FIRM</a>
+    <a href="/practices">PRACTICE AREAS</a>
     <a href="/team" class="active">TEAM</a>
   </div>
   <a href="/contact" class="scroll-nav-cta">CONTACT</a>
@@ -424,20 +434,10 @@
   <!-- Right: Directory -->
   <div class="team-directory">
     <a class="team-mobile-brand" href="/" aria-label="Blanchet LLP home">
-      <img src="assets/logos/Wordmark-White.png" alt="Blanchet LLP">
+      <img src="assets/logos/Primary-Lockup-Grey.svg" alt="Blanchet LLP">
     </a>
     <div class="team-nav">
-      <div class="nav-dropdown">
-        <a href="/practices">PRACTICE AREAS</a>
-        <div class="nav-dropdown-menu">
-          <a href="/commercial-litigation">Commercial Litigation</a>
-          <a href="/environmental-disputes">Environmental Disputes</a>
-          <a href="/product-liability">Product Liability &amp; Mass Tort</a>
-          <a href="/white-collar">Government Investigations &amp; Enforcement</a>
-          <a href="/ip-trade-secrets">Intellectual Property &amp; Trade Secrets</a>
-        </div>
-      </div>
-      <a href="/firm">FIRM</a>
+      <a href="/practices">PRACTICE AREAS</a>
       <a href="/team" class="active">TEAM</a>
       <a href="/contact" class="nav-cta">CONTACT</a>
     </div>
@@ -467,16 +467,15 @@
   <div class="site-footer-top site-footer-brand-top">
     <div class="site-footer-cta site-footer-brand-cta">
       <a href="/" class="footer-brand-logo" aria-label="Blanchet LLP home">
-        <img src="assets/logos/Logo-White.png" alt="Blanchet LLP" width="34" height="29" style="width:34px;max-width:34px;height:auto;">
+        <img src="assets/logos/Primary-Lockup-Grey.svg" alt="Blanchet LLP">
       </a>
-      <p class="footer-offices">Offices in Buffalo, New York, and Chicago</p>
-      <a href="/contact" class="btn-white footer-contact-button">Contact</a>
     </div>
     <div class="site-footer-nav">
       <div class="site-footer-cols">
         <div class="footer-col">
           <div class="col-title">EXPLORE</div>
           <a href="/" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Home</a>
+          <a href="/practices" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Practice Areas</a>
           <a href="/team" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Team</a>
         </div>
         <div class="footer-col">
@@ -488,6 +487,7 @@
         <div class="footer-col">
           <div class="col-title">CONNECT</div>
           <span class="address">LinkedIn</span>
+          <a href="/contact" class="btn-white footer-contact-button">Contact</a>
         </div>
       </div>
       <div class="site-footer-meta">
@@ -505,7 +505,7 @@
   if (c) c.classList.add('reveal');
 })();
 </script>
-<script src="js/main.js?v=20260706-bio-sticky-card"></script>
+<script src="js/main.js?v=20260707-header-component"></script>
 
 </body>
 </html>

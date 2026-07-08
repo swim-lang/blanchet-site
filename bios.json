@@ -36,8 +36,8 @@
         "Bringing prior experience in government and politics to matters involving public institutions, regulatory context, and sensitive stakeholder concerns."
       ],
       "education": [
-        "Loyola University Chicago School of Law, J.D., 2022",
-        "University of Chicago, B.A., 2015"
+        "Loyola University Chicago School of Law, J.D.",
+        "University of Chicago, B.A."
       ],
       "admissions": [
         "Illinois"
@@ -221,8 +221,8 @@
         "Arguing in the final round of the Domenick L. Gabrielli Appellate Advocacy Competition in front of the Chief Judge of the New York Court of Appeals and receiving Best Brief honors."
       ],
       "education": [
-        "Albany Law School of Union University, J.D., summa cum laude, 2025",
-        "St. Lawrence University, B.A., magna cum laude, 2021"
+        "Albany Law School of Union University, J.D., summa cum laude",
+        "St. Lawrence University, B.A., magna cum laude"
       ],
       "admissions": [
         "Illinois",
@@ -270,8 +270,8 @@
       "representativeExperienceIntro": "",
       "representativeExperience": [],
       "education": [
-        "DePaul University College of Law, J.D., 2022",
-        "DePaul University, B.A., 2016"
+        "DePaul University College of Law, J.D.",
+        "DePaul University, B.A."
       ],
       "admissions": [
         "Illinois"
@@ -359,9 +359,7 @@
         "40 Under 40, Buffalo Business First, 2022",
         "Honoree of the New York State Bar Association Empire State Counsel Program for pro bono work, 2018"
       ],
-      "professionalAssociations": [
-        "Greater Buffalo Metropolitan Crime Stoppers, Inc., Board of Directors, Legal Counsel"
-      ],
+      "professionalAssociations": [],
       "activities": [
         "Leadership Buffalo Rising Leaders, Class of 2015",
         "FINRA Series 7, 24, 53, and 66 licenses, inactive"
@@ -401,8 +399,8 @@
         "Litigating complex commercial matters at Kirkland & Ellis and Quinn Emanuel before rejoining former colleagues in the Chicago market."
       ],
       "education": [
-        "Northwestern University Pritzker School of Law, J.D., 2011",
-        "Bradley University, B.A., 2006"
+        "Northwestern University Pritzker School of Law, J.D.",
+        "Bradley University, B.A."
       ],
       "admissions": [
         "Illinois",
@@ -460,8 +458,8 @@
         "Handling product liability, mass tort, and multidistrict litigation for life sciences companies, manufacturers, and other national businesses."
       ],
       "education": [
-        "Harvard Law School, J.D., 1989",
-        "Hamilton College, B.A., magna cum laude, 1986"
+        "Harvard Law School, J.D.",
+        "Hamilton College, B.A., magna cum laude"
       ],
       "admissions": [
         "New York",
@@ -485,16 +483,17 @@
       "fullName": "James Doody",
       "role": "PARTNER",
       "offices": [
-        "New York"
+        "Buffalo",
+        "New York City"
       ],
       "page": "bio-james-doody.html",
       "url": "https://swim-lang.github.io/blanchet-site/bio-james-doody.html",
       "slug": "bio-james-doody",
-      "metaDescription": "James Doody is a partner at Blanchet LLP focused on high-stakes disputes, environmental law, mass torts, and commercial conflicts.",
+      "metaDescription": "James Doody is a partner at Blanchet LLP focused on high-stakes disputes, environmental law, mass torts, and commercial disputes.",
       "image": "",
       "imageAlt": "James Doody",
       "introduction": [
-        "James Doody is a litigator with extensive experience in high-stakes disputes. His practice areas include environmental law, mass torts, and commercial conflicts.",
+        "James Doody is a litigator with extensive experience in high-stakes disputes. His practice areas include environmental law, mass torts, and commercial disputes.",
         "James has a deep command of every phase of the litigation lifecycle. He has a proven track record of securing wins for his clients, including briefing successful dispositive motions, spearheading large document productions and reviews, taking and defending high-value depositions, collaborating with experts, and negotiating favorable case outcomes.",
         "As a core member of Blanchet LLP, James is trusted to design and execute the strategies that advance clients' objectives."
       ],
@@ -720,8 +719,8 @@
         "Representing clients and communities through Northwestern's Community Justice and Civil Rights Clinic and pro bono work."
       ],
       "education": [
-        "Northwestern University Pritzker School of Law, J.D., 2021",
-        "University of Pittsburgh, B.A., 2016"
+        "Northwestern University Pritzker School of Law, J.D.",
+        "University of Pittsburgh, B.A."
       ],
       "admissions": [
         "Illinois"
@@ -806,7 +805,8 @@
       "fullName": "Joshua S. Wallace",
       "role": "ASSOCIATE",
       "offices": [
-        "Buffalo"
+        "Buffalo",
+        "New York City"
       ],
       "page": "bio-joshua-wallace.html",
       "url": "https://swim-lang.github.io/blanchet-site/bio-joshua-wallace.html",

@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>html{background:#fff}</style>
-<link rel="stylesheet" href="css/styles.css?v=20260706-bio-sticky-card">
+<link rel="stylesheet" href="css/styles.css?v=20260707-bio-template-2">
 <script>document.documentElement.classList.add("auth-lock");</script>
 <script src="js/password-protect.js?v=20260702-dolly" defer></script>
 <script src="js/review-config.js" defer></script>
@@ -84,24 +84,23 @@
   .form-disclaimer { font-family: 'Inter', sans-serif; font-size: 12px; color: rgba(12,34,44,0.45); line-height: 1.7; max-width: 560px; margin-top: 16px; }
 </style>
 </head>
-<body>
+<body class="has-site-header">
 
 <div class="page-curtain"></div>
 
+<header class="site-header" data-site-header>
+  <a class="site-header-logo" href="/" aria-label="Blanchet LLP home"><img src="assets/logos/Primary-Lockup-Grey.svg" alt="Blanchet LLP"></a>
+  <nav class="site-header-nav" aria-label="Primary navigation">
+    <a href="/practices">PRACTICE AREAS</a>
+    <a href="/team">TEAM</a>
+    <a href="/contact" class="is-active" aria-current="page">CONTACT</a>
+  </nav>
+</header>
+
 <nav class="scroll-nav">
-  <div class="nav-logo"><a href="/"><img src="assets/logos/Wordmark-White.png" alt="Blanchet LLP"></a></div>
+  <div class="nav-logo"><a href="/"><img src="assets/logos/Primary-Lockup-Grey.svg" alt="Blanchet LLP"></a></div>
   <div class="scroll-nav-links">
-    <div class="nav-dropdown">
-      <a href="/practices">PRACTICE AREAS</a>
-      <div class="nav-dropdown-menu">
-        <a href="/commercial-litigation">Commercial Litigation</a>
-        <a href="/environmental-disputes">Environmental Disputes</a>
-        <a href="/product-liability">Product Liability &amp; Mass Tort</a>
-        <a href="/white-collar">Government Investigations &amp; Enforcement</a>
-        <a href="/ip-trade-secrets">Intellectual Property &amp; Trade Secrets</a>
-      </div>
-    </div>
-    <a href="/firm">FIRM</a>
+    <a href="/practices">PRACTICE AREAS</a>
     <a href="/team">TEAM</a>
   </div>
   <a href="/contact" class="scroll-nav-cta active">CONTACT</a>
@@ -110,7 +109,7 @@
 <section class="contact-page" data-review-id="contact.page">
   <div class="contact-left">
     <div class="contact-left-nav">
-      <div class="nav-logo"><a href="/"><img src="assets/logos/Wordmark-White.png" alt="Blanchet LLP"></a></div>
+      <div class="nav-logo"><a href="/"><img src="assets/logos/Primary-Lockup-Grey.svg" alt="Blanchet LLP"></a></div>
     </div>
     <div class="contact-left-content" data-review-id="contact.info">
       <span class="contact-label">[ CONTACT ]</span>
@@ -127,17 +126,7 @@
   </div>
   <div class="contact-right">
     <div class="contact-right-nav">
-      <div class="nav-dropdown nav-dropdown-light">
-        <a href="/practices">PRACTICE AREAS</a>
-        <div class="nav-dropdown-menu">
-        <a href="/commercial-litigation">Commercial Litigation</a>
-        <a href="/environmental-disputes">Environmental Disputes</a>
-        <a href="/product-liability">Product Liability &amp; Mass Tort</a>
-        <a href="/white-collar">Government Investigations &amp; Enforcement</a>
-        <a href="/ip-trade-secrets">Intellectual Property &amp; Trade Secrets</a>
-        </div>
-      </div>
-      <a href="/firm">FIRM</a>
+      <a href="/practices">PRACTICE AREAS</a>
       <a href="/team">TEAM</a>
       <a href="/contact" class="nav-cta active">CONTACT</a>
     </div>
@@ -190,16 +179,15 @@
   <div class="site-footer-top site-footer-brand-top">
     <div class="site-footer-cta site-footer-brand-cta">
       <a href="/" class="footer-brand-logo" aria-label="Blanchet LLP home">
-        <img src="assets/logos/Logo-White.png" alt="Blanchet LLP" width="34" height="29" style="width:34px;max-width:34px;height:auto;">
+        <img src="assets/logos/Primary-Lockup-Grey.svg" alt="Blanchet LLP">
       </a>
-      <p class="footer-offices">Offices in Buffalo, New York, and Chicago</p>
-      <a href="/contact" class="btn-white footer-contact-button">Contact</a>
     </div>
     <div class="site-footer-nav">
       <div class="site-footer-cols">
         <div class="footer-col">
           <div class="col-title">EXPLORE</div>
           <a href="/" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Home</a>
+          <a href="/practices" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Practice Areas</a>
           <a href="/team" style="color:rgba(255,255,255,0.5);text-decoration:none;font-family:'Inter',sans-serif;font-size:14px;">Team</a>
         </div>
         <div class="footer-col">
@@ -211,6 +199,7 @@
         <div class="footer-col">
           <div class="col-title">CONNECT</div>
           <span class="address">LinkedIn</span>
+          <a href="/contact" class="btn-white footer-contact-button">Contact</a>
         </div>
       </div>
       <div class="site-footer-meta">
@@ -228,7 +217,7 @@
   if (c) c.classList.add('reveal');
 })();
 </script>
-<script src="js/main.js?v=20260706-bio-sticky-card"></script>
+<script src="js/main.js?v=20260707-header-component"></script>
 <script src="js/contact-form.js?v=20260630-resend"></script>
 
 </body>

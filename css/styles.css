@@ -1029,7 +1029,7 @@ body.mobile-menu-open {
   align-items: center;
   justify-content: center;
   width: fit-content;
-  margin-top: 6px !important;
+  margin-top: 0 !important;
   text-decoration: none;
 }
 .site-footer-legal {
@@ -4598,13 +4598,13 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 }
 
 .city-home-page .city-hero-nav .nav-logo img {
-  width: clamp(210px, 18vw, 306px) !important;
+  width: clamp(276px, 23vw, 360px) !important;
   height: auto !important;
 }
 
 @media (max-width: 900px) {
   .city-home-page .city-hero-nav .nav-logo img {
-    width: min(196px, 56vw) !important;
+    width: min(230px, 58vw) !important;
     height: auto !important;
   }
 }
@@ -4654,6 +4654,7 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
 
   .site-footer-cols .footer-col:nth-child(3) {
     grid-area: connect;
+    align-items: flex-start;
   }
 
   .site-footer-meta {
@@ -4666,8 +4667,335 @@ html:not(.launch-lock) .home-launch-simple .partners[data-review-id="home.team-p
   }
 }
 
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.nav .nav-logo,
+.scroll-nav .nav-logo,
+.bio-nav .nav-logo,
+.contact-left-nav .nav-logo,
+.practice-preview-logo,
+.team-mobile-brand,
+.mobile-menu-brand {
+  width: clamp(276px, 23vw, 360px) !important;
+  max-width: 100% !important;
+}
+
+.nav .nav-logo img,
+.scroll-nav .nav-logo img,
+.bio-nav .nav-logo img,
+.contact-left-nav .nav-logo img,
+.practice-preview-logo img,
+.team-mobile-brand img,
+.mobile-menu-brand img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+}
+
+.practice-preview-logo img,
+.team-mobile-brand img {
+  width: 100% !important;
+}
+
+.footer-brand-logo img {
+  display: block !important;
+  width: clamp(240px, 20vw, 320px) !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 900px) {
+  .nav .nav-logo,
+  .scroll-nav .nav-logo,
+  .bio-nav .nav-logo,
+  .contact-left-nav .nav-logo,
+  .practice-preview-logo,
+  .team-mobile-brand,
+  .mobile-menu-brand {
+    width: min(230px, 58vw) !important;
+  }
+
+  .nav .nav-logo img,
+  .scroll-nav .nav-logo img,
+  .bio-nav .nav-logo img,
+  .contact-left-nav .nav-logo img,
+  .practice-preview-logo img,
+  .team-mobile-brand img,
+  .mobile-menu-brand img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .footer-brand-logo img {
+    width: min(230px, 68vw) !important;
+  }
+}
+
 @media (max-width: 900px) {
   .site-footer-cols .footer-col:nth-child(2) {
     gap: 16px;
+  }
+}
+
+/* Final launch header lockup normalization, 2026-07-07.
+   Older page-specific header rules are intentionally left in place for now;
+   these overrides keep the visible public lockup consistent across Home,
+   Practice Areas, Team, Contact, and attorney bios. */
+body.team-minimal-page .team-mobile-brand,
+.contact-left-nav .nav-logo,
+.practice-preview-logo,
+.bio-nav .nav-logo,
+.city-hero-nav .nav-logo {
+  width: clamp(276px, 23vw, 360px) !important;
+}
+
+body.team-minimal-page .team-mobile-brand img,
+.contact-left-nav .nav-logo img,
+.practice-preview-logo img,
+.bio-nav .nav-logo img,
+.city-hero-nav .nav-logo img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.footer-brand-logo {
+  width: auto !important;
+  max-width: none !important;
+  line-height: 0 !important;
+}
+
+.footer-brand-logo img {
+  display: block !important;
+  width: clamp(240px, 20vw, 320px) !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 900px) {
+  body.team-minimal-page .team-mobile-brand,
+  .contact-left-nav .nav-logo,
+  .practice-preview-logo,
+  .bio-nav .nav-logo,
+  .city-hero-nav .nav-logo {
+    width: min(230px, 58vw) !important;
+  }
+
+  .bio-nav {
+    display: flex !important;
+    padding: 18px 24px !important;
+  }
+
+  .bio-nav-links,
+  .bio-nav-cta {
+    display: none !important;
+  }
+
+  .footer-brand-logo img {
+    width: min(230px, 68vw) !important;
+  }
+}
+
+/* Shared public header component, 2026-07-07.
+   This is the canonical header for the active launch site: Home, Practice
+   Areas, Team, Contact, and attorney bio pages. Legacy page-specific header
+   fragments remain in the static files but are hidden when this component is
+   present so spacing and logo sizing stay consistent. */
+.site-header {
+  position: relative;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 104px;
+  padding: 0 clamp(48px, 4.8vw, 80px);
+  box-sizing: border-box;
+  background: #0c222c;
+}
+
+.site-header-logo {
+  display: flex;
+  align-items: center;
+  width: clamp(276px, 23vw, 360px);
+  max-width: 42vw;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.site-header-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.site-header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(24px, 3.2vw, 48px);
+  min-width: 0;
+}
+
+.site-header-nav a {
+  color: rgba(255,255,255,0.64);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.site-header-nav a:hover,
+.site-header-nav a.is-active,
+.site-header-nav a[aria-current="page"] {
+  color: #fff;
+}
+
+.has-site-header > .scroll-nav,
+.has-site-header .city-hero-nav,
+.has-site-header .practice-preview-nav,
+.has-site-header .team-mobile-brand,
+.has-site-header .team-nav,
+.has-site-header .contact-left-nav,
+.has-site-header .contact-right-nav,
+.has-site-header .bio-nav {
+  display: none !important;
+}
+
+.has-site-header.city-home-page .city-image-hero {
+  min-height: calc(100vh - 104px);
+  background: #0c222c !important;
+}
+
+.has-site-header.city-home-page .city-image-hero::before,
+.has-site-header.city-home-page .city-image-hero::after {
+  display: none !important;
+}
+
+.has-site-header.city-home-page .city-hero-stage {
+  padding-top: clamp(42px, 5vh, 72px);
+}
+
+.has-site-header.practice-preview-page .practice-preview-shell {
+  padding-top: clamp(72px, 7vw, 112px);
+}
+
+.has-site-header.team-minimal-page .team-list {
+  margin-top: clamp(56px, 7vw, 92px) !important;
+}
+
+.has-site-header .contact-left,
+.has-site-header .contact-right {
+  padding-top: clamp(56px, 6vw, 90px);
+}
+
+.has-site-header .bio-content {
+  padding-top: clamp(76px, 7vw, 112px) !important;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    min-height: 72px;
+    padding: 0 24px;
+  }
+
+  .site-header-logo {
+    width: min(230px, 58vw);
+    max-width: calc(100vw - 116px);
+  }
+
+  .site-header-nav {
+    display: none;
+  }
+
+  .has-site-header.city-home-page .city-image-hero {
+    min-height: calc(100vh - 72px);
+  }
+
+  .has-site-header .contact-left,
+  .has-site-header .contact-right {
+    padding-top: 0;
+  }
+
+  .has-site-header .bio-content {
+    padding-top: 72px !important;
+  }
+}
+
+/* Canonical active bio component.
+   Some attorney pages still carry older inline bio CSS, while newer additions
+   rely more heavily on the shared stylesheet. Keep these shared rules last so
+   every active bio page renders the same header card, contact block, and body
+   rhythm regardless of which static file it came from. */
+.has-site-header .bio-back {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 0 0 32px !important;
+  color: #0c222c !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+  text-decoration: none !important;
+}
+
+.has-site-header .bio-label {
+  display: inline-block !important;
+  margin: 0 0 16px !important;
+  color: rgba(12,34,44,0.35) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 2px !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+}
+
+.has-site-header .bio-offices {
+  color: #4b5563 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  letter-spacing: 0.5px !important;
+  line-height: 1.7 !important;
+  margin: 0 0 20px !important;
+  max-width: none !important;
+}
+
+.has-site-header .bio-email {
+  color: #0c222c !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+
+.has-site-header .bio-email:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 4px !important;
+}
+
+.has-site-header .bio-text {
+  color: #4b5563 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 17px !important;
+  line-height: 1.78 !important;
+  margin: 0 0 24px !important;
+}
+
+@media (max-width: 900px) {
+  .has-site-header .bio-text {
+    font-size: 15px !important;
   }
 }
