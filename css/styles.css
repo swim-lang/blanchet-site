@@ -502,14 +502,15 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
   position: fixed;
   inset: 0;
   z-index: 750;
+  height: 100svh;
+  max-height: 100svh;
   background: #0c222c;
   color: #fff;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-12px);
   transition: opacity 0.28s ease, transform 0.28s ease, visibility 0.28s ease;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
 }
 
 .mobile-menu-open .mobile-menu-panel {
@@ -519,10 +520,12 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
 }
 
 .mobile-menu-inner {
-  min-height: 100%;
+  min-height: 100svh;
+  height: 100svh;
   display: flex;
   flex-direction: column;
-  padding: 42px 24px 24px;
+  box-sizing: border-box;
+  padding: 42px 24px max(24px, env(safe-area-inset-bottom));
 }
 
 .mobile-menu-brand {
@@ -610,10 +613,14 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
 }
 
 .mobile-menu-footer {
-  margin-top: auto;
-  padding-top: 44px;
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  margin-top: 0;
+  padding-top: 0;
   display: grid;
-  gap: 24px;
+  gap: 16px;
 }
 
 .mobile-menu-contact {
@@ -650,8 +657,8 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
 .mobile-menu-offices {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 18px;
-  padding-top: 22px;
+  gap: 10px;
+  padding-top: 16px;
   border-top: 1px solid rgba(255,255,255,0.12);
 }
 
@@ -662,13 +669,13 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
 .mobile-menu-offices address {
   margin: 0;
   display: grid;
-  gap: 4px;
+  gap: 2px;
   font-style: normal;
 }
 
 .mobile-menu-offices strong {
   font-family: 'Inter', sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 650;
   letter-spacing: 1.5px;
   line-height: 1.2;
@@ -678,8 +685,8 @@ html[data-review-mode="comment"] .review-target.has-review-comment { box-shadow:
 
 .mobile-menu-offices span {
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  line-height: 1.45;
+  font-size: 11px;
+  line-height: 1.35;
   color: rgba(255,255,255,0.52);
 }
 
