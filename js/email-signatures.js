@@ -65,7 +65,7 @@
 
   function metaRows(data) {
     const rows = [
-      line('', data.phone),
+      line('O', data.phone),
       line('M', data.mobile),
       line('', data.email, data.email ? `mailto:${escapeHtml(data.email)}` : ''),
       line('', data.websiteLabel, data.websiteHref),
