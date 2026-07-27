@@ -106,7 +106,7 @@ if (shouldMountMobileMenu) {
           </address>
           <address>
             <strong>Chicago</strong>
-            <span>110 North Wacker Dr.</span>
+            <span>155 North Wacker Drive, Suite 900</span>
             <span>Chicago, IL 60606</span>
           </address>
         </div>
