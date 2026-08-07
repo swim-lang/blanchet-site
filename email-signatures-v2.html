@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Blanchet LLP | Email Signature V2 Review</title>
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192.png">
+<meta name="theme-color" content="#0c222c">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=20260708-mobile-office-footer">
+<style>
+  html, body { background: #0c222c; }
+  .signature-v2-page { min-height: 100vh; padding: 64px clamp(20px, 5vw, 76px) 88px; background: #f4f6f7; color: #0c222c; }
+  .signature-v2-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin: 0 auto 54px; max-width: 1440px; }
+  .signature-v2-brand { display: flex; align-items: center; gap: 18px; }
+  .signature-v2-brand img { display: block; width: min(390px, 55vw); height: auto; }
+  .signature-v2-badge { border: 1px solid rgba(12,34,44,.18); padding: 9px 12px; font: 600 10px/1 'Inter', sans-serif; letter-spacing: 1.4px; text-transform: uppercase; white-space: nowrap; }
+  .signature-v2-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 360px); gap: 56px; align-items: end; max-width: 1440px; margin: 0 auto 44px; }
+  .signature-v2-intro h1 { max-width: 800px; margin: 18px 0 16px; font: 700 clamp(42px, 5vw, 70px)/.98 'DM Sans', sans-serif; letter-spacing: 0; }
+  .signature-v2-intro p { max-width: 670px; margin: 0; color: #53636b; font: 400 16px/1.7 'Inter', sans-serif; }
+  .signature-v2-note { border-left: 2px solid #0c222c; padding-left: 20px; color: #53636b; font: 400 13px/1.6 'Inter', sans-serif; }
+  .signature-v2-note strong { display: block; margin-bottom: 7px; color: #0c222c; font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; }
+  .signature-v2-shell { display: grid; grid-template-columns: minmax(320px, .82fr) minmax(520px, 1.18fr); gap: 2px; max-width: 1440px; margin: 0 auto; align-items: start; }
+  .signature-v2-form, .signature-v2-preview-panel { min-width: 0; padding: clamp(24px, 3vw, 38px); background: #fff; border: 1px solid rgba(12,34,44,.09); }
+  .signature-v2-preview-panel { position: sticky; top: 20px; }
+  .signature-v2-heading { margin-bottom: 26px; }
+  .signature-v2-heading span { display: block; margin-bottom: 8px; color: rgba(12,34,44,.48); font: 600 10px/1 'Inter', sans-serif; letter-spacing: 1.6px; text-transform: uppercase; }
+  .signature-v2-heading h2 { margin: 0; font: 700 24px/1.15 'DM Sans', sans-serif; }
+  .signature-v2-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+  .signature-v2-form label { display: flex; flex-direction: column; gap: 8px; color: rgba(12,34,44,.55); font: 600 11px/1.2 'Inter', sans-serif; letter-spacing: .8px; text-transform: uppercase; }
+  .signature-v2-form input { width: 100%; min-width: 0; height: 44px; padding: 0 12px; border: 1px solid #dce2e5; border-radius: 0; background: #fff; color: #0c222c; font: 400 14px/1.4 'Inter', sans-serif; outline: 0; }
+  .signature-v2-form input:focus { border-color: #0c222c; box-shadow: 0 0 0 1px #0c222c; }
+  .signature-v2-wide { grid-column: 1 / -1; }
+  .signature-v2-preview-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; }
+  .signature-v2-modes { display: inline-flex; border: 1px solid #dce2e5; }
+  .signature-v2-modes button { min-height: 34px; padding: 0 13px; border: 0; border-right: 1px solid #dce2e5; background: #fff; color: #53636b; cursor: pointer; font: 600 10px/1 'Inter', sans-serif; letter-spacing: .8px; text-transform: uppercase; }
+  .signature-v2-modes button:last-child { border-right: 0; }
+  .signature-v2-modes button[aria-pressed="true"] { background: #0c222c; color: #fff; }
+  .signature-v2-client { overflow-x: auto; border: 1px solid #dfe5e8; background: #fff; transition: background-color .2s ease; }
+  .signature-v2-preview { min-width: 560px; padding: 34px; background: #fff; transition: background-color .2s ease; }
+  .signature-v2-client[data-theme="dark"], .signature-v2-client[data-theme="dark"] .signature-v2-preview { background: #0c222c; }
+  .signature-v2-client[data-theme="dark"] .signature-v2-preview table { background-color: #0c222c !important; }
+  .signature-v2-client[data-theme="dark"] .signature-v2-preview td { border-color: #e8edef !important; }
+  .signature-v2-client[data-theme="dark"] .signature-v2-preview div { color: #eef2f3 !important; }
+  .signature-v2-client[data-theme="dark"] .signature-v2-preview div:last-child { color: #aeb8bd !important; }
+  .signature-v2-client[data-theme="dark"] .signature-v2-preview a { color: #dce4e7 !important; }
+  .signature-v2-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+  .signature-v2-actions button { min-height: 44px; padding: 0 17px; border: 1px solid rgba(12,34,44,.18); background: #fff; color: #0c222c; cursor: pointer; font: 600 11px/1 'Inter', sans-serif; letter-spacing: 1px; text-transform: uppercase; }
+  .signature-v2-actions button:first-child { background: #0c222c; color: #fff; }
+  .signature-v2-status { min-height: 20px; margin: 11px 0 0; color: #314956; font: 400 13px/1.5 'Inter', sans-serif; }
+  .signature-v2-help { margin-top: 22px; padding-top: 20px; border-top: 1px solid #e1e7ea; }
+  .signature-v2-help h3 { margin: 0 0 8px; font: 700 14px/1.2 'Inter', sans-serif; letter-spacing: .9px; text-transform: uppercase; }
+  .signature-v2-help p { margin: 0; color: #53636b; font: 400 13px/1.65 'Inter', sans-serif; }
+  .signature-v2-html { width: 100%; min-height: 126px; margin-top: 18px; padding: 12px; border: 1px solid #dce2e5; border-radius: 0; color: #0c222c; font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; resize: vertical; }
+  @media (max-width: 960px) {
+    .signature-v2-page { padding-top: 36px; }
+    .signature-v2-intro { grid-template-columns: 1fr; gap: 24px; }
+    .signature-v2-shell { grid-template-columns: 1fr; }
+    .signature-v2-preview-panel { position: static; }
+  }
+  @media (max-width: 620px) {
+    .signature-v2-page { padding: 26px 16px 54px; }
+    .signature-v2-header { margin-bottom: 40px; }
+    .signature-v2-brand img { width: min(255px, 68vw); }
+    .signature-v2-badge { padding: 8px; font-size: 9px; }
+    .signature-v2-intro h1 { font-size: 42px; }
+    .signature-v2-form, .signature-v2-preview-panel { padding: 22px; }
+    .signature-v2-form-grid { grid-template-columns: 1fr; }
+    .signature-v2-wide { grid-column: auto; }
+    .signature-v2-preview-head { display: block; }
+    .signature-v2-modes { margin: -8px 0 20px; }
+    .signature-v2-preview { padding: 24px 18px; }
+  }
+</style>
+</head>
+<body>
+<main class="signature-v2-page">
+  <header class="signature-v2-header">
+    <a class="signature-v2-brand" href="email-signatures-v2.html" aria-label="Blanchet LLP email signature V2 review">
+      <img src="assets/logos/LLP.svg" alt="Blanchet LLP">
+    </a>
+    <span class="signature-v2-badge">V2 review</span>
+  </header>
+
+  <section class="signature-v2-intro">
+    <div>
+      <div class="section-label">[ SIGNATURES ]</div>
+      <h1>Email Signature V2</h1>
+      <p>A separate review build using the selected blue-square logo. Edit the attorney details, compare the same signature on light and dark client backgrounds, then copy or download the Outlook-ready HTML.</p>
+    </div>
+    <div class="signature-v2-note">
+      <strong>One optimized logo</strong>
+      The exported signature uses a single square image for consistent proportions in light and dark email clients. The theme controls affect this preview only.
+    </div>
+  </section>
+
+  <section class="signature-v2-shell">
+    <form class="signature-v2-form" data-signature-form>
+      <div class="signature-v2-heading">
+        <span>Details</span>
+        <h2>Attorney information</h2>
+      </div>
+      <div class="signature-v2-form-grid">
+        <label>Name<input data-signature-field="name" type="text" value="Stefan W. Engelhardt"></label>
+        <label>Title<input data-signature-field="title" type="text" value="Partner"></label>
+        <label>Email<input data-signature-field="email" type="email" value="stefan.engelhardt@blanchetllp.com"></label>
+        <label>Office Phone<input data-signature-field="phone" type="text" value="(212) 763-4808"></label>
+        <label>Mobile<input data-signature-field="mobile" type="text" value=""></label>
+        <label>Office Locations<input data-signature-field="office" type="text" value="New York City"></label>
+        <label class="signature-v2-wide">Firm<input data-signature-field="address" type="text" value="Blanchet LLP"></label>
+        <label>Website<input data-signature-field="website" type="text" value="blanchetllp.com"></label>
+        <label>LinkedIn<input data-signature-field="linkedin" type="text" value=""></label>
+      </div>
+    </form>
+
+    <section class="signature-v2-preview-panel" aria-live="polite">
+      <div class="signature-v2-preview-head">
+        <div class="signature-v2-heading">
+          <span>Preview</span>
+          <h2>Generated signature</h2>
+        </div>
+        <div class="signature-v2-modes" aria-label="Email client background preview">
+          <button type="button" data-preview-theme="light" aria-pressed="true">Light</button>
+          <button type="button" data-preview-theme="dark" aria-pressed="false">Dark</button>
+        </div>
+      </div>
+      <div class="signature-v2-client" data-signature-client data-theme="light">
+        <div class="signature-v2-preview" data-signature-preview></div>
+      </div>
+      <div class="signature-v2-actions">
+        <button type="button" data-copy-signature>Copy Signature</button>
+        <button type="button" data-copy-html>Copy HTML</button>
+        <button type="button" data-download-html>Download HTML</button>
+      </div>
+      <p class="signature-v2-status" data-signature-status role="status" aria-live="polite"></p>
+      <div class="signature-v2-help">
+        <h3>Outlook setup</h3>
+        <p>Copy the signature and paste it into Outlook's signature editor. Dark-mode behavior varies by email client, so V2 keeps one high-contrast logo rather than relying on automatic image switching.</p>
+      </div>
+      <textarea class="signature-v2-html" data-signature-html readonly aria-label="Generated signature HTML"></textarea>
+    </section>
+  </section>
+</main>
+<script src="js/email-signatures-v2.js?v=20260807-v2-review"></script>
+</body>
+</html>
