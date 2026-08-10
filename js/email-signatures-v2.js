@@ -72,7 +72,7 @@
   function renderSignature(data) {
     const firmAndOffice = [escapeHtml(data.address), escapeHtml(data.office)].filter(Boolean).join('<span style="color:#c9d0d3;"> &nbsp;|&nbsp; </span>');
     return `
-<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#0c222c;background-color:#ffffff;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#0c222c;">
   <tr>
     <td width="58" style="width:58px;max-width:58px;vertical-align:top;padding:0;">
       <img src="${LOGO_URL}" width="58" alt="Blanchet LLP" style="display:block;width:100%;max-width:58px;height:auto;border:0;outline:none;text-decoration:none;">
