@@ -1047,6 +1047,9 @@ body.mobile-menu-open {
 .footer-col .col-title { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); }
 .footer-col span { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: #fff; cursor: pointer; }
 .footer-col .address { font-weight: 400; color: rgba(255,255,255,0.45); cursor: default; }
+.footer-col a.address { cursor: pointer; text-decoration: none; transition: color 180ms ease; }
+.footer-col a.address:hover,
+.footer-col a.address:focus-visible { color: #fff; outline: none; }
 .footer-watermark { padding: 0 80px 50px; overflow: hidden; max-width: calc(100% - 480px); }
 .footer-watermark img { width: 100%; height: auto; object-fit: contain; opacity: 0.04; }
 .site-footer-brand-top { align-items: flex-start; }
