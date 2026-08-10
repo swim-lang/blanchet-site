@@ -6,6 +6,10 @@ const js = await readFile(new URL('../js/email-signatures-v2.js', import.meta.ur
 
 assert.match(html, /noindex, nofollow, noarchive/);
 assert.match(html, /Email Signature V2/);
+assert.match(html, /data-signature-field="title"[^>]+value="PARTNER"/);
+assert.match(html, /Office Phone - \(XXX\) XXX-XXXX/);
+assert.match(html, /Mobile - \(XXX\) XXX-XXXX/);
+assert.match(html, /data-signature-field="office"[^>]+value="Buffalo \| Chicago \| New York City"/);
 assert.match(js, /https:\/\/blanchetllp\.com\/assets\/favicon\/favicon-192\.png/);
 assert.doesNotMatch(js, /Logo-Color\.png/);
 assert.doesNotMatch(js, /dark[^\n]*logo|logo[^\n]*dark/i);
@@ -18,5 +22,10 @@ assert.doesNotMatch(js, /background-color:#ffffff/);
 assert.match(html, /data-theme="dark"[^]*background: #0c222c/);
 assert.equal((js.match(/const LOGO_URL/g) || []).length, 1);
 assert.match(js, /data-download-html/);
+assert.match(js, /data\.title = data\.title\.toUpperCase\(\)/);
+assert.match(js, /function hrefForPhone/);
+assert.match(js, /replace\(\/\[\^\+\\d\]\//);
+assert.match(js, /line\('O', data\.phone, hrefForPhone\(data\.phone\)\)/);
+assert.match(js, /line\('M', data\.mobile, hrefForPhone\(data\.mobile\)\)/);
 
 console.log('Email signature V2 static checks passed.');

@@ -39,11 +39,21 @@
     return /^https?:\/\//i.test(cleaned) ? escapeHtml(cleaned) : `https://${escapeHtml(cleaned)}`;
   }
 
+  function hrefForPhone(value) {
+    const cleaned = clean(value);
+    if (!cleaned) return '';
+    const normalized = cleaned
+      .replace(/[^+\d]/g, '')
+      .replace(/(?!^)\+/g, '');
+    return normalized ? `tel:${normalized}` : '';
+  }
+
   function getData() {
     const data = {};
     document.querySelectorAll('[data-signature-field]').forEach(field => {
       data[field.dataset.signatureField] = clean(field.value);
     });
+    data.title = data.title.toUpperCase();
     data.websiteLabel = normalizeWebsite(data.website) || 'blanchetllp.com';
     data.websiteHref = hrefForWebsite(data.website);
     return data;
@@ -61,8 +71,8 @@
 
   function metaRows(data) {
     return [
-      line('O', data.phone),
-      line('M', data.mobile),
+      line('O', data.phone, hrefForPhone(data.phone)),
+      line('M', data.mobile, hrefForPhone(data.mobile)),
       line('', data.email, data.email ? `mailto:${escapeHtml(data.email)}` : ''),
       line('', data.websiteLabel, data.websiteHref),
       line('L', data.linkedin, hrefForExternal(data.linkedin))
@@ -157,7 +167,12 @@
     setStatus('V2 HTML downloaded.');
   }
 
-  form.addEventListener('input', updatePreview);
+  form.addEventListener('input', event => {
+    if (event.target.matches('[data-signature-field="title"]')) {
+      event.target.value = event.target.value.toUpperCase();
+    }
+    updatePreview();
+  });
 
   document.querySelectorAll('[data-preview-theme]').forEach(button => {
     button.addEventListener('click', () => {
