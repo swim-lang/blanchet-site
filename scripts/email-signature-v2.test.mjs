@@ -6,6 +6,7 @@ const js = await readFile(new URL('../js/email-signatures-v2.js', import.meta.ur
 
 assert.match(html, /noindex, nofollow, noarchive/);
 assert.match(html, /Email Signature V2/);
+assert.match(html, /email-signatures-v2\.js\?v=20260810-consistency/);
 assert.match(html, /data-signature-field="title"[^>]+value="PARTNER"/);
 assert.match(html, /Office Phone - \(XXX\) XXX-XXXX/);
 assert.match(html, /Mobile - \(XXX\) XXX-XXXX/);
