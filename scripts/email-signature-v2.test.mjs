@@ -14,6 +14,7 @@ assert.match(js, /<td width="18"/);
 assert.match(js, /<img[^>]+width="58"/);
 assert.doesNotMatch(js, /<img[^>]+height="58"/);
 assert.match(js, /width:100%;max-width:58px;height:auto/);
+assert.doesNotMatch(js, /background-color:#ffffff/);
 assert.match(html, /data-theme="dark"[^]*background: #0c222c/);
 assert.equal((js.match(/const LOGO_URL/g) || []).length, 1);
 assert.match(js, /data-download-html/);
