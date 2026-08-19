@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
-import { offices, organization, profiles } from './attorney-schema-config.mjs';
+import { readFile, readdir } from 'node:fs/promises';
+import { hiddenProfiles, offices, organization, profiles } from './attorney-schema-config.mjs';
 
 function decodeHtml(value) {
   return value.replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"');
@@ -9,6 +9,17 @@ function decodeHtml(value) {
 function textContent(value) {
   return decodeHtml(value.replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
 }
+
+const siteRoot = new URL('../', import.meta.url);
+const bioFiles = (await readdir(siteRoot)).filter((file) => /^bio-.*\.html$/.test(file)).sort();
+const configuredFiles = profiles.map((profile) => profile.file).sort();
+const publicBioFiles = bioFiles.filter((file) => !hiddenProfiles.includes(file));
+
+assert.deepEqual(
+  configuredFiles,
+  publicBioFiles,
+  'Every public bio page must be included in the attorney schema configuration'
+);
 
 for (const profile of profiles) {
   const html = await readFile(new URL(`../${profile.file}`, import.meta.url), 'utf8');
@@ -49,7 +60,9 @@ for (const profile of profiles) {
   assert.deepEqual(person.knowsAbout, focusText, `${profile.file} schema should match visible focus areas`);
 }
 
-const hiddenProfile = await readFile(new URL('../bio-craig-nolan.html', import.meta.url), 'utf8');
-assert.doesNotMatch(hiddenProfile, /application\/ld\+json/);
+for (const hiddenProfile of hiddenProfiles) {
+  const html = await readFile(new URL(`../${hiddenProfile}`, import.meta.url), 'utf8');
+  assert.doesNotMatch(html, /application\/ld\+json/, `${hiddenProfile} should remain excluded from public schema`);
+}
 
 console.log(`Attorney schema checks passed for ${profiles.length} public profiles.`);

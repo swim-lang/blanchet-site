@@ -15,6 +15,9 @@ export const profiles = [
   { file: 'bio-timothy-cronin.html', givenName: 'Timothy', familyName: 'Cronin' }
 ];
 
+// Preserved profiles that are intentionally not part of the public team roster.
+export const hiddenProfiles = ['bio-craig-nolan.html'];
+
 export const offices = {
   Buffalo: {
     slug: 'buffalo',

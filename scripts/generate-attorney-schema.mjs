@@ -1,8 +1,26 @@
-import { readFile, writeFile } from 'node:fs/promises';
-import { offices, organization, profiles } from './attorney-schema-config.mjs';
+import { readFile, readdir, writeFile } from 'node:fs/promises';
+import { hiddenProfiles, offices, organization, profiles } from './attorney-schema-config.mjs';
 
 const siteRoot = new URL('../', import.meta.url);
 const markerPattern = /<!-- Attorney profile structured data:start -->[\s\S]*?<!-- Attorney profile structured data:end -->\n?/;
+
+async function assertCompleteProfileManifest() {
+  const bioFiles = (await readdir(siteRoot))
+    .filter((file) => /^bio-.*\.html$/.test(file))
+    .sort();
+  const configuredFiles = profiles.map((profile) => profile.file).sort();
+  const expectedPublicFiles = bioFiles.filter((file) => !hiddenProfiles.includes(file));
+
+  const missingProfiles = expectedPublicFiles.filter((file) => !configuredFiles.includes(file));
+  const missingFiles = configuredFiles.filter((file) => !bioFiles.includes(file));
+
+  if (missingProfiles.length) {
+    throw new Error(`Public attorney profiles missing schema configuration: ${missingProfiles.join(', ')}`);
+  }
+  if (missingFiles.length) {
+    throw new Error(`Schema configuration references missing profiles: ${missingFiles.join(', ')}`);
+  }
+}
 
 function decodeHtml(value) {
   return value
@@ -141,6 +159,8 @@ function schemaGraph(data) {
     ]
   };
 }
+
+await assertCompleteProfileManifest();
 
 for (const profile of profiles) {
   const fileUrl = new URL(profile.file, siteRoot);
