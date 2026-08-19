@@ -2,44 +2,6 @@
    BLANCHET LLP — Main Scripts
    ============================================ */
 
-// Attorney phone actions: reveal/copy on desktop and tap-to-call on mobile.
-document.querySelectorAll('.bio-offices[data-bio-phone]').forEach((contactBlock, index) => {
-  const displayNumber = contactBlock.dataset.bioPhone;
-  const telephoneNumber = displayNumber.replace(/[^+\d]/g, '');
-  const panelId = `bio-phone-panel-${index + 1}`;
-  const actions = document.createElement('div');
-  actions.className = 'bio-phone-actions';
-  actions.innerHTML = `
-    <button class="bio-phone-toggle" type="button" aria-expanded="false" aria-controls="${panelId}">Phone</button>
-    <span class="bio-phone-panel" id="${panelId}" hidden>
-      <a class="bio-phone-number" href="tel:${telephoneNumber}">${displayNumber}</a>
-      <button class="bio-phone-copy" type="button" data-phone="${displayNumber}">Copy</button>
-    </span>
-    <a class="bio-phone-call-mobile" href="tel:${telephoneNumber}">Call <span>${displayNumber}</span></a>
-  `;
-  contactBlock.append(actions);
-
-  const toggle = actions.querySelector('.bio-phone-toggle');
-  const panel = actions.querySelector('.bio-phone-panel');
-  const copy = actions.querySelector('.bio-phone-copy');
-
-  toggle.addEventListener('click', () => {
-    const willOpen = toggle.getAttribute('aria-expanded') !== 'true';
-    toggle.setAttribute('aria-expanded', String(willOpen));
-    panel.hidden = !willOpen;
-  });
-
-  copy.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(copy.dataset.phone);
-      copy.textContent = 'Copied';
-      setTimeout(() => { copy.textContent = 'Copy'; }, 1600);
-    } catch (error) {
-      window.prompt('Copy phone number:', copy.dataset.phone);
-    }
-  });
-});
-
 // Lock service card heights to prevent jerk on hover (desktop only)
 window.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth >= 768) {
@@ -121,7 +83,7 @@ if (shouldMountMobileMenu) {
   menuPanel.innerHTML = `
     <div class="mobile-menu-inner">
       <a class="mobile-menu-brand" href="/" aria-label="Blanchet LLP home">
-        <img src="assets/logos/Primary-Lockup-Grey.svg" alt="Blanchet LLP">
+        <img src="/assets/logos/Primary-Lockup-Grey.svg" alt="Blanchet LLP">
       </a>
       <nav class="mobile-menu-primary" aria-label="Mobile navigation">
         ${navLink('/', 'Home')}

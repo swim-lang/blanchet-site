@@ -1,6 +1,7 @@
 import { chromium } from 'playwright';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
+import { profiles } from './attorney-schema-config.mjs';
 
 const ROOT_DIR = path.resolve(new URL('..', import.meta.url).pathname);
 const BASE_URL = 'http://127.0.0.1:4173';
@@ -18,19 +19,8 @@ const pages = [
   ['white-collar', 'white-collar.html'],
   ['ip-trade-secrets', 'ip-trade-secrets.html'],
   ['team', 'team.html'],
-  ['bio-hannah-amundsen', 'bio-hannah-amundsen.html'],
-  ['bio-myles-bartley', 'bio-myles-bartley.html'],
-  ['bio-joel', 'bio-joel.html'],
-  ['bio-caroline-creagan', 'bio-caroline-creagan.html'],
-  ['bio-timothy-cronin', 'bio-timothy-cronin.html'],
-  ['bio-andrew-devine', 'bio-andrew-devine.html'],
-  ['bio-frank-dylewski', 'bio-frank-dylewski.html'],
-  ['bio-stefan-engelhardt', 'bio-stefan-engelhardt.html'],
-  ['bio-jaran-moten', 'bio-jaran-moten.html'],
+  ...profiles.map((profile) => [`bio-${profile.slug}`, profile.file]),
   ['bio-craig-nolan', 'bio-craig-nolan.html'],
-  ['bio-robert-reagan', 'bio-robert-reagan.html'],
-  ['bio-bridget-ruschak', 'bio-bridget-ruschak.html'],
-  ['bio-john-worth', 'bio-john-worth.html'],
   ['insights', 'insights.html'],
   ['insights-article', 'insights-article.html'],
   ['contact', 'contact.html'],

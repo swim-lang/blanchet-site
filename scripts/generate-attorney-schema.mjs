@@ -1,17 +1,15 @@
 import { readFile, readdir, writeFile } from 'node:fs/promises';
-import { hiddenProfiles, offices, organization, profiles } from './attorney-schema-config.mjs';
+import { offices, organization, profiles } from './attorney-schema-config.mjs';
 
 const siteRoot = new URL('../', import.meta.url);
+const profileRoot = new URL('../team/', import.meta.url);
 const markerPattern = /<!-- Attorney profile structured data:start -->[\s\S]*?<!-- Attorney profile structured data:end -->\n?/;
 
 async function assertCompleteProfileManifest() {
-  const bioFiles = (await readdir(siteRoot))
-    .filter((file) => /^bio-.*\.html$/.test(file))
-    .sort();
+  const bioFiles = (await readdir(profileRoot)).filter((file) => file.endsWith('.html')).map((file) => `team/${file}`).sort();
   const configuredFiles = profiles.map((profile) => profile.file).sort();
-  const expectedPublicFiles = bioFiles.filter((file) => !hiddenProfiles.includes(file));
 
-  const missingProfiles = expectedPublicFiles.filter((file) => !configuredFiles.includes(file));
+  const missingProfiles = bioFiles.filter((file) => !configuredFiles.includes(file));
   const missingFiles = configuredFiles.filter((file) => !bioFiles.includes(file));
 
   if (missingProfiles.length) {
@@ -66,14 +64,14 @@ function profileData(html, profile) {
     .replace(/^\[\s*|\s*\]$/g, '')
     .toLowerCase()
     .replace(/^./, (character) => character.toUpperCase());
-  const phone = matchOne(html, /data-bio-phone="([^"]+)"/, 'telephone', profile.file);
+  const phone = textContent(matchOne(html, /<a class="bio-phone-number"[^>]*>([\s\S]*?)<\/a>/, 'telephone', profile.file));
   const email = matchOne(html, /href="mailto:([^"]+)"/, 'email', profile.file);
   const imagePath = matchOne(html, /<figure class="bio-headshot-card">\s*<img src="([^"]+)"/, 'headshot', profile.file);
   const image = new URL(imagePath, organization.url).href;
   const officeFragment = matchOne(html, /<div class="bio-offices"[^>]*>([\s\S]*?)<\/div>/, 'office affiliations', profile.file).split(/<br\s*\/?>\s*<a/i)[0];
   const profileOffices = textContent(officeFragment).split('|').map((office) => office.trim()).filter(Boolean);
-  const educationFragment = matchOne(html, /<div class="bio-section-title">EDUCATION<\/div>\s*<ul class="bio-list">([\s\S]*?)<\/ul>/, 'education', profile.file);
-  const focusFragment = matchOne(html, /<div class="bio-section-title">AREAS OF FOCUS<\/div>\s*<div class="bio-tags"[^>]*>([\s\S]*?)<\/div>/, 'areas of focus', profile.file);
+  const educationFragment = matchOne(html, /<h2 class="bio-section-title">EDUCATION<\/h2>\s*<ul class="bio-list">([\s\S]*?)<\/ul>/, 'education', profile.file);
+  const focusFragment = matchOne(html, /<h2 class="bio-section-title">AREAS OF FOCUS<\/h2>\s*<div class="bio-tags"[^>]*>([\s\S]*?)<\/div>/, 'areas of focus', profile.file);
 
   for (const office of profileOffices) {
     if (!offices[office]) throw new Error(`${profile.file}: unknown office "${office}"`);

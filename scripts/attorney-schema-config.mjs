@@ -1,18 +1,18 @@
 export const profiles = [
-  { file: 'bio-andrew-devine.html', givenName: 'Andrew', additionalName: 'P.', familyName: 'Devine' },
-  { file: 'bio-bridget-ruschak.html', givenName: 'Bridget', familyName: 'Ruschak' },
-  { file: 'bio-caroline-creagan.html', givenName: 'Caroline', additionalName: 'E.', familyName: 'Creagan' },
-  { file: 'bio-frank-dylewski.html', givenName: 'Frank', additionalName: 'G.', familyName: 'Dylewski' },
-  { file: 'bio-hannah-amundsen.html', givenName: 'Hannah', additionalName: 'E.', familyName: 'Amundsen' },
-  { file: 'bio-james-doody.html', givenName: 'James', familyName: 'Doody' },
-  { file: 'bio-jaran-moten.html', givenName: 'Jaran', additionalName: 'R.', familyName: 'Moten' },
-  { file: 'bio-joel.html', givenName: 'Joel', additionalName: 'A.', familyName: 'Blanchet' },
-  { file: 'bio-john-worth.html', givenName: 'John', additionalName: 'R.', familyName: 'Worth' },
-  { file: 'bio-joshua-wallace.html', givenName: 'Joshua', additionalName: 'S.', familyName: 'Wallace' },
-  { file: 'bio-myles-bartley.html', givenName: 'Myles', additionalName: 'K.', familyName: 'Bartley' },
-  { file: 'bio-robert-reagan.html', givenName: 'Robert', familyName: 'Reagan' },
-  { file: 'bio-stefan-engelhardt.html', givenName: 'Stefan', additionalName: 'W.', familyName: 'Engelhardt' },
-  { file: 'bio-timothy-cronin.html', givenName: 'Timothy', familyName: 'Cronin' }
+  { file: 'team/andrew-devine.html', legacyFile: 'bio-andrew-devine.html', slug: 'andrew-devine', givenName: 'Andrew', additionalName: 'P.', familyName: 'Devine' },
+  { file: 'team/bridget-ruschak.html', legacyFile: 'bio-bridget-ruschak.html', slug: 'bridget-ruschak', givenName: 'Bridget', familyName: 'Ruschak' },
+  { file: 'team/caroline-creagan.html', legacyFile: 'bio-caroline-creagan.html', slug: 'caroline-creagan', givenName: 'Caroline', additionalName: 'E.', familyName: 'Creagan' },
+  { file: 'team/frank-dylewski.html', legacyFile: 'bio-frank-dylewski.html', slug: 'frank-dylewski', givenName: 'Frank', additionalName: 'G.', familyName: 'Dylewski' },
+  { file: 'team/hannah-amundsen.html', legacyFile: 'bio-hannah-amundsen.html', slug: 'hannah-amundsen', givenName: 'Hannah', additionalName: 'E.', familyName: 'Amundsen' },
+  { file: 'team/james-doody.html', legacyFile: 'bio-james-doody.html', slug: 'james-doody', givenName: 'James', familyName: 'Doody' },
+  { file: 'team/jaran-moten.html', legacyFile: 'bio-jaran-moten.html', slug: 'jaran-moten', givenName: 'Jaran', additionalName: 'R.', familyName: 'Moten' },
+  { file: 'team/joel-blanchet.html', legacyFile: 'bio-joel.html', slug: 'joel-blanchet', givenName: 'Joel', additionalName: 'A.', familyName: 'Blanchet' },
+  { file: 'team/john-worth.html', legacyFile: 'bio-john-worth.html', slug: 'john-worth', givenName: 'John', additionalName: 'R.', familyName: 'Worth' },
+  { file: 'team/joshua-wallace.html', legacyFile: 'bio-joshua-wallace.html', slug: 'joshua-wallace', givenName: 'Joshua', additionalName: 'S.', familyName: 'Wallace' },
+  { file: 'team/myles-bartley.html', legacyFile: 'bio-myles-bartley.html', slug: 'myles-bartley', givenName: 'Myles', additionalName: 'K.', familyName: 'Bartley' },
+  { file: 'team/robert-reagan.html', legacyFile: 'bio-robert-reagan.html', slug: 'robert-reagan', givenName: 'Robert', familyName: 'Reagan' },
+  { file: 'team/stefan-engelhardt.html', legacyFile: 'bio-stefan-engelhardt.html', slug: 'stefan-engelhardt', givenName: 'Stefan', additionalName: 'W.', familyName: 'Engelhardt' },
+  { file: 'team/timothy-cronin.html', legacyFile: 'bio-timothy-cronin.html', slug: 'timothy-cronin', givenName: 'Timothy', familyName: 'Cronin' }
 ];
 
 // Preserved profiles that are intentionally not part of the public team roster.

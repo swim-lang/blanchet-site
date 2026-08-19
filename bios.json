@@ -11,7 +11,7 @@
       "offices": [
         "Chicago"
       ],
-      "page": "bio-hannah-amundsen.html",
+      "page": "team/hannah-amundsen.html",
       "metaDescription": "Hannah E. Amundsen is an associate at Blanchet LLP focused on commercial litigation, product liability, mass tort, toxic tort, and life sciences disputes.",
       "introduction": [
         "Hannah E. Amundsen is a litigator who represents companies in commercial disputes, product liability and mass tort matters, toxic tort litigation, and cases involving life sciences and health effects.",
@@ -53,7 +53,7 @@
       "clerkships": [],
       "image": "",
       "imageAlt": "Hannah Amundsen",
-      "url": "https://blanchetllp.com/bio-hannah-amundsen",
+      "url": "https://blanchetllp.com/team/hannah-amundsen",
       "email": "hannah.amundsen@blanchetllp.com"
     },
     {
@@ -62,9 +62,9 @@
       "offices": [
         "New York City"
       ],
-      "page": "bio-myles-bartley.html",
-      "url": "https://blanchetllp.com/bio-myles-bartley",
-      "slug": "bio-myles-bartley",
+      "page": "team/myles-bartley.html",
+      "url": "https://blanchetllp.com/team/myles-bartley",
+      "slug": "myles-bartley",
       "metaDescription": "Myles K. Bartley is a partner at Blanchet LLP focused on complex business disputes, securities, bankruptcy, product liability, mass tort, and investigations.",
       "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1200&q=80",
       "imageAlt": "Myles Bartley",
@@ -125,9 +125,9 @@
         "New York City",
         "Chicago"
       ],
-      "page": "bio-joel.html",
-      "url": "https://blanchetllp.com/bio-joel",
-      "slug": "bio-joel",
+      "page": "team/joel-blanchet.html",
+      "url": "https://blanchetllp.com/team/joel-blanchet",
+      "slug": "joel-blanchet",
       "metaDescription": "Joel Blanchet is a trial lawyer representing sophisticated clients in commercial, environmental, product liability, and other high-stakes disputes.",
       "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1200&q=80",
       "imageAlt": "Joel Blanchet",
@@ -196,7 +196,7 @@
       "offices": [
         "Chicago"
       ],
-      "page": "bio-caroline-creagan.html",
+      "page": "team/caroline-creagan.html",
       "metaDescription": "Caroline E. Creagan is a litigator assisting clients in civil disputes, including product liability and toxic tort litigation.",
       "introduction": [
         "Caroline E. Creagan is a litigator who assists clients in civil disputes, including product liability and toxic tort litigation, and brings prior experience preparing and overseeing casework in public-sector and judicial settings.",
@@ -239,7 +239,7 @@
       "clerkships": [],
       "image": "",
       "imageAlt": "Caroline Creagan",
-      "url": "https://blanchetllp.com/bio-caroline-creagan",
+      "url": "https://blanchetllp.com/team/caroline-creagan",
       "email": "caroline.creagan@blanchetllp.com"
     },
     {
@@ -249,7 +249,7 @@
       "offices": [
         "Chicago"
       ],
-      "page": "bio-timothy-cronin.html",
+      "page": "team/timothy-cronin.html",
       "metaDescription": "Timothy Cronin is a litigator advising clients in complex commercial, product liability, toxic tort, and environmental disputes.",
       "introduction": [
         "Timothy Cronin is a litigator who advises clients in complex commercial, product liability, toxic tort, and environmental disputes. His practice focuses on helping companies navigate high-stakes litigation and regulatory challenges involving technical, scientific, and environmental issues.",
@@ -292,7 +292,7 @@
       "clerkships": [],
       "image": "",
       "imageAlt": "Timothy Cronin",
-      "url": "https://blanchetllp.com/bio-timothy-cronin",
+      "url": "https://blanchetllp.com/team/timothy-cronin",
       "email": "timothy.cronin@blanchetllp.com"
     },
     {
@@ -302,9 +302,9 @@
         "Buffalo",
         "New York City"
       ],
-      "page": "bio-andrew-devine.html",
-      "url": "https://blanchetllp.com/bio-andrew-devine",
-      "slug": "bio-andrew-devine",
+      "page": "team/andrew-devine.html",
+      "url": "https://blanchetllp.com/team/andrew-devine",
+      "slug": "andrew-devine",
       "metaDescription": "Andrew P. Devine is a partner at Blanchet LLP handling product liability, environmental, class and mass action, commercial, construction, investment, and CERCLA disputes.",
       "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=1200&q=80",
       "imageAlt": "Andrew Devine",
@@ -374,7 +374,7 @@
       "offices": [
         "Chicago"
       ],
-      "page": "bio-frank-dylewski.html",
+      "page": "team/frank-dylewski.html",
       "metaDescription": "Frank G. Dylewski is a partner at Blanchet LLP handling commercial litigation, class and mass actions, product liability, antitrust, insurance, and complex disputes.",
       "introduction": [
         "Frank Dylewski is a litigator who represents companies, business owners, and individuals in commercial disputes, class and mass actions, product liability matters, partnership disputes, antitrust cases, insurance disputes, and other complex litigation.",
@@ -421,7 +421,7 @@
       "clerkships": [],
       "image": "",
       "imageAlt": "Frank Dylewski",
-      "url": "https://blanchetllp.com/bio-frank-dylewski",
+      "url": "https://blanchetllp.com/team/frank-dylewski",
       "email": "Frank.Dylewski@blanchetllp.com"
     },
     {
@@ -431,7 +431,7 @@
       "offices": [
         "New York City"
       ],
-      "page": "bio-stefan-engelhardt.html",
+      "page": "team/stefan-engelhardt.html",
       "metaDescription": "Stefan W. Engelhardt is a partner at Blanchet LLP with more than 30 years of experience in commercial litigation, bankruptcy, antitrust, fraud, and product liability.",
       "introduction": [
         "Stefan W. Engelhardt is a trial lawyer with more than 30 years of experience resolving complex disputes in state, federal, and bankruptcy courts. He represents life sciences companies, manufacturers, financial institutions, and national corporations in commercial litigation, bankruptcy, antitrust, fraud, and product liability matters.",
@@ -475,7 +475,7 @@
       "clerkships": [],
       "image": "",
       "imageAlt": "Stefan Engelhardt",
-      "url": "https://blanchetllp.com/bio-stefan-engelhardt",
+      "url": "https://blanchetllp.com/team/stefan-engelhardt",
       "email": "Stefan.Engelhardt@blanchetllp.com"
     },
     {
@@ -486,9 +486,9 @@
         "Buffalo",
         "New York City"
       ],
-      "page": "bio-james-doody.html",
-      "url": "https://blanchetllp.com/bio-james-doody",
-      "slug": "bio-james-doody",
+      "page": "team/james-doody.html",
+      "url": "https://blanchetllp.com/team/james-doody",
+      "slug": "james-doody",
       "metaDescription": "James Doody is a partner at Blanchet LLP focused on high-stakes disputes, environmental law, mass torts, and commercial disputes.",
       "image": "",
       "imageAlt": "James Doody",
@@ -527,9 +527,9 @@
       "offices": [
         "Chicago"
       ],
-      "page": "bio-jaran-moten.html",
-      "url": "https://blanchetllp.com/bio-jaran-moten",
-      "slug": "bio-jaran-moten",
+      "page": "team/jaran-moten.html",
+      "url": "https://blanchetllp.com/team/jaran-moten",
+      "slug": "jaran-moten",
       "metaDescription": "Jaran Moten is a partner at Blanchet LLP focused on commercial litigation, mass and toxic tort matters, antitrust, bankruptcy litigation, and complex business disputes.",
       "image": "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=1200&q=80",
       "imageAlt": "Jaran Moten",
@@ -638,9 +638,9 @@
       "offices": [
         "New York City"
       ],
-      "page": "bio-robert-reagan.html",
-      "url": "https://blanchetllp.com/bio-robert-reagan",
-      "slug": "bio-robert-reagan",
+      "page": "team/robert-reagan.html",
+      "url": "https://blanchetllp.com/team/robert-reagan",
+      "slug": "robert-reagan",
       "metaDescription": "Robert Reagan is a partner at Blanchet LLP focused on environmental litigation, mass tort, product liability, and chemical exposure matters.",
       "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1200&q=80",
       "imageAlt": "Robert Reagan",
@@ -694,7 +694,7 @@
       "offices": [
         "Chicago"
       ],
-      "page": "bio-bridget-ruschak.html",
+      "page": "team/bridget-ruschak.html",
       "metaDescription": "Bridget Ruschak is an associate at Blanchet LLP focused on civil litigation, contract disputes, product liability, chemical exposure, and toxic tort.",
       "introduction": [
         "Bridget Ruschak is a litigator who represents manufacturers and other companies in civil litigation, including contract disputes, product liability, chemical exposure, and toxic tort.",
@@ -744,7 +744,7 @@
       ],
       "image": "",
       "imageAlt": "Bridget Ruschak",
-      "url": "https://blanchetllp.com/bio-bridget-ruschak",
+      "url": "https://blanchetllp.com/team/bridget-ruschak",
       "email": "bridget.ruschak@blanchetllp.com"
     },
     {
@@ -753,9 +753,9 @@
       "offices": [
         "Chicago"
       ],
-      "page": "bio-john-worth.html",
-      "url": "https://blanchetllp.com/bio-john-worth",
-      "slug": "bio-john-worth",
+      "page": "team/john-worth.html",
+      "url": "https://blanchetllp.com/team/john-worth",
+      "slug": "john-worth",
       "metaDescription": "John R. Worth is a partner at Blanchet LLP focused on commercial disputes, environmental and toxic tort matters, mass torts, and product liability litigation.",
       "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1200&q=80",
       "imageAlt": "John Worth",
@@ -807,9 +807,9 @@
         "Buffalo",
         "New York City"
       ],
-      "page": "bio-joshua-wallace.html",
-      "url": "https://blanchetllp.com/bio-joshua-wallace",
-      "slug": "bio-joshua-wallace",
+      "page": "team/joshua-wallace.html",
+      "url": "https://blanchetllp.com/team/joshua-wallace",
+      "slug": "joshua-wallace",
       "metaDescription": "Joshua S. Wallace is an environmental litigator focused on complex environmental disputes, regulatory enforcement, and scientifically intensive litigation.",
       "image": "assets/headshots/14_joshua-s-wallace.jpg",
       "imageAlt": "Joshua S. Wallace",

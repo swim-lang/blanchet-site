@@ -1,5 +1,6 @@
 import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
+import { profiles } from './attorney-schema-config.mjs';
 
 const ROOT_DIR = path.resolve(new URL('..', import.meta.url).pathname);
 const HTML_FILES = [
@@ -13,19 +14,8 @@ const HTML_FILES = [
   'white-collar.html',
   'ip-trade-secrets.html',
   'team.html',
-  'bio-hannah-amundsen.html',
-  'bio-myles-bartley.html',
-  'bio-joel.html',
-  'bio-caroline-creagan.html',
-  'bio-timothy-cronin.html',
-  'bio-andrew-devine.html',
-  'bio-frank-dylewski.html',
-  'bio-stefan-engelhardt.html',
-  'bio-jaran-moten.html',
+  ...profiles.map((profile) => profile.file),
   'bio-craig-nolan.html',
-  'bio-robert-reagan.html',
-  'bio-bridget-ruschak.html',
-  'bio-john-worth.html',
   'insights.html',
   'insights-article.html',
   'contact.html',
@@ -64,11 +54,21 @@ function isWrappedByLabel(html, index) {
   return before.lastIndexOf('<label') > before.lastIndexOf('</label>');
 }
 
-function existsLocal(target) {
-  const [withoutHash] = target.split('#');
-  if (!withoutHash || withoutHash.startsWith('mailto:') || withoutHash.startsWith('tel:')) return true;
-  if (/^(https?:)?\/\//.test(withoutHash) || withoutHash.startsWith('data:')) return true;
-  return existsSync(path.join(ROOT_DIR, decodeURIComponent(withoutHash)));
+function existsLocal(target, sourceFile) {
+  const cleanTarget = target.split(/[?#]/)[0];
+  if (!cleanTarget || cleanTarget.startsWith('mailto:') || cleanTarget.startsWith('tel:')) return true;
+  if (/^(https?:)?\/\//.test(cleanTarget) || cleanTarget.startsWith('data:')) return true;
+
+  const decodedTarget = decodeURIComponent(cleanTarget);
+  const relativeTarget = decodedTarget.startsWith('/')
+    ? decodedTarget.slice(1)
+    : path.join(path.dirname(sourceFile), decodedTarget);
+  const normalizedTarget = path.normalize(relativeTarget);
+  const candidates = normalizedTarget
+    ? [normalizedTarget, `${normalizedTarget}.html`, path.join(normalizedTarget, 'index.html')]
+    : ['index.html'];
+
+  return candidates.some(candidate => existsSync(path.join(ROOT_DIR, candidate)));
 }
 
 for (const file of HTML_FILES) {
@@ -83,7 +83,7 @@ for (const file of HTML_FILES) {
       issues.push({ file, type: 'a11y', detail: 'Anchor is missing href', snippet: tag.slice(0, 120) });
     } else if (attr.href === '#') {
       issues.push({ file, type: 'broken-link', detail: 'Placeholder href="#" link', snippet: tag.slice(0, 120) });
-    } else if (!existsLocal(attr.href)) {
+    } else if (!existsLocal(attr.href, file)) {
       issues.push({ file, type: 'broken-link', detail: `Missing local target: ${attr.href}`, snippet: tag.slice(0, 120) });
     }
 
