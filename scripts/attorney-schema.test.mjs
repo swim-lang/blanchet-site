@@ -11,13 +11,13 @@ function textContent(value) {
 }
 
 const siteRoot = new URL('../', import.meta.url);
-const bioFiles = (await readdir(siteRoot)).filter((file) => /^bio-.*\.html$/.test(file)).sort();
+const profileRoot = new URL('../team/', import.meta.url);
+const bioFiles = (await readdir(profileRoot)).filter((file) => file.endsWith('.html')).map((file) => `team/${file}`).sort();
 const configuredFiles = profiles.map((profile) => profile.file).sort();
-const publicBioFiles = bioFiles.filter((file) => !hiddenProfiles.includes(file));
 
 assert.deepEqual(
   configuredFiles,
-  publicBioFiles,
+  bioFiles,
   'Every public bio page must be included in the attorney schema configuration'
 );
 
@@ -58,6 +58,15 @@ for (const profile of profiles) {
   assert.ok(visibleFocus, `${profile.file} should expose visible focus areas`);
   const focusText = [...visibleFocus[1].matchAll(/<span[^>]*>([\s\S]*?)<\/span>/g)].map((match) => textContent(match[1]));
   assert.deepEqual(person.knowsAbout, focusText, `${profile.file} schema should match visible focus areas`);
+
+  const canonical = `https://blanchetllp.com/team/${profile.slug}`;
+  assert.equal(profilePage.url, canonical);
+  assert.equal(person.url, canonical);
+  assert.equal(person.image, html.match(/<meta property="og:image" content="([^"]+)"/)?.[1]);
+  assert.equal(html.match(/<meta property="og:image:width" content="([^"]+)"/)?.[1], '900');
+  assert.equal(html.match(/<meta property="og:image:height" content="([^"]+)"/)?.[1], '1125');
+  assert.equal((html.match(/<h2 class="bio-section-title">/g) || []).length > 0, true);
+  assert.equal((html.match(/<div class="bio-section-title">/g) || []).length, 0);
 }
 
 for (const hiddenProfile of hiddenProfiles) {

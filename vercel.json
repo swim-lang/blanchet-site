@@ -1,6 +1,23 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/bio-andrew-devine", "destination": "/team/andrew-devine", "statusCode": 301 },
+    { "source": "/bio-bridget-ruschak", "destination": "/team/bridget-ruschak", "statusCode": 301 },
+    { "source": "/bio-caroline-creagan", "destination": "/team/caroline-creagan", "statusCode": 301 },
+    { "source": "/bio-frank-dylewski", "destination": "/team/frank-dylewski", "statusCode": 301 },
+    { "source": "/bio-hannah-amundsen", "destination": "/team/hannah-amundsen", "statusCode": 301 },
+    { "source": "/bio-james-doody", "destination": "/team/james-doody", "statusCode": 301 },
+    { "source": "/bio-jaran-moten", "destination": "/team/jaran-moten", "statusCode": 301 },
+    { "source": "/bio-joel", "destination": "/team/joel-blanchet", "statusCode": 301 },
+    { "source": "/bio-john-worth", "destination": "/team/john-worth", "statusCode": 301 },
+    { "source": "/bio-joshua-wallace", "destination": "/team/joshua-wallace", "statusCode": 301 },
+    { "source": "/bio-myles-bartley", "destination": "/team/myles-bartley", "statusCode": 301 },
+    { "source": "/bio-robert-reagan", "destination": "/team/robert-reagan", "statusCode": 301 },
+    { "source": "/bio-stefan-engelhardt", "destination": "/team/stefan-engelhardt", "statusCode": 301 },
+    { "source": "/bio-timothy-cronin", "destination": "/team/timothy-cronin", "statusCode": 301 }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
