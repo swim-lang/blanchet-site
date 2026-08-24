@@ -46,9 +46,17 @@ for (const profile of profiles) {
   assert.ok(person.jobTitle);
   assert.ok(person.description);
   assert.ok(person.image.startsWith('https://blanchetllp.com/'));
-  assert.ok(person.email.includes('@blanchetllp.com'));
-  assert.match(person.telephone, /^\(\d{3}\) \d{3}-\d{4}$/);
+  if (profile.contactDetailsPending) {
+    assert.equal(Object.hasOwn(person, 'email'), false);
+    assert.equal(Object.hasOwn(person, 'telephone'), false);
+  } else {
+    assert.ok(person.email.includes('@blanchetllp.com'));
+    assert.match(person.telephone, /^\(\d{3}\) \d{3}-\d{4}$/);
+  }
   assert.ok(person.alumniOf.length >= 1);
+  for (const institution of person.alumniOf) {
+    assert.doesNotMatch(institution.name, /,\s*(?:J\.D\.|LL\.M\.|Ph\.D\.|M\.[A-Z]\.|B\.[A-Z]\.|A\.B\.)/);
+  }
   assert.ok(person.knowsAbout.length >= 1);
   assert.ok(person.workLocation.length >= 1);
   assert.equal(Object.hasOwn(profilePage, 'dateCreated'), false);

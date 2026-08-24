@@ -44,6 +44,10 @@ function matchOne(html, pattern, label, file) {
   return match[1];
 }
 
+function matchOptional(html, pattern) {
+  return html.match(pattern)?.[1] ?? null;
+}
+
 function listItems(fragment) {
   return [...fragment.matchAll(/<li[^>]*>([\s\S]*?)<\/li>/gi)].map((match) => textContent(match[1]));
 }
@@ -53,7 +57,7 @@ function spanItems(fragment) {
 }
 
 function institutionName(education) {
-  return education.split(/,\s*(?=(?:J\.D\.|LL\.M\.|Ph\.D\.|M\.[A-Z]\.|B\.[A-Z]\.))/)[0].trim();
+  return education.split(/,\s*(?=(?:J\.D\.|LL\.M\.|Ph\.D\.|M\.[A-Z]\.|B\.[A-Z]\.|A\.B\.))/)[0].trim();
 }
 
 function profileData(html, profile) {
@@ -64,8 +68,9 @@ function profileData(html, profile) {
     .replace(/^\[\s*|\s*\]$/g, '')
     .toLowerCase()
     .replace(/^./, (character) => character.toUpperCase());
-  const phone = textContent(matchOne(html, /<a class="bio-phone-number"[^>]*>([\s\S]*?)<\/a>/, 'telephone', profile.file));
-  const email = matchOne(html, /href="mailto:([^"]+)"/, 'email', profile.file);
+  const phoneMatch = matchOptional(html, /<a class="bio-phone-number"[^>]*>([\s\S]*?)<\/a>/);
+  const phone = phoneMatch ? textContent(phoneMatch) : null;
+  const email = matchOptional(html, /href="mailto:([^"]+)"/);
   const imagePath = matchOne(html, /<figure class="bio-headshot-card">\s*<img src="([^"]+)"/, 'headshot', profile.file);
   const image = new URL(imagePath, organization.url).href;
   const officeFragment = matchOne(html, /<div class="bio-offices"[^>]*>([\s\S]*?)<\/div>/, 'office affiliations', profile.file).split(/<br\s*\/?>\s*<a/i)[0];
@@ -123,8 +128,8 @@ function schemaGraph(data) {
     mainEntityOfPage: { '@id': pageId },
     image: data.image,
     description: data.description,
-    email: data.email,
-    telephone: data.phone,
+    ...(data.email ? { email: data.email } : {}),
+    ...(data.phone ? { telephone: data.phone } : {}),
     worksFor: { '@id': organization.id },
     alumniOf: data.education.map((name) => ({ '@type': 'EducationalOrganization', name })),
     knowsAbout: data.knowsAbout,

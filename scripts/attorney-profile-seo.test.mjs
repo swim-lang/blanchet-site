@@ -8,7 +8,6 @@ const sitemap = await readFile(new URL('../sitemap.xml', import.meta.url), 'utf8
 
 for (const profile of profiles) {
   const html = await readFile(new URL(`../${profile.file}`, import.meta.url), 'utf8');
-  const legacyPath = `/${profile.legacyFile.replace(/\.html$/, '')}`;
   const publicPath = `/team/${profile.slug}`;
   const canonical = `https://blanchetllp.com${publicPath}`;
   const titleName = html.match(/<title>([^<]+) \| Blanchet LLP<\/title>/)?.[1];
@@ -22,18 +21,24 @@ for (const profile of profiles) {
   assert.match(html, new RegExp(`<meta property="og:image:alt" content="${titleName} professional headshot">`));
   assert.doesNotMatch(html, /<div class="bio-section-title">/);
   assert.ok((html.match(/<h2 class="bio-section-title">/g) || []).length >= 3);
-  assert.match(html, /<a class="bio-phone-number" href="tel:\+1\d{10}"/);
+  if (profile.contactDetailsPending) {
+    assert.doesNotMatch(html, /class="bio-phone-number"|href="mailto:/);
+  } else {
+    assert.match(html, /<a class="bio-phone-number" href="tel:\+1\d{10}"/);
+  }
   assert.doesNotMatch(html, /data-bio-phone=/);
   assert.doesNotMatch(html, /(?:href|src)="(?:assets|css|js)\//);
 
   assert.match(teamPage, new RegExp(`href="${publicPath}"`));
   assert.match(sitemap, new RegExp(`<loc>${canonical}<\/loc>`));
-  assert.deepEqual(
-    redirects.find((redirect) => redirect.source === legacyPath),
-    { source: legacyPath, destination: publicPath, statusCode: 301 }
-  );
-
-  await assert.rejects(access(new URL(`../${profile.legacyFile}`, import.meta.url)));
+  if (profile.legacyFile) {
+    const legacyPath = `/${profile.legacyFile.replace(/\.html$/, '')}`;
+    assert.deepEqual(
+      redirects.find((redirect) => redirect.source === legacyPath),
+      { source: legacyPath, destination: publicPath, statusCode: 301 }
+    );
+    await assert.rejects(access(new URL(`../${profile.legacyFile}`, import.meta.url)));
+  }
 }
 
 console.log(`Attorney profile SEO checks passed for ${profiles.length} public profiles.`);

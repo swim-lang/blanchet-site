@@ -22,6 +22,11 @@ const phoneBySlug = new Map([
 for (const profile of profiles) {
   const phone = phoneBySlug.get(profile.slug);
   const html = await readFile(new URL(`../${profile.file}`, import.meta.url), 'utf8');
+  if (profile.contactDetailsPending) {
+    assert.equal(phone, undefined);
+    assert.doesNotMatch(html, /class="bio-phone-number"|href="mailto:/);
+    continue;
+  }
   const telephone = `+1${phone.replace(/\D/g, '')}`;
   assert.equal((html.match(/class="bio-phone-number"/g) || []).length, 1, `${profile.file} should have one visible phone link`);
   assert.match(html, new RegExp(`href="tel:\\${telephone}"`));

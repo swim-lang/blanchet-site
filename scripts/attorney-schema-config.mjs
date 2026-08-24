@@ -10,6 +10,7 @@ export const profiles = [
   { file: 'team/john-worth.html', legacyFile: 'bio-john-worth.html', slug: 'john-worth', givenName: 'John', additionalName: 'R.', familyName: 'Worth' },
   { file: 'team/joshua-wallace.html', legacyFile: 'bio-joshua-wallace.html', slug: 'joshua-wallace', givenName: 'Joshua', additionalName: 'S.', familyName: 'Wallace' },
   { file: 'team/myles-bartley.html', legacyFile: 'bio-myles-bartley.html', slug: 'myles-bartley', givenName: 'Myles', additionalName: 'K.', familyName: 'Bartley' },
+  { file: 'team/peter-bellacosa.html', slug: 'peter-bellacosa', givenName: 'Peter', additionalName: 'A.', familyName: 'Bellacosa', contactDetailsPending: true },
   { file: 'team/robert-reagan.html', legacyFile: 'bio-robert-reagan.html', slug: 'robert-reagan', givenName: 'Robert', familyName: 'Reagan' },
   { file: 'team/stefan-engelhardt.html', legacyFile: 'bio-stefan-engelhardt.html', slug: 'stefan-engelhardt', givenName: 'Stefan', additionalName: 'W.', familyName: 'Engelhardt' },
   { file: 'team/timothy-cronin.html', legacyFile: 'bio-timothy-cronin.html', slug: 'timothy-cronin', givenName: 'Timothy', familyName: 'Cronin' }

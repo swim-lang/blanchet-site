@@ -1,5 +1,5 @@
 {
-  "count": 15,
+  "count": 16,
   "generatedAt": "2026-06-23T15:52:15.457Z",
   "generatedFrom": "Blanchet LLP website bio HTML pages and blanchet-new-attorney-bios-master-v2.json",
   "sourceDirectory": "/Users/seanashlow/Documents/Codex/2026-06-22/can/work/blanchet-site",
@@ -859,6 +859,73 @@
       "boards": [
         "State Advisory Board, New York State Future Business Leaders of America"
       ],
+      "governmentService": [],
+      "clerkships": []
+    },
+    {
+      "name": "Peter Bellacosa",
+      "fullName": "Peter A. Bellacosa",
+      "role": "PARTNER",
+      "offices": [
+        "New York City"
+      ],
+      "page": "team/peter-bellacosa.html",
+      "url": "https://blanchetllp.com/team/peter-bellacosa",
+      "slug": "peter-bellacosa",
+      "metaDescription": "Peter A. Bellacosa is a Blanchet LLP partner with more than 30 years of trial and appellate experience in complex business disputes and class actions.",
+      "image": "assets/headshots/15_peter-a-bellacosa.jpg",
+      "imageAlt": "Peter A. Bellacosa",
+      "introduction": [
+        "Peter A. Bellacosa is a trial and appellate lawyer with more than 30 years of experience representing companies and individuals in complex business disputes in state and federal courts, arbitrations, and regulatory matters.",
+        "Peter has served as lead counsel in individual and class actions for clients across industries. His practice includes product liability and mass tort litigation, ERISA and employment disputes, commercial and contractual litigation, securities matters, New York State practice and procedure, and class action defense.",
+        "Peter has appeared in trial and appellate courts across the country, tried cases in court and arbitration, argued appeals in federal and state courts, and led teams of lawyers, local counsel, paralegals, experts, and support staff. He also brings significant pro bono and public-service experience, including appointments to New York State legal and public-service boards and committees."
+      ],
+      "areasOfFocus": [
+        "Commercial Litigation",
+        "Product Liability & Mass Tort",
+        "Class Actions",
+        "ERISA & Employment Litigation",
+        "Securities Litigation",
+        "Appeals",
+        "Regulatory Matters",
+        "New York State Practice & Procedure"
+      ],
+      "representativeExperienceIntro": "Peter's experience includes:",
+      "representativeExperience": [
+        "Defending a chemical manufacturer in New York water districts' 1,4-dioxane litigation.",
+        "Representing a financial services firm in state court litigation involving breach of non-compete claims against a former managing director.",
+        "Defending a hedge fund and individuals in arbitration involving non-compete and non-solicitation claims.",
+        "Defending a leading property and casualty insurance company in ERISA, ADEA, civil RICO, breach of contract, tort, and employment discrimination matters.",
+        "Defending a leading investment bank in securities fraud class action litigation.",
+        "Defending major automobile companies in recalls, multidistrict litigation, and NHTSA and DOJ investigations concerning ignition switch and emissions issues.",
+        "Defending a major oil company in class action litigation involving MTBE groundwater contamination and in an investigation concerning the Deepwater Horizon incident.",
+        "Defending the tobacco industry in lawsuits brought by states, unions, individual smoker classes, and foreign governments."
+      ],
+      "education": [
+        "St. John's University School of Law, J.D., 1988",
+        "Georgetown University, A.B., Government, 1985"
+      ],
+      "admissions": [
+        "New York",
+        "U.S. District Courts for the Eastern, Northern, and Southern Districts of New York",
+        "U.S. Court of Appeals for the First, Second, Third, and Eleventh Circuits",
+        "U.S. Supreme Court"
+      ],
+      "honorsAndRecognition": [
+        "Kirkland & Ellis Pro Bono Service Award, 2005-2014"
+      ],
+      "professionalAssociations": [
+        "American Bar Association",
+        "New York State Bar Association"
+      ],
+      "activities": [
+        "Trustee and Treasurer of the Lawyers' Fund for Client Protection for the State of New York",
+        "Member of the Appellate Division, First Department, Attorney Grievance Committee",
+        "Certified Guardian and Court Evaluator pursuant to Part 36 of the Rules of the Chief Judge of the State of New York and Article 81 of the New York Mental Hygiene Law",
+        "Former member of the Council for the State University of New York Health Science Center at Brooklyn",
+        "Former member of the Committee to Promote Public Trust and Confidence in the Legal System"
+      ],
+      "judicialClerkships": [],
       "governmentService": [],
       "clerkships": []
     }
