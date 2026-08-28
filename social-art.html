@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+  <title>Social Art | Blanchet LLP</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/social-art.css">
+</head>
+<body>
+  <a class="skip-link" href="#editor">Skip to editor</a>
+
+  <header class="tool-header">
+    <a class="tool-brand" href="/" aria-label="Blanchet LLP home">
+      <img src="assets/logos/Primary-Lockup-Grey.svg" alt="Blanchet LLP">
+    </a>
+    <div class="tool-title">
+      <span>Internal Tool</span>
+      <strong>Social Art</strong>
+    </div>
+  </header>
+
+  <main class="generator" id="editor">
+    <form class="control-panel" id="art-form" novalidate>
+      <section class="control-section" aria-labelledby="composition-heading">
+        <div class="section-heading">
+          <span>01</span>
+          <h1 id="composition-heading">Composition</h1>
+        </div>
+
+        <fieldset class="control-group">
+          <legend>Content type</legend>
+          <div class="segmented segmented-four" data-segmented="template">
+            <label><input type="radio" name="template" value="announcement" checked><span>Announcement</span></label>
+            <label><input type="radio" name="template" value="attorney"><span>Attorney</span></label>
+            <label><input type="radio" name="template" value="perspective"><span>Perspective</span></label>
+            <label><input type="radio" name="template" value="cover"><span>Cover</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="control-group" id="format-group">
+          <legend>Format</legend>
+          <div class="segmented" data-segmented="format">
+            <label><input type="radio" name="format" value="square" checked><span>Square</span></label>
+            <label><input type="radio" name="format" value="portrait"><span>Portrait</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="control-group">
+          <legend>Color</legend>
+          <div class="swatch-group" data-segmented="theme">
+            <label title="Ink"><input type="radio" name="theme" value="ink" checked><span class="swatch swatch-ink"><i></i>Ink</span></label>
+            <label title="Paper"><input type="radio" name="theme" value="paper"><span class="swatch swatch-paper"><i></i>Paper</span></label>
+            <label title="Slate"><input type="radio" name="theme" value="slate"><span class="swatch swatch-slate"><i></i>Slate</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="control-group">
+          <legend>Logo</legend>
+          <div class="segmented" data-segmented="logo">
+            <label><input type="radio" name="logo" value="lockup" checked><span>Lockup</span></label>
+            <label><input type="radio" name="logo" value="symbol"><span>B Symbol</span></label>
+            <label><input type="radio" name="logo" value="none"><span>None</span></label>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="control-section" aria-labelledby="content-heading">
+        <div class="section-heading">
+          <span>02</span>
+          <h2 id="content-heading">Content</h2>
+        </div>
+
+        <div class="template-fields" data-fields="announcement">
+          <label class="field">
+            <span>Category <output data-count-for="announcement-category">0/28</output></span>
+            <input id="announcement-category" type="text" maxlength="28" value="Firm Announcement" autocomplete="off">
+          </label>
+          <label class="field">
+            <span>Headline <output data-count-for="announcement-headline">0/92</output></span>
+            <textarea id="announcement-headline" rows="3" maxlength="92">Blanchet LLP welcomes Peter A. Bellacosa as partner</textarea>
+          </label>
+          <label class="field">
+            <span>Supporting detail <output data-count-for="announcement-detail">0/160</output></span>
+            <textarea id="announcement-detail" rows="3" maxlength="160">Peter brings more than 30 years of trial and appellate experience to the firm.</textarea>
+          </label>
+          <label class="field compact-field">
+            <span>Date <output data-count-for="announcement-date">0/24</output></span>
+            <input id="announcement-date" type="text" maxlength="24" value="August 2026" autocomplete="off">
+          </label>
+        </div>
+
+        <div class="template-fields" data-fields="attorney" hidden>
+          <label class="field">
+            <span>Attorney</span>
+            <select id="attorney-select">
+              <option value="">Loading team...</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Name <output data-count-for="attorney-name">0/48</output></span>
+            <input id="attorney-name" type="text" maxlength="48" value="Joel A. Blanchet" autocomplete="off">
+          </label>
+          <label class="field compact-field">
+            <span>Title <output data-count-for="attorney-title">0/26</output></span>
+            <input id="attorney-title" type="text" maxlength="26" value="Partner" autocomplete="off">
+          </label>
+          <label class="field">
+            <span>Focus statement <output data-count-for="attorney-focus">0/130</output></span>
+            <textarea id="attorney-focus" rows="3" maxlength="130">Trial-tested judgment for complex disputes where the law, facts, and stakes are all in motion.</textarea>
+          </label>
+        </div>
+
+        <div class="template-fields" data-fields="perspective" hidden>
+          <label class="field">
+            <span>Topic <output data-count-for="perspective-topic">0/32</output></span>
+            <input id="perspective-topic" type="text" maxlength="32" value="Firm Perspective" autocomplete="off">
+          </label>
+          <label class="field">
+            <span>Point of view <output data-count-for="perspective-statement">0/190</output></span>
+            <textarea id="perspective-statement" rows="4" maxlength="190">The best litigation strategy accounts for legal leverage and business consequences at the same time.</textarea>
+          </label>
+          <label class="field">
+            <span>Attribution <output data-count-for="perspective-attribution">0/54</output></span>
+            <input id="perspective-attribution" type="text" maxlength="54" value="Blanchet LLP" autocomplete="off">
+          </label>
+          <label class="field compact-field">
+            <span>Practice area <output data-count-for="perspective-practice">0/38</output></span>
+            <input id="perspective-practice" type="text" maxlength="38" value="Commercial Litigation" autocomplete="off">
+          </label>
+        </div>
+
+        <div class="template-fields" data-fields="cover" hidden>
+          <label class="field">
+            <span>Headline <output data-count-for="cover-headline">0/60</output></span>
+            <input id="cover-headline" type="text" maxlength="60" value="Built for complex disputes" autocomplete="off">
+          </label>
+          <label class="field">
+            <span>Supporting line <output data-count-for="cover-detail">0/88</output></span>
+            <input id="cover-detail" type="text" maxlength="88" value="Wherever they arise, whatever they require." autocomplete="off">
+          </label>
+          <label class="field">
+            <span>Office image</span>
+            <select id="cover-image-select">
+              <option value="none">No image</option>
+              <option value="assets/images/home/blanchet-buffalo-bright.webp">Buffalo</option>
+              <option value="assets/images/home/blanchet-chicago-bright.webp" selected>Chicago</option>
+              <option value="assets/images/home/blanchet-new-york-bright.webp">New York City</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="control-section" id="image-section" aria-labelledby="image-heading">
+        <div class="section-heading">
+          <span>03</span>
+          <h2 id="image-heading">Image</h2>
+        </div>
+
+        <div class="image-control-row">
+          <div class="image-thumbnail" id="image-thumbnail" aria-hidden="true"></div>
+          <div class="image-actions">
+            <label class="button button-secondary upload-button" for="image-upload">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 16V4m0 0L7 9m5-5 5 5M5 14v5h14v-5"/></svg>
+              <span id="upload-label">Choose image</span>
+            </label>
+            <input id="image-upload" class="visually-hidden" type="file" accept="image/jpeg,image/png,image/webp">
+            <button class="text-button" id="remove-image" type="button" disabled>Remove</button>
+          </div>
+        </div>
+
+        <div class="focal-controls" id="focal-controls" hidden>
+          <label class="range-field" for="focal-x">
+            <span>Horizontal position</span>
+            <input id="focal-x" type="range" min="0" max="100" value="50">
+          </label>
+          <label class="range-field" for="focal-y">
+            <span>Vertical position</span>
+            <input id="focal-y" type="range" min="0" max="100" value="50">
+          </label>
+        </div>
+        <p class="field-status" id="image-status" aria-live="polite">Optional</p>
+      </section>
+
+      <section class="export-section" aria-labelledby="export-heading">
+        <div>
+          <span class="export-kicker">Ready to export</span>
+          <h2 id="export-heading">Final artwork</h2>
+          <p id="export-dimensions">1200 × 1200 pixels</p>
+        </div>
+        <div class="export-actions">
+          <button class="button button-primary" id="download-png" type="button" disabled>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 4v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg>
+            Download PNG
+          </button>
+          <button class="button button-secondary" id="download-jpg" type="button" hidden disabled>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 4v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg>
+            Download JPEG
+          </button>
+        </div>
+        <p class="export-status" id="export-status" role="status" aria-live="polite">Loading brand assets...</p>
+      </section>
+    </form>
+
+    <aside class="preview-panel" aria-labelledby="preview-heading">
+      <div class="preview-toolbar">
+        <div>
+          <span>Live preview</span>
+          <h2 id="preview-heading">Square Post</h2>
+        </div>
+        <button class="icon-button" id="reset-art" type="button" title="Reset artwork" aria-label="Reset artwork">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8m0-5v5h5"/></svg>
+        </button>
+      </div>
+      <div class="canvas-stage" id="canvas-stage">
+        <canvas id="art-canvas" width="1200" height="1200" aria-label="Social artwork preview"></canvas>
+      </div>
+      <div class="preview-meta">
+        <span id="preview-size">1200 × 1200</span>
+        <span>PNG</span>
+      </div>
+    </aside>
+  </main>
+
+  <script src="js/social-art.js" defer></script>
+</body>
+</html>
