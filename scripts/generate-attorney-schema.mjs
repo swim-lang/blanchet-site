@@ -67,7 +67,8 @@ function profileData(html, profile) {
   const jobTitle = textContent(matchOne(html, /<div class="bio-label">([\s\S]*?)<\/div>/, 'job title', profile.file))
     .replace(/^\[\s*|\s*\]$/g, '')
     .toLowerCase()
-    .replace(/^./, (character) => character.toUpperCase());
+    .replace(/\b\w/g, (character) => character.toUpperCase())
+    .replace(/\bAnd\b/g, 'and');
   const phoneMatch = matchOptional(html, /<a class="bio-phone-number"[^>]*>([\s\S]*?)<\/a>/);
   const phone = phoneMatch ? textContent(phoneMatch) : null;
   const email = matchOptional(html, /href="mailto:([^"]+)"/);
