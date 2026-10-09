@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { profiles } from './attorney-schema-config.mjs';
 
 const phoneBySlug = new Map([
-  ['joel-blanchet', '(716) 302-5702'],
+  ['joel-blanchet', '(312) 961-4824'],
   ['andrew-devine', '(716) 302-5703'],
   ['james-doody', '(716) 302-5704'],
   ['joshua-wallace', '(716) 302-5705'],
