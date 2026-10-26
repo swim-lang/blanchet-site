@@ -1,7 +1,7 @@
 (function() {
-  const PUBLIC_BASE_URL = 'https://swim-lang.github.io/blanchet-site/';
+  const PUBLIC_BASE_URL = 'https://blanchet.com/';
   const LOGO_URL = PUBLIC_BASE_URL + 'assets/logos/Logo-Color.png';
-  const SITE_URL = 'https://swim-lang.github.io/blanchet-site/';
+  const SITE_URL = PUBLIC_BASE_URL;
 
   const form = document.querySelector('[data-signature-form]');
   const preview = document.querySelector('[data-signature-preview]');
@@ -46,7 +46,7 @@
     document.querySelectorAll('[data-signature-field]').forEach(field => {
       data[field.dataset.signatureField] = clean(field.value);
     });
-    data.websiteLabel = normalizeWebsite(data.website) || 'blanchetllp.com';
+    data.websiteLabel = normalizeWebsite(data.website) || 'blanchet.com';
     data.websiteHref = hrefForWebsite(data.website);
     return data;
   }
@@ -91,7 +91,8 @@
       <div style="font-size:12px;line-height:18px;letter-spacing:1.4px;text-transform:uppercase;color:#5d6a70;">${escapeHtml(data.title || 'Title')}</div>
       <div style="font-size:12px;line-height:19px;color:#314956;margin-top:9px;">${metaRows(data)}</div>
       <div style="font-size:12px;line-height:18px;color:#6b767b;margin-top:7px;">${escapeHtml(data.address || '')}${data.address && data.office ? '<span style="color:#c9d0d3;"> &nbsp;|&nbsp; </span>' : ''}${escapeHtml(data.office || '')}</div>
-      <div style="font-size:10px;line-height:15px;color:#9aa3a7;margin-top:11px;max-width:420px;">${legalFooter()}</div>
+      <div style="font-size:12px;line-height:18px;color:#0c222c;margin-top:11px;max-width:420px;">Our website has moved from <strong>blanchetllp.com</strong> to <strong>blanchet.com</strong>. Please update your bookmarks.</div>
+      <div style="font-size:10px;line-height:15px;color:#9aa3a7;margin-top:7px;max-width:420px;">${legalFooter()}</div>
     </td>
   </tr>
 </table>`.trim();

@@ -47,9 +47,9 @@ export const offices = {
 };
 
 export const organization = {
-  id: 'https://blanchetllp.com/#organization',
+  id: 'https://blanchet.com/#organization',
   name: 'Blanchet LLP',
-  url: 'https://blanchetllp.com/',
-  logo: 'https://blanchetllp.com/assets/favicon/favicon-192.png',
+  url: 'https://blanchet.com/',
+  logo: 'https://blanchet.com/assets/favicon/favicon-192.png',
   sameAs: ['https://www.linkedin.com/company/blanchet-llp']
 };

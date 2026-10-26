@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blanchetllp.com/sitemap.xml
+Sitemap: https://blanchet.com/sitemap.xml

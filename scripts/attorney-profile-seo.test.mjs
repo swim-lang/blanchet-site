@@ -9,12 +9,12 @@ const sitemap = await readFile(new URL('../sitemap.xml', import.meta.url), 'utf8
 for (const profile of profiles) {
   const html = await readFile(new URL(`../${profile.file}`, import.meta.url), 'utf8');
   const publicPath = `/team/${profile.slug}`;
-  const canonical = `https://blanchetllp.com${publicPath}`;
+  const canonical = `https://blanchet.com${publicPath}`;
   const titleName = html.match(/<title>([^<]+) \| Blanchet LLP<\/title>/)?.[1];
 
   assert.match(html, new RegExp(`<link rel="canonical" href="${canonical}">`));
   assert.match(html, new RegExp(`<meta property="og:url" content="${canonical}">`));
-  assert.match(html, /<meta property="og:image" content="https:\/\/blanchetllp\.com\/assets\/headshots\/[^"]+\.jpg">/);
+  assert.match(html, /<meta property="og:image" content="https:\/\/blanchet\.com\/assets\/headshots\/[^"]+\.jpg">/);
   assert.match(html, /<meta property="og:image:type" content="image\/jpeg">/);
   assert.match(html, /<meta property="og:image:width" content="900">/);
   assert.match(html, /<meta property="og:image:height" content="1125">/);

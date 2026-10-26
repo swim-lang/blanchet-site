@@ -45,7 +45,7 @@ for (const profile of profiles) {
   assert.ok(person.familyName);
   assert.ok(person.jobTitle);
   assert.ok(person.description);
-  assert.ok(person.image.startsWith('https://blanchetllp.com/'));
+  assert.ok(person.image.startsWith('https://blanchet.com/'));
   if (profile.contactDetailsPending) {
     assert.equal(Object.hasOwn(person, 'email'), false);
     assert.equal(Object.hasOwn(person, 'telephone'), false);
@@ -67,7 +67,7 @@ for (const profile of profiles) {
   const focusText = [...visibleFocus[1].matchAll(/<span[^>]*>([\s\S]*?)<\/span>/g)].map((match) => textContent(match[1]));
   assert.deepEqual(person.knowsAbout, focusText, `${profile.file} schema should match visible focus areas`);
 
-  const canonical = `https://blanchetllp.com/team/${profile.slug}`;
+  const canonical = `https://blanchet.com/team/${profile.slug}`;
   assert.equal(profilePage.url, canonical);
   assert.equal(person.url, canonical);
   assert.equal(person.image, html.match(/<meta property="og:image" content="([^"]+)"/)?.[1]);

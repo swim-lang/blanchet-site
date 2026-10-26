@@ -6,12 +6,15 @@ const js = await readFile(new URL('../js/email-signatures-v2.js', import.meta.ur
 
 assert.match(html, /noindex, nofollow, noarchive/);
 assert.match(html, /Email Signature V2/);
-assert.match(html, /email-signatures-v2\.js\?v=20260810-consistency/);
+assert.match(html, /email-signatures-v2\.js\?v=20261026-domain/);
 assert.match(html, /data-signature-field="title"[^>]+value="PARTNER"/);
 assert.match(html, /Office Phone - \(XXX\) XXX-XXXX/);
 assert.match(html, /Mobile - \(XXX\) XXX-XXXX/);
 assert.match(html, /data-signature-field="office"[^>]+value="Buffalo \| Chicago \| New York City"/);
-assert.match(js, /https:\/\/blanchetllp\.com\/assets\/favicon\/favicon-192\.png/);
+assert.match(js, /https:\/\/blanchet\.com\/assets\/favicon\/favicon-192\.png/);
+assert.match(html, /data-signature-field="website"[^>]+value="blanchet\.com"/);
+assert.match(html, /data-signature-field="email"[^>]+@blanchetllp\.com/);
+assert.match(js, /Our website has moved from <strong>blanchetllp\.com<\/strong> to <strong>blanchet\.com<\/strong>/);
 assert.doesNotMatch(js, /Logo-Color\.png/);
 assert.doesNotMatch(js, /dark[^\n]*logo|logo[^\n]*dark/i);
 assert.match(js, /<td width="58"/);
