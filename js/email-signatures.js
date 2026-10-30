@@ -91,7 +91,7 @@
       <div style="font-size:12px;line-height:18px;letter-spacing:1.4px;text-transform:uppercase;color:#5d6a70;">${escapeHtml(data.title || 'Title')}</div>
       <div style="font-size:12px;line-height:19px;color:#314956;margin-top:9px;">${metaRows(data)}</div>
       <div style="font-size:12px;line-height:18px;color:#6b767b;margin-top:7px;">${escapeHtml(data.address || '')}${data.address && data.office ? '<span style="color:#c9d0d3;"> &nbsp;|&nbsp; </span>' : ''}${escapeHtml(data.office || '')}</div>
-      <div style="font-size:12px;line-height:18px;color:#0c222c;margin-top:11px;max-width:420px;">Our website has moved from <strong>blanchetllp.com</strong> to <strong>blanchet.com</strong>. Please update your bookmarks.</div>
+      <div style="font-size:12px;line-height:18px;color:#0c222c;margin-top:11px;max-width:420px;">We have a new domain. Our website and email addresses now use <strong>blanchet.com</strong>. Please update your bookmarks and contacts.</div>
       <div style="font-size:10px;line-height:15px;color:#9aa3a7;margin-top:7px;max-width:420px;">${legalFooter()}</div>
     </td>
   </tr>
